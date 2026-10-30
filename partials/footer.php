@@ -387,6 +387,53 @@
     .footer-copyright-bar a:hover {
         color: #ffffff !important;
     }
+
+    @media (max-width: 767.98px) {
+        .maritime-footer-wrapper {
+            margin-top: 2.25rem;
+        }
+        .footer-ocean-wave-top,
+        .footer-wave-svg {
+            height: 46px;
+        }
+        .maritime-footer-stage {
+            padding: 22px 0 0;
+        }
+        .footer-main-shell {
+            padding: 20px 16px;
+            border-radius: 18px;
+        }
+        .footer-heading {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+        .footer-contact-row {
+            font-size: 13px;
+            gap: 10px;
+        }
+        .footer-map-frame {
+            min-height: 205px;
+        }
+        .footer-copyright-bar {
+            margin-top: 20px;
+            padding: 14px 0;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .footer-links-grid {
+            grid-template-columns: 1fr;
+        }
+        .footer-portal-bar {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 8px;
+        }
+        .footer-mini-pill.admin-pill {
+            justify-content: center;
+        }
+    }
 </style>
 
 <footer class="maritime-footer-wrapper">

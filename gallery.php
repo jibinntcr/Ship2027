@@ -832,16 +832,99 @@
         }
 
         @media (max-width: 767.98px) {
+            .gallery-hero-wrapper {
+                min-height: 290px;
+            }
+            .gallery-hero-content {
+                padding: 34px 16px 60px;
+            }
+            .gallery-hero-title {
+                font-size: clamp(24px, 6.2vw, 32px);
+            }
+            .gallery-hero-lead {
+                font-size: 13.8px;
+                margin-bottom: 16px;
+            }
+            .gallery-hero-stat-pill {
+                font-size: 11.5px;
+                padding: 6px 12px;
+            }
+            .hero-ocean-horizon,
+            .hero-ocean-waves {
+                height: 40px;
+            }
+            .video-spotlight-bento {
+                padding: 18px 16px;
+                border-radius: 20px;
+                margin-bottom: 22px;
+            }
+            .video-preview-stage {
+                height: 195px;
+                border-radius: 14px;
+            }
+            .video-spotlight-bento h2 {
+                font-size: 21px !important;
+            }
+            .video-spotlight-bento p {
+                font-size: 13.8px !important;
+                margin-bottom: 16px !important;
+            }
+            .video-spotlight-bento .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            .gallery-control-deck {
+                padding: 14px 14px;
+                border-radius: 18px;
+                margin-bottom: 22px;
+            }
+            .gallery-filter-pills {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                max-width: 100%;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                padding-bottom: 4px;
+            }
+            .gallery-filter-pills::-webkit-scrollbar {
+                display: none;
+            }
+            .gallery-filter-btn {
+                flex-shrink: 0;
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+            .gallery-search-box {
+                width: 100%;
+                min-width: 0;
+            }
+            .gallery-thumb-stage {
+                height: 205px;
+            }
+            .lightbox-top-bar {
+                padding: 12px 14px;
+                gap: 8px;
+            }
             .lightbox-stage-area {
-                padding: 12px 16px;
+                padding: 12px 12px;
             }
             .lightbox-arrow {
-                width: 42px;
-                height: 42px;
+                width: 40px;
+                height: 40px;
+                font-size: 15px;
             }
+            .lightbox-arrow.prev { left: 10px; }
+            .lightbox-arrow.next { right: 10px; }
             .lightbox-album-title {
-                font-size: 13.5px;
-                max-width: 180px;
+                font-size: 13px;
+                max-width: 140px;
+            }
+            .lightbox-tool-btn span {
+                display: none;
+            }
+            .lightbox-tool-btn {
+                padding: 8px 11px;
             }
         }
     </style>
@@ -1371,6 +1454,28 @@
             document.getElementById('lb-stage-area').addEventListener('click', function (e) {
                 if (e.target === this) closeLightbox();
             });
+
+            // Mobile Touch Swipe Support for Lightbox Stage
+            var touchStartX = 0;
+            var touchStartY = 0;
+            var stageEl = document.getElementById('lb-stage-area');
+            stageEl.addEventListener('touchstart', function (e) {
+                if (!e.touches || e.touches.length !== 1) return;
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            stageEl.addEventListener('touchend', function (e) {
+                if (!e.changedTouches || e.changedTouches.length !== 1) return;
+                var dx = e.changedTouches[0].clientX - touchStartX;
+                var dy = e.changedTouches[0].clientY - touchStartY;
+                if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+                    if (dx < 0) {
+                        document.getElementById('lb-next-photo').click();
+                    } else {
+                        document.getElementById('lb-prev-photo').click();
+                    }
+                }
+            }, { passive: true });
 
             document.addEventListener('keydown', function (e) {
                 if (!lbModal.classList.contains('is-open')) return;

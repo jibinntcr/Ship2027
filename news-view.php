@@ -90,6 +90,22 @@
             border: 1px solid rgba(15, 23, 42, 0.08);
             padding: 3px;
         }
+
+        @media (max-width: 767.98px) {
+            .article-main-card {
+                padding: 20px 16px;
+                border-radius: 20px;
+            }
+            .article-clipping-frame {
+                padding: 10px;
+                border-radius: 14px;
+                margin: 16px 0;
+            }
+            .sidebar-news-panel {
+                padding: 18px 16px;
+                border-radius: 20px;
+            }
+        }
     </style>
 </head>
 

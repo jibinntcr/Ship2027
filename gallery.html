@@ -832,16 +832,99 @@
         }
 
         @media (max-width: 767.98px) {
+            .gallery-hero-wrapper {
+                min-height: 290px;
+            }
+            .gallery-hero-content {
+                padding: 34px 16px 60px;
+            }
+            .gallery-hero-title {
+                font-size: clamp(24px, 6.2vw, 32px);
+            }
+            .gallery-hero-lead {
+                font-size: 13.8px;
+                margin-bottom: 16px;
+            }
+            .gallery-hero-stat-pill {
+                font-size: 11.5px;
+                padding: 6px 12px;
+            }
+            .hero-ocean-horizon,
+            .hero-ocean-waves {
+                height: 40px;
+            }
+            .video-spotlight-bento {
+                padding: 18px 16px;
+                border-radius: 20px;
+                margin-bottom: 22px;
+            }
+            .video-preview-stage {
+                height: 195px;
+                border-radius: 14px;
+            }
+            .video-spotlight-bento h2 {
+                font-size: 21px !important;
+            }
+            .video-spotlight-bento p {
+                font-size: 13.8px !important;
+                margin-bottom: 16px !important;
+            }
+            .video-spotlight-bento .btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            .gallery-control-deck {
+                padding: 14px 14px;
+                border-radius: 18px;
+                margin-bottom: 22px;
+            }
+            .gallery-filter-pills {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                max-width: 100%;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                padding-bottom: 4px;
+            }
+            .gallery-filter-pills::-webkit-scrollbar {
+                display: none;
+            }
+            .gallery-filter-btn {
+                flex-shrink: 0;
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+            .gallery-search-box {
+                width: 100%;
+                min-width: 0;
+            }
+            .gallery-thumb-stage {
+                height: 205px;
+            }
+            .lightbox-top-bar {
+                padding: 12px 14px;
+                gap: 8px;
+            }
             .lightbox-stage-area {
-                padding: 12px 16px;
+                padding: 12px 12px;
             }
             .lightbox-arrow {
-                width: 42px;
-                height: 42px;
+                width: 40px;
+                height: 40px;
+                font-size: 15px;
             }
+            .lightbox-arrow.prev { left: 10px; }
+            .lightbox-arrow.next { right: 10px; }
             .lightbox-album-title {
-                font-size: 13.5px;
-                max-width: 180px;
+                font-size: 13px;
+                max-width: 140px;
+            }
+            .lightbox-tool-btn span {
+                display: none;
+            }
+            .lightbox-tool-btn {
+                padding: 8px 11px;
             }
         }
     </style>
@@ -1657,6 +1740,249 @@ body {
     background: rgba(56, 189, 248, 0.22);
     color: #7dd3fc;
     border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+/* ==========================================================================
+   7. COMPREHENSIVE MOBILE & TABLET RESPONSIVE OPTIMIZATION (ALL DEVICES)
+   ========================================================================== */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Tablet & Mobile Navigation + Layout (< 991.98px) */
+@media (max-width: 991.98px) {
+    .upper-header .row {
+        justify-content: center !important;
+        row-gap: 4px;
+    }
+    .upper-header .col-auto {
+        justify-content: center !important;
+        text-align: center;
+    }
+    .navbar.sticky-top {
+        padding: 10px 16px !important;
+    }
+    .navbar-brand {
+        max-width: calc(100vw - 88px);
+        margin-right: 0 !important;
+    }
+    .navbar .navbar-brand img {
+        max-height: 40px !important;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
+        margin-right: 0 !important;
+    }
+    .navbar-toggler {
+        padding: 6px 10px;
+        border-radius: 10px;
+        border: 1px solid rgba(15, 23, 42, 0.16);
+        box-shadow: none !important;
+    }
+    .navbar-collapse {
+        margin-top: 10px;
+    }
+    .navbar-nav.bg-new-nav,
+    .fac-img-curv {
+        border-radius: 18px !important;
+        padding: 12px 16px !important;
+        width: 100%;
+        max-height: 76vh;
+        overflow-y: auto;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        margin-left: 0 !important;
+        padding: 11px 12px !important;
+        border-radius: 10px;
+        font-size: 14.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        background: rgba(255, 255, 255, 0.08);
+    }
+    .navbar-nav .dropdown-menu {
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 4px 0 8px 0 !important;
+        border-radius: 12px !important;
+        padding: 6px !important;
+        background: rgba(255, 255, 255, 0.96) !important;
+        box-shadow: inset 0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+    .navbar-nav .dropdown-item {
+        padding: 9px 14px;
+        border-radius: 8px;
+        font-size: 13.5px;
+        font-weight: 600;
+        white-space: normal;
+    }
+    .maritime-subpage-hero {
+        padding: 3.25rem 0 5.25rem;
+    }
+    .subpage-ocean-horizon,
+    .subpage-ocean-svg {
+        height: 54px;
+    }
+    .maritime-bento-panel {
+        padding: 1.75rem;
+        border-radius: 22px;
+    }
+}
+
+/* Mobile Landscape & Standard Phones (< 767.98px) */
+@media (max-width: 767.98px) {
+    .upper-header {
+        padding: 6px 0 !important;
+    }
+    .upper-header span,
+    .upper-header a {
+        font-size: 11.5px !important;
+    }
+    .upper-header .gap-3 {
+        gap: 0.55rem !important;
+    }
+    .maritime-subpage-hero {
+        padding: 2.35rem 0 4.25rem;
+    }
+    .maritime-breadcrumb {
+        flex-wrap: wrap;
+        max-width: 100%;
+        padding: 0.35rem 0.85rem;
+        gap: 0.35rem;
+        font-size: 0.68rem;
+        margin-bottom: 0.9rem;
+    }
+    .maritime-hero-title {
+        font-size: clamp(1.65rem, 6.5vw, 2.25rem);
+        line-height: 1.18;
+        margin-bottom: 0.65rem;
+    }
+    .maritime-hero-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    .subpage-ocean-horizon,
+    .subpage-ocean-svg {
+        height: 42px;
+    }
+    .maritime-section {
+        padding: 2.5rem 0;
+    }
+    .maritime-bento-panel {
+        padding: 1.35rem 1.15rem;
+        border-radius: 20px;
+    }
+    .maritime-section-title {
+        font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+    }
+    .maritime-panel-header {
+        padding-bottom: 14px;
+        margin-bottom: 16px;
+        gap: 10px;
+    }
+    .maritime-panel-heading {
+        font-size: 19px;
+    }
+    .maritime-panel-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+        border-radius: 12px;
+    }
+    .programme-bento-card {
+        border-radius: 20px;
+    }
+    .programme-card-body {
+        padding: 1.25rem;
+    }
+    .programme-img-frame {
+        height: 200px;
+    }
+    .person-photo-frame {
+        height: 265px;
+    }
+    .person-card-body {
+        padding: 1.25rem 1.15rem;
+    }
+    .coord-bento-card,
+    .doc-bento-card {
+        padding: 1.35rem 1.15rem;
+        border-radius: 18px;
+    }
+    /* Subpage inline fixed-height image containers (Libraries, Academics, Contact) */
+    .maritime-bento-panel div[style*="height: 410px"],
+    .maritime-bento-panel div[style*="height: 390px"],
+    .maritime-bento-panel div[style*="height: 310px"] {
+        height: 235px !important;
+    }
+    .back-to-top {
+        right: 16px !important;
+        bottom: 18px !important;
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+    }
+}
+
+/* Small & Standard Smartphones (< 575.98px, down to 320px) */
+@media (max-width: 575.98px) {
+    .upper-header .col-auto:first-child {
+        width: 100%;
+        justify-content: center !important;
+    }
+    .upper-header .col-auto:last-child {
+        width: 100%;
+        justify-content: center !important;
+        padding-top: 2px;
+    }
+    .navbar.sticky-top {
+        padding: 8px 12px !important;
+    }
+    .navbar .navbar-brand img {
+        max-height: 35px !important;
+    }
+    .maritime-bento-panel {
+        padding: 1.15rem 1rem;
+        border-radius: 18px;
+    }
+    .maritime-panel-footer {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .maritime-cta-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 18px;
+    }
+    .justify-para {
+        text-align: left !important;
+    }
+    .programme-title-row {
+        gap: 11px;
+    }
+    .programme-icon-orb {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        border-radius: 12px;
+    }
+    .person-photo-frame {
+        height: 245px;
+    }
+    .maritime-table thead th,
+    .maritime-table tbody td {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.85rem;
+    }
 }
 </style>
 <div class="wrap bg-upper-nav upper-header py-2 px-0" style="background: linear-gradient(90deg, #040b1d 0%, #0d1f47 50%, #07284a 100%); border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
@@ -2728,6 +3054,28 @@ body {
                 if (e.target === this) closeLightbox();
             });
 
+            // Mobile Touch Swipe Support for Lightbox Stage
+            var touchStartX = 0;
+            var touchStartY = 0;
+            var stageEl = document.getElementById('lb-stage-area');
+            stageEl.addEventListener('touchstart', function (e) {
+                if (!e.touches || e.touches.length !== 1) return;
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            stageEl.addEventListener('touchend', function (e) {
+                if (!e.changedTouches || e.changedTouches.length !== 1) return;
+                var dx = e.changedTouches[0].clientX - touchStartX;
+                var dy = e.changedTouches[0].clientY - touchStartY;
+                if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+                    if (dx < 0) {
+                        document.getElementById('lb-next-photo').click();
+                    } else {
+                        document.getElementById('lb-prev-photo').click();
+                    }
+                }
+            }, { passive: true });
+
             document.addEventListener('keydown', function (e) {
                 if (!lbModal.classList.contains('is-open')) return;
                 if (e.key === 'Escape') closeLightbox();
@@ -3134,6 +3482,53 @@ body {
 
     .footer-copyright-bar a:hover {
         color: #ffffff !important;
+    }
+
+    @media (max-width: 767.98px) {
+        .maritime-footer-wrapper {
+            margin-top: 2.25rem;
+        }
+        .footer-ocean-wave-top,
+        .footer-wave-svg {
+            height: 46px;
+        }
+        .maritime-footer-stage {
+            padding: 22px 0 0;
+        }
+        .footer-main-shell {
+            padding: 20px 16px;
+            border-radius: 18px;
+        }
+        .footer-heading {
+            font-size: 17px;
+            margin-bottom: 12px;
+        }
+        .footer-contact-row {
+            font-size: 13px;
+            gap: 10px;
+        }
+        .footer-map-frame {
+            min-height: 205px;
+        }
+        .footer-copyright-bar {
+            margin-top: 20px;
+            padding: 14px 0;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .footer-links-grid {
+            grid-template-columns: 1fr;
+        }
+        .footer-portal-bar {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 8px;
+        }
+        .footer-mini-pill.admin-pill {
+            justify-content: center;
+        }
     }
 </style>
 

@@ -74,6 +74,7 @@
     autoplay: true,
     autoplayTimeout: 6500,
     autoplayHoverPause: true,
+    autoHeight: true,
     smartSpeed: 1100,
     items: 1,
     dots: true,

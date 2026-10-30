@@ -175,6 +175,27 @@
             color: #ffffff;
             transform: translateX(3px);
         }
+
+        @media (max-width: 575.98px) {
+            .newsroom-card {
+                padding: 13px;
+                gap: 13px;
+                border-radius: 16px;
+            }
+            .newsroom-thumb-box {
+                width: 78px;
+                min-width: 78px;
+                height: 78px;
+                border-radius: 12px;
+            }
+            .newsroom-title {
+                font-size: 14.2px;
+                line-height: 1.38;
+            }
+            .newsroom-arrow {
+                display: none;
+            }
+        }
     </style>
 </head>
 
