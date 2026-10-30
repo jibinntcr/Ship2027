@@ -501,7 +501,7 @@
                                 <a class="footer-mini-pill" target="_blank" href="https://descon.cusat.ac.in/">DESCON</a>
                                 <a class="footer-mini-pill" target="_blank" href="https://snas.in/">SNAS</a>
                             </div>
-                            <a class="footer-mini-pill admin-pill" href="/shipadmin">
+                            <a class="footer-mini-pill admin-pill" href="shipadmin/">
                                 <i class="fa fa-lock"></i> Admin Portal
                             </a>
                         </div>

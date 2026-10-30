@@ -203,11 +203,12 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                         return inf.read()
                 return ""
 
-            content = re.sub(r"<\?php\s+include\(\x27([^\x27]+)\x27\)\s*;?\s*\?>", repl, content)
+            for _ in range(3):
+                content = re.sub(r"<\?php\s+include\(\x27([^\x27]+)\x27\)\s*;?\s*\?>", repl, content)
             # Inject preloaded public data inline so pages render with zero extra API round-trip
             public_json = get_public_data_payload().decode("utf-8")
             inline_script = f"<script>window.__SHIPTECH_DATA__ = {public_json};</script>\n"
-            content = content.replace("<script src=\"js/site-data.js\"></script>", inline_script + "<script src=\"js/site-data.js\"></script>")
+            content = content.replace("<script src=\"js/site-data.js\"></script>", inline_script + "<script src=\"js/site-data.js\"></script>", 1)
 
             data = content.encode("utf-8")
             self.send_response(200)

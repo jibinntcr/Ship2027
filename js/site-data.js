@@ -135,6 +135,33 @@
             .replace(/'/g, '&#39;');
     }
 
+    var isStaticHost = (
+        typeof location !== 'undefined' &&
+        location.hostname !== 'localhost' &&
+        location.hostname !== '127.0.0.1' &&
+        location.hostname !== '::1'
+    );
+
+    function normHref(url) {
+        if (!url) return url;
+        var s = String(url);
+        if (isStaticHost && s.indexOf('http') !== 0 && s.indexOf('mailto:') !== 0 && s.indexOf('tel:') !== 0) {
+            s = s.replace(/([a-zA-Z0-9_-]+)\.php(\b|#|\?|$)/g, '$1.html$2');
+        }
+        return s;
+    }
+
+    function rewriteStaticLinks(root) {
+        if (!isStaticHost) return;
+        var links = (root || document).querySelectorAll('a[href*=".php"]');
+        for (var i = 0; i < links.length; i++) {
+            var h = links[i].getAttribute('href');
+            if (h && h.indexOf('http') !== 0) {
+                links[i].setAttribute('href', normHref(h));
+            }
+        }
+    }
+
     function applySiteData(data) {
         if (!data) return;
         var s = data.settings || {};
@@ -185,7 +212,7 @@
         if (marquee && Array.isArray(data.announcements) && data.announcements.length > 0) {
             var pills = data.announcements.map(function (item) {
                 return (
-                    '<a class="ticker-item-pill" href="' + esc(item.link || 'events.php') + '">' +
+                    '<a class="ticker-item-pill" href="' + esc(normHref(item.link || 'events.php')) + '">' +
                     '  <span class="ticker-chip-tag">UPDATE</span>' +
                     '  <span>' + esc(item.title) + '</span>' +
                     '  <i class="fa fa-arrow-right small text-info"></i>' +
@@ -216,7 +243,7 @@
                     '      <div class="programme-desc-box">' + esc(c.description) + '</div>' +
                     '      <div class="programme-card-footer">' +
                     '        <span class="programme-level-tag"><i class="fa fa-graduation-cap"></i> ' + levelLabel + '</span>' +
-                    '        <a class="programme-cta-btn" href="' + esc(c.link || 'academics.php') + '"><span>Explore</span> <i class="fa fa-arrow-right"></i></a>' +
+                    '        <a class="programme-cta-btn" href="' + esc(normHref(c.link || 'academics.php')) + '"><span>Explore</span> <i class="fa fa-arrow-right"></i></a>' +
                     '      </div>' +
                     '    </div>' +
                     '  </div>' +
@@ -286,7 +313,7 @@
         var eventsGrid = document.getElementById('events-grid');
         if (eventsGrid && Array.isArray(data.events)) {
             eventsGrid.innerHTML = data.events.map(function (ev) {
-                var href = (ev.link && ev.link !== '#') ? esc(ev.link) : 'news.php';
+                var href = (ev.link && ev.link !== '#') ? esc(normHref(ev.link)) : normHref('news.php');
                 return (
                     '<div class="col-md-6 col-lg-4">' +
                     '  <div class="programme-bento-card">' +
@@ -468,7 +495,19 @@
                 );
             }).join('');
         }
+        rewriteStaticLinks(document);
     }
+
+    // Intercept clicks on any dynamically rendered .php links on static hosts
+    document.addEventListener('click', function (e) {
+        if (!isStaticHost) return;
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (href && href.indexOf('http') !== 0 && href.indexOf('.php') !== -1) {
+            a.setAttribute('href', normHref(href));
+        }
+    }, true);
 
     // Render synchronously if preloaded inline by server.py, otherwise fetch
     if (window.__SHIPTECH_DATA__) {
