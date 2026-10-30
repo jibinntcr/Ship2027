@@ -1,0 +1,451 @@
+[
+  {
+    "order": 1,
+    "album_id": 1,
+    "title": "Department Video",
+    "category": "Video",
+    "cover": "gallery_data/images/department-video.jpg",
+    "photos": [
+      "gallery_data/images/department-video.jpg"
+    ],
+    "link": "https://www.youtube.com/watch?time_continue=12&v=ps38qzlaNEA&embeds_euri=http%3A%2F%2Flocalhost%2F&source_ve_path=MTM5MTE3LDEzOTExNw&feature=emb_logo&themeRefresh=1"
+  },
+  {
+    "order": 2,
+    "album_id": 101,
+    "title": "Welcome to Captain Manoj Kumar, OIC of the Naval Construction Wing , Southern Naval Command to the Department of Ship Technology on 29.06.2026",
+    "category": "Events",
+    "cover": "gallery_data/images/WhatsApp_Image_2026-07-01_at_17.42.53.jpeg",
+    "photos": [
+      "gallery_data/images/WhatsApp_Image_2026-07-01_at_17.42.53.jpeg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=101&slug=welcome-to-captain-manoj-kumar-oic-of-the-naval-construction-wing--southern-naval-command-to-the-department-of-ship-technology-on-29062026"
+  },
+  {
+    "order": 3,
+    "album_id": 100,
+    "title": "Visit of Netherlands Team-14 May 2026",
+    "category": "Events",
+    "cover": "gallery_data/images/IMG-20260629-WA0021.jpg",
+    "photos": [
+      "gallery_data/images/IMG-20260629-WA0021.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=100&slug=visit-of-netherlands-team-14-may-2026"
+  },
+  {
+    "order": 4,
+    "album_id": 97,
+    "title": "AICTE Student Induction Programme 2025, for First year B.Tech admissions",
+    "category": "Events",
+    "cover": "gallery_data/images/1_SIP_2025.jpeg",
+    "photos": [
+      "gallery_data/images/1_SIP_2025.jpeg",
+      "gallery_data/images/2_SIP_2025.jpeg",
+      "gallery_data/images/3_SIP_2025.jpeg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=97&slug=aicte-student-induction-programme-2025-for-first-year-btech-admissions"
+  },
+  {
+    "order": 5,
+    "album_id": 96,
+    "title": "B.Tech. 46th Batch- Achieves 100% Placement",
+    "category": "Events",
+    "cover": "gallery_data/images/46TH_BATCH.jpg",
+    "photos": [
+      "gallery_data/images/46TH_BATCH.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=96&slug=btech-46th-batch--achieves-100-placement"
+  },
+  {
+    "order": 6,
+    "album_id": 95,
+    "title": "Graduation Ceremony May 3, 2025",
+    "category": "Events",
+    "cover": "gallery_data/images/PIC_1.jpg",
+    "photos": [
+      "gallery_data/images/PIC_1.jpg",
+      "gallery_data/images/PIC_3.jpg",
+      "gallery_data/images/PIC_2.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=95&slug=graduation-ceremony-may-3-2025"
+  },
+  {
+    "order": 7,
+    "album_id": 92,
+    "title": "Golden Jubilee Celebration o 1st Batch- 07 Jan 2025",
+    "category": "Events",
+    "cover": "gallery_data/images/IMG-20250109-WA0004.jpg",
+    "photos": [
+      "gallery_data/images/IMG-20250109-WA0004.jpg",
+      "gallery_data/images/p1.jpg",
+      "gallery_data/images/p2.jpg",
+      "gallery_data/images/p3.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=92&slug=golden-jubilee-celebration-o-1st-batch--07-jan-2025"
+  },
+  {
+    "order": 8,
+    "album_id": 90,
+    "title": "PTA General Body Meeting 19-10-2024",
+    "category": "Events",
+    "cover": "gallery_data/images/IMG-20241020-WA0005.jpg",
+    "photos": [
+      "gallery_data/images/IMG-20241020-WA0005.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=90&slug=pta-general-body-meeting-19-10-2024"
+  },
+  {
+    "order": 9,
+    "album_id": 80,
+    "title": "Visit of the Team from University of Ruhuna, Sri Lanka",
+    "category": "Events",
+    "cover": "gallery_data/images/photo1.jpg",
+    "photos": [
+      "gallery_data/images/photo1.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=80&slug=visit-of-the-team-from-university-of-ruhuna-sri-lanka"
+  },
+  {
+    "order": 10,
+    "album_id": 79,
+    "title": "M.Tech. (CASAD) Alumni Meet -7th Oct 2023",
+    "category": "Events",
+    "cover": "gallery_data/images/Alumni.jpg",
+    "photos": [
+      "gallery_data/images/Alumni.jpg",
+      "gallery_data/images/ALUMNI_MEET_page-0001.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=79&slug=mtech-casad-alumni-meet--7th-oct-2023"
+  },
+  {
+    "order": 11,
+    "album_id": 77,
+    "title": "DOSTAS ONAM CELEBRATION 2023",
+    "category": "Events",
+    "cover": "gallery_data/images/ONAM.jpg",
+    "photos": [
+      "gallery_data/images/ONAM.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=77&slug=dostas-onam-celebration-2023"
+  },
+  {
+    "order": 12,
+    "album_id": 76,
+    "title": "PTA GENERAL BODY MEETING (16-09-2023)",
+    "category": "Events",
+    "cover": "gallery_data/images/PTA.jpg",
+    "photos": [
+      "gallery_data/images/PTA.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=76&slug=pta-general-body-meeting-16-09-2023"
+  },
+  {
+    "order": 13,
+    "album_id": 75,
+    "title": "Inauguration of B.Tech. NA&SB 48th Batch- 16-08-2023",
+    "category": "Events",
+    "cover": "gallery_data/images/inauguration_of_48th_batch.jpg",
+    "photos": [
+      "gallery_data/images/inauguration_of_48th_batch.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=75&slug=inauguration-of-btech-nasb-48th-batch--16-08-2023"
+  },
+  {
+    "order": 14,
+    "album_id": 74,
+    "title": "Visit of HE Dr. Saeed Hamad Al- Rubaie ,Vice Chancellor , University of Technology & Applied Sciences, Oman-16-8-2023",
+    "category": "Events",
+    "cover": "gallery_data/images/Visit_2.jpg",
+    "photos": [
+      "gallery_data/images/Visit_2.jpg",
+      "gallery_data/images/Visit_1.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=74&slug=visit-of-he-dr-saeed-hamad-al--rubaie-vice-chancellor--university-of-technology--applied-sciences-oman-16-8-2023"
+  },
+  {
+    "order": 15,
+    "album_id": 72,
+    "title": "Fresher’s Day – 28th batch of Computer Aided Structural Analysis and Design",
+    "category": "Events",
+    "cover": "gallery_data/images/Image_1.jpeg",
+    "photos": [
+      "gallery_data/images/Image_1.jpeg",
+      "gallery_data/images/Image_7.jpeg",
+      "gallery_data/images/Image_6.jpg",
+      "gallery_data/images/Image_5.jpeg",
+      "gallery_data/images/Image_4.jpeg",
+      "gallery_data/images/Image_2.jpg",
+      "gallery_data/images/Image_8.jpg",
+      "gallery_data/images/Image_3.jpeg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=72&slug=freshers-day--28th-batch-of-computer-aided-structural-analysis-and-design"
+  },
+  {
+    "order": 16,
+    "album_id": 71,
+    "title": "Visit of Cmde Sritanu Guru, CMD(Trg), HQSNC",
+    "category": "Events",
+    "cover": "gallery_data/images/VISIT_OF_CMDE.jpg",
+    "photos": [
+      "gallery_data/images/VISIT_OF_CMDE.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=71&slug=visit-of-cmde-sritanu-guru-cmdtrg-hqsnc"
+  },
+  {
+    "order": 17,
+    "album_id": 70,
+    "title": "DRDO Award Presentation to Dr. P. Krishnankutty",
+    "category": "Events",
+    "cover": "gallery_data/images/AWARD_function.jpg",
+    "photos": [
+      "gallery_data/images/AWARD_function.jpg",
+      "gallery_data/images/AWARD_picture.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=70&slug=drdo-award-presentation-to-dr-p-krishnankutty"
+  },
+  {
+    "order": 18,
+    "album_id": 69,
+    "title": "FAREWELL",
+    "category": "Events",
+    "cover": "gallery_data/images/farewell_to_44th_batch_NA_SB.jpg",
+    "photos": [
+      "gallery_data/images/farewell_to_44th_batch_NA_SB.jpg",
+      "gallery_data/images/Passing_out_of_NAVY__students_from_44th_batch.jpg",
+      "gallery_data/images/Farewell_to_M.Tech__CASAD__2021-23_batch.jpg"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=69&slug=farewell"
+  },
+  {
+    "order": 19,
+    "album_id": 65,
+    "title": "RINA Student Award Function",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__78_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__78_.png",
+      "gallery_data/images/Untitled_design__79_.png",
+      "gallery_data/images/Untitled_design__80_.png",
+      "gallery_data/images/Untitled_design__81_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=65&slug=rina-student-award-function"
+  },
+  {
+    "order": 20,
+    "album_id": 64,
+    "title": "Silver Jubilee- B.Tech. 17th Batch",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__74_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__74_.png",
+      "gallery_data/images/Untitled_design__73_.png",
+      "gallery_data/images/Untitled_design__75_.png",
+      "gallery_data/images/Untitled_design__76_.png",
+      "gallery_data/images/Untitled_design__77_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=64&slug=silver-jubilee--btech-17th-batch"
+  },
+  {
+    "order": 21,
+    "album_id": 63,
+    "title": "Class NK Award 2022",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__71_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__71_.png",
+      "gallery_data/images/Untitled_design__72_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=63&slug=class-nk-award-2022"
+  },
+  {
+    "order": 22,
+    "album_id": 62,
+    "title": "Alumni Get-Together",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__70_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__70_.png",
+      "gallery_data/images/Untitled_design__65_.png",
+      "gallery_data/images/Untitled_design__66_.png",
+      "gallery_data/images/Untitled_design__67_.png",
+      "gallery_data/images/Untitled_design__68_.png",
+      "gallery_data/images/Untitled_design__69_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=62&slug=alumni-get-together"
+  },
+  {
+    "order": 23,
+    "album_id": 61,
+    "title": "MoU with CSL Renewal Ceremony",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__62_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__62_.png",
+      "gallery_data/images/Untitled_design__63_.png",
+      "gallery_data/images/Untitled_design__64_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=61&slug=mou-with-csl-renewal-ceremony"
+  },
+  {
+    "order": 24,
+    "album_id": 60,
+    "title": "3 Day National Workshop on “Green Hydrogen Pathways To Sustainable Future”",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__57_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__57_.png",
+      "gallery_data/images/Untitled_design__58_.png",
+      "gallery_data/images/Untitled_design__59_.png",
+      "gallery_data/images/Untitled_design__60_.png",
+      "gallery_data/images/Untitled_design__61_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=60&slug=3-day-national-workshop-on-green-hydrogen-pathways-to-sustainable-future"
+  },
+  {
+    "order": 25,
+    "album_id": 59,
+    "title": "Student Induction Programme 2022",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__54_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__54_.png",
+      "gallery_data/images/Untitled_design__51_.png",
+      "gallery_data/images/Untitled_design__52_.png",
+      "gallery_data/images/Untitled_design__53_.png",
+      "gallery_data/images/Untitled_design__55_.png",
+      "gallery_data/images/Untitled_design__56_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=59&slug=student-induction-programme-2022"
+  },
+  {
+    "order": 26,
+    "album_id": 58,
+    "title": "Visit to INS VIKRANT",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__17_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__17_.png",
+      "gallery_data/images/Untitled_design__18_.png",
+      "gallery_data/images/Untitled_design__19_.png",
+      "gallery_data/images/Untitled_design__20_.png",
+      "gallery_data/images/Untitled_design__21_.png",
+      "gallery_data/images/Untitled_design__22_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=58&slug=visit-to-ins-vikrant"
+  },
+  {
+    "order": 27,
+    "album_id": 57,
+    "title": "Visit of Russian Ambassador",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__27_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__27_.png",
+      "gallery_data/images/Untitled_design__28_.png",
+      "gallery_data/images/Untitled_design__29_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=57&slug=visit-of-russian-ambassador"
+  },
+  {
+    "order": 28,
+    "album_id": 56,
+    "title": "Visit of RINA CEO",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__30_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__30_.png",
+      "gallery_data/images/Untitled_design__31_.png",
+      "gallery_data/images/Untitled_design__32_.png",
+      "gallery_data/images/Untitled_design__33_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=56&slug=visit-of-rina-ceo"
+  },
+  {
+    "order": 29,
+    "album_id": 55,
+    "title": "NSTL VISIT",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__34_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__34_.png",
+      "gallery_data/images/Untitled_design__35_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=55&slug=nstl-visit"
+  },
+  {
+    "order": 30,
+    "album_id": 54,
+    "title": "SNAS NITE 2022",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__87_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__87_.png",
+      "gallery_data/images/Untitled_design__83_.png",
+      "gallery_data/images/Untitled_design__84_.png",
+      "gallery_data/images/Untitled_design__85_.png",
+      "gallery_data/images/Untitled_design__86_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=54&slug=snas-nite-2022"
+  },
+  {
+    "order": 31,
+    "album_id": 52,
+    "title": "Farewell to M.Tech.(CASAD) 2022 Batch",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__46_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__46_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=52&slug=farewell-to-mtechcasad-2022-batch"
+  },
+  {
+    "order": 32,
+    "album_id": 51,
+    "title": "Send Off Function of Prof. Mariamma Chacko",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__45_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__45_.png",
+      "gallery_data/images/Untitled_design__44_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=51&slug=send-off-function-of-prof-mariamma-chacko"
+  },
+  {
+    "order": 33,
+    "album_id": 50,
+    "title": "Snas Nite 2019",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__41_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__41_.png",
+      "gallery_data/images/Untitled_design__42_.png",
+      "gallery_data/images/Untitled_design__43_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=50&slug=snas-nite-2019"
+  },
+  {
+    "order": 34,
+    "album_id": 49,
+    "title": "Onam 2019",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__39_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__39_.png",
+      "gallery_data/images/Untitled_design__40_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=49&slug=onam-2019"
+  },
+  {
+    "order": 35,
+    "album_id": 48,
+    "title": "ClassNK Global Alumni Meet",
+    "category": "Events",
+    "cover": "gallery_data/images/Untitled_design__36_.png",
+    "photos": [
+      "gallery_data/images/Untitled_design__36_.png",
+      "gallery_data/images/Untitled_design__37_.png",
+      "gallery_data/images/Untitled_design__38_.png"
+    ],
+    "link": "https://shiptech.cusat.ac.in/gallery-item.php?id=48&slug=classnk-global-alumni-meet"
+  }
+]

@@ -1,0 +1,800 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Faculty | Department of Shiptechnology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./lib/icons/css/all.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/facultyDetails.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <!-- Topbar Start -->
+<div class="wrap bg-upper-nav upper-header py-2 px-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col d-flex">
+                <p class="mt-2 mb-2 d-flex">
+                <p class="mb-0 me-4 text-white"><span class="fa fa-envelope"></span>
+                    <a class="text-white" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </p>
+                <p class="mb-0 text-white"><span class="fa fa-phone-alt"></span>
+                    <a class="text-white" href=" tel:+914842575714">0484-2575714</a>
+                </p>
+                </p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="social-media">
+                    <p class="mb-0 d-flex">
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="course.php" class="dropdown-item">Courses</a>
+                    <!-- <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank"
+                        class="dropdown-item">Program Educational
+                        Objectives</a>
+                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="dropdown-item">Program
+                        Outcomes (POs)</a>
+                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="dropdown-item">Program
+                        Specific
+                        Outcomes (PSOs)</a> -->
+                    <!-- <a href="research.php" class="dropdown-item">Research</a> -->
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.php" class="dropdown-item">Faculty</a>
+                    <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
+                    <!-- <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a> -->
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="phd.php" target="_blank" class="dropdown-item">Ph.D.</a>
+                    <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
+                    <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
+                    <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Sudents</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+            <!-- <div class=" nav-item dropdown">
+                <a href="library.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank"
+                        class="dropdown-item">Department Library</a>
+
+                </div>
+            </div> -->
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="library.php" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+
+            <!-- <a href="library.php" class="nav-item nav-link">Library</a> -->
+            <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
+                    <!-- <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Committee 2022</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Form</a> -->
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+
+                </div>
+            </div>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="feature.html" class="dropdown-item">Features</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div> -->
+            <!-- <a href="contact.html" class="nav-item nav-link active">Contact Us</a> -->
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->    <!-- Navbar End -->
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Dr. A. Mathiazhagan</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page"> Dr. A. Mathiazhagan                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 px-lg-0" style="overflow:hidden;">
+        <div class="container  about py-5 px-lg-0 element">
+            <div class="row g-5 mx-lg-5">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
+                    style="min-height: 400px;">
+                    <!-- card  -->
+                    <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
+                        <img src="uploads/mathi.png" class="card-img-top img-fluid"
+                            style="border-radius: 15px;" alt="faculty image" />
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-uppercase ">
+                                Dr. A. Mathiazhagan                            </h4>
+                            <p class="card-text thick">Professor and Head of the Department</p>
+                        </div>
+                        <hr class="my-2">
+                        <div class="card-body ">
+                            <h6 class="card-title text-uppercase mb-3 ">
+                                CONTACT INFO
+                            </h6>
+                            <div class="small-text ">
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                    <div class="col-10 text-right"><a class="white col-11"
+                                            href="mailto:alagan@cusat.ac.in">alagan@cusat.ac.in</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-10 text-right">DEPT. OF SHIP TECHNOLOGY ,COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"> <i class="fa fa-address-book"></i></div>
+                                    <div class="col-10 text-right">
+                                        <a class="white col-11" href="https://iqac.cusat.ac.in/Web/profile_view/199/Prof.Dr.AMATHIAZHAGAN">CUSAT IQAC
+                                            Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+                <div class="col-lg-8 mx-lg-2 col-md-12 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h1 class="mb-5 title-color ">Dr. A. Mathiazhagan </h1>
+                    <p class="mb-5 " style="margin-right: 3%;">“Dr. A. Mathiazhagan, is a Professor in the Dept of Ship Technology, Cochin University. He was Head of the Department from Jan 17th 2019- 16th Jan 2022. He has more than sixty papers published in national and international journals/ conferences and seminar and was coordinator of the conferences and seminars organized in the Department. He has conducted one day workshop on marine corrosion and its control in 2012 at the Department of ship Technology, CUSAT-22. He has given invited technical talks on Corrosion and its Control for ISTE Training program and seminar held in CUSAT, Kochi-22. He has attended more than twenty short-term courses in his chosen area. He completed Short Term Research Training Programmes at IIT Chennai and NIT, Trichy. He has disseminated the corrosion awareness to students of various engineering field and industrial people and inculcated the corrosiono management practices to people working in ship building and offshore industry. he is a member of various academic bodies including BIS, India."                    </p>
+                    <i class="fa-solid fa-book-open-readertext-primary fa-3x"></i>
+                    <div>
+                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="mb-5">Field Of Special Interest</h2>
+                            <div class="d-flex flex-wrap ">
+
+
+                                <!-- SPECIAL INTEREST 1 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Materials Technology and Corrosion Engg</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 1 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Welding Technology</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 2 END -->
+
+                                <!-- SPECIAL INTEREST 3 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Composite Technology</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 3 END -->
+
+                                <!-- SPECIAL INTEREST 4  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Sustainable Materials</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 4 END -->
+
+                                <!-- SPECIAL INTEREST 5  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Bio Inspired Materials</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 5 END -->
+
+                                <!-- SPECIAL INTEREST 6  START -->
+                                                                <!-- SPECIAL INTEREST 6 END -->
+
+                                <!-- SPECIAL INTEREST 7  START -->
+                                                                <!-- SPECIAL INTEREST 7 END -->
+
+                                <!-- SPECIAL INTEREST 8  START -->
+                                                                <!-- SPECIAL INTEREST 8 END -->
+
+                                <!-- SPECIAL INTEREST 9  START -->
+                                                                <!-- SPECIAL INTEREST 9 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <!-- SPECIAL INTEREST 10 END -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Experience</h2>
+            <div class="d-flex flex-wrap ">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Teaching and Research</h5>
+                        <p class="mb-0">29 YEARS</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2   START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Administration</h5>
+                        <p class="mb-0">3 years as Head of the Department(2019-2022)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+                <!-- EXPERIENCE 6  START -->
+                                <!-- EXPERIENCE 6  END -->
+
+                <!-- EXPERIENCE 7  START -->
+                                <!-- EXPERIENCE 7  END -->
+
+                <!-- EXPERIENCE 8  START -->
+                                <!-- EXPERIENCE 8  END -->
+
+                <!-- EXPERIENCE 9  START -->
+                                <!-- EXPERIENCE 9  END -->
+
+                <!-- EXPERIENCE 10  START -->
+                                <!-- EXPERIENCE 10  END -->
+
+
+            </div>
+        </div>
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-wrap justify-para">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>M.Sc Applied Science</h5>
+                        <p class="mb-0">Anna University, CEG, Chennai(1992)</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>M.E Materials Science and Engg(1994)</h5>
+                        <p class="mb-0">NIT, Trichy (Formerly REC Trichy)</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>PhD Materials Technology and corrosion Engg(2011)</h5>
+                        <p class="mb-0">Cochin University of Science and Technology,Kochi-22</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS START -->
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Publications
+            </h2>
+            <p class="mb-5"><p><strong><em>List of Publications Journals:</em></strong></p>
+
+<ol>
+	<li>Mathiazhagan, A., &ldquo;Marine fouling on submerged Structure&rdquo;, Journal of Ships Technic, Vol XIII, pp 75-<br />
+	78, Jan (1997).</li>
+	<li>Mathiazhagan, A., &ldquo;Cathodic protection for corrosion control of ships and other offshore structure<br />
+	in seawater&rdquo;, Journal of Ships Technic, Vol. XIV, pp. 85-89 (1998).</li>
+	<li>Mathiazhagan, A., &ldquo;Thermal spray coating for repair of ship propeller&rdquo;, Journal of Ships Technic,<br />
+	Vol-xx, pp. 101-110 (2004).</li>
+	<li>Mathiazhagan, A., &ldquo;Mathematical Modeling of Cathodic Protection for Ship Hull &rdquo;, Journal of<br />
+	Ship Technology, Vol.4, No.1, pp.56-60, Jan (2008).</li>
+	<li>Mathiazhagan, A., Rani Joseph, Narayanan, K.P., &ldquo;Corrosion Behaviour of brass in Vembanad<br />
+	Estuary&rdquo;,<br />
+	Journal of Marine Science and Technology, Vol. 18, No. 5, pp. 719-722 (2010) .</li>
+	<li>Mathiazhagan, A., Rani Joseph, Narayanan, K.P., &ldquo;Dezincification of brass in Cochin Estuary, India&rdquo;,<br />
+	Journal of Ship Technology, Vol.6, No.1, pp.36-48, (2010)</li>
+	<li>Mathiazhagan, A., Rani Joseph, Narayanan, K.P., &ldquo;Dezincification of Epoxy coated brass in Cochin<br />
+	Estuary, India&rdquo;, International Journal of Chemical Engineering and application, Vol.6, No.1, pp.36-<br />
+	48,(2010)</li>
+	<li>Mathiazhagan, A., Rani Joseph, &ldquo;Nanotechnology &ndash;New Prospective in polymer coating &ndash;Review&rdquo;<br />
+	International Journal of Chemical Engineering and Applications, Vol. 2 , No. 4 , August (2011)</li>
+	<li>Mathiazhagan, A.,&ndash; Design and Programming of Cathodic Protection for Ships&rdquo;, International<br />
+	Journal of Chemical Engineering and Applications, Vol. 1, No. 3, October (2010)</li>
+	<li>Satheesh Babu P.K, Dr A Mathiazhagan, Dr C.G. Nandakumar, Corrosion Health Monitoring<br />
+	System for Steel Ship Structures, International Journal of Environmental Science and Development,<br />
+	Vol. 5, No. 5, October (2014).</li>
+	<li>Satheesh Babu P.K, Dr A Mathiazhagan, Integrated Corrosion Protection System for Ship<br />
+	Structures, International Journal of Design and Manufacturing Technology, pp.29-34,Vol. 5, Issue No.<br />
+	3, December, (2014)</li>
+	<li>Neena George , A.Mathiazhagan, Julie Chandra C.S., Rani Joseph, &ldquo;High performance natural<br />
+	rubber composites with conductive segregated network of multiwalled carbon nanotubes&rdquo;, Journal of<br />
+	Composite Science and Technology,pp.33-40,Vol.116,8, (2015).</li>
+	<li>Sindhu Radhakrishnan1, A.Mathiazhagan and G. Annadurai, &ldquo;Achyranthes Aspera: A<br />
+	Potent<br />
+	Immunostimulating Plant for Herbal Formulation and Management of Wounds&rdquo;, European Journal of<br />
+	Biomedical AND Pharmaceutical sciences, Vol. 2 Issue. 4, pp 730-742, (2015)</li>
+	<li>J.Uthaya Chandirika1, P.Seetha Lakshmi, A.Mathiazhagan, G. Annadurai,&rdquo;Design and<br />
+	Development of Chitosan Nanoparticle in Target Novel Drug Delivery Systems for Urolithiasis&rdquo;,<br />
+	European Journal of Biomedical and Pharmaceutical sciences, Vol. 2 Issue. 4, pp. 528-537, (2015)</li>
+	<li>M. Revathy, A.Mathiazhagan and G. Annadurai, Biosynthesis, Characterization and Antibacterial<br />
+	Activity of Silver Nanoparticles using the Lichen Parmotrema Perlatum, European Journal of Biomedical<br />
+	and Pharmaceutical sciences, Vol. 2 Issue. 4, pp. 348-361 (2015).</li>
+	<li>Neena George, A. Mathiazhagan and Rani Joseph &ldquo;Natural rubber nanocomposites based on<br />
+	multiwalled carbon nanotube/nanosilica hybrid&rsquo;. Plastics and Rubber Srilanka 15,20-23,(2016).</li>
+	<li>Neena George , Bipinbal P. K., Bhavya Bhadran, A.Mathiazhagan, Rani Joseph, Segregated<br />
+	network<br />
+	formation of multiwalled carbon nanotubes in natural rubber through surfactant assisted latex<br />
+	compounding: A novel technique for multifunctional properties , Journal of Polymer , 264-277,112<br />
+	(2017)</li>
+	<li>Dhanya Vijayan., A. Mathiazhagan, and Rani Joseph, &ldquo; Aluminium trihydroxide: Novel reinforcing<br />
+	filler in Polychloroprene rubber&rdquo; Journal of Polymer 132 , 143-156 (2017)</li>
+	<li>Neena George, B. Venugopal , Honey John, A. Mathiazhagan, Rani Joseph, Nanosilica decorated<br />
+	multiwalled carbon nanotubes (CS hybrids) in natural rubber latex, Journal of Polymer 161<br />
+	170&ndash;180(2019)</li>
+	<li>Neena George, Honey John, A. Mathiazhagan, and Rani Joseph, &ldquo;Dielectric property<br />
+	enhancement by nanosilica decorated multiwalled carbon nanotubes in natural rubber&rdquo;. Composites<br />
+	Science and Technology (Under review)</li>
+	<li>Krishnaprasad.s, A.Mathiazhagan, Krishnadas P.S &quot;Effect of manual and automatic Activated<br />
+	Tungsten Inert Gas welding using single component fluxes on stainless steel AISI-304&quot; in the Journal of<br />
+	Ship Production and Design(SNAME) ,pp 1-9 (2019).</li>
+	<li>Binsu Sukumaran , Dr. Nubesh Khan , Dr. Moataz M Barakat , Rebecca Ann Abraham , Dr. K.<br />
+	Chandrasekharan Nair , Dr. A. Mathiazhagan &ldquo;Effects of dental implant corrosion- A Review&rdquo;,<br />
+	European Journal of Molecular &amp; Clinical Medicine, ISSN 2515-8260, Volume 07, Issue 07, 2020.</li>
+	<li>S., Krishna Prasad, Mathiazhagan, A. Underwater Welding: A Review Paper. Indian Welding<br />
+	Journal . Vol. 54 Issue 1, pp 56-63, Jan (2021).</li>
+	<li>Elias George., A.Mathaizhagan, Evaluation of Reaction Kinetics and Properties of Epoxy<br />
+	Resin with Two Hardeners, International Journal of Science and Research, Vol. 10,Issue 5, pp. 256-<br />
+	261,May 2021.</li>
+	<li>Elias George., , Bhagyesh V Bhaskaran, A.Mathaizhagan, Modification of Epoxy coatings by<br />
+	conducting polymers for improved corrosion protection of Mild Steel, International Journal of Recent<br />
+	Research and Applied Studies, Volume 8, Issue 4(20),pp.122-126, April (2021).</li>
+	<li>Bhagyesh V Bhaskaran., Rani Joshep, A.Mathaizhagan, Elias George., Unsaturated polyester<br />
+	resin reinforced reduced graphene oxide composite for anti-corrosive applications, International Journal<br />
+	of Research and Analytical Reviews, Volume 6, Issue 2, pp.829-836, April (2019).</li>
+	<li>Elias George., A.Mathaizhagan, Evaluation of Reaction Kinetics and Properties of Epoxy<br />
+	Resin with Two Hardeners, International Journal of Science and Research, Vol. 10,Issue 5, pp. 256-<br />
+	261,May (2021).</li>
+	<li>Elias George., Bhagyesh V Bhaskaran, A.Mathaizhagan, Modification of Epoxy coatings by<br />
+	conducting polymers for improved corrosion protection of Mild Steel, International Journal of Recent<br />
+	Research and Applied Studies, Volume 8, Issue 4(20),pp.122-126, April (2021).</li>
+	<li>Krishna Prasad. S, A. Mathiazhagan, Krishnadas. P S.Effect of Manual Flux Bounded TIG<br />
+	Welding on Austenitic stainless steel AISI 304 and its comparison with Automated Flux Bounded TIG<br />
+	Welding, Indian Welding Journal, Volume 54, No. 3, pp.59-77, July (2021) .</li>
+	<li>G. Neena, S. R. Amrutha, J. Rani, P. M. Jose , A. Mathiazhagan, Nano-silica as reinforcing<br />
+	filler in NR latex: Role of processing method on filler morphology inside the rubber and properties of the<br />
+	nanocomposite, eXPRESS Polymer Letters Vol.15, No.11 1101&ndash;1112,(2021)</li>
+	<li>Vysakh Kadayath Bijukumar, Andy Mathiazhagan, Pallichakkalayil Sasidharan Krishnaprasad, &ldquo;A<br />
+	Systematic overview on Activated Tungsten Inert Gas Welding&rdquo;, Journal of International welding<br />
+	(Taylor&amp; Francis) Vol.36, No.9, pp1-17, Nov 2022</li>
+</ol>
+
+<p><strong><em>List of Publications in Conferences:</em></strong></p>
+
+<ol>
+	<li>Mathiazhagan, A., Somasundara Nair, E.M., &ldquo;Glass reinforced plastics for marine application and<br />
+	maintenance&rdquo;, National Symposium, J-1, Southern Naval Command, Kochi, 20th Jan (1995).</li>
+	<li>Mathiazhagan, A., Sivaprasad, K., &ldquo;Condition monitoring of ships hull for corrosion&rdquo;, National Congress<br />
+	on corrosion control, NCCI&amp;CECRI, Kochi, pp.6.1- 69, Sep 9- 11(1998).</li>
+	<li>Mathiazhagan, A., Sunil Kumar, P.G., &ldquo;Thermal spray coating for repair of shafts&rdquo; National Congress<br />
+	on corrosion control, Sep-20-22, NCCI/CECRI, vizak (2004)</li>
+	<li>Mathiazhagan, A., Rani Joseph, &ldquo;Zinc powder filled coatings for corrosion protection&rdquo;, International<br />
+	Conference on advances in polymer Technology (APT-08), pp.86, CUSAT, Kochi, Kerela, India (2008)</li>
+	<li>Mathiazhagan, A., Rani Joseph, Narayanan, K.P., &ldquo;Biofouling and Corrosion of brass in Cochin<br />
+	Estuary&rdquo;, National Congress on corrosion assessment and its control, Dec -21-22, NCCI/CECRI, karaikudi<br />
+	and TCE, Madurai (2009)</li>
+	<li>Mathiazhagan,A., &ldquo;Corrosion Management for Effective Mitigation of Corrosion in &nbsp;&nbsp;&nbsp;Ships &ndash;Overview&rdquo;International conference on Management Technology and Applications held at Singapore, Sep-10-12, IACSIT, Singapore (2010).</li>
+	<li>Mathazhagan.A, &ldquo;Corrosion Control&rdquo; ISTE-Short Term Training Programme on Modern Materials<br />
+	and Methods in Engg, 02-12,May,CUSAT-Kochi-22(2011).</li>
+	<li>Bhagyesh V B, Rani Joseph, A. Mathiazhagan &ldquo;Anticorrosive coating performance of reduced<br />
+	graphene oxide - Polyester nano composite&rdquo; National Conference on Material Science<br />
+	&amp;Technology,<br />
+	Department of Chemistry, Indian Institute of Science and Technoloogy,Thiruvanthapuram-<br />
+	695547,kerala, July 6-8, 2013.</li>
+	<li>Mathiazhagan, P.K. Satheesh Babu, &ldquo;New Horizon in ship safety and reliability-corrosion<br />
+	management approach&rdquo;,3rd Asian Symposium on Materials and Processing,30-31,August , IIT<br />
+	Chennai,India (2012).</li>
+	<li>Bhagyesh V Bhaskaran1, Mathiazhagan. A, Rani Joseph, Synthesis of reduced graphene oxide:<br />
+	An effective corrosion inhibiting coating, Proceedings of International Conference on Advances in<br />
+	Materials, Manufacturing and Applications (AMMA 2015), NIT Trichy,April 9-11, (2015).</li>
+	<li>Neena George , A.Mathiazhagan, Rani Joseph, &ldquo;Reinforcement of Natural Rubber with Multiwalled<br />
+	Carbon nanotube/Nanosilica hybrid filler, Seminar on Advanced Functional Materials,15-16-Sep, Mar<br />
+	Athanasius College, Kothamangalam,Kerala,India (2015).</li>
+	<li>A.Mathiazhagan, Impact of chemicals in antifouling paints on the life of Marine organisms,<br />
+	International Conference on Recent Advances in Engineering Science and Management,30th August,<br />
+	New Delhi,(2015).</li>
+	<li>A.Mathiazhagan, Marine Corrosion and Its Management, International Conference on<br />
+	Science,Technology and Management,27th Sep, New Delhi,(2015)</li>
+	<li>Sajitha N. R ., Kurup M. R. P, Mathiazhagan A. &ldquo;Synthesis, Characterization and Corrosion<br />
+	Inhibition of 4-benzyloxy salicylaldehyde-N(4)-methylthiosemicarbazone&rdquo; International Conference on<br />
+	Materials for the Millennium-MATCON-2016 during January 14th-16th,Cochin University of Science and<br />
+	Technology( 2016).</li>
+	<li>Bhagyesh V. B., Rani J., Mathiazhagan A. Anti-Corrosion Performance of Graphene Reinforced-<br />
+	Polyester Composite, International Conference on Materials for the Millennium-MATCON-2016 during<br />
+	January 14th-16th, Cochin University of Science and Technology( 2016).</li>
+	<li>Dennymol.P.Y., Mathiazhagan.A.,Rani Joseph, Ehanced Properties of Egg Shell Derived<br />
+	Nanohyroxyapatite Reinforced High Density polyethylene Composites, International conference on<br />
+	Advances in Mathematics, Materials Science,and Nano Technology for Engineering and Industrial<br />
+	Application, at Federal Institute of Science and Technology, Angamaly January, 7-9, (2016).</li>
+	<li>Bhagyesh V B, Rani Joseph, A. Mathiazhagan &ldquo;Ethylene diamine reduced graphene<br />
+	oxide:<br />
+	Preparation and Anticorrosion effect on polyester resin&rdquo;. International Conference on Advance in<br />
+	Polymer<br />
+	Technology [APT-16]. Department of Polymer Science &amp; Rubber Technology, CUSAT, Kochi-<br />
+	22,February 25-26, 2016.</li>
+	<li>Dennymol.P.Y., Mathiazhagan.A.,Rani Joseph, Mechanical and Thermal Properties of High<br />
+	Density Polyethelene-Exfoliated Graphite Composites, UGC Sponsored National Seminar<br />
+	Proceeding&rdquo;Modern<br />
+	Trends in Chemistry at Sree Kerala VARMA College,Trichur, Kerala , 7-9,( 2016).</li>
+	<li>Dhanya Vijayan., Mathiazhagan, A., Rani Joseph, &ldquo;Effects of Nano Aluminium Hydroxide in<br />
+	Flurocarbaon Rubber Composites&rdquo;, International Conference on advances in polymer Technology<br />
+	Feb.25-26, 2016 (APT-2016) CUSAT, Kochi, Kerala, India (2016).</li>
+	<li>Dhanya Vijayan., Mathiazhagan, A., Rani Joseph, &ldquo; Mechanical and Thermal studies of<br />
+	Nitrile<br />
+	Rubber/Aluminium Hydroxide Nanocomposites&rdquo;, International Symposium on New Trends in Applied<br />
+	Chemistry, Feb.09-11, 2017 (NTAC-2017) , Sared Heart College,Thevara, Kochi, Kerala, India (2017).</li>
+	<li>Bhagyesh V B, Rani Joseph, A. Mathiazhagan &ldquo;Reduced graphene oxide decorated with halloysite<br />
+	nanotube hybrid composite preparation and its application&rdquo;, 26 th Swedeshi Science Congress.<br />
+	Swedeshi Science Movement, Kerala ,kochi18,November 7-9, (2016).</li>
+	<li>Dhanya Vijayan., Mathiazhagan, A., Rani Joseph, &ldquo; Use of Aluminium Hydroxide as Reinforced<br />
+	Filler in Viton&rdquo;, India Rubber Industry Forum 2016, Dec.05-06, 2016, at Capitol Hotel, Bangalore ,<br />
+	India (2017).</li>
+	<li>Dhanya Vijayan., Mathiazhagan, A., Rani Joseph, &ldquo; Preparation and Comparison of Fluorocarbon<br />
+	Rubber Composites based on Aluminium Hydroxide and Medium Thermal Black&rdquo;, International<br />
+	Conference on Advanced Materials(SCICON-2016), Dec.19-21, 2016,Amrita Vishwa Vidyapeetham,<br />
+	Combatore , India (2016).</li>
+	<li>24. Dhanya Vijayan., Mathiazhagan, A., Rani Joseph, &ldquo; Sorption and Dynamic Studies of<br />
+	Viton/Aluminium<br />
+	Hydroxide Nanocomposites, 26th Swadeshi Science Cogress-National Seminar, Nov 07-09, 2016,<br />
+	Amrita Vishwa Vidyapeetham, Swedish Science Movement,Kerala Unit of Vijnana Bharathi, Kochi,<br />
+	Kerala, India (2017).</li>
+	<li>Sinai Michel, S. Packialakshmi, A. Mathiazhagan, Rajesh.P.Nair, &ldquo;Assessment of corrosion in steel<br />
+	under marine environment&rdquo; International Conference on Energy ,Environment, Materials and<br />
+	Safety(ICEEMS), 25-27,April,School of Engg,CUSAT,Kochi-22,Kerala, 2019.</li>
+	<li>Sinai Michel, S. Packialakshmi, A. Mathiyazhagan, Rajesh.P.Nair, &ldquo;Assessment of Effect of Marine<br />
+	Corrosion on Impact Energy of Mild Steel Using Experimental Method and Finite Element Method&rdquo;<br />
+	INCAM 2019 Conference, 3-5 July, IISc Bangalore, (2019).</li>
+	<li>Elias George., A.Mathaizhagan, Modification of Epoxy Resin using Nano Materials for improved<br />
+	Corrosion Resistance, NACE Conference-CORCON 23-26, ,Mumbai,India (2019).</li>
+	<li>P Jyothimol,&nbsp;R Hazeena,&nbsp;Manoj T Issac&nbsp;and&nbsp;A Mathiazhagan, &ldquo;Effect of reduced graphene oxide<br />
+	on the mechanical properties of concrete&rdquo;, IOP Conf. Series: Earth and Environmental Science : 5th<br />
+	International Conference on Modelling and Simulation in Civil Engineering, 1-8 ,491 (2020).</li>
+	<li>Vysakh Kadayath Bijukumar, Andy Mathiazhagan, Pallichakkalayil Sasidharan Krishnaprasad, &ldquo;A<br />
+	Review on Activated Tungsten Inert Gas Welding Technique&rdquo; National Seminar on Welding Science<br />
+	and Technology -NSWEST-2021, Organised by IIM, Chennai Chapter, 23-24 July (2021)</li>
+	<li>Krishnaprasad.S, Mathiazhagan.A.,HariKrishnan. R, &ldquo;Experimental validation and comparative<br />
+	study of activated tungsten inert gas welding on Marine grade aluminium alloy,&rdquo; International<br />
+	Conference on advances in Naval and ocean Engineering, iCANOE&rsquo; 21 ,DST,CUSAT, 19-20<br />
+	November(2021)</li>
+	<li>Krishna Prasad. S, . Mathiazhagan, A, Nikhil S.Nair, &ldquo;Effect of Manual Flux Bounded A-TIG<br />
+	Welding on using single component fluxes on Marine grade Stainless Steel&rdquo; International Conference<br />
+	on advances in Naval and ocean Engineering, iCANOE&rsquo; 21 ,DST,CUSAT, 19-20 November(2021)</li>
+	<li>Jishnu Menon,A., Ramesh Kumar.V., Mathiazhagan.A., Reji John, &ldquo;Galvanic corrosion of Marine<br />
+	alloys with CFRP composites&rdquo; International Conference on advances in Naval and ocean Engineering,<br />
+	iCANOE&rsquo; 21 ,DST,CUSAT, 19-20 November(2021)</li>
+	<li>P.A.Akram, Beena Mary John, Teresa Siby Madathil, Prakasan, A.Mathiazhagan, P.S.Tide,<br />
+	D.D.Ebenezer &ldquo;Numerical Model of a Multi Layer Shock and Vibration Isolator&rdquo; Oceans &lsquo;22, Research<br />
+	Park Organised by IIT, Madras&amp;NIOT Chennai, Feb 21-24 (2022)</li>
+</ol>
+
+<p>&nbsp;</p>
+            </p>
+        </div>
+        
+        <!-- PUBLICATIONS END  -->
+
+
+        <!-- FUNDED PROJECTS START -->
+
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Funded Projects
+            </h2>
+            <table class="table table-bordered table-hover">
+                <thead class="bg-primary text-white">
+                    <tr class="text-center">
+                        <th scope="col">Role</th>
+                        <th scope="col">Project</th>
+                        <th scope="col">Funding Agency</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- FUNDED PROJECT 1 START -->
+                                        <tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Development and Modeling of Cathodic protection system for ship</td>
+                        <td>UGC grant -two years</td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 1 END -->
+
+                    <!-- FUNDED PROJECT 2 START -->
+                                        <tr>
+                        <td>-</td>
+                        <td>Failure Analysis of boilers components and infrastructures</td>
+                        <td>Consultancy</td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 2 END -->
+
+                    <!-- FUNDED PROJECT 3 START -->
+                                        <!-- FUNDED PROJECT 3 END -->
+
+                    <!-- FUNDED PROJECT 4 START -->
+                                        <!-- FUNDED PROJECT 4 END -->
+
+                    <!-- FUNDED PROJECT 5 START -->
+                                        <!-- FUNDED PROJECT 5 END -->
+
+                    <!-- FUNDED PROJECT 6 START -->
+                                        <!-- FUNDED PROJECT 6 END -->
+
+                    <!-- FUNDED PROJECT 7 START -->
+                                        <!-- FUNDED PROJECT 7 END -->
+
+                    <!-- FUNDED PROJECT 8 START -->
+                                        <!-- FUNDED PROJECT 8 END -->
+
+                    <!-- FUNDED PROJECT 9 START -->
+                                        <!-- FUNDED PROJECT 9 END -->
+
+                    <!-- FUNDED PROJECT 10 START -->
+                                        <!-- FUNDED PROJECT 10 END -->
+
+
+                </tbody>
+            </table>
+                    </div>
+        
+        <!-- FUNDED PROJECTS END -->
+
+
+        <!-- OTHER DETAILS START -->
+        
+        <!-- OTHER DETAILS END  -->
+    </div>
+    
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 ">
+                <h4 class="text-light mb-4">Address</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Department of Ship Technology,<br>
+                    Cochin University of Science and Technology,<br>
+                    Cochin-22, Kerala, India
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-484 257-5714</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
+                <div class="d-flex pt-2">
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
+                            class="fab fa-linkedin-in"></i></a> -->
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="course.php">Courses</a>
+                <a class="btn btn-link" href="news-home.php">News</a>
+                <a class="btn btn-link" href="events-home.php">Events</a>
+                <a class="btn btn-link" href="gallery.php">Gallery</a>
+                <!-- <a class="btn btn-link" href="#">Connect</a> -->
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row pt-2">
+                    <iframe class="row" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- Footer End -->    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

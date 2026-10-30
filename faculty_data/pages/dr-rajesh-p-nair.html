@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Faculty | Department of Shiptechnology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./lib/icons/css/all.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/facultyDetails.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <!-- Topbar Start -->
+<div class="wrap bg-upper-nav upper-header py-2 px-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col d-flex">
+                <p class="mt-2 mb-2 d-flex">
+                <p class="mb-0 me-4 text-white"><span class="fa fa-envelope"></span>
+                    <a class="text-white" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </p>
+                <p class="mb-0 text-white"><span class="fa fa-phone-alt"></span>
+                    <a class="text-white" href=" tel:+914842575714">0484-2575714</a>
+                </p>
+                </p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="social-media">
+                    <p class="mb-0 d-flex">
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="course.php" class="dropdown-item">Courses</a>
+                    <!-- <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank"
+                        class="dropdown-item">Program Educational
+                        Objectives</a>
+                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="dropdown-item">Program
+                        Outcomes (POs)</a>
+                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="dropdown-item">Program
+                        Specific
+                        Outcomes (PSOs)</a> -->
+                    <!-- <a href="research.php" class="dropdown-item">Research</a> -->
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.php" class="dropdown-item">Faculty</a>
+                    <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
+                    <!-- <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a> -->
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="phd.php" target="_blank" class="dropdown-item">Ph.D.</a>
+                    <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
+                    <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
+                    <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Sudents</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+            <!-- <div class=" nav-item dropdown">
+                <a href="library.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank"
+                        class="dropdown-item">Department Library</a>
+
+                </div>
+            </div> -->
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="library.php" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+
+            <!-- <a href="library.php" class="nav-item nav-link">Library</a> -->
+            <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
+                    <!-- <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Committee 2022</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Form</a> -->
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+
+                </div>
+            </div>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="feature.html" class="dropdown-item">Features</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div> -->
+            <!-- <a href="contact.html" class="nav-item nav-link active">Contact Us</a> -->
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->    <!-- Navbar End -->
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Dr. Rajesh P Nair</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page"> Dr. Rajesh P Nair                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 px-lg-0" style="overflow:hidden;">
+        <div class="container  about py-5 px-lg-0 element">
+            <div class="row g-5 mx-lg-5">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
+                    style="min-height: 400px;">
+                    <!-- card  -->
+                    <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
+                        <img src="uploads/fac-2.jpg" class="card-img-top img-fluid"
+                            style="border-radius: 15px;" alt="faculty image" />
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-uppercase ">
+                                Dr. Rajesh P Nair                            </h4>
+                            <p class="card-text thick">Assistant Professor</p>
+                        </div>
+                        <hr class="my-2">
+                        <div class="card-body ">
+                            <h6 class="card-title text-uppercase mb-3 ">
+                                CONTACT INFO
+                            </h6>
+                            <div class="small-text ">
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                    <div class="col-10 text-right"><a class="white col-11"
+                                            href="mailto:rajeshpnair@cusat.ac.in">rajeshpnair@cusat.ac.in</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-10 text-right">Krishna Kripa,Pazhoor P O,Piravom,Ernakulam 686664</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"> <i class="fa fa-address-book"></i></div>
+                                    <div class="col-10 text-right">
+                                        <a class="white col-11" href="https://iqac.cusat.ac.in/Web/profile_view/27/Dr.RAJESHPNAIR">CUSAT IQAC
+                                            Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+                <div class="col-lg-8 mx-lg-2 col-md-12 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h1 class="mb-5 title-color ">Dr. Rajesh P Nair </h1>
+                    <p class="mb-5 " style="margin-right: 3%;">Working as Assistant Professor at Department of Ship Technology, CUSAT                    </p>
+                    <i class="fa-solid fa-book-open-readertext-primary fa-3x"></i>
+                    <div>
+                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="mb-5">Field Of Special Interest</h2>
+                            <div class="d-flex flex-wrap ">
+
+
+                                <!-- SPECIAL INTEREST 1 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Finite Element method</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 1 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Impact Mechanics</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 2 END -->
+
+                                <!-- SPECIAL INTEREST 3 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Blast Analysis</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 3 END -->
+
+                                <!-- SPECIAL INTEREST 4  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Dynamics of Structures </h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 4 END -->
+
+                                <!-- SPECIAL INTEREST 5  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Engineering Design</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 5 END -->
+
+                                <!-- SPECIAL INTEREST 6  START -->
+                                                                <!-- SPECIAL INTEREST 6 END -->
+
+                                <!-- SPECIAL INTEREST 7  START -->
+                                                                <!-- SPECIAL INTEREST 7 END -->
+
+                                <!-- SPECIAL INTEREST 8  START -->
+                                                                <!-- SPECIAL INTEREST 8 END -->
+
+                                <!-- SPECIAL INTEREST 9  START -->
+                                                                <!-- SPECIAL INTEREST 9 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <!-- SPECIAL INTEREST 10 END -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Experience</h2>
+            <div class="d-flex flex-wrap ">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Assistant Professor</h5>
+                        <p class="mb-0">Department of Ship Technology (Cochin University of Science and
+Technology) ( July 2015-till date)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2   START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Associate Professor </h5>
+                        <p class="mb-0">Mechanical Engineering Department (Toc H Institute of Science and
+Technology) (October 2013-July 2015)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Project Officer</h5>
+                        <p class="mb-0">IIT Madras(September 2011-October 2013)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5> Lecturer </h5>
+                        <p class="mb-0">Mechanical Engineering (Jyothi Engineering College)
+(June 2005-June 2006)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+                <!-- EXPERIENCE 6  START -->
+                                <!-- EXPERIENCE 6  END -->
+
+                <!-- EXPERIENCE 7  START -->
+                                <!-- EXPERIENCE 7  END -->
+
+                <!-- EXPERIENCE 8  START -->
+                                <!-- EXPERIENCE 8  END -->
+
+                <!-- EXPERIENCE 9  START -->
+                                <!-- EXPERIENCE 9  END -->
+
+                <!-- EXPERIENCE 10  START -->
+                                <!-- EXPERIENCE 10  END -->
+
+
+            </div>
+        </div>
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-wrap justify-para">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Ph.D.(Solid Mechanics)</h5>
+                        <p class="mb-0">Department of Applied Mechanics, IIT Madras</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>M.Tech.(CASAD)</h5>
+                        <p class="mb-0">Department of Ship Technology, CUSAT</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>B.Tech (Mechanical Engineering)</h5>
+                        <p class="mb-0">LBS College of Engineering, Kasaragod</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS START -->
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Publications
+            </h2>
+            <p class="mb-5"><h2 style="font-style:italic"><strong>Journal Papers</strong></h2>
+
+<ol>
+	<li>
+	<p>Mahesh C &amp;Rajesh P Nair,Impact analysis of sandwitch composite pates made of honeycomb and form cores,Stochastic modeling and applications,Vol 26,April 2022</p>
+	</li>
+	<li>
+	<p>Nazeer, A., Nair, R.P., Ebenezer, D.D. Numerical Analysis of a Vibration Isolator Under Shock Load. In: Tadepalli, T., Narayanamurthy, V. (eds) Recent Advances in Applied Mechanics. Lecture Notes in Mechanical Engineering. Springer, Singapore.,2022</p>
+	</li>
+	<li>
+	<p>Farhana, V.J., John, B.M., Nair, R.P. Finite Element Analysis of OGrid Lateral Bracing System. In: Tadepalli, T., Narayanamurthy, V. (eds) Recent Advances in Applied Mechanics. Lecture Notes in Mechanical Engineering. Springer, Singapore.,2022</p>
+	</li>
+	<li>
+	<p>Geethu R Babu &amp; Rajesh P Nair,Numerical analysis on offshore blast walls subjected to explosi&oacute;n,GIS science Journal, Vol 9, Jan 2022.</p>
+	</li>
+	<li>
+	<p>Mahesh C &amp; Rajesh P Nair, Numerical Study on the response of Sandwich Composite Plates with Foam Core and Different Skin Thicknesses to various impact Energy Levels, International Journal of Mechanical Engineering, Vol.6 No 1 January-June , 2021.</p>
+	</li>
+	<li>
+	<p>Renjith R &amp;Rajesh P Nair, Mechanical Properties of Bamboo, Waste Silk Fiber Composites, International Journal of Mechanical Engineering, Vol 6 No 1 January-June, 2021.</p>
+	</li>
+	<li>
+	<p>Malu Sajeev, Tusarkanta Sahoo, Rijo M Mathew , Rajesh P Nair &amp; O B Satheeshkumar,Estimation of piezo-electric transducer parameters in a dynamic fluid domain, NMIMS Engineering and Technology Review, Volume III, Issue 1, January 2021.</p>
+	</li>
+	<li>
+	<p>Stenny, Girish Babu P, S. Rajendran&amp; Rajesh P Nair ,Dynamic Load Factor Estimation of a Typical Launch Vehicle during atmospheric phase, International Research Journal of Engineering and Technology, vol7, Issue: 05, 2020</p>
+	</li>
+	<li>
+	<p>Renjith R &amp; Rajesh P Nair,Structural Analysis of NFRP Composite Boat Hull Using Finite Element Method, Journal of Offshore Structure and Technology,vol.6,Issue 1,pp 10-17,2019</p>
+	</li>
+	<li>
+	<p>Anjaly Jose, Sheeja Janardhanan, Ajith Kumar Arumugham-Achari &amp;Rajesh P Nair, Structural behavior of a wing in deformable ground effect of a seaplane,International Journal of Recent Technology and Engineering (IJRTE),Volume-8, 2019</p>
+	</li>
+	<li>
+	<p>Mahesh C &amp; Rajesh P Nair,Numerical study on the effect of impactor shape and core characteristics on the ballistic impact response of marine sandwich composite plates,International Journal of Recent Technology and Engineering,2019</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair,Alex A Earali,Igin John and Sujith K M(2015), Finite Element Simulation of ballistic Impact on thin steel plate, International Journal of Innovative Research in Science ,Engineering and Technology,4,pp.51-52</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair&amp; C Lakshmana Rao (2014), NumericalSimulation of BallisticImpactonParticulateComposite Target usingDiscreteElementMethod: 1-D and 2-D models, International Journal for Computational Methods in Engineering Science and Mechanics,15,pp.9-16</p>
+	</li>
+	<li>
+	<p>K VineetKumarReddy, Rajesh P Nair &amp; C Lakshmana Rao(2013), NumericalModeling of Response of BeamsSubjectedtoBlastLoading,&nbsp;Journal of Structural Engineering, 40, pp.85-89</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair&amp; C Lakshmana Rao(2012), Simulation of depth of penetration during ballistic impact on thick targets using a 1-D discrete element model,Sadhana,37, pp.261-279</p>
+	</li>
+	<li>
+	<p>K VineetKumarReddy, Rajesh P Nair &amp; C Lakshmana Rao(2013), NumericalModeling of Response of BeamsSubjectedtoBlastLoading, Journal of Structural Engineering, 40, pp.85-89</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair&amp; C Lakshmana Rao(2012), Simulation of depth of penetration during ballistic impact on thick targets using a 1-D discrete element model,Sadhana,37, pp.261-279</p>
+	</li>
+</ol>
+
+<h2 style="font-style:italic"><strong>Conference Papers</strong></h2>
+
+<ol>
+	<li>
+	<p>Akhil VP, Rajesh P Nair and Akram PA, Finite element analysis of crash tube subjected to impact loading,13 th International Symposium on plasticity and impact mechanics, Implast 2023,IIT Madras</p>
+	</li>
+	<li>
+	<p>&nbsp;Gibina Jamal and Rajesh P Nair, Finite element analysis of FRP boat hull under slamming load ,13th International Symposium on plasticity and impact mechanics, Implast 2023,IIT Madras</p>
+	</li>
+	<li>
+	<p>Summayya ,Beena Marry John and Rajesh P Nair, Soil structure interaction of laterally loaded piles,3rd International conference on sustainable energy solutions for a better tomorrow (SESBT2022) , July 2022, VIT Chennai.</p>
+	</li>
+	<li>
+	<p>Diya Denny and Rajesh P Nair, Buckling enhancement of metallic cylinder pressure vessel using composite stiffner, 3rd International conference on sustainable energy solutions for a better tomorrow (SESBT2022) , July 2022, VIT Chennai.</p>
+	</li>
+	<li>
+	<p>Noureen Mohamed Rafy, Junaidh M I, Rakhil Krishnan R and Rajesh P Nair, &nbsp;Finite Element Analysis and Design Verification of Test Rig Structure for the Integrated Structural Qualification of Crew Module Fairing Assembly of a Manned Mission Launch Vehicle,&nbsp; &nbsp;i-SMaRT 2022 (2nd International Conference on Sustainable materials, Manufacturing and Renewable Technologies 2022),FISAT Cochin</p>
+	</li>
+	<li>
+	<p>Renjith R and Rajesh P Nair, Thermal Analysis of Natural Fiber Reinforced Composites,&nbsp;i-SMaRT 2022 (2nd International Conference on Sustainable materials, Manufacturing and Renewable Technologies 2022),FISAT Cochin</p>
+	</li>
+	<li>
+	<p>Chitra N,A Mathiazhaghan &amp;Rajesh P Nair, Mechanical Behavior Of Nanophased Sandwich Composites Using Fem- A Review, International conference on Sustainable technology and Innovation for Industry 4.0 (icstii 2022) April 21-22, 2022, CUSAT</p>
+	</li>
+	<li>
+	<p>Mahesh C &amp; Rajesh P Nair, Impact Analysis Of Sandwich Composite Plates Made Off Honeycomb And Foam Cores, 2nd International Conference On Science, Technology and Innovation,6th Feb 2022,IARA</p>
+	</li>
+	<li>
+	<p>Ameena Nazeer ,Rajesh P Nair &amp; D. D. Ebenezer, Numerical Analysis of a Vibration Isolator Under Shock Load,Virtual seminar on applied mechanics, July 30-31,2021, Indian Society for Applied Mechanics.</p>
+	</li>
+	<li>
+	<p>V J Farhana, Beena Mary John and Rajesh P Nair , FEA of O Grid Lateral Bracing system,Virtual seminar on applied mechanics, July 30-31,2021, Indian Society for Applied Mechanics.</p>
+	</li>
+	<li>
+	<p>Jasna, Beena M.J, Rajesh P Nair, Comparative Study of Monopod and Tripod Suction Caisson Foundation For an Offshore Wind Turbine, International Conference on Structural Engineering and Construction Management, May 12-15, 2021.</p>
+	</li>
+	<li>
+	<p>Akhila K V, Anish Job Kurian, Alok B D &amp; Rajesh P Nair, Non Linear Structural Response of an Offshore Platform Under Jetfire, Indo-Korean Work on Multi-Functional Material for Extreme Loading (MFMEL 2021) organized by IIT Madras and Hangyang University , South Korea, February 23-24, 2021.</p>
+	</li>
+	<li>
+	<p>Chhun Banann &amp;Rajesh P Nair ,Numerical Simulation of Strain-rate Effect of Al Circular Tube under Dynamic Loading Applications, Indo-Korean Work on Multi-Functional Material for Extreme Loading (MFMEL 2021) organized by IIT Madras and Hangyang University , South Korea,<br />
+	February 23-24, 2021.</p>
+	</li>
+	<li>
+	<p>Karthi Jayan&amp;Rajesh P Nair, Design and analysis of bullet proof jacket under impact loading, Indo- Korean Work on Multi-Functional Material for Extreme Loading (MFMEL 2021) organized by IIT Madras and Hangyang University , South Korea, February 23-24, 2021.</p>
+	</li>
+	<li>
+	<p>Ameena Nazeer &amp; Rajesh P Nair, Design and Analysis of a Hyperelastic Viscoelastic Vibration Isolator, Indo-Korean Work on Multi-Functional Material for Extreme Loading (MFMEL 2021) organized by IIT Madras and Hangyang University , South Korea, February 23-24, 2021.</p>
+	</li>
+	<li>
+	<p>Malu Sajeev, Tusarkanta Sahoo, Rijo M Mathew , Rajesh P Nair &amp; O B Satheeshkumar, Estimation of piezo-electric transducer parameters in a dynamic fluid domain,Virtual Pre- SWAYAM Seminar on Applied Mechanics, September 5th ,2020, Indian Society for Applied Mechanics &amp;BD<br />
+	College of Engineering,Sevagram,Maharashtra.</p>
+	</li>
+	<li>
+	<p>AparnaViswanathan, Senthil Rajan S &amp; Rajesh P Nair,Creep Characterization of Twisted and Braided Nylon Ropes for Towed Sonar Applications, International Colloquium on recent trends in Engineering, March 13-14, 2020, MACE, Cochin.</p>
+	</li>
+	<li>
+	<p>Roshni V L, Vibhu P G &amp;Rajesh P Nair, Numerical Studies on Structural Components of Airborne Operator Console for Crashworthness, International Colloquium on recent trends in Engineering, March 13-14, 2020, MACE, Cochin.</p>
+	</li>
+	<li>
+	<p>Sachin sunny, Sibi George &amp; Rajesh P Nair, Design of Spreader Tool &amp; Software Interface for lifting Grand Assemblies in 300 T crane, International Colloquium on recent trends in Engineering, March 13-14, 2020, MACE, Cochin.</p>
+	</li>
+	<li>
+	<p>Sreelakshmi S K, Nishamol P A, Ajesh Kumar M, &amp; Rajesh P Nair, Analysis of 1-3 Piezoelectric Ceramic Polymer Composite Transducers,&nbsp;International Colloquium on recent trends in Engineering,&nbsp;March 13-14, 2020, MACE, Cochin.</p>
+	</li>
+	<li>
+	<p>Vivek A K, Ajith Kumar K, Rajesh P Nair, Weight Optimisation of Deep water Pressure Vessels,&nbsp;International Colloquium on recent trends in Engineering, March 13-14, 2020, MACE, Cochin.</p>
+	</li>
+	<li>
+	<p>Mahesh C &amp; Rajesh P Nair,Design of Marine Sandwich Composite Targets toResist Perforation During Ballistic Impact Analysis,National conference on current trends in polymer science,28th Feb 2020,CUSAT</p>
+	</li>
+	<li>
+	<p>Anitta Jose, Rajesh P. Nair, Sanoob.B and Jose Paul, Finite Element Analysis of Helideck Structure Subjected to Impact Load during Helicopter Landing, Indian conference on Applied Mechanics (INCAM 2019), 3rd -5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Anu Varghese, Ayyapadas P, Beena A.P and Rajesh P. Nair, Structural integrity assessment of pressure vessel using Failure AssessmentDiagram, Indian conference on Applied Mechanics (INCAM 2019), 3rd -5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Binil Benny and Rajesh P. Nair, Numerical Simulation of Buckling Load Enhancement of Thin Structures Using Smart Materials,Indian conference on Applied Mechanics (INCAM 2019), 3rd -5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Ahammad Kabeer MS, Rajesh P Nair and Narasimha D, Dynamic Analysis of offshore Jacket sub structure using FEM,Indian conference on Applied Mechanics (INCAM 2019), 3rd -5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Sinai Michel, Rajesh P Nair &amp;Mathiyazhagan A, Analysis of Impact Energy of Mild Steel Subjected to Marine Corrosion,Indian conference on Applied Mechanics (INCAM 2019), 3 rd -5 th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Suvarna Vijayan, C K Krishnadasan &amp; Rajesh P Nair,Failure Studies Of Composite -Metal Hybrid Laminates Under Three-Point Bending,INCAM 2019,3rd-5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Nidhin K &amp; Rajesh P Nair,Numerical analysis of effect of nose shape on composite plate subjected to Impact Loading,INCAM 2019,3rd-5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Mahesh C &amp; Rajesh P Nair, Ballistic impact analysis of marine sandwich composite plates using FEM,INCAM 2019,3rd-5th July 2019, IISc Bangalore.</p>
+	</li>
+	<li>
+	<p>Mahesh C &amp; Rajesh P Nair, Numerical study on the effect of impactor shape and core characteristics on the ballistic impact response of marine sandwich composite plates,International Conference on Sustainable Innovations in Civil &amp; Mechanical Engineering (ICSICM-2019), May 16 &amp; 17,2019,Mangalam college of Engineering,Kottayam,Kerala .</p>
+	</li>
+	<li>
+	<p>Anitta Jose, Dr. Rajesh P Nair, Sanoob B &amp; Jose Paul, Structural Optimisation of Helideck Structure using FEM,Third National Conference on Structural Engineering and Construction Management, May 15th and 16th, 2019,FISAT, Angamaly, Kerala</p>
+	</li>
+	<li>
+	<p>Sinai Michel, S. Packialakshmi, Mathiyazhagan A&amp; Rajesh P.Nair, Assessment of corrosion in steel under marine environment, International Conference on Energy, Environment, Materials and Safety (ICEEMS&rsquo;19),April 25 -27, 2019,CUSAT,Kerala.</p>
+	</li>
+	<li>
+	<p>Geethu R Babu &amp;Rajesh P Nair,Dynamic response of a concrete wall under blast loading, RAISE 2019, 28-29th March 2019, Toc H Insitute of Science and Technlogy,Cochin.</p>
+	</li>
+	<li>
+	<p>Renjith R &amp; Rajesh P Nair,Structural Analysis of NFRP Composite Boat Hull using Finite Element Method,1 st National Symposium on marine design and construction 2018 (SMDC 2018),28-29 th Dec 2018,IIT Madras.</p>
+	</li>
+	<li>
+	<p>Jestine J Thannickal &amp;Rajesh P Nair,Finite element analysis of a military vehicle door under impact loading, 2nd International conference on structural integrity,14-17 th Dec 2018,IIT Madras.</p>
+	</li>
+	<li>
+	<p>Rohini K, Kuldeep Sharma &amp; Rajesh P Nair,Impact assesment of concrete structures, 2 nd International conference on structural integrity,14-17 th Dec 2018,IIT Madras.</p>
+	</li>
+	<li>
+	<p>A.K.A.Achari, S.Janardhanan, R P Nair and A Jose, Numerical Investigations on the Wing- in-Deformable Ground Effect for Seaplanes, International conference on computational and experimental marine hydrodynamics,MARHY 2018,26-27th Nov 2018,IIT Madras.</p>
+	</li>
+	<li>
+	<p>Renjith&nbsp;R&amp; Rajesh P Nair,Evaluation of Mechanical Characteristics of Natural Fiber Composites, International Conference on Composite Materials and Structures,&nbsp;27-29 th Dec 2017,IITHyderabad</p>
+	</li>
+	<li>
+	<p>D. Akhil Varma, C. K. Krishnadasan &amp; Rajesh P. Nair, Failure modes of composite panelfastened joints, Advances in Bioenergy and Biomaterials and Mechanical engineering and Mechatronics,20- 21 st December,2017.&nbsp;MCET,Trivandrum</p>
+	</li>
+	<li>
+	<p>Geethika Dev &amp; Rajesh P Nair, Impact Analysis of a Motorcycle Helmet Using Finite Element Method,Indian Conference on Applied Mechanics, 5&ndash; 7 July 2017,MNNIT Allahabad</p>
+	</li>
+	<li>
+	<p>Swathy Raj S &amp;Rajesh P Nair,Impact Analysis of Offshore Tubular Member Using FEM,Indian Conference on Applied Mechanics, 5&ndash; 7 July 2017,MNNIT Allahabad</p>
+	</li>
+	<li>
+	<p>Athira T V&amp;Rajesh P Nair,Structural Analysis of Concrete Bunkers,Indian Conference on Applied Mechanics, 5&ndash; 7 July 2017,MNNIT Allahabad</p>
+	</li>
+	<li>
+	<p>Jeevan V L &amp;Rajesh P Nair, Numerical evaluation of blast mitigation using fluid structure interaction,Indian Conference on Applied Mechanics, 5&ndash; 7 July 2017,MNNIT Allahabad</p>
+	</li>
+	<li>
+	<p>Parvathy S Pillai &amp;Rajesh P Nair,Crack Propagation Studies and Life Cycle Estimation of High Pressure Gas Bottles,Indian Conference on Applied Mechanics, 5&ndash; 7 July 2017,MNNIT Allahabad.</p>
+	</li>
+	<li>
+	<p>Sriram KV&amp;Rajesh P Nair,Parametric study using FEM for Graphite-Epoxy composite plate subjected to transverse load,Advances in Technology, Engineering &amp; computing &ndash;A multinational colloquium-2017,Jan 27-28,2017,SCMS SET, Cochin</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair,Alex A Earali,Igin John and Sujith K M, Finite Element Simulation of ballistic Impact on thin steel plate,ICETME,September3-5,2015,TIST,Cochin.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair &amp;C Lakshmana Rao, Analysis of elastic body using square discrete element method, ICCMS, December10-13,2014,SERC,Chennai.</p>
+	</li>
+	<li>
+	<p>Priyanksingh, Rajesh P Nair &amp;C Lakshmana Rao, Ballistic impact simulation of 2-D elastic body using square discrete element method, INCAM 2013, July3-6, 2013, IIT Madras.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair &amp; C Lakshmana Rao, Simulation of failure of a fixed beam subjected to impact load using QDEM, ASME-International Mechanical Engineering Congress&nbsp;and&nbsp;Exposition, November 9-15, 2012,Texas, USA.</p>
+	</li>
+	<li>
+	<p>Vineet Kumar Reddy K, Rajesh P Nair and C Lakshmana Rao, Numerical Modeling of Response of Beams Subjected to Blast Loading,&nbsp;ICCMS, December 10-12, 2012,IIT Hyderabad.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair &amp; C Lakshmana Rao, Simulation of failure of a cantilever beam subjected to impact load using QDEM,&nbsp;ICCMS, December 10-12, 2012, IIT Hyderabad.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair, Anoop N Honnekeri&amp;C Lakshmana Rao, Numerical simulation of Ballistic Impact on thick targets using Discrete Element Method-1D and 2D models, International Conference on Composites for 21 st Century: Current and Future Trends, January 4- 7,2011,IISC Bangalore.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair &amp;C Lakshmana Rao, Elastic Response of Cantilever beam using QDEM, ICCMS, December 1-5,2009, IIT-Bombay.</p>
+	</li>
+	<li>
+	<p>M D Ghouse, Rajesh P Nair, C LakshmanaRao&amp;B NRao, Numerical modeling of failure in materials, Indo-Russian Workshop on Topical problems in Solid Mechanics, November 11-14, 2008, BITS Pilani,Goa.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair, RohitDeshmukh and C Lakshmana Rao,Simulation of Penetration During Ballistic Impact Using 1-D DFEM, International Conference on Multiscale Modeling and simulation, January 2-4, 2008, IISC Bangalore.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair, C Lakshmana Rao &amp;B N Rao,One-dimensional approach to ballistic impact problems using discrete finite element method, ICTACEM, December 27-29, 2007, IIT Kharagpur.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair &amp;C Lakshmana Rao, Elastic Response of Cantilever beam using QDEM, ICCMS, December 1-5,2009, IIT-Bombay.</p>
+	</li>
+	<li>
+	<p>M D Ghouse, Rajesh P Nair, C LakshmanaRao&amp;B NRao, Numerical modeling of failure in materials, Indo-Russian Workshop on Topical problems in Solid Mechanics, November 11-14, 2008, BITS Pilani,Goa.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair, RohitDeshmukh and C Lakshmana Rao,Simulation of Penetration During Ballistic Impact Using 1-D DFEM, International Conference on Multiscale Modeling and simulation, January 2-4, 2008, IISC Bangalore.</p>
+	</li>
+	<li>
+	<p>Rajesh P Nair, C Lakshmana Rao &amp;B N Rao,One-dimensional approach to ballistic impact problems using discrete finite element method, ICTACEM, December 27-29, 2007, IIT Kharagpur.</p>
+	</li>
+</ol>
+            </p>
+        </div>
+        
+        <!-- PUBLICATIONS END  -->
+
+
+        <!-- FUNDED PROJECTS START -->
+
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Funded Projects
+            </h2>
+            <table class="table table-bordered table-hover">
+                <thead class="bg-primary text-white">
+                    <tr class="text-center">
+                        <th scope="col">Role</th>
+                        <th scope="col">Project</th>
+                        <th scope="col">Funding Agency</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- FUNDED PROJECT 1 START -->
+                                        <tr>
+                    <tr>
+                        <td>Principal Investigator</td>
+                        <td>Electric Propulsion System for Energy Efficient House Boats</td>
+                        <td>Ministry of Electronics and Information Technology (MEITY) project under National Mission on Power Electronics Technology Phase III (NaMPET-III).</td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 1 END -->
+
+                    <!-- FUNDED PROJECT 2 START -->
+                                        <tr>
+                        <td>Principal Investigator</td>
+                        <td>Optimization of viscoelastic interleaves in composite laminates for high stiffness and damping.</td>
+                        <td>NPOL project (DRDO Lab)</td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 2 END -->
+
+                    <!-- FUNDED PROJECT 3 START -->
+                                        <tr>
+                        <td>Principal Investigator</td>
+                        <td>FEM Analysis of Underwater Structures.</td>
+                        <td>NPOL project 2021 (DRDO Lab)</td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 3 END -->
+
+                    <!-- FUNDED PROJECT 4 START -->
+                                        <tr>
+                        <td>Project Director</td>
+                        <td>A Multi-Dimensional Study on Kochi Water Metro as an Inland Water-Based Urban Transportation Solution for Smart Cities</td>
+                        <td>Indian Council of Social Science Research</td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 4 END -->
+
+                    <!-- FUNDED PROJECT 5 START -->
+                                        <!-- FUNDED PROJECT 5 END -->
+
+                    <!-- FUNDED PROJECT 6 START -->
+                                        <!-- FUNDED PROJECT 6 END -->
+
+                    <!-- FUNDED PROJECT 7 START -->
+                                        <!-- FUNDED PROJECT 7 END -->
+
+                    <!-- FUNDED PROJECT 8 START -->
+                                        <!-- FUNDED PROJECT 8 END -->
+
+                    <!-- FUNDED PROJECT 9 START -->
+                                        <!-- FUNDED PROJECT 9 END -->
+
+                    <!-- FUNDED PROJECT 10 START -->
+                                        <!-- FUNDED PROJECT 10 END -->
+
+
+                </tbody>
+            </table>
+                    </div>
+        
+        <!-- FUNDED PROJECTS END -->
+
+
+        <!-- OTHER DETAILS START -->
+        
+        <!-- OTHER DETAILS END  -->
+    </div>
+    
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 ">
+                <h4 class="text-light mb-4">Address</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Department of Ship Technology,<br>
+                    Cochin University of Science and Technology,<br>
+                    Cochin-22, Kerala, India
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-484 257-5714</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
+                <div class="d-flex pt-2">
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
+                            class="fab fa-linkedin-in"></i></a> -->
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="course.php">Courses</a>
+                <a class="btn btn-link" href="news-home.php">News</a>
+                <a class="btn btn-link" href="events-home.php">Events</a>
+                <a class="btn btn-link" href="gallery.php">Gallery</a>
+                <!-- <a class="btn btn-link" href="#">Connect</a> -->
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row pt-2">
+                    <iframe class="row" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- Footer End -->    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

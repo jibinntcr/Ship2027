@@ -1,0 +1,88 @@
+{
+  "brochures": [
+    {
+      "title": "Placement Brochure 2021-2022",
+      "remote": "uploads/Placement Brochure 2021-22.pdf",
+      "local_name": "Placement_Brochure_2021-22.pdf",
+      "image": "img/career-mag.jpg",
+      "sort_order": 1,
+      "file_path": "placement_data/brochures/Placement_Brochure_2021-22.pdf"
+    },
+    {
+      "title": "Placement Brochure 2022-2023",
+      "remote": "uploads/PLACEMENT BROCHURE 2022-23.pdf",
+      "local_name": "PLACEMENT_BROCHURE_2022-23.pdf",
+      "image": "img/career-mag.jpg",
+      "sort_order": 2,
+      "file_path": "placement_data/brochures/PLACEMENT_BROCHURE_2022-23.pdf"
+    },
+    {
+      "title": "Placement Brochure 2024-25",
+      "remote": "uploads/bto.pdf",
+      "local_name": "Placement_Brochure_2024-25.pdf",
+      "image": "img/career-mag.jpg",
+      "sort_order": 3,
+      "file_path": "placement_data/brochures/Placement_Brochure_2024-25.pdf"
+    },
+    {
+      "title": "Placement Brochure 2025",
+      "remote": "uploads/bto.pdf",
+      "local_name": "Placement_Brochure_2025.pdf",
+      "image": "img/career-mag.jpg",
+      "sort_order": 4,
+      "file_path": "placement_data/brochures/Placement_Brochure_2025.pdf"
+    },
+    {
+      "title": "Placement Brochure 2026",
+      "remote": "uploads/B26 (2).pdf",
+      "local_name": "Placement_Brochure_2026.pdf",
+      "image": "img/career-mag.jpg",
+      "sort_order": 5,
+      "file_path": "placement_data/brochures/Placement_Brochure_2026.pdf"
+    }
+  ],
+  "coordinators": [
+    {
+      "name": "Dr. Satheesh babu P K",
+      "role_type": "Faculty Coordinator",
+      "email": "satheeshbabu@cusat.ac.in",
+      "phone": "+919946063772",
+      "sort_order": 1
+    },
+    {
+      "name": "Aravind K.R",
+      "role_type": "Faculty Coordinator",
+      "email": "aravind@cusat.ac.in",
+      "phone": "+91 8089866415",
+      "sort_order": 2
+    },
+    {
+      "name": "Mr. Devadath Uday P K",
+      "role_type": "Student Coordinator",
+      "email": "devadathudaypk@gmail.com",
+      "phone": "+91 9072393613",
+      "sort_order": 3
+    },
+    {
+      "name": "Mr. Advaith Ullas",
+      "role_type": "Student Coordinator",
+      "email": "adwaithullas@gmail.com",
+      "phone": "+91  8590180472",
+      "sort_order": 4
+    },
+    {
+      "name": "Mr. Aravind M Nath",
+      "role_type": "Student Coordinator",
+      "email": "aravind.m.rs49@gmail.com",
+      "phone": "+91 8590903126",
+      "sort_order": 5
+    },
+    {
+      "name": "Mr. Adithyan C",
+      "role_type": "Student Coordinator",
+      "email": "adithyanct@gmail.com",
+      "phone": "+91 7736800613",
+      "sort_order": 6
+    }
+  ]
+}

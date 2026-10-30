@@ -1,0 +1,4354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Department of Ship Technology | CUSAT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="https://shiptech.cusat.ac.in/" name="url">
+    <meta content="Naval Architecture, Ship Building Colleges in Kochi, Kerala" name="title">
+    <meta content="Join for Naval Architecture, Ship Building Colleges in Kochi, Kerala at CUSAT offering B Tech, M Tech and PhD courses." name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="testimonial/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="testimonial/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="testimonial/css/style.css">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/icons/css/all.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css?v=6" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/date.css" rel="stylesheet">
+
+    <link href="css/event.css" rel="stylesheet" />
+    <link href="card-css.css" rel="stylesheet">
+
+    <style type="text/css">
+    .hod-img {
+        width: 450px;
+    }
+
+    @media (max-width: 576px) {
+        .hod-img {
+            width: 300px;
+        }
+    }
+
+    .rowCustome {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+
+    @media (max-width: 1152px) {
+        .rowCustome {
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: 50% 50%;
+        }
+    }
+
+    .card1 {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: #f2f8f9;
+        border-radius: 4px;
+        padding: 32px 32px;
+        text-decoration: none;
+        z-index: 0;
+        overflow: hidden;
+        background: #bed;
+        justify-content: center;
+    }
+
+    /* Modern 2026 Bento Quick-Access Cards */
+    .bento-portal-grid {
+        position: relative;
+        z-index: 5;
+        margin-top: -15px;
+    }
+
+    .bento-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 245px;
+        padding: 26px 24px 22px;
+        border-radius: 22px;
+        background: linear-gradient(145deg, #0b1636 0%, #150754 55%, #035388 100%);
+        border: 1px solid rgba(56, 189, 248, 0.22);
+        box-shadow: 0 16px 36px -10px rgba(10, 18, 44, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+        overflow: hidden;
+        cursor: pointer;
+        text-decoration: none !important;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bento-card::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -35%;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, transparent 70%);
+        transition: transform 0.45s ease, opacity 0.45s ease;
+        pointer-events: none;
+    }
+
+    .bento-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 24px;
+        right: 24px;
+        height: 3px;
+        border-radius: 0 0 6px 6px;
+        background: linear-gradient(90deg, #38bdf8, #00e5ff, transparent);
+        opacity: 0.75;
+        transition: opacity 0.3s ease;
+    }
+
+    .bento-card:hover {
+        transform: translateY(-9px) scale(1.015);
+        border-color: rgba(56, 189, 248, 0.6);
+        box-shadow: 0 26px 50px -12px rgba(2, 132, 199, 0.42), 0 0 25px rgba(56, 189, 248, 0.2);
+    }
+
+    .bento-card:hover::before {
+        transform: scale(1.35);
+    }
+
+    .bento-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 12px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .bento-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 11px;
+        border-radius: 999px;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7dd3fc;
+        background: rgba(56, 189, 248, 0.14);
+        border: 1px solid rgba(56, 189, 248, 0.28);
+        backdrop-filter: blur(8px);
+    }
+
+    .bento-icon-orb {
+        width: 68px;
+        height: 68px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background 0.35s ease;
+    }
+
+    .bento-card:hover .bento-icon-orb {
+        transform: scale(1.08) rotate(-3deg);
+        background: rgba(255, 255, 255, 0.18);
+        border-color: rgba(56, 189, 248, 0.55);
+    }
+
+    .bento-icon-orb img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+    }
+
+    .bento-bottom {
+        position: relative;
+        z-index: 2;
+    }
+
+    .bento-title {
+        color: #ffffff !important;
+        font-size: 1.45rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+        letter-spacing: -0.02em;
+    }
+
+    .bento-subtitle {
+        color: rgba(226, 232, 240, 0.78);
+        font-size: 0.82rem;
+        margin-bottom: 14px;
+        line-height: 1.35;
+    }
+
+    .bento-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12.5px;
+        font-weight: 700;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        padding: 7px 16px;
+        border-radius: 999px;
+        transition: all 0.28s ease;
+    }
+
+    .bento-card:hover .bento-cta {
+        background: #38bdf8;
+        color: #06102b;
+        border-color: #38bdf8;
+        padding-right: 20px;
+        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.45);
+    }
+
+    .bento-cta i {
+        font-size: 11px;
+        transition: transform 0.28s ease;
+    }
+
+    .bento-card:hover .bento-cta i {
+        transform: translateX(4px);
+    }
+
+    /* Modern 2026 Floating Capsule Announcements Ticker */
+    .modern-ticker-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(90deg, #08112b 0%, #150754 50%, #0b2247 100%);
+        border: 1px solid rgba(56, 189, 248, 0.32);
+        border-radius: 999px;
+        padding: 8px 10px 8px 8px;
+        box-shadow: 0 18px 40px -12px rgba(10, 18, 44, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+        overflow: hidden;
+    }
+
+    .modern-ticker-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        background: linear-gradient(135deg, #ff3e41 0%, #e11d48 100%);
+        color: #ffffff !important;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border-radius: 999px;
+        text-decoration: none !important;
+        white-space: nowrap;
+        box-shadow: 0 6px 18px rgba(225, 29, 72, 0.4);
+        z-index: 3;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .modern-ticker-badge:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 22px rgba(225, 29, 72, 0.55);
+        color: #fff !important;
+    }
+
+    .ticker-pulse-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+        animation: tickerPulse 1.8s infinite;
+    }
+
+    @keyframes tickerPulse {
+        0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.75); }
+        70% { box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+    }
+
+    .modern-ticker-viewport {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        margin: 0 14px;
+        mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    }
+
+    .modern-ticker-track {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        white-space: nowrap;
+        animation: modernTickerScroll 28s linear infinite;
+    }
+
+    .modern-ticker-viewport:hover .modern-ticker-track {
+        animation-play-state: paused;
+    }
+
+    @keyframes modernTickerScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+
+    .ticker-item-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: #f8fafc !important;
+        text-decoration: none !important;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 6px 16px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        transition: all 0.22s ease;
+    }
+
+    .ticker-item-pill:hover {
+        background: rgba(56, 189, 248, 0.2);
+        border-color: #38bdf8;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+    }
+
+    .ticker-chip-tag {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.22);
+        color: #7dd3fc;
+        border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+
+    .modern-ticker-action {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #7dd3fc !important;
+        font-size: 12.5px;
+        font-weight: 700;
+        padding: 8px 16px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        text-decoration: none !important;
+        white-space: nowrap;
+        transition: all 0.2s ease;
+    }
+
+    .modern-ticker-action:hover {
+        background: #38bdf8;
+        color: #06102b !important;
+    }
+
+    /* Modern 2026 Ship Technology Events & News Bento Showcase */
+    .maritime-feed-section {
+        position: relative;
+        padding: 18px 0 36px;
+    }
+
+    .maritime-bento-panel {
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        border-radius: 26px;
+        padding: 28px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 22px 48px -16px rgba(10, 22, 54, 0.11), 0 4px 14px -4px rgba(10, 22, 54, 0.05);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .maritime-bento-panel::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #0a1938 0%, #0284c7 50%, #38bdf8 100%);
+    }
+
+    .maritime-bento-panel:hover {
+        border-color: rgba(2, 132, 199, 0.28);
+        box-shadow: 0 28px 60px -16px rgba(10, 25, 56, 0.16);
+    }
+
+    .maritime-panel-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .maritime-panel-title-group {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .maritime-panel-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 10px 20px -6px rgba(10, 25, 56, 0.35);
+        flex-shrink: 0;
+    }
+
+    .maritime-panel-eyebrow {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #0284c7;
+        margin-bottom: 2px;
+        display: block;
+    }
+
+    .maritime-panel-heading {
+        font-size: 24px;
+        font-weight: 800;
+        color: #0f172a;
+        margin: 0;
+        letter-spacing: -0.02em;
+    }
+
+    .maritime-panel-heading a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .maritime-panel-heading a:hover {
+        color: #0284c7;
+    }
+
+    .maritime-header-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #0369a1;
+        background: rgba(2, 132, 199, 0.09);
+        border: 1px solid rgba(2, 132, 199, 0.2);
+        padding: 6px 13px;
+        border-radius: 999px;
+        text-decoration: none !important;
+        transition: all 0.22s ease;
+    }
+
+    .maritime-header-pill:hover {
+        background: #0a1938;
+        color: #ffffff !important;
+        border-color: #0a1938;
+        transform: translateY(-1px);
+    }
+
+    .maritime-card-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        flex: 1;
+    }
+
+    .maritime-item-card {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 16px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+        text-decoration: none !important;
+        transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .maritime-item-card:hover {
+        transform: translateY(-3px) translateX(2px);
+        border-color: rgba(2, 132, 199, 0.38);
+        box-shadow: 0 14px 30px -10px rgba(10, 25, 56, 0.14);
+        background: linear-gradient(90deg, #ffffff 0%, #f0f9ff 100%);
+    }
+
+    /* Event Date Badge */
+    .maritime-date-badge {
+        width: 84px;
+        min-width: 84px;
+        height: 88px;
+        border-radius: 16px;
+        background: linear-gradient(155deg, #09152f 0%, #150754 55%, #0369a1 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        box-shadow: 0 10px 22px -6px rgba(10, 25, 56, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.28s ease;
+    }
+
+    .maritime-item-card:hover .maritime-date-badge {
+        transform: scale(1.04);
+    }
+
+    .maritime-date-day {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+    }
+
+    .maritime-date-month {
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #38bdf8;
+        margin-top: 3px;
+    }
+
+    .maritime-date-year {
+        font-size: 10.5px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.72);
+        margin-top: 2px;
+        padding: 1px 8px;
+        border-radius: 99px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* News Thumbnail Frame */
+    .maritime-news-thumb-wrap {
+        width: 88px;
+        min-width: 88px;
+        height: 88px;
+        border-radius: 14px;
+        background: #f1f5f9;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        position: relative;
+    }
+
+    .maritime-news-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.35s ease;
+    }
+
+    .maritime-item-card:hover .maritime-news-thumb {
+        transform: scale(1.07);
+    }
+
+    .maritime-item-body {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .maritime-meta-row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 6px;
+    }
+
+    .maritime-tag-chip {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        padding: 3px 9px;
+        border-radius: 999px;
+        background: rgba(2, 132, 199, 0.1);
+        color: #0369a1;
+    }
+
+    .maritime-tag-chip.press {
+        background: rgba(225, 29, 72, 0.1);
+        color: #be123c;
+    }
+
+    .maritime-date-inline {
+        font-size: 12px;
+        font-weight: 600;
+        color: #64748b;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .maritime-date-inline i {
+        color: #0284c7;
+    }
+
+    .maritime-item-title {
+        font-size: 15.5px;
+        font-weight: 700;
+        color: #0f172a;
+        line-height: 1.42;
+        margin: 0;
+        transition: color 0.2s ease;
+    }
+
+    .maritime-item-card:hover .maritime-item-title {
+        color: #0369a1;
+    }
+
+    .maritime-item-arrow {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        border-radius: 50%;
+        background: #f1f5f9;
+        color: #0f172a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        transition: all 0.25s ease;
+    }
+
+    .maritime-item-card:hover .maritime-item-arrow {
+        background: #0284c7;
+        color: #ffffff;
+        transform: translateX(3px);
+    }
+
+    .maritime-panel-footer {
+        margin-top: 22px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(15, 23, 42, 0.07);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .maritime-footer-note {
+        font-size: 12.5px;
+        color: #64748b;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .maritime-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #ffffff !important;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 999px;
+        text-decoration: none !important;
+        box-shadow: 0 10px 20px -8px rgba(10, 25, 56, 0.45);
+        transition: all 0.25s ease;
+    }
+
+    .maritime-cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 26px -8px rgba(2, 132, 199, 0.55);
+        background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+        color: #ffffff !important;
+    }
+
+    /* ==========================================================================
+       ELEGANT, UNCLUTTERED CINEMATIC SHIP-BOW WIDESCREEN HERO SLIDER
+       + SMOOTH AMBIENT MOTION & FRESH LANDING PAGE ATMOSPHERE
+       ========================================================================== */
+    body {
+        background-color: #f8fafc;
+        background-image:
+            radial-gradient(at 0% 18%, rgba(56, 189, 248, 0.06) 0px, transparent 48%),
+            radial-gradient(at 100% 42%, rgba(2, 132, 199, 0.05) 0px, transparent 50%),
+            radial-gradient(at 20% 78%, rgba(21, 7, 84, 0.04) 0px, transparent 50%);
+        background-attachment: fixed;
+        overflow-x: hidden;
+    }
+
+    .ship-hero-wrapper {
+        position: relative;
+        background: #040b1d;
+        overflow: hidden;
+    }
+
+    .hero-slide-stage {
+        position: relative;
+        min-height: 560px;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(112deg, #030917 0%, #081738 44%, #0c2654 100%);
+        overflow: hidden;
+    }
+
+    /* ==========================================================================
+       SLIDE 01: SIGNATURE WELCOME BANNER STAGE WITH SUBTLE BEAUTIFICATIONS
+       ========================================================================== */
+    .hero-welcome-slide-stage {
+        position: relative;
+        width: 100%;
+        height: 560px;
+        background: #ffffff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-welcome-slide-stage .welcome-banner-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: fill !important;
+        object-position: center center !important;
+        display: block !important;
+        transform: scale(1.018);
+        filter: contrast(1.03) saturate(1.04);
+        transition: transform 6.5s cubic-bezier(0.22, 1, 0.36, 1), filter 1s ease;
+    }
+
+    .owl-item.active .hero-welcome-slide-stage .welcome-banner-img {
+        transform: scale(1);
+        filter: contrast(1.05) saturate(1.06);
+    }
+
+    /* Subtle animated cyan/blue wireframe ship pulse glow on the left parallelogram */
+    .hero-welcome-slide-stage::before {
+        content: "";
+        position: absolute;
+        top: 12%;
+        left: 8%;
+        width: 48%;
+        height: 76%;
+        background: radial-gradient(
+            circle at 52% 52%,
+            rgba(56, 189, 248, 0.16) 0%,
+            rgba(37, 99, 235, 0.10) 38%,
+            transparent 70%
+        );
+        mix-blend-mode: screen;
+        animation: welcomeShipPulse 5.5s ease-in-out infinite alternate;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    @keyframes welcomeShipPulse {
+        0% {
+            opacity: 0.45;
+            transform: scale(0.96);
+        }
+        100% {
+            opacity: 0.95;
+            transform: scale(1.06);
+        }
+    }
+
+    /* Gentle diagonal light sheen sweeping across the welcome banner panels */
+    .hero-welcome-slide-stage::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 65%;
+        height: 100%;
+        background: linear-gradient(
+            115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.03) 35%,
+            rgba(186, 230, 253, 0.14) 50%,
+            rgba(255, 255, 255, 0.03) 65%,
+            transparent 100%
+        );
+        transform: skewX(-24deg);
+        animation: welcomeBannerSheen 9s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    @keyframes welcomeBannerSheen {
+        0% { left: -120%; }
+        45%, 100% { left: 160%; }
+    }
+
+    /* Ambient breathing ocean glow behind the left typography stage */
+    .hero-slide-stage::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: -10%;
+        width: 55%;
+        height: 140%;
+        background: radial-gradient(circle, rgba(56, 189, 248, 0.13) 0%, rgba(2, 132, 199, 0.04) 45%, transparent 70%);
+        animation: ambientOceanPulse 8s ease-in-out infinite alternate;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    @keyframes ambientOceanPulse {
+        0% { transform: translate(0, 0) scale(1); opacity: 0.75; }
+        100% { transform: translate(3%, 4%) scale(1.12); opacity: 1; }
+    }
+
+    /* Subtle angled ship-prow accent line with gentle light sweep */
+    .hero-slide-stage::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 44%;
+        width: 14%;
+        background: linear-gradient(
+            180deg,
+            rgba(56, 189, 248, 0.08) 0%,
+            rgba(125, 211, 252, 0.55) 50%,
+            rgba(56, 189, 248, 0.08) 100%
+        );
+        background-size: 100% 200%;
+        animation: prowLightSweep 6s ease-in-out infinite;
+        clip-path: polygon(96.5% 0, 100% 0, 3.5% 100%, 0% 100%);
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    @keyframes prowLightSweep {
+        0%, 100% { background-position: 0% 0%; }
+        50% { background-position: 0% 100%; }
+    }
+
+    /* Right-side Unobstructed Visual Canvas with Ship-Bow Diagonal Cut */
+    .hero-visual-pane {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 56%;
+        clip-path: polygon(24% 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 2;
+        overflow: hidden;
+        background: #040b1d;
+    }
+
+    .hero-visual-pane img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: center;
+        transform: scale(1.08);
+        filter: brightness(0.96) contrast(1.03);
+        transition: transform 7s cubic-bezier(0.22, 1, 0.36, 1), filter 1.2s ease;
+    }
+
+    .owl-item.active .hero-visual-pane img {
+        transform: scale(1.0);
+        filter: brightness(1.02) contrast(1.04);
+    }
+
+    /* Soft left edge blend so the diagonal ship-prow transition feels seamless */
+    .hero-visual-pane::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(4, 11, 29, 0.42) 0%, rgba(4, 11, 29, 0.05) 32%, transparent 100%);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* Left-side Minimal, Breathable Typography Stage */
+    .hero-content-container {
+        position: relative;
+        z-index: 4;
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 68px 32px 84px;
+    }
+
+    .hero-text-column {
+        max-width: 520px;
+    }
+
+    /* Staggered Slide Text Entrance Animation when Slide Becomes Active */
+    .hero-overline,
+    .hero-main-heading,
+    .hero-subtitle-lead,
+    .hero-minimal-cta {
+        opacity: 0;
+        transform: translateY(22px);
+        transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .owl-item.active .hero-overline {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.12s;
+    }
+
+    .owl-item.active .hero-main-heading {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.24s;
+    }
+
+    .owl-item.active .hero-subtitle-lead {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.36s;
+    }
+
+    .owl-item.active .hero-minimal-cta {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.48s;
+    }
+
+    .hero-overline {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #38bdf8;
+        margin-bottom: 18px;
+    }
+
+    .hero-overline::before {
+        content: "";
+        width: 28px;
+        height: 2px;
+        background: linear-gradient(90deg, #38bdf8, transparent);
+        display: inline-block;
+    }
+
+    .hero-main-heading {
+        font-size: clamp(32px, 3.6vw, 50px);
+        font-weight: 800;
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+        margin-bottom: 20px;
+    }
+
+    .hero-main-heading span {
+        color: #7dd3fc;
+        font-weight: 300;
+        display: block;
+    }
+
+    .hero-subtitle-lead {
+        font-size: 16px;
+        line-height: 1.7;
+        color: rgba(226, 232, 240, 0.84);
+        font-weight: 400;
+        margin-bottom: 32px;
+        max-width: 460px;
+    }
+
+    .hero-minimal-cta {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 30px;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #06132e !important;
+        font-size: 13.5px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-decoration: none !important;
+        transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-minimal-cta i {
+        transition: transform 0.28s ease;
+    }
+
+    .hero-minimal-cta:hover {
+        background: #38bdf8;
+        color: #041028 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 18px 36px rgba(56, 189, 248, 0.4);
+    }
+
+    .hero-minimal-cta:hover i {
+        transform: translateX(4px);
+    }
+
+    /* GPU-Accelerated Multi-Layer Parallax Ocean Water Effect at Bottom of Hero */
+    .hero-ocean-horizon {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 68px;
+        overflow: hidden;
+        z-index: 6;
+        pointer-events: none;
+        line-height: 0;
+    }
+
+    .hero-ocean-waves {
+        position: relative;
+        width: 100%;
+        height: 68px;
+        margin-bottom: -7px;
+    }
+
+    .hero-wave-parallax > use {
+        animation: oceanWaveMove 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+        will-change: transform;
+    }
+
+    .hero-wave-parallax > use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 8s;
+    }
+
+    .hero-wave-parallax > use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 12s;
+    }
+
+    .hero-wave-parallax > use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 16s;
+    }
+
+    .hero-wave-parallax > use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 22s;
+    }
+
+    @keyframes oceanWaveMove {
+        0% {
+            transform: translate3d(-90px, 0, 0);
+        }
+        100% {
+            transform: translate3d(85px, 0, 0);
+        }
+    }
+
+    /* Subtle Water Caustics & Shimmer Reflection on the Hero Stage (GPU-only) */
+    .water-caustic-shimmer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45%;
+        background:
+            radial-gradient(ellipse 50% 28% at 22% 95%, rgba(56, 189, 248, 0.16) 0%, transparent 70%),
+            radial-gradient(ellipse 45% 24% at 62% 92%, rgba(14, 165, 233, 0.18) 0%, transparent 70%),
+            radial-gradient(ellipse 35% 18% at 42% 88%, rgba(186, 230, 253, 0.12) 0%, transparent 65%);
+        filter: blur(8px);
+        animation: causticWaterRipple 7s ease-in-out infinite alternate;
+        will-change: transform, opacity;
+        pointer-events: none;
+        z-index: 3;
+    }
+
+    @keyframes causticWaterRipple {
+        0% {
+            transform: translate3d(-1.5%, 0, 0) scaleY(0.95);
+            opacity: 0.65;
+        }
+        100% {
+            transform: translate3d(1.5%, -4px, 0) scaleY(1.08);
+            opacity: 1;
+        }
+    }
+
+    /* Owl Carousel Controls — Minimal & Unobtrusive */
+    .header-carousel .owl-nav {
+        position: absolute;
+        bottom: 58px;
+        right: 42px;
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+    }
+
+    .header-carousel .owl-nav .owl-prev,
+    .header-carousel .owl-nav .owl-next {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 50% !important;
+        background: rgba(6, 16, 40, 0.65) !important;
+        border: 1px solid rgba(255, 255, 255, 0.22) !important;
+        color: #ffffff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 16px !important;
+        backdrop-filter: blur(8px);
+        transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1) !important;
+        margin: 0 !important;
+    }
+
+    .header-carousel .owl-nav .owl-prev:hover,
+    .header-carousel .owl-nav .owl-next:hover {
+        background: #ffffff !important;
+        color: #050e24 !important;
+        border-color: #ffffff !important;
+        transform: translateY(-2px) scale(1.05);
+    }
+
+    .header-carousel .owl-dots {
+        position: absolute;
+        bottom: 64px;
+        left: 32px;
+        right: 32px;
+        max-width: 1320px;
+        margin: 0 auto;
+        z-index: 10;
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        pointer-events: none;
+    }
+
+    .header-carousel .owl-dot {
+        pointer-events: auto;
+        width: 28px;
+        height: 5px;
+        border-radius: 99px;
+        background: rgba(15, 23, 42, 0.36) !important;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        position: relative;
+        transition: width 0.35s ease;
+    }
+
+    .header-carousel .owl-dot.active {
+        width: 56px;
+        background: rgba(15, 23, 42, 0.48) !important;
+    }
+
+    .header-carousel .owl-dot.active::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(90deg, #0284c7, #38bdf8);
+        border-radius: 99px;
+        animation: slideProgressFill 6.5s linear forwards;
+    }
+
+    @keyframes slideProgressFill {
+        0% { width: 0%; }
+        100% { width: 100%; }
+    }
+
+    /* Smooth Scroll-Reveal & Ambient Floating Micro-Interactions Across Landing Page */
+    .ship-scroll-reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .ship-scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .maritime-stat-icon i,
+    .maritime-panel-icon i {
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .maritime-stat-box:hover .maritime-stat-icon i {
+        transform: translateY(-3px) scale(1.1);
+    }
+
+    .maritime-bento-panel:hover .maritime-panel-icon i {
+        transform: rotate(15deg) scale(1.08);
+    }
+
+    @media (max-width: 991.98px) {
+        .hero-welcome-slide-stage {
+            height: 360px;
+        }
+        .hero-welcome-slide-stage .welcome-banner-img {
+            object-fit: contain !important;
+        }
+        .hero-slide-stage {
+            flex-direction: column;
+            min-height: auto;
+        }
+        .hero-slide-stage::after {
+            display: none;
+        }
+        .hero-visual-pane {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            clip-path: none;
+        }
+        .hero-content-container {
+            padding: 36px 24px 64px;
+        }
+    }
+
+    /* ==========================================================================
+       INTERNATIONAL MARITIME TELEMETRY STATS RIBBON (BENTO STYLE ADHERING TO ABOVE)
+       ========================================================================== */
+    .maritime-stats-ribbon {
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 26px;
+        padding: 24px;
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        box-shadow: 0 22px 48px -16px rgba(10, 22, 54, 0.11), 0 4px 14px -4px rgba(10, 22, 54, 0.05);
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Top signature maritime gradient bar matching Events & News Bento panels above */
+    .maritime-stats-ribbon::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #0a1938 0%, #0284c7 50%, #38bdf8 100%);
+    }
+
+    /* Subtle angled navy/sky watermark accent in corner matching Welcome slide geometry */
+    .maritime-stats-ribbon::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 140px;
+        height: 140px;
+        background: radial-gradient(circle, rgba(2, 132, 199, 0.06) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .maritime-stat-box {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 18px 20px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Subtle skewed accent ribbon on the right edge of each stat card */
+    .maritime-stat-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 28px;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(2, 132, 199, 0.06) 0%, rgba(56, 189, 248, 0.02) 100%);
+        clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
+        transition: width 0.3s ease, background 0.3s ease;
+        pointer-events: none;
+    }
+
+    .maritime-stat-box:hover {
+        transform: translateY(-4px);
+        border-color: rgba(2, 132, 199, 0.35);
+        box-shadow: 0 16px 32px -12px rgba(10, 25, 56, 0.14);
+        background: linear-gradient(90deg, #ffffff 0%, #f0f9ff 100%);
+    }
+
+    .maritime-stat-box:hover::after {
+        width: 38px;
+        background: linear-gradient(180deg, rgba(2, 132, 199, 0.14) 0%, rgba(56, 189, 248, 0.06) 100%);
+    }
+
+    .maritime-stat-icon {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        border-radius: 15px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        box-shadow: 0 10px 20px -6px rgba(10, 25, 56, 0.35);
+        flex-shrink: 0;
+    }
+
+    .maritime-stat-eyebrow {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #0284c7;
+        margin-bottom: 2px;
+    }
+
+    .maritime-stat-num {
+        font-size: 28px;
+        font-weight: 900;
+        color: #0f172a;
+        line-height: 1.08;
+        letter-spacing: -0.025em;
+    }
+
+    .maritime-stat-label {
+        font-size: 12.5px;
+        color: #475569;
+        font-weight: 600;
+        margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       INTERNATIONAL UNIVERSITY VISION, MISSION, ABOUT & HOD SHOWCASE
+       (UNIFIED BENTO PANEL STYLE MATCHING EVENTS, NEWS & TELEMETRY)
+       ========================================================================== */
+    .campus-showcase-frame {
+        position: relative;
+        border-radius: 26px;
+        overflow: hidden;
+        background: #ffffff;
+        padding: 10px;
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        box-shadow: 0 22px 48px -16px rgba(10, 22, 54, 0.11), 0 4px 14px -4px rgba(10, 22, 54, 0.05);
+        min-height: 480px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Signature top 5px ocean gradient bar matching Events/News Bento panels */
+    .campus-showcase-frame::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #0a1938 0%, #0284c7 50%, #38bdf8 100%);
+        z-index: 4;
+    }
+
+    .campus-showcase-inner {
+        position: relative;
+        width: 100%;
+        flex: 1;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #0f172a;
+    }
+
+    .campus-showcase-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        inset: 0;
+        transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .campus-showcase-frame:hover .campus-showcase-img {
+        transform: scale(1.035);
+    }
+
+    .campus-showcase-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 0%, transparent 62%, rgba(10, 22, 54, 0.45) 100%);
+        pointer-events: none;
+    }
+
+    .campus-floating-badge {
+        position: absolute;
+        bottom: 18px;
+        left: 18px;
+        right: 18px;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        box-shadow: 0 16px 34px -10px rgba(10, 22, 54, 0.22);
+        border-radius: 18px;
+        padding: 14px 18px;
+        color: #0f172a;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        z-index: 3;
+    }
+
+    .campus-badge-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .campus-badge-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 17px;
+        box-shadow: 0 8px 16px -4px rgba(10, 25, 56, 0.3);
+    }
+
+    .section-eyebrow-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #0284c7;
+        background: rgba(2, 132, 199, 0.09);
+        border: 1px solid rgba(2, 132, 199, 0.2);
+        padding: 6px 14px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+    }
+
+    /* Vision Bento Card inside Vision & Mission Panel */
+    .vision-highlight-box {
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        color: #0f172a;
+        padding: 20px 22px;
+        border-radius: 18px;
+        border: 1px solid rgba(2, 132, 199, 0.24);
+        border-left: 5px solid #0284c7;
+        box-shadow: 0 8px 22px -8px rgba(2, 132, 199, 0.12);
+        margin-bottom: 22px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vision-highlight-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+    }
+
+    .vision-tag-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 3px 10px;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #0369a1;
+        border: 1px solid rgba(2, 132, 199, 0.25);
+    }
+
+    .mission-section-subhead {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    .mission-modern-list,
+    .ship-contact-data ul.mission-modern-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .mission-modern-list li,
+    .ship-contact-data ul.mission-modern-list li {
+        display: flex !important;
+        align-items: center !important;
+        gap: 14px !important;
+        padding: 12px 16px !important;
+        margin-bottom: 0 !important;
+        min-height: 0 !important;
+        position: relative;
+        border-radius: 16px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+        font-size: 14px;
+        font-weight: 500;
+        color: #1e293b;
+        line-height: 1.5;
+        transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .mission-modern-list li:hover,
+    .ship-contact-data ul.mission-modern-list li:hover {
+        transform: translateY(-2px) translateX(3px);
+        border-color: rgba(2, 132, 199, 0.36);
+        box-shadow: 0 12px 26px -10px rgba(10, 25, 56, 0.13);
+        background: linear-gradient(90deg, #ffffff 0%, #f0f9ff 100%);
+    }
+
+    .mission-icon-badge {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #38bdf8;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 14px;
+        box-shadow: 0 6px 14px -4px rgba(10, 25, 56, 0.3);
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .mission-modern-list li i,
+    .ship-contact-data ul.mission-modern-list li i {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        color: #38bdf8 !important;
+        font-size: 14px !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+    }
+
+    /* ==========================================================================
+       ENHANCED "ABOUT US — SURGING AHEAD SINCE 1975" EDITORIAL BENTO SHOWCASE
+       ========================================================================== */
+    .about-milestone-strip {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .about-milestone-chip {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        border: 1px solid rgba(2, 132, 199, 0.22);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .about-milestone-chip:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px -6px rgba(2, 132, 199, 0.18);
+    }
+
+    .about-milestone-icon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        box-shadow: 0 6px 12px -4px rgba(10, 25, 56, 0.28);
+    }
+
+    .about-milestone-val {
+        font-size: 15px;
+        font-weight: 800;
+        color: #0f172a;
+        line-height: 1.1;
+    }
+
+    .about-milestone-lbl {
+        font-size: 10.5px;
+        font-weight: 700;
+        color: #0369a1;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+    }
+
+    .about-narrative-card {
+        position: relative;
+        padding: 20px 22px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        border-left: 5px solid #0284c7;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.035);
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+
+    .about-narrative-card::after {
+        content: "\f21a";
+        font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        bottom: -14px;
+        right: 12px;
+        font-size: 84px;
+        color: rgba(2, 132, 199, 0.045);
+        pointer-events: none;
+        line-height: 1;
+    }
+
+    .about-partner-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .about-partner-pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 14px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        font-size: 12.5px;
+        font-weight: 700;
+        color: #1e293b;
+        transition: all 0.24s ease;
+    }
+
+    .about-partner-pill i {
+        color: #0284c7;
+        font-size: 14px;
+    }
+
+    .about-partner-pill:hover {
+        border-color: rgba(2, 132, 199, 0.35);
+        background: #f0f9ff;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 575.98px) {
+        .about-milestone-strip,
+        .about-partner-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Executive HOD Leadership Showcase */
+    .hod-executive-card {
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        border-radius: 30px;
+        padding: 42px;
+        box-shadow: 0 26px 60px -18px rgba(10, 25, 56, 0.14);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hod-executive-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 80%, #38bdf8 100%);
+    }
+
+    .hod-portrait-panel {
+        background: linear-gradient(155deg, #08122b 0%, #150754 55%, #0b2c59 100%);
+        border-radius: 24px;
+        padding: 26px;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: 0 20px 40px -12px rgba(10, 25, 56, 0.35);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hod-portrait-img {
+        width: 210px;
+        height: 235px;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 20px;
+        border: 3px solid #38bdf8;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+        margin-bottom: 18px;
+        background: #ffffff;
+    }
+
+    /* ==========================================================================
+       INTERNATIONAL ACADEMIC PROGRAMME BENTO CARDS (UNIFIED PAGE STYLE)
+       ========================================================================== */
+    .programme-bento-card {
+        position: relative;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid rgba(15, 23, 42, 0.09);
+        border-radius: 26px;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 22px 48px -16px rgba(10, 22, 54, 0.11), 0 4px 14px -4px rgba(10, 22, 54, 0.05);
+        transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s ease, border-color 0.32s ease;
+    }
+
+    /* Signature top 5px ocean gradient bar matching Events, News, Vision & About panels */
+    .programme-bento-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: linear-gradient(90deg, #0a1938 0%, #0284c7 50%, #38bdf8 100%);
+        z-index: 4;
+    }
+
+    .programme-bento-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(2, 132, 199, 0.36);
+        box-shadow: 0 28px 58px -16px rgba(10, 25, 56, 0.18);
+    }
+
+    .programme-img-wrap {
+        position: relative;
+        height: 215px;
+        margin: 12px 12px 0;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #0a1938;
+        box-shadow: 0 8px 20px -8px rgba(10, 22, 54, 0.18);
+    }
+
+    .programme-img-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .programme-bento-card:hover .programme-img-wrap img {
+        transform: scale(1.06);
+    }
+
+    .programme-degree-pill {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: rgba(255, 255, 255, 0.94);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: #0369a1;
+        border: 1px solid rgba(2, 132, 199, 0.25);
+        box-shadow: 0 8px 18px rgba(10, 22, 54, 0.18);
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 5px 13px;
+        border-radius: 999px;
+        z-index: 2;
+    }
+
+    .programme-card-body {
+        padding: 22px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .programme-title-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 14px;
+    }
+
+    .programme-icon-orb {
+        width: 46px;
+        height: 46px;
+        min-width: 46px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        box-shadow: 0 10px 20px -6px rgba(10, 25, 56, 0.32);
+        transition: transform 0.35s ease;
+    }
+
+    .programme-bento-card:hover .programme-icon-orb {
+        transform: rotate(-8deg) scale(1.06);
+    }
+
+    .programme-desc-box {
+        padding: 14px 16px;
+        border-radius: 16px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.07);
+        border-left: 4px solid #0284c7;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.025);
+        font-size: 14px;
+        line-height: 1.62;
+        color: #334155;
+        margin-bottom: 16px;
+    }
+
+    .programme-spec-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 18px;
+    }
+
+    .programme-spec-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 11px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        border: 1px solid rgba(2, 132, 199, 0.2);
+        font-size: 11.5px;
+        font-weight: 700;
+        color: #0369a1;
+    }
+
+    .programme-card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    /* ==========================================================================
+       EXECUTIVE MARITIME BENTO TESTIMONIALS SHOWCASE
+       ========================================================================== */
+    .testimonial--wrap {
+        background: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        position: relative;
+    }
+
+    .testimonial-alumni-strip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .testimonial-alumni-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 12px 5px 6px;
+        border-radius: 999px;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        font-size: 12px;
+        font-weight: 700;
+        color: #334155;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    }
+
+    .testimonial-alumni-pill img {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1.5px solid #38bdf8;
+        background: #ffffff;
+    }
+
+    .testimonial-alumni-pill:hover {
+        border-color: rgba(2, 132, 199, 0.45);
+        background: #f0f9ff;
+        color: #0369a1;
+        transform: translateY(-2px);
+    }
+
+    .testimonial-alumni-pill.active {
+        background: linear-gradient(135deg, #0a1938 0%, #150754 55%, #0369a1 100%);
+        color: #ffffff;
+        border-color: #0284c7;
+        box-shadow: 0 10px 22px -6px rgba(10, 25, 56, 0.35);
+    }
+
+    .maritime-testimonial-card {
+        padding: 4px 2px;
+    }
+
+    .testimonial-author-panel {
+        background: linear-gradient(155deg, #08122b 0%, #150754 55%, #0b2c59 100%);
+        border-radius: 22px;
+        padding: 28px 22px;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: 0 18px 38px -12px rgba(10, 25, 56, 0.32);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testimonial-portrait-img {
+        width: 130px !important;
+        height: 130px !important;
+        min-width: 130px !important;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 22px;
+        border: 3px solid #38bdf8;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38);
+        margin: 0 auto 16px !important;
+        background: #ffffff;
+        display: block !important;
+    }
+
+    .testimonial-role-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 12px;
+        border-radius: 999px;
+        background: rgba(56, 189, 248, 0.16);
+        color: #38bdf8;
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-author-name {
+        font-size: 22px;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 6px;
+        letter-spacing: -0.02em;
+    }
+
+    .testimonial-author-role {
+        color: #7dd3fc;
+        font-size: 13.5px;
+        font-weight: 600;
+        line-height: 1.45;
+        margin-bottom: 14px;
+    }
+
+    .testimonial-author-batch {
+        width: 100%;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.14);
+        font-size: 12px;
+        font-weight: 600;
+        color: #cbd5e1;
+    }
+
+    .testimonial-quote-panel {
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        border-left: 5px solid #0284c7;
+        border-radius: 22px;
+        padding: 28px 30px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .testimonial-quote-panel::after {
+        content: "\f10e";
+        font-family: "Font Awesome 6 Free", "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        bottom: -10px;
+        right: 18px;
+        font-size: 92px;
+        color: rgba(2, 132, 199, 0.045);
+        pointer-events: none;
+        line-height: 1;
+    }
+
+    .testimonial-quote-body {
+        font-size: 15px;
+        line-height: 1.78;
+        color: #1e293b;
+        font-weight: 400;
+        position: relative;
+        z-index: 2;
+    }
+
+    .testimonial-quote-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 18px;
+        margin-top: 20px;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Hide legacy absolute custom-nav-wrap & style header nav buttons */
+    .testimonial-nav-group {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .testimonial-nav-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: #ffffff;
+        border: 1px solid rgba(2, 132, 199, 0.25);
+        color: #0369a1 !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        text-decoration: none !important;
+        transition: all 0.24s ease;
+        box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    }
+
+    .testimonial-nav-btn:hover {
+        background: linear-gradient(135deg, #0a1938 0%, #0369a1 100%);
+        color: #ffffff !important;
+        border-color: #0a1938;
+        transform: translateY(-2px);
+    }
+
+    #testimonials-slider .owl-dots {
+        margin-top: 18px !important;
+        text-align: center;
+    }
+
+    #testimonials-slider .owl-dots .owl-dot span {
+        width: 10px !important;
+        height: 10px !important;
+        margin: 4px !important;
+        background: rgba(2, 132, 199, 0.22) !important;
+        border-radius: 999px !important;
+        transition: all 0.3s ease !important;
+    }
+
+    #testimonials-slider .owl-dots .owl-dot.active span {
+        width: 28px !important;
+        background: #0284c7 !important;
+    }
+    </style>
+</head>
+
+<body style="box-flex-group: #d6d6d6;">
+
+    <!-- Spinner Start -->
+    <div id="spinner" style="display:none;"
+        class="bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- HEADER START  -->
+    <!-- Topbar Start -->
+<style>
+/* ==========================================================================
+   GLOBAL MARITIME BENTO + SHIP-BOW HERO + GPU OCEAN WAVE DESIGN SYSTEM
+   ========================================================================== */
+body {
+    background-color: #f4f8fc;
+    color: #0f172a;
+}
+
+/* 1. Ship-Bow Maritime Subpage Hero + 4-Layer GPU Ocean Waves */
+.maritime-subpage-hero {
+    position: relative;
+    background:
+        radial-gradient(circle at 82% 22%, rgba(14, 165, 233, 0.24) 0%, transparent 48%),
+        radial-gradient(circle at 18% 78%, rgba(56, 189, 248, 0.16) 0%, transparent 50%),
+        linear-gradient(135deg, #030917 0%, #0a1936 48%, #07294d 100%);
+    padding: 4.5rem 0 6.75rem;
+    overflow: hidden;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.22);
+    margin-bottom: 1.5rem;
+}
+.maritime-subpage-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 20%, transparent 80%);
+    pointer-events: none;
+}
+.maritime-hero-Ship-bg {
+    position: absolute;
+    right: -2%;
+    bottom: 18px;
+    width: 480px;
+    max-width: 46vw;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 1;
+}
+.maritime-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(14, 165, 233, 0.16);
+    border: 1px solid rgba(56, 189, 248, 0.42);
+    color: #7dd3fc;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(8px);
+}
+.maritime-hero-title {
+    font-size: clamp(2.15rem, 3.8vw, 3.35rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+}
+.maritime-hero-subtitle {
+    font-size: 1.05rem;
+    color: rgba(226, 232, 240, 0.88);
+    max-width: 680px;
+    line-height: 1.68;
+    margin-bottom: 1.35rem;
+}
+.maritime-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(8, 23, 52, 0.68);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    list-style: none;
+}
+.maritime-breadcrumb a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.maritime-breadcrumb a:hover {
+    color: #ffffff;
+}
+.maritime-breadcrumb .sep {
+    color: rgba(148, 163, 184, 0.5);
+}
+.maritime-breadcrumb .active {
+    color: #ffffff;
+}
+
+/* Subpage Hero Ocean Waves */
+.subpage-ocean-horizon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 76px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 3;
+    line-height: 0;
+}
+.subpage-ocean-svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 76px;
+}
+.subpage-wave-parallax > use {
+    animation: subpageWaveMove 22s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    will-change: transform;
+}
+.subpage-wave-parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 9s; }
+.subpage-wave-parallax > use:nth-child(2) { animation-delay: -4s; animation-duration: 13s; }
+.subpage-wave-parallax > use:nth-child(3) { animation-delay: -3s; animation-duration: 17s; }
+.subpage-wave-parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 24s; }
+@keyframes subpageWaveMove {
+    0% { transform: translate3d(-90px, 0, 0); }
+    100% { transform: translate3d(85px, 0, 0); }
+}
+
+/* 2. Unified Maritime Section Headers & Bento Containers */
+.maritime-section-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+.maritime-section-heading {
+    font-size: clamp(1.85rem, 3vw, 2.55rem);
+    font-weight: 800;
+    color: #09152f;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.65rem;
+}
+.maritime-section-lead {
+    color: #475569;
+    font-size: 1rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+}
+
+.maritime-bento-panel {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 26px;
+    padding: 2.5rem;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 22px 50px -18px rgba(8, 22, 56, 0.1);
+    overflow: hidden;
+}
+.maritime-bento-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 40%, #0284c7 80%, #38bdf8 100%);
+}
+
+/* 3. Programme / Course / Event Bento Cards */
+.programme-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 24px;
+    padding: 14px 14px 24px 14px;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 18px 42px -15px rgba(8, 22, 56, 0.09);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+.programme-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 85%, #38bdf8 100%);
+    z-index: 3;
+}
+.programme-bento-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(14, 165, 233, 0.42);
+    box-shadow: 0 26px 54px -14px rgba(14, 165, 233, 0.2);
+}
+.programme-img-wrap {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #09152f;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+.programme-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.programme-bento-card:hover .programme-img-wrap img {
+    transform: scale(1.06);
+}
+.programme-img-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6, 14, 34, 0.25) 0%, rgba(6, 14, 34, 0.05) 45%, rgba(6, 14, 34, 0.68) 100%);
+    pointer-events: none;
+}
+.programme-badge-top {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: rgba(8, 20, 48, 0.84);
+    backdrop-filter: blur(10px);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.42);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.programme-icon-orb {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 22px -6px rgba(9, 21, 47, 0.42);
+    border: 2px solid #ffffff;
+    position: relative;
+    z-index: 3;
+    margin-top: -23px;
+    margin-left: 14px;
+    margin-bottom: 8px;
+}
+.programme-card-body {
+    padding: 0.25rem 0.9rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.programme-card-body h4 {
+    color: #09152f;
+    font-weight: 800;
+    font-size: 1.28rem;
+    margin-bottom: 0.55rem;
+    line-height: 1.32;
+}
+.programme-desc-box {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    border-left: 3.5px solid #0284c7;
+    border-radius: 11px;
+    padding: 0.8rem 0.95rem;
+    color: #334155;
+    font-size: 0.91rem;
+    line-height: 1.62;
+    margin-bottom: 0.95rem;
+    flex-grow: 1;
+}
+.programme-card-footer {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.programme-level-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: #0369a1;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    padding: 5px 11px;
+    border-radius: 999px;
+}
+.programme-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #ffffff !important;
+    font-size: 0.81rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 18px -6px rgba(9, 21, 47, 0.35);
+}
+.programme-cta-btn:hover {
+    transform: translateX(3px);
+    box-shadow: 0 12px 24px -6px rgba(2, 132, 199, 0.5);
+    color: #7dd3fc !important;
+}
+
+/* 4. Faculty & Technical Staff Bento Profile Cards */
+.person-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 24px;
+    padding: 14px 14px 20px;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 16px 38px -14px rgba(8, 22, 56, 0.09);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+.person-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 85%, #38bdf8 100%);
+    z-index: 3;
+}
+.person-bento-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(14, 165, 233, 0.45);
+    box-shadow: 0 24px 50px -14px rgba(14, 165, 233, 0.2);
+}
+.person-photo-frame {
+    position: relative;
+    height: 310px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #09152f 0%, #112a5c 100%);
+    margin-bottom: 14px;
+    border: 1px solid rgba(14, 165, 233, 0.16);
+}
+.person-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.55s ease;
+}
+.person-bento-card:hover .person-photo-frame img {
+    transform: scale(1.04);
+}
+.person-role-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    padding: 4px 11px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.person-card-body {
+    padding: 0 6px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.person-name {
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: #09152f;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+.person-name a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.person-name a:hover {
+    color: #0284c7;
+}
+.person-qual {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0284c7;
+    margin-bottom: 8px;
+}
+.person-spec-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #0284c7;
+    border-radius: 10px;
+    padding: 8px 11px;
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+.person-card-footer {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.person-email-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+    word-break: break-all;
+}
+.person-email-chip i {
+    color: #0284c7;
+}
+.person-email-chip:hover {
+    color: #0284c7;
+}
+.person-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #09152f 0%, #0284c7 100%);
+    color: #ffffff !important;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+/* 5. Coordinator & Document Bento Cards (Placement / Approvals) */
+.coord-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 22px;
+    padding: 1.65rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    box-shadow: 0 16px 36px -14px rgba(8, 22, 56, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+.coord-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #09152f 0%, #0284c7 65%, #38bdf8 100%);
+}
+.coord-bento-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(14, 165, 233, 0.45);
+    box-shadow: 0 22px 44px -14px rgba(14, 165, 233, 0.18);
+}
+.coord-icon-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 18px -6px rgba(9, 21, 47, 0.35);
+}
+.coord-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 8px;
+    font-size: 0.86rem;
+}
+.coord-contact-row i {
+    color: #0284c7;
+    width: 16px;
+    text-align: center;
+}
+.coord-contact-row a {
+    color: #1e293b;
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-all;
+}
+.coord-contact-row a:hover {
+    color: #0284c7;
+}
+
+.doc-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 22px;
+    padding: 1.65rem 1.4rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    box-shadow: 0 15px 34px -14px rgba(8, 22, 56, 0.08);
+    transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+.doc-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 85%, #38bdf8 100%);
+}
+.doc-bento-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(14, 165, 233, 0.45);
+    box-shadow: 0 24px 48px -14px rgba(14, 165, 233, 0.2);
+}
+.doc-bento-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    box-shadow: 0 10px 22px -6px rgba(9, 21, 47, 0.35);
+}
+</style>
+<div class="wrap bg-upper-nav upper-header py-2 px-0" style="background: linear-gradient(90deg, #040b1d 0%, #0d1f47 50%, #07284a 100%); border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto d-flex align-items-center flex-wrap gap-3 py-1">
+                <span class="mb-0 text-white d-inline-flex align-items-center gap-2" style="font-size: 13px; font-weight: 500;">
+                    <span class="fa fa-envelope text-info"></span>
+                    <a id="header-email" class="text-white text-decoration-none" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </span>
+                <span style="color: rgba(255,255,255,0.25);">|</span>
+                <span class="mb-0 text-white d-inline-flex align-items-center gap-2" style="font-size: 13px; font-weight: 500;">
+                    <span class="fa fa-phone-alt text-info"></span>
+                    <a id="header-phone" class="text-white text-decoration-none" href="tel:+914842575714">0484-2575714</a>
+                </span>
+            </div>
+            <div class="col-auto d-flex justify-content-end align-items-center">
+                <div class="social-media">
+                    <div class="mb-0 d-flex align-items-center gap-3" style="font-size: 13px; font-weight: 600;">
+                        <a class="text-white text-decoration-none d-inline-flex align-items-center gap-1" href="https://www.cusat.ac.in/" target="_blank">
+                            <i class="fa fa-university text-info" style="font-size: 11px;"></i> CUSAT Website
+                        </a>
+                        <span style="color: rgba(255,255,255,0.25);">|</span>
+                        <a class="text-white text-decoration-none d-inline-flex align-items-center gap-1" style="background: rgba(56, 189, 248, 0.16); border: 1px solid rgba(56, 189, 248, 0.35); padding: 3px 12px; border-radius: 999px;" href="https://admissions.cusat.ac.in/" target="_blank">
+                            <i class="fa fa-graduation-cap text-info" style="font-size: 11px;"></i> Admissions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5" style="box-shadow: 0 10px 30px -10px rgba(8, 18, 44, 0.12); border-bottom: 1px solid rgba(15, 23, 42, 0.06);">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="Department of Ship Technology, CUSAT">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv" style="background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0b2954 100%); box-shadow: 0 12px 28px -8px rgba(15, 23, 62, 0.45); border: 1px solid rgba(56, 189, 248, 0.25);">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="academics.html" class="dropdown-item">Courses</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.html" class="dropdown-item">Faculty</a>
+                    <a href="technical-staff.html" class="dropdown-item">Technical Staff</a>
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="academics.html#phd" class="dropdown-item">Ph.D.</a>
+                    <a href="department-library.html" class="dropdown-item">Facilities</a>
+                    <a href="connect.html#collaborations" class="dropdown-item">MoU</a>
+                    <a href="events.html" class="dropdown-item">Achievements</a>
+                    <a href="academics.html#phd" class="dropdown-item">Current Ph.D. Students</a>
+                    <a href="academics.html#phd" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="university-library.html" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="Approvals-and-Affiliations.html" class="dropdown-item">Approvals &amp; Affiliations</a>
+                    <a href="placement.html" class="dropdown-item">Placement</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opportunity
+                        cell</a>
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+    <!-- HEADER END  -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-4 ship-hero-wrapper">
+        <div class="owl-carousel header-carousel position-relative">
+
+            <!-- SLIDE 01: SIGNATURE WELCOME BANNER -->
+            <div class="owl-carousel-item position-relative">
+                <div class="hero-welcome-slide-stage">
+                    <img class="welcome-banner-img" src="img/banner-1_.jpg" alt="Welcome to Department of Ship Technology, CUSAT">
+                </div>
+            </div>
+
+            <!-- SLIDE 02 -->
+            <div class="owl-carousel-item position-relative">
+                <div class="hero-slide-stage">
+                    <div class="hero-content-container">
+                        <div class="hero-text-column">
+                            <div class="hero-overline">Department of Ship Technology</div>
+                            <h1 class="hero-main-heading">
+                                <span>Cochin University of</span>
+                                Science &amp; Technology
+                            </h1>
+                            <p class="hero-subtitle-lead">
+                                Advancing hydrodynamics, marine structures, and autonomous ocean engineering with global industry and university partners.
+                            </p>
+                            <a href="department-library.html" class="hero-minimal-cta">
+                                <span>Research &amp; Facilities</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual-pane">
+                        <img src="img/hero-ship-cad.jpg" alt="Naval Architecture 3D Ship Model">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 03 -->
+            <div class="owl-carousel-item position-relative">
+                <div class="hero-slide-stage">
+                    <div class="hero-content-container">
+                        <div class="hero-text-column">
+                            <div class="hero-overline">100% Placement Record</div>
+                            <h1 class="hero-main-heading">
+                                <span>Explore the high seas of</span>
+                                Opportunity with us
+                            </h1>
+                            <p class="hero-subtitle-lead">
+                                Our graduates lead premier international shipyards, classification societies, offshore energy firms, and the Indian Navy.
+                            </p>
+                            <a href="placement.html" class="hero-minimal-cta">
+                                <span>Placement Portal</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual-pane">
+                        <img src="img/hero-ship-ocean.jpg" alt="Ocean Vessel at High Seas">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 04 -->
+            <div class="owl-carousel-item position-relative">
+                <div class="hero-slide-stage">
+                    <div class="hero-content-container">
+                        <div class="hero-text-column">
+                            <div class="hero-overline">National Board of Accreditation</div>
+                            <h1 class="hero-main-heading">
+                                <span>NBA Accreditation</span>
+                                For B.Tech Programme
+                            </h1>
+                            <p class="hero-subtitle-lead">
+                                Internationally benchmarked curriculum in Naval Architecture &amp; Ship Building, M.Tech (CASAD), and Doctoral Research.
+                            </p>
+                            <a href="Approvals-and-Affiliations.html" class="hero-minimal-cta">
+                                <span>Approvals &amp; Affiliations</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual-pane">
+                        <img src="img/hero-ship-bow.jpg" alt="Maritime Vessel Bow">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Subtle Water Caustics Glow & 4-Layer GPU-Accelerated Parallax Ocean Waves -->
+        <div class="water-caustic-shimmer"></div>
+        <div class="hero-ocean-horizon">
+            <svg class="hero-ocean-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="hero-wave-parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(56, 189, 248, 0.25)" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(14, 165, 233, 0.35)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255, 255, 255, 0.55)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#f8fafc" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <div class="container py-4 bento-portal-grid">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bento-card" onclick="window.open('https://snas.in/','_blank')">
+                        <div class="bento-top">
+                            <span class="bento-badge"><i class="fa fa-anchor"></i> Student Forum</span>
+                            <div class="bento-icon-orb">
+                                <img src="img/cropped-snaslogo-removebg-preview-300x300-1-1-150x150.png" alt="SNAS">
+                            </div>
+                        </div>
+                        <div class="bento-bottom">
+                            <h3 class="bento-title">SNAS</h3>
+                            <p class="bento-subtitle">Society of Naval Architecture Students</p>
+                            <span class="bento-cta">Know More <i class="fa fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="bento-card" onclick="window.open('https://descon.cusat.ac.in','_blank')">
+                        <div class="bento-top">
+                            <span class="bento-badge"><i class="fa fa-compass"></i> Conclave</span>
+                            <div class="bento-icon-orb">
+                                <img src="img/Logo - descon_white1.png" alt="DESCON">
+                            </div>
+                        </div>
+                        <div class="bento-bottom">
+                            <h3 class="bento-title">DESCON</h3>
+                            <p class="bento-subtitle">All India Ship Design Competition &amp; Summit</p>
+                            <span class="bento-cta">Know More <i class="fa fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bento-card" onclick="location.href='Approvals-and-Affiliations.html'">
+                        <div class="bento-top">
+                            <span class="bento-badge"><i class="fa fa-award"></i> Accredited</span>
+                            <div class="bento-icon-orb">
+                                <img src="img/affiliations.png" alt="Affiliations">
+                            </div>
+                        </div>
+                        <div class="bento-bottom">
+                            <h3 class="bento-title">Affiliations</h3>
+                            <p class="bento-subtitle">AICTE Approvals, NBA &amp; Mandatory Disclosures</p>
+                            <span class="bento-cta">Know More <i class="fa fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="bento-card" onclick="location.href='placement.html'">
+                        <div class="bento-top">
+                            <span class="bento-badge"><i class="fa fa-briefcase"></i> Career Cell</span>
+                            <div class="bento-icon-orb">
+                                <img src="img/placement_.png" alt="Placement">
+                            </div>
+                        </div>
+                        <div class="bento-bottom">
+                            <h3 class="bento-title">Placement</h3>
+                            <p class="bento-subtitle">Global Maritime Recruitment &amp; Brochures</p>
+                            <span class="bento-cta">Know More <i class="fa fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCROLL NEWS START  -->
+    <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="modern-ticker-wrap">
+                <a class="modern-ticker-badge" href="events.html">
+                    <span class="ticker-pulse-dot"></span>
+                    <i class="fa fa-bullhorn"></i>
+                    <span>Announcements</span>
+                </a>
+                <div class="modern-ticker-viewport">
+                    <div id="announcements-marquee" class="modern-ticker-track">
+                        <a class="ticker-item-pill" href="https://drive.google.com/file/d/1PaR7ZvQVIzbCze2aLSGKFO0ThMc3MRGJ/view?usp=sharing" target="_blank">
+                            <span class="ticker-chip-tag">FEATURED</span>
+                            <span>Department of Ship Technology &mdash; Official Overview Video</span>
+                            <i class="fa fa-arrow-right small text-info"></i>
+                        </a>
+                    </div>
+                </div>
+                <a class="modern-ticker-action d-none d-md-inline-flex" href="events.html">
+                    <span>View All</span>
+                    <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- SCROLL NEWS END -->
+
+    <!-- NEWS AND EVENTS START -->
+    <div class="container maritime-feed-section wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-4 align-items-stretch">
+            <!-- EVENTS COLUMN -->
+            <div class="col-lg-6">
+                <div class="maritime-bento-panel">
+                    <div>
+                        <div class="maritime-panel-header">
+                            <div class="maritime-panel-title-group">
+                                <div class="maritime-panel-icon">
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">Naval Architecture &amp; Ocean Engg.</span>
+                                    <h2 class="maritime-panel-heading"><a href="events.html">Events</a></h2>
+                                </div>
+                            </div>
+                            <a href="events.html" class="maritime-header-pill">
+                                <span>All Events</span>
+                                <i class="fa fa-arrow-right" style="font-size: 10px;"></i>
+                            </a>
+                        </div>
+
+                        <div class="maritime-card-stack">
+                            <a href="events.html" class="maritime-item-card">
+                                <div class="maritime-date-badge">
+                                    <span class="maritime-date-day">28</span>
+                                    <span class="maritime-date-month">Nov</span>
+                                    <span class="maritime-date-year">2025</span>
+                                </div>
+                                <div class="maritime-item-body">
+                                    <div class="maritime-meta-row">
+                                        <span class="maritime-tag-chip">International Conference</span>
+                                    </div>
+                                    <h6 class="maritime-item-title">
+                                        3rd International Conference on Advances in Naval and Ocean Engineering (ICANOE'25)
+                                    </h6>
+                                </div>
+                                <div class="maritime-item-arrow">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="events.html" class="maritime-item-card">
+                                <div class="maritime-date-badge">
+                                    <span class="maritime-date-day">03</span>
+                                    <span class="maritime-date-month">May</span>
+                                    <span class="maritime-date-year">2025</span>
+                                </div>
+                                <div class="maritime-item-body">
+                                    <div class="maritime-meta-row">
+                                        <span class="maritime-tag-chip">Academic Milestone</span>
+                                    </div>
+                                    <h6 class="maritime-item-title">
+                                        Graduation Ceremony — Department of Ship Technology
+                                    </h6>
+                                </div>
+                                <div class="maritime-item-arrow">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="events.html" class="maritime-item-card">
+                                <div class="maritime-date-badge">
+                                    <span class="maritime-date-day">21</span>
+                                    <span class="maritime-date-month">Dec</span>
+                                    <span class="maritime-date-year">2024</span>
+                                </div>
+                                <div class="maritime-item-body">
+                                    <div class="maritime-meta-row">
+                                        <span class="maritime-tag-chip">50 Years of Excellence</span>
+                                    </div>
+                                    <h6 class="maritime-item-title">
+                                        Ship Technology Golden Jubilee Celebrations
+                                    </h6>
+                                </div>
+                                <div class="maritime-item-arrow">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="maritime-panel-footer">
+                        <span class="maritime-footer-note">
+                            <i class="fa-solid fa-anchor text-info"></i> Department Symposiums &amp; Milestones
+                        </span>
+                        <a class="maritime-cta-btn" href="events.html">
+                            <span>Read More</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- EVENTS END -->
+
+            <!-- NEWS COLUMN -->
+            <div class="col-lg-6">
+                <div class="maritime-bento-panel">
+                    <div>
+                        <div class="maritime-panel-header">
+                            <div class="maritime-panel-title-group">
+                                <div class="maritime-panel-icon">
+                                    <i class="fa-regular fa-newspaper"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">Press Releases &amp; Notices</span>
+                                    <h2 class="maritime-panel-heading"><a href="news.html">News</a></h2>
+                                </div>
+                            </div>
+                            <a href="news.html" class="maritime-header-pill">
+                                <span>Newsroom</span>
+                                <i class="fa fa-arrow-right" style="font-size: 10px;"></i>
+                            </a>
+                        </div>
+
+                        <div class="maritime-card-stack">
+                            <a href="news-view.html?id=38&amp;slug=advertisement-for-the-vacancies-of-project-associate" class="maritime-item-card">
+                                <div class="maritime-news-thumb-wrap">
+                                    <img class="maritime-news-thumb" src="uploads/Advertisement for Project Associate.jpg" alt="Advertisement for the Vacancies of Project Associate" />
+                                </div>
+                                <div class="maritime-item-body">
+                                    <div class="maritime-meta-row">
+                                        <span class="maritime-tag-chip press">Recruitment</span>
+                                        <span class="maritime-date-inline">
+                                            <i class="fa-regular fa-calendar"></i> 26/03/2025
+                                        </span>
+                                    </div>
+                                    <h6 class="maritime-item-title">
+                                        Advertisement for the Vacancies of Project Associate
+                                    </h6>
+                                </div>
+                                <div class="maritime-item-arrow">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="news-view.html?id=39&amp;slug=news-in-janmabhumi-daily-regarding-award-of-phd-to-s-krishnaprasad" class="maritime-item-card">
+                                <div class="maritime-news-thumb-wrap">
+                                    <img class="maritime-news-thumb" src="uploads/PhD Krishnaprasad.jpg" alt="News in Janmabhumi Daily Regarding Award of Ph.D. to S. Krishnaprasad" />
+                                </div>
+                                <div class="maritime-item-body">
+                                    <div class="maritime-meta-row">
+                                        <span class="maritime-tag-chip press">Research Feature</span>
+                                        <span class="maritime-date-inline">
+                                            <i class="fa-regular fa-calendar"></i> 17/02/2025
+                                        </span>
+                                    </div>
+                                    <h6 class="maritime-item-title">
+                                        News in Janmabhumi Daily Regarding Award of Ph.D. to S. Krishnaprasad
+                                    </h6>
+                                </div>
+                                <div class="maritime-item-arrow">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                            </a>
+
+                            <a href="news-view.html?id=37&amp;slug=news-in-kalakaumudi-about-department-golden-jubilee-celebration" class="maritime-item-card">
+                                <div class="maritime-news-thumb-wrap">
+                                    <img class="maritime-news-thumb" src="uploads/IMG-20241026-WA0000.jpg" alt="News in KALAKAUMUDI about Department Golden Jubilee Celebration" />
+                                </div>
+                                <div class="maritime-item-body">
+                                    <div class="maritime-meta-row">
+                                        <span class="maritime-tag-chip press">Press Coverage</span>
+                                        <span class="maritime-date-inline">
+                                            <i class="fa-regular fa-calendar"></i> 25/10/2024
+                                        </span>
+                                    </div>
+                                    <h6 class="maritime-item-title">
+                                        News in 'KALAKAUMUDI' about Department Golden Jubilee Celebration
+                                    </h6>
+                                </div>
+                                <div class="maritime-item-arrow">
+                                    <i class="fa fa-arrow-right"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="maritime-panel-footer">
+                        <span class="maritime-footer-note">
+                            <i class="fa-solid fa-ship text-info"></i> Media Features &amp; Official Bulletins
+                        </span>
+                        <a class="maritime-cta-btn" href="news.html">
+                            <span>Read More</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- NEWS END -->
+        </div>
+    </div>
+    <!-- NEWS AND EVENTS END -->
+
+
+    <!-- MARITIME IMPACT TELEMETRY RIBBON START -->
+    <div class="container py-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="maritime-stats-ribbon">
+            <div class="row g-3 align-items-stretch">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="maritime-stat-box">
+                        <div class="maritime-stat-icon">
+                            <i class="fa-solid fa-anchor"></i>
+                        </div>
+                        <div>
+                            <span class="maritime-stat-eyebrow">Est. Heritage</span>
+                            <div class="maritime-stat-num">1974</div>
+                            <div class="maritime-stat-label">Pioneering Legacy (50+ Yrs)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="maritime-stat-box">
+                        <div class="maritime-stat-icon">
+                            <i class="fa-solid fa-earth-americas"></i>
+                        </div>
+                        <div>
+                            <span class="maritime-stat-eyebrow">Career Outcomes</span>
+                            <div class="maritime-stat-num">100%</div>
+                            <div class="maritime-stat-label">Global Placement Record</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="maritime-stat-box">
+                        <div class="maritime-stat-icon">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <div>
+                            <span class="maritime-stat-eyebrow">R&amp;D Innovation</span>
+                            <div class="maritime-stat-num">41+</div>
+                            <div class="maritime-stat-label">Active Ph.D. Scholars</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="maritime-stat-box">
+                        <div class="maritime-stat-icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <span class="maritime-stat-eyebrow">Quality Standard</span>
+                            <div class="maritime-stat-num">NBA</div>
+                            <div class="maritime-stat-label">Accredited B.Tech &amp; AICTE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MARITIME IMPACT TELEMETRY RIBBON END -->
+
+
+    <!-- About Start (Vision & Mission) -->
+    <div class="container py-4">
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                <div class="campus-showcase-frame">
+                    <div class="campus-showcase-inner">
+                        <img class="campus-showcase-img" src="img/cusat.jpg" alt="Cochin University of Science and Technology">
+                        <div class="campus-showcase-overlay"></div>
+                        <div class="campus-floating-badge">
+                            <div class="campus-badge-left">
+                                <div class="campus-badge-icon">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold text-uppercase" style="font-size: 10.5px; letter-spacing: 0.09em; color: #0284c7;">University Headquarters</div>
+                                    <div class="fw-bold" style="font-size: 15px; color: #0f172a;">Cochin University of Science and Technology</div>
+                                </div>
+                            </div>
+                            <span class="maritime-header-pill">CUSAT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 about-text wow fadeInUp ship-contact-data" data-wow-delay="0.2s">
+                <div class="maritime-bento-panel">
+                    <div>
+                        <div class="maritime-panel-header">
+                            <div class="maritime-panel-title-group">
+                                <div class="maritime-panel-icon">
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">Ship Technology CUSAT</span>
+                                    <h2 class="maritime-panel-heading">Vision &amp; Mission</h2>
+                                </div>
+                            </div>
+                            <span class="maritime-header-pill">
+                                <i class="fa-solid fa-anchor" style="font-size: 10px;"></i>
+                                <span>Charter</span>
+                            </span>
+                        </div>
+
+                        <div class="vision-highlight-box">
+                            <div class="vision-highlight-header">
+                                <span class="vision-tag-pill"><i class="fa-solid fa-eye"></i> Vision</span>
+                            </div>
+                            <p id="vision-text" class="mb-0" style="font-size: 15.5px; font-weight: 700; line-height: 1.55; color: #0f172a;">To evolve into a globally recognized department in the frontier areas of Naval Architecture and Ship Building.</p>
+                        </div>
+
+                        <div class="mission-section-subhead">
+                            <span class="maritime-panel-eyebrow mb-0"><i class="fa-solid fa-bullseye me-1"></i> Core Mission Pillars</span>
+                        </div>
+                        <ul class="mission-modern-list">
+                            <li>
+                                <div class="mission-icon-badge"><i class="fa fa-ship" aria-hidden="true"></i></div>
+                                <span>We are committed to achieve academic excellence in the field of Naval Architecture and ShipBuilding through innovative teaching and learning processes.</span>
+                            </li>
+                            <li>
+                                <div class="mission-icon-badge"><i class="fa fa-ship" aria-hidden="true"></i></div>
+                                <span>To prepare the students to be professionally competent to face the challenges in academics, the industry and research.</span>
+                            </li>
+                            <li>
+                                <div class="mission-icon-badge"><i class="fa fa-ship" aria-hidden="true"></i></div>
+                                <span>Promote inter-disciplinary research among the faculty and the students to create state of art research facilities.</span>
+                            </li>
+                            <li>
+                                <div class="mission-icon-badge"><i class="fa fa-ship" aria-hidden="true"></i></div>
+                                <span>To promote quality and ethics among the students.</span>
+                            </li>
+                            <li>
+                                <div class="mission-icon-badge"><i class="fa fa-ship" aria-hidden="true"></i></div>
+                                <span>Motivate the students to acquire entrepreneurial skills to become global leaders.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- ABOUT 2 (Surging Ahead Since 1975) -->
+    <div class="container py-4">
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-6 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                <div class="maritime-bento-panel">
+                    <div>
+                        <div class="maritime-panel-header">
+                            <div class="maritime-panel-title-group">
+                                <div class="maritime-panel-icon">
+                                    <i class="fa-solid fa-anchor"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">About Us &bull; Department Heritage</span>
+                                    <h2 id="about-title" class="maritime-panel-heading">Surging ahead since 1975</h2>
+                                </div>
+                            </div>
+                            <span class="maritime-header-pill">
+                                <i class="fa-solid fa-compass" style="font-size: 10px;"></i>
+                                <span>Est. 1974/75</span>
+                            </span>
+                        </div>
+
+                        <!-- 3-Column Heritage & Global Impact Highlights -->
+                        <div class="about-milestone-strip">
+                            <div class="about-milestone-chip">
+                                <div class="about-milestone-icon"><i class="fa-solid fa-flag"></i></div>
+                                <div>
+                                    <div class="about-milestone-val">1975</div>
+                                    <div class="about-milestone-lbl">Pioneer in India</div>
+                                </div>
+                            </div>
+                            <div class="about-milestone-chip">
+                                <div class="about-milestone-icon"><i class="fa-solid fa-earth-europe"></i></div>
+                                <div>
+                                    <div class="about-milestone-val">1978</div>
+                                    <div class="about-milestone-lbl">Rostock Germany</div>
+                                </div>
+                            </div>
+                            <div class="about-milestone-chip">
+                                <div class="about-milestone-icon"><i class="fa-solid fa-trophy"></i></div>
+                                <div>
+                                    <div class="about-milestone-val">100%</div>
+                                    <div class="about-milestone-lbl">Placement Record</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Editorial Narrative Card -->
+                        <div class="about-narrative-card">
+                            <div class="vision-highlight-header mb-2">
+                                <span class="vision-tag-pill"><i class="fa-solid fa-ship"></i> Naval Architecture &amp; Ship Building</span>
+                            </div>
+                            <p id="about-text" class="mb-0 justify-para" style="font-size: 14.5px; line-height: 1.72; color: #334155;">This Department is one of the pioneers in the field of Naval
+                                Architecture
+                                education in this country and was established in 1975 with an aim to create a new and
+                                dynamic generation of Naval Architects to meet the requirements of the Indian
+                                Shipbuilding Industry, Ship Classification Societies, R&amp;D organizations, Indian Navy,
+                                and related organisations. This Department maintains active collaboration and
+                                interaction with IITs, foreign Universities, shipyards and other industries. These
+                                organizations have been generous in extending their facilities and expertise to impart
+                                training to our students. The fruitful collaboration of this Department with Rostock
+                                University, Germany dates back to 1978 and remains as an important milestone in the
+                                development of this Department. The curriculum was drawn up and updated in consultation
+                                with experts from various academic institutions and industries. This has brought the
+                                course curriculum in conformity with international standards. The quality of education
+                                imparted and the resulting professional competence of the graduates enabled the
+                                Department to achieve a unique record of 100 percent placement of its graduates in India
+                                and abroad.</p>
+                        </div>
+
+                        <!-- Strategic Collaborations Grid -->
+                        <div class="about-partner-grid">
+                            <div class="about-partner-pill">
+                                <i class="fa-solid fa-handshake"></i>
+                                <span>Rostock University, Germany</span>
+                            </div>
+                            <div class="about-partner-pill">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Indian Navy &amp; DRDO R&amp;D</span>
+                            </div>
+                            <div class="about-partner-pill">
+                                <i class="fa-solid fa-building-columns"></i>
+                                <span>IITs &amp; Global Universities</span>
+                            </div>
+                            <div class="about-partner-pill">
+                                <i class="fa-solid fa-certificate"></i>
+                                <span>Classification Societies</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="maritime-panel-footer">
+                        <span class="maritime-footer-note">
+                            <i class="fa-solid fa-anchor text-info"></i> Globally Benchmarked Maritime Curriculum
+                        </span>
+                        <a class="maritime-cta-btn" href="academics.html">
+                            <span>Explore Academics</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
+                <div class="campus-showcase-frame">
+                    <div class="campus-showcase-inner">
+                        <img class="campus-showcase-img" src="img/shiptech.jpg" alt="Department of Ship Technology Building">
+                        <div class="campus-showcase-overlay"></div>
+                        <div class="campus-floating-badge">
+                            <div class="campus-badge-left">
+                                <div class="campus-badge-icon">
+                                    <i class="fa-solid fa-ship"></i>
+                                </div>
+                                <div>
+                                    <div class="fw-bold text-uppercase" style="font-size: 10.5px; letter-spacing: 0.09em; color: #0284c7;">Department Campus</div>
+                                    <div class="fw-bold" style="font-size: 15px; color: #0f172a;">Department of Ship Technology, CUSAT</div>
+                                </div>
+                            </div>
+                            <span class="maritime-header-pill">Est. 1974/75</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ABOUT End -->
+
+
+    <!-- HOD MESSAGE 2 Start -->
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="hod-executive-card">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4">
+                    <div class="hod-portrait-panel">
+                        <img id="hod-image" class="hod-portrait-img" src="uploads/mathi.png" alt="Dr. A. Mathiazhagan" />
+                        <span class="badge rounded-pill mb-2 px-3 py-1" style="background: rgba(56, 189, 248, 0.18); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.35); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;">Leadership Desk</span>
+                        <h4 class="text-white fw-bold mb-1">Dr. A. Mathiazhagan</h4>
+                        <p class="mb-3" style="color: #7dd3fc; font-size: 13.5px; font-weight: 600;">Professor &amp; Head of the Department</p>
+                        <div class="w-100 pt-3 mt-1" style="border-top: 1px solid rgba(255,255,255,0.12); font-size: 12px; color: #cbd5e1;">
+                            <i class="fa-solid fa-ship text-info me-1"></i> Department of Ship Technology, CUSAT
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                            <span class="section-eyebrow-pill mb-0"><i class="fa-solid fa-quote-left"></i> HOD's Message</span>
+                            <span class="text-muted small fw-semibold"><i class="fa-solid fa-compass text-info me-1"></i> Naval Architecture &amp; Ship Building</span>
+                        </div>
+                        <h2 id="hod-title" class="fw-bold mb-3" style="font-size: 32px; color: #0f172a; letter-spacing: -0.02em;">Shiptech CUSAT</h2>
+                        <div id="hod-message" class="justify-para" style="font-size: 15px; line-height: 1.72; color: #334155;">
+                            <p class="fw-semibold text-dark">Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp; Technology (CUSAT), Kerala, India!!</p>
+
+                            <p>The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a pioneer in the field of Naval Architecture education in the country and has produced global leaders in maritime sector, in diverse fields including design, construction, operation, survey, maintenance, education and research.<br />
+                            We are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates have a 100% placement record for the past several years, a M.Tech course in Computer Aided Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine industry, and a Ph.D programme with 41 scholars at present.<br />
+                            We are a truly interdisciplinary department with a very strong research atmosphere. Much of the graduate level research is done at the Computational Hydrodynamics and Structural Engineering (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The DoST has collaboration with the Indian Navy, MoUs with leading shipyards, Classification Societies and academic institutions.<br />
+                            The support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters to the overall development is highly encouraging.<br />
+                            Student achievements are recognized through RINA (Royal Institution of Naval Architects, London) student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for developing technical and professional leadership among students is provided by the SNAS (Society of Naval Architecture Students). Department training and placement cell provides professional assistance for student placement as well as internship in leading companies.<br />
+                            We are also actively participating in industrial projects as well as consultancy services through DESON, the consultancy wing of DoST.<br />
+                            I invite you to browse through the web pages for further information</p>
+                        </div>
+                        <div class="mt-3 pt-3 d-flex align-items-center justify-content-between flex-wrap gap-2" style="border-top: 1px solid rgba(15, 23, 42, 0.08);">
+                            <div>
+                                <div class="fw-bold" style="font-size: 16px; color: #0f172a;">Dr. A. Mathiazhagan</div>
+                                <div class="fw-semibold" style="font-size: 13.5px; color: #0284c7;">Professor and Head of the Department</div>
+                            </div>
+                            <span class="maritime-header-pill"><i class="fa-solid fa-building-columns"></i> DoST, CUSAT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HOD MESSAGE 2 End -->
+
+
+    <!-- Course Start -->
+    <div class="container py-5">
+        <div class="text-center wow fadeInUp mb-5" data-wow-delay="0.1s">
+            <span class="section-eyebrow-pill"><i class="fa-solid fa-graduation-cap"></i> Academic Programmes</span>
+            <h1 class="fw-bold mb-2" style="font-size: 38px; color: #0f172a; letter-spacing: -0.02em;">Courses Offered</h1>
+            <p class="text-muted mx-auto mb-0" style="max-width: 640px;">Internationally benchmarked undergraduate, postgraduate, and doctoral programmes in Naval Architecture, Ship Building, and Ocean Engineering.</p>
+        </div>
+        <div class="row g-4 align-items-stretch">
+
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="programme-bento-card w-100">
+                    <div class="programme-img-wrap">
+                        <img src="uploads/btchnavel.jpg" alt="B.Tech. Naval Architecture and Ship Building">
+                        <span class="programme-degree-pill"><i class="fa-solid fa-award me-1"></i> NBA Accredited &bull; 4 Years</span>
+                    </div>
+                    <div class="programme-card-body">
+                        <div>
+                            <div class="programme-title-row">
+                                <div class="programme-icon-orb">
+                                    <i class="fa-solid fa-ship"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">Undergraduate &bull; NA&amp;SB</span>
+                                    <h4 class="maritime-panel-heading" style="font-size: 22px;">B.Tech.</h4>
+                                </div>
+                            </div>
+                            <div class="programme-desc-box">
+                                Naval Architecture and Ship Building (NA&amp;SB) &mdash; Flagship undergraduate programme with a 100% global placement track record.
+                            </div>
+                            <div class="programme-spec-row">
+                                <span class="programme-spec-chip"><i class="fa-solid fa-globe"></i> 100% Placement</span>
+                                <span class="programme-spec-chip"><i class="fa-solid fa-certificate"></i> AICTE &amp; NBA</span>
+                            </div>
+                        </div>
+                        <div class="programme-card-footer">
+                            <span class="maritime-header-pill"><i class="fa-regular fa-clock"></i> 8 Semesters</span>
+                            <a class="maritime-cta-btn" href="academics.html#btech">
+                                <span>Read More</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="programme-bento-card w-100">
+                    <div class="programme-img-wrap">
+                        <img src="uploads/mtech.jpg" alt="M.Tech. Computer Aided Structural Analysis and Design">
+                        <span class="programme-degree-pill"><i class="fa-solid fa-microchip me-1"></i> Postgraduate &bull; 2 Years</span>
+                    </div>
+                    <div class="programme-card-body">
+                        <div>
+                            <div class="programme-title-row">
+                                <div class="programme-icon-orb">
+                                    <i class="fa-solid fa-cubes"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">Postgraduate &bull; CASAD</span>
+                                    <h4 class="maritime-panel-heading" style="font-size: 22px;">M.Tech.</h4>
+                                </div>
+                            </div>
+                            <div class="programme-desc-box">
+                                Computer Aided Structural Analysis and Design (CASAD) &mdash; Advanced finite element, marine structures, and offshore engineering.
+                            </div>
+                            <div class="programme-spec-row">
+                                <span class="programme-spec-chip"><i class="fa-solid fa-laptop-code"></i> FEM &amp; Marine CAD</span>
+                                <span class="programme-spec-chip"><i class="fa-solid fa-water"></i> Offshore Structures</span>
+                            </div>
+                        </div>
+                        <div class="programme-card-footer">
+                            <span class="maritime-header-pill"><i class="fa-regular fa-clock"></i> 4 Semesters</span>
+                            <a class="maritime-cta-btn" href="academics.html#mtech">
+                                <span>Read More</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 d-flex">
+                <div class="programme-bento-card w-100">
+                    <div class="programme-img-wrap">
+                        <img src="img/phd_image-thumb.jpg" alt="Ph.D. Doctoral Research">
+                        <span class="programme-degree-pill"><i class="fa-solid fa-compass me-1"></i> Doctoral &bull; 41+ Scholars</span>
+                    </div>
+                    <div class="programme-card-body">
+                        <div>
+                            <div class="programme-title-row">
+                                <div class="programme-icon-orb">
+                                    <i class="fa-solid fa-compass"></i>
+                                </div>
+                                <div>
+                                    <span class="maritime-panel-eyebrow">Doctoral Research &bull; R&amp;D</span>
+                                    <h4 class="maritime-panel-heading" style="font-size: 22px;">Ph.D.</h4>
+                                </div>
+                            </div>
+                            <div class="programme-desc-box">
+                                Research is central to the progress of any academic department &mdash; Frontier hydrodynamics, propulsion, and ocean structures research.
+                            </div>
+                            <div class="programme-spec-row">
+                                <span class="programme-spec-chip"><i class="fa-solid fa-flask"></i> CHASE Lab CFD</span>
+                                <span class="programme-spec-chip"><i class="fa-solid fa-user-graduate"></i> 41+ Active Scholars</span>
+                            </div>
+                        </div>
+                        <div class="programme-card-footer">
+                            <span class="maritime-header-pill"><i class="fa-solid fa-microscope"></i> Doctoral Track</span>
+                            <a class="maritime-cta-btn" href="academics.html#phd">
+                                <span>Read More</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Course End -->
+
+
+    <!-- NEW TESTIMONIAL START  -->
+    <div class="container py-5">
+        <div class="maritime-bento-panel">
+            <div class="maritime-panel-header">
+                <div class="maritime-panel-title-group">
+                    <div class="maritime-panel-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div>
+                        <span class="maritime-panel-eyebrow">Global Alumni &amp; Student Voices</span>
+                        <h2 class="maritime-panel-heading">Testimonials</h2>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-2 flex-wrap">
+                    <span class="maritime-header-pill d-none d-md-inline-flex">
+                        <i class="fa-solid fa-globe"></i>
+                        <span>Experiences &amp; Industry Endorsements</span>
+                    </span>
+                    <div class="testimonial-nav-group">
+                        <a href="#" class="custom-owl-prev testimonial-nav-btn" aria-label="Previous Testimonial"><i class="fa fa-arrow-left"></i></a>
+                        <a href="#" class="custom-owl-next testimonial-nav-btn" aria-label="Next Testimonial"><i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick-Select Distinguished Alumni Strip -->
+            <div id="testimonials-alumni-strip" class="testimonial-alumni-strip">
+                <!-- Populated dynamically via js/site-data.js -->
+            </div>
+
+            <div class="testimonial--wrap">
+                <div id="testimonials-slider" class="owl-single owl-carousel no-nav">
+                    <!-- Populated dynamically from SQLite database via window.__SHIPTECH_DATA__.testimonials -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NEW TESTIMONIAL END -->
+
+
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+<style>
+    /* ==========================================================================
+       INTERNATIONAL MARITIME FOOTER — MULTI-CREST OCEAN WAVES & FULL-BLEED MAP
+       ========================================================================== */
+    .maritime-footer-wrapper {
+        position: relative;
+        clear: both;
+        width: 100%;
+        margin-top: 3.5rem;
+        background: transparent;
+        color: #e2e8f0;
+        overflow: hidden;
+    }
+
+    /* 1. Multi-Crest Seamless GPU Ocean Wave Horizon (viewBox 0 0 1440 84) */
+    .footer-ocean-wave-top {
+        position: relative;
+        width: 100%;
+        height: 76px;
+        overflow: hidden;
+        line-height: 0;
+        background: transparent;
+        margin-bottom: -2px;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .footer-wave-svg {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 76px;
+    }
+
+    .footer-wave-parallax > use {
+        will-change: transform;
+    }
+
+    .footer-wave-parallax > use:nth-child(1) {
+        animation: footerWaveLoop 18s linear infinite;
+    }
+
+    .footer-wave-parallax > use:nth-child(2) {
+        animation: footerWaveLoop 13s linear infinite reverse;
+    }
+
+    .footer-wave-parallax > use:nth-child(3) {
+        animation: footerWaveLoop 10s linear infinite;
+    }
+
+    .footer-wave-parallax > use:nth-child(4) {
+        animation: footerWaveLoop 7.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes footerWaveLoop {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            transform: translate3d(-720px, 0, 0);
+        }
+    }
+
+    /* 2. Deep-Ocean Footer Stage (#051129 top matches 4th wave fill seamlessly) */
+    .maritime-footer-stage {
+        position: relative;
+        z-index: 2;
+        background:
+            radial-gradient(circle at 14% 20%, rgba(14, 165, 233, 0.14) 0%, transparent 45%),
+            radial-gradient(circle at 86% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+            linear-gradient(180deg, #051129 0%, #071736 55%, #030917 100%);
+        padding: 36px 0 0;
+        overflow: hidden;
+    }
+
+    .maritime-footer-stage::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('img/map.png') center center no-repeat;
+        background-size: contain;
+        opacity: 0.14;
+        pointer-events: none;
+    }
+
+    /* Water Caustics Shimmer Reflection at Top of Footer Stage */
+    .footer-caustic-shimmer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background:
+            radial-gradient(ellipse 40% 35% at 25% 0%, rgba(56, 189, 248, 0.18) 0%, transparent 70%),
+            radial-gradient(ellipse 45% 35% at 75% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+        filter: blur(8px);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* 3. Unified Architectural Footer Shell */
+    .footer-main-shell {
+        position: relative;
+        z-index: 2;
+        background: rgba(10, 24, 54, 0.62);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        border-radius: 24px;
+        padding: 28px 30px;
+        box-shadow: 0 22px 48px -18px rgba(0, 0, 0, 0.65);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-main-shell::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #0284c7 0%, #38bdf8 50%, #0284c7 100%);
+    }
+
+    .footer-col-divider {
+        border-right: 1px solid rgba(255, 255, 255, 0.09);
+        padding-right: 24px;
+    }
+
+    @media (max-width: 991.98px) {
+        .footer-col-divider {
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+            padding-right: 12px;
+            padding-bottom: 22px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .footer-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #38bdf8;
+        margin-bottom: 3px;
+    }
+
+    .footer-heading {
+        font-size: 19px;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 14px;
+        letter-spacing: -0.015em;
+    }
+
+    /* Column 1: Compact Address & Direct Contact */
+    .footer-contact-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-contact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 13.5px;
+        color: #cbd5e1;
+        line-height: 1.5;
+    }
+
+    .footer-contact-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        border-radius: 9px;
+        background: rgba(56, 189, 248, 0.14);
+        border: 1px solid rgba(56, 189, 248, 0.32);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        margin-top: 1px;
+    }
+
+    .footer-social-strip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .footer-social-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        text-decoration: none !important;
+        transition: all 0.22s ease;
+    }
+
+    .footer-social-btn:hover {
+        background: #38bdf8;
+        border-color: #38bdf8;
+        color: #041028 !important;
+        transform: translateY(-2px);
+    }
+
+    /* Column 2: Clean 2-Column Navigation Grid */
+    .footer-links-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 10px;
+    }
+
+    .footer-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 11px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #e2e8f0 !important;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: all 0.2s ease;
+    }
+
+    .footer-nav-link span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .footer-nav-link i.link-bullet {
+        color: #38bdf8;
+        font-size: 11.5px;
+    }
+
+    .footer-nav-link i.link-arrow {
+        font-size: 10px;
+        color: rgba(148, 163, 184, 0.6);
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .footer-nav-link:hover {
+        background: rgba(56, 189, 248, 0.15);
+        border-color: rgba(56, 189, 248, 0.4);
+        color: #ffffff !important;
+        transform: translateX(2px);
+    }
+
+    .footer-nav-link:hover i.link-arrow {
+        transform: translateX(2px);
+        color: #38bdf8;
+    }
+
+    .footer-portal-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 14px;
+        padding-top: 13px;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .footer-mini-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #cbd5e1 !important;
+        font-size: 11.5px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: all 0.2s ease;
+    }
+
+    .footer-mini-pill:hover {
+        background: rgba(56, 189, 248, 0.18);
+        border-color: rgba(56, 189, 248, 0.45);
+        color: #ffffff !important;
+    }
+
+    .footer-mini-pill.admin-pill {
+        background: linear-gradient(90deg, rgba(2, 132, 199, 0.28) 0%, rgba(56, 189, 248, 0.14) 100%);
+        border-color: rgba(56, 189, 248, 0.4);
+        color: #7dd3fc !important;
+    }
+
+    /* Column 3: Edge-to-Edge Full-Fill Map Showcase (Zero Wasted Space!) */
+    .footer-map-column {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .footer-map-frame {
+        position: relative;
+        flex: 1 1 auto;
+        width: 100%;
+        min-height: 225px;
+        height: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(56, 189, 248, 0.32);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+        background: #061229;
+    }
+
+    .footer-map-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0;
+        display: block;
+    }
+
+    .footer-map-badge-overlay {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: rgba(5, 17, 41, 0.88);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        color: #7dd3fc !important;
+        font-size: 11px;
+        font-weight: 700;
+        text-decoration: none !important;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+        transition: all 0.2s ease;
+    }
+
+    .footer-map-badge-overlay:hover {
+        background: #0284c7;
+        color: #ffffff !important;
+    }
+
+    /* Bottom Copyright Bar */
+    .footer-copyright-bar {
+        position: relative;
+        z-index: 2;
+        margin-top: 26px;
+        padding: 16px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(2, 6, 16, 0.65);
+        font-size: 13px;
+        color: #94a3b8;
+    }
+
+    .footer-copyright-bar a {
+        color: #7dd3fc !important;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: color 0.2s ease;
+    }
+
+    .footer-copyright-bar a:hover {
+        color: #ffffff !important;
+    }
+</style>
+
+<footer class="maritime-footer-wrapper">
+    <!-- 4-Layer Multi-Crest Ocean Wave Horizon (viewBox 0 0 1440 84 — Seamless Periodic Loop) -->
+    <div class="footer-ocean-wave-top">
+        <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 1440 84" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="footer-ocean-wave-path"
+                    d="M 0 44 Q 180 12 360 44 T 720 44 T 1080 44 T 1440 44 T 1800 44 T 2160 44 T 2520 44 T 2880 44 L 2880 86 L 0 86 Z" />
+            </defs>
+            <g class="footer-wave-parallax">
+                <use xlink:href="#footer-ocean-wave-path" x="0" y="0" fill="rgba(56, 189, 248, 0.26)" />
+                <use xlink:href="#footer-ocean-wave-path" x="-180" y="6" fill="rgba(14, 165, 233, 0.45)" />
+                <use xlink:href="#footer-ocean-wave-path" x="-360" y="12" fill="rgba(10, 34, 78, 0.80)" />
+                <use xlink:href="#footer-ocean-wave-path" x="-90" y="18" fill="#051129" />
+            </g>
+        </svg>
+    </div>
+
+    <div class="maritime-footer-stage">
+        <!-- Subtle Water Caustics Shimmer -->
+        <div class="footer-caustic-shimmer"></div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="footer-main-shell">
+                <div class="row g-4 align-items-stretch">
+                    <!-- COLUMN 1: ADDRESS & DIRECT CONTACT -->
+                    <div class="col-lg-4 col-md-6 footer-col-divider d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="footer-eyebrow"><i class="fa fa-anchor"></i> Est. 1974 • CUSAT</span>
+                            <h4 class="footer-heading">Address &amp; Contact</h4>
+
+                            <div class="footer-contact-stack">
+                                <div class="footer-contact-row">
+                                    <div class="footer-contact-icon">
+                                        <i class="fa fa-map-marker-alt"></i>
+                                    </div>
+                                    <span id="footer-address">Department of Ship Technology,<br>
+                                        Cochin University of Science and Technology,<br>
+                                        Cochin-22, Kerala, India</span>
+                                </div>
+                                <div class="footer-contact-row align-items-center">
+                                    <div class="footer-contact-icon">
+                                        <i class="fa fa-phone-alt"></i>
+                                    </div>
+                                    <span id="footer-phone" class="fw-semibold text-white">+91-484 257-5714</span>
+                                </div>
+                                <div class="footer-contact-row align-items-center">
+                                    <div class="footer-contact-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <span id="footer-email" class="fw-semibold text-white">ship@cusat.ac.in</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social-strip">
+                            <span class="small fw-bold text-uppercase me-1" style="font-size: 10.5px; letter-spacing: 0.08em; color: #7dd3fc;">Connect:</span>
+                            <a target="_blank" class="footer-social-btn" title="DoST CUSAT LinkedIn" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                            <a target="_blank" class="footer-social-btn" title="Placement Cell LinkedIn" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+                            <a target="_blank" class="footer-social-btn" title="Facebook" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" class="footer-social-btn" title="YouTube" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 2: 2-COLUMN QUICK LINKS & PORTALS -->
+                    <div class="col-lg-4 col-md-6 footer-col-divider d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="footer-eyebrow"><i class="fa fa-compass"></i> Navigation</span>
+                            <h4 class="footer-heading">Quick Links</h4>
+
+                            <div class="footer-links-grid">
+                                <a class="footer-nav-link" href="academics.html">
+                                    <span><i class="fa fa-graduation-cap link-bullet"></i> Courses</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="placement.html">
+                                    <span><i class="fa fa-briefcase link-bullet"></i> Placement</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="faculty.html">
+                                    <span><i class="fa fa-user-tie link-bullet"></i> Faculty</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="Approvals-and-Affiliations.html">
+                                    <span><i class="fa fa-certificate link-bullet"></i> Affiliations</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="news.html">
+                                    <span><i class="fa fa-newspaper link-bullet"></i> News</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="events.html">
+                                    <span><i class="fa fa-calendar-check link-bullet"></i> Events</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="gallery.html">
+                                    <span><i class="fa fa-images link-bullet"></i> Gallery</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="contact.html">
+                                    <span><i class="fa fa-envelope link-bullet"></i> Contact Us</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-portal-bar">
+                            <div class="d-flex align-items-center gap-1 flex-wrap">
+                                <a class="footer-mini-pill" target="_blank" href="https://www.dostas.org/">DOSTAS</a>
+                                <a class="footer-mini-pill" target="_blank" href="https://descon.cusat.ac.in/">DESCON</a>
+                                <a class="footer-mini-pill" target="_blank" href="https://snas.in/">SNAS</a>
+                            </div>
+                            <a class="footer-mini-pill admin-pill" href="/shipadmin">
+                                <i class="fa fa-lock"></i> Admin Portal
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 3: FULL-BLEED CAMPUS MAP (FILLS ENTIRE COLUMN HEIGHT) -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer-map-column">
+                            <div class="footer-map-frame">
+                                <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                <a target="_blank" href="https://maps.google.com/?q=Department+of+Ship+Technology+CUSAT" class="footer-map-badge-overlay">
+                                    <i class="fa fa-location-arrow"></i> South Kalamassery, Kochi
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright-bar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        &copy; <a href="index.html">Department of Ship Technology, CUSAT</a>. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a target="_blank" href="https://infinio.co.in">Infinio Technology Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>window.__SHIPTECH_DATA__ = {"settings": {"department_name": "Department of Ship Technology", "university_name": "Cochin University of Science and Technology", "email": "ship@cusat.ac.in", "phone_header": "0484 - 2577602", "phone_footer": "+91-484 257-5714", "address": "Department of Ship Technology, Cochin University of Science and Technology, Cochin-22, Kerala, India", "vision": "To evolve into a globally recognized department in the frontier areas of Naval Architecture and Ship Building.", "about_title": "Surging ahead since 1975", "about_text": "This Department is one of the pioneers in the field of Naval Architecture education in this country and was established in 1975 with an aim to create a new and dynamic generation of Naval Architects to meet the requirements of the Indian Shipbuilding Industry, Ship Classification Societies, R&D organizations, Indian Navy, and related organisations. This Department maintains active collaboration and interaction with IITs, foreign Universities, shipyards and other industries. These organizations have been generous in extending their facilities and expertise to impart training to our students. The fruitful collaboration of this Department with Rostock University, Germany dates back to 1978 and remains as an important milestone in the development of this Department. The curriculum was drawn up and updated in consultation with experts from various academic institutions and industries. This has brought the course curriculum in conformity with international standards. The quality of education imparted and the resulting professional competence of the graduates enabled the Department to achieve a unique record of 100 percent placement of its graduates in India and abroad.", "hod_title": "Shiptech CUSAT", "hod_message": "Greetings from the Department of Ship Technology (DoST), Cochin University of Science & Technology (CUSAT), Kerala, India!!\n\nThe DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a pioneer in the field of Naval Architecture education in the country and has produced global leaders in maritime sector, in diverse fields including design, construction, operation, survey, maintenance, education and research.\nWe are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates have a 100% placement record for the past several years, a M.Tech course in Computer Aided Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine industry, and a Ph.D programme with 41 scholars at present.\nWe are a truly interdisciplinary department with a very strong research atmosphere. Much of the graduate level research is done at the Computational Hydrodynamics and Structural Engineering (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The DoST has collaboration with the Indian Navy, MoUs with leading shipyards, Classification Societies and academic institutions.\nThe support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters to the overall development is highly encouraging.\nStudent achievements are recognized through RINA (Royal Institution of Naval Architects, London) student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for developing technical and professional leadership among students is provided by the SNAS (Society of Naval Architecture Students). Department training and placement cell provides professional assistance for student placement as well as internship in leading companies.\nWe are also actively participating in industrial projects as well as consultancy services through DESON, the consultancy wing of DoST.\nI invite you to browse through the web pages for further information", "hod_image": "uploads/mathi.png"}, "announcements": [{"id": 2, "title": "Annual Technical Symposium & Industry Meet scheduled for next month.", "link": "events.php", "is_active": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "Admissions open for B.Tech Naval Architecture & Ship Building and M.Tech programmes.", "link": "https://admissions.cusat.ac.in/", "is_active": 1, "created_at": "2026-10-30 06:12:22"}], "faculty": [{"id": 19, "name": "Dr. A. Mathiazhagan", "designation": "Professor and Head of the Department", "specialization": "Ph.D. | Materials Technology and Corrosion Engg, Welding Technology, Composite Technology", "email": "alagan@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/mathi.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=22&name=dr-a-mathiazhagan", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/199/Prof.Dr.AMATHIAZHAGAN", "sort_order": 1, "created_at": "2026-10-30 09:56:22"}, {"id": 20, "name": "Dr. Satheesh Babu P.K", "designation": "Associate Professor", "specialization": "Ph.D. | Naval Architecture, Marine Hydrodynamics, Ship Design", "email": "satheeshbabu@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/satheeshbabu.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=23&name=dr-satheesh-babu-pk", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/449/DRSATHEESHBABUPK", "sort_order": 2, "created_at": "2026-10-30 09:56:22"}, {"id": 21, "name": "Dr. D. D. Ebenezer", "designation": "Adjunct Faculty", "specialization": "Ph. D. | Computational Fluid Dynamics, Analysis and Design of St, Underwater Electroacousti", "email": "ebenezer@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-6.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=11&name=dr-d-d-ebenezer", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/510/Dr.D.D.EBENEZER", "sort_order": 3, "created_at": "2026-10-30 09:56:22"}, {"id": 22, "name": "Dr. Rajesh P Nair", "designation": "Assistant Professor", "specialization": "Ph.D. | Finite Element method, Impact Mechanics, Blast Analysis", "email": "rajeshpnair@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=7&name=dr-rajesh-p-nair", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/27/Dr.RAJESHPNAIR", "sort_order": 4, "created_at": "2026-10-30 09:56:22"}, {"id": 23, "name": "Dr. Manoj T. Issac", "designation": "Assistant Professor", "specialization": "Ph.D. | Experimental and Numerical Hydrodynamics of Unmanned Underwater Vehicles, Dynamics Modeling of Underwater Vehicles using Identification Techniques, Dynamics of Floating Offshore Structures", "email": "m.issac@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__5_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=13&name=dr-manoj-t-issac", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/50/Dr.MANOJTISSAC", "sort_order": 5, "created_at": "2026-10-30 09:56:22"}, {"id": 24, "name": "Dr. Favas T K", "designation": "Assistant Professor (Lien)", "specialization": "Ph.D. | Computational Fluid Dynamics, Numerical Heat Transfer, Computational Methods in", "email": "favastk@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-4.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=9&name=dr-favas-t-k", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/394", "sort_order": 6, "created_at": "2026-10-30 09:56:22"}, {"id": 25, "name": "Akram P. A.", "designation": "Assistant Professor (On Leave)", "specialization": "M. Tech. | Finite Element Analysis, Ship Structural Analysis, Offshore Structures", "email": "akrampa@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__24_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=16&name=akram-p-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/397/Mr.AKRAMP.A.", "sort_order": 7, "created_at": "2026-10-30 09:56:22"}, {"id": 26, "name": "Dr. Aravind K.R", "designation": "Assistant Professor", "specialization": "Ph.D | Inland Waterways Transport, Ship Design, Marine Engineering", "email": "aravind@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/IMG_0154_copy__1_.JPG", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=18&name=dr-aravind-kr", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/facdetails#faculty.list", "sort_order": 8, "created_at": "2026-10-30 09:56:22"}, {"id": 27, "name": "Dr. Beena Mary John", "designation": "Assistant Professor", "specialization": "Ph.D | Computational Fluid Dynamics, Physical model studies of marine structures, Fluid structure interaction", "email": "beena.john@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Beena_MJ2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=20&name=dr-beena-mary-john", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/569/Dr.BEENAMARYJOHN", "sort_order": 9, "created_at": "2026-10-30 09:56:22"}, {"id": 28, "name": "Dr. Haseena K A", "designation": "Assistant Professor", "specialization": "Ph.D | Renewable/Green Energy Systems-Modeling, Optimization and Integration, Electric Propulsion Systems- Dynamics and Control, Machine Learning and AI Techniques for Energy Systems", "email": "haseenaka@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/haseena.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=21&name=dr-haseena-k-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/571/Dr.HASEENA.KA", "sort_order": 10, "created_at": "2026-10-30 09:56:22"}], "technical_staff": [{"id": 5, "name": "SHIJU S", "designation": "Technical Officer Gr I", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac1.jpg", "sort_order": 1, "created_at": "2026-10-30 10:13:10"}, {"id": 6, "name": "SANTHOSH KUMAR K", "designation": "Technical Assistant", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac2.jpg", "sort_order": 2, "created_at": "2026-10-30 10:13:10"}, {"id": 7, "name": "Dr. Sheeja N.K.", "designation": "Deputy Librarian", "email": "", "phone": "", "image": "technical_staff_data/images/admin_staff_2.jpg", "sort_order": 3, "created_at": "2026-10-30 10:13:10"}], "courses": [{"id": 1, "title": "B.Tech in Naval Architecture & Ship Building", "description": "Four-year full-time undergraduate programme covering ship design, hydrodynamics, marine structures, ship production, and marine engineering with 100% placement track record.", "duration": "4 Years (8 Semesters)", "image": "uploads/btchnavel.jpg", "link": "academics.php#btech", "sort_order": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "M.Tech in Computer Aided Structural Analysis & Design (CASAD)", "description": "Two-year postgraduate programme focusing on finite element analysis, offshore and marine structures, structural dynamics, and CAD.", "duration": "2 Years (4 Semesters)", "image": "uploads/mtech.jpg", "link": "academics.php#mtech", "sort_order": 2, "created_at": "2026-10-30 06:12:22"}, {"id": 3, "title": "Ph.D. in Naval Architecture & Ocean Engineering", "description": "Doctoral research programme in ship hydrodynamics, structural mechanics, ship recycling, green shipping, and ocean engineering.", "duration": "3 - 5 Years", "image": "img/phd_image-thumb.jpg", "link": "academics.php#phd", "sort_order": 3, "created_at": "2026-10-30 06:12:22"}, {"id": 4, "title": "Short-Term Industry Training Courses", "description": "Specialized continuing education programmes for shipyard engineers, classification society surveyors, and Indian Navy officers.", "duration": "2 - 6 Weeks", "image": "img/service-4.jpg", "link": "academics.php", "sort_order": 4, "created_at": "2026-10-30 06:12:22"}, {"id": 5, "title": "CAD/CAM & Ship Design Studio", "description": "Hands-on training in hull surface modeling, stability calculations, and structural design software suites.", "duration": "Semester Module", "image": "img/service-5.jpg", "link": "academics.php", "sort_order": 5, "created_at": "2026-10-30 06:12:22"}, {"id": 6, "title": "Towing Tank & Model Testing", "description": "Experimental hydrodynamics and ship model testing training for undergraduate and postgraduate researchers.", "duration": "Lab Course", "image": "img/service-6.jpg", "link": "academics.php", "sort_order": 6, "created_at": "2026-10-30 06:12:22"}], "events": [{"id": 3, "title": "Golden Jubilee Alumni & Industry Conclave", "event_date": "2027-01-20", "description": "Gathering of Shiptech CUSAT alumni from global shipyards, R&D institutes, Indian Navy, and classification societies.", "image": "img/service-6.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "International Workshop on Green Shipping & Decarbonization", "event_date": "2026-12-05", "description": "Two-day workshop in collaboration with industry experts and classification societies on sustainable ship propulsion and IMO regulations.", "image": "img/service-5.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "ANCHOR - Annual National Technical Symposium", "event_date": "2026-11-15", "description": "National-level technical fest and symposium organized by the Society of Naval Architecture Students (SNAS) featuring paper presentations and design competitions.", "image": "img/service-4.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}], "gallery": [{"id": 41, "title": "Department Video", "category": "Video", "image": "gallery_data/images/department-video.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 40, "title": "Welcome to Captain Manoj Kumar, OIC of the Naval Construction Wing , Southern Naval Command to the Department of Ship Technology on 29.06.2026", "category": "Events", "image": "gallery_data/images/WhatsApp_Image_2026-07-01_at_17.42.53.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 39, "title": "Visit of Netherlands Team-14 May 2026", "category": "Events", "image": "gallery_data/images/IMG-20260629-WA0021.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 38, "title": "AICTE Student Induction Programme 2025, for First year B.Tech admissions", "category": "Events", "image": "gallery_data/images/1_SIP_2025.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 37, "title": "B.Tech. 46th Batch- Achieves 100% Placement", "category": "Events", "image": "gallery_data/images/46TH_BATCH.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 36, "title": "Graduation Ceremony May 3, 2025", "category": "Events", "image": "gallery_data/images/PIC_1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 35, "title": "Golden Jubilee Celebration o 1st Batch- 07 Jan 2025", "category": "Events", "image": "gallery_data/images/IMG-20250109-WA0004.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 34, "title": "PTA General Body Meeting 19-10-2024", "category": "Events", "image": "gallery_data/images/IMG-20241020-WA0005.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 33, "title": "Visit of the Team from University of Ruhuna, Sri Lanka", "category": "Events", "image": "gallery_data/images/photo1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 32, "title": "M.Tech. (CASAD) Alumni Meet -7th Oct 2023", "category": "Events", "image": "gallery_data/images/Alumni.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 31, "title": "DOSTAS ONAM CELEBRATION 2023", "category": "Events", "image": "gallery_data/images/ONAM.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 30, "title": "PTA GENERAL BODY MEETING (16-09-2023)", "category": "Events", "image": "gallery_data/images/PTA.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 29, "title": "Inauguration of B.Tech. NA&SB 48th Batch- 16-08-2023", "category": "Events", "image": "gallery_data/images/inauguration_of_48th_batch.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 28, "title": "Visit of HE Dr. Saeed Hamad Al- Rubaie ,Vice Chancellor , University of Technology & Applied Sciences, Oman-16-8-2023", "category": "Events", "image": "gallery_data/images/Visit_2.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 27, "title": "Fresher\u2019s Day \u2013 28th batch of Computer Aided Structural Analysis and Design", "category": "Events", "image": "gallery_data/images/Image_1.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 26, "title": "Visit of Cmde Sritanu Guru, CMD(Trg), HQSNC", "category": "Events", "image": "gallery_data/images/VISIT_OF_CMDE.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 25, "title": "DRDO Award Presentation to Dr. P. Krishnankutty", "category": "Events", "image": "gallery_data/images/AWARD_function.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 24, "title": "FAREWELL", "category": "Events", "image": "gallery_data/images/farewell_to_44th_batch_NA_SB.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 23, "title": "RINA Student Award Function", "category": "Events", "image": "gallery_data/images/Untitled_design__78_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 22, "title": "Silver Jubilee- B.Tech. 17th Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__74_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 21, "title": "Class NK Award 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__71_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 20, "title": "Alumni Get-Together", "category": "Events", "image": "gallery_data/images/Untitled_design__70_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 19, "title": "MoU with CSL Renewal Ceremony", "category": "Events", "image": "gallery_data/images/Untitled_design__62_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 18, "title": "3 Day National Workshop on \u201cGreen Hydrogen Pathways To Sustainable Future\u201d", "category": "Events", "image": "gallery_data/images/Untitled_design__57_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 17, "title": "Student Induction Programme 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__54_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 16, "title": "Visit to INS VIKRANT", "category": "Events", "image": "gallery_data/images/Untitled_design__17_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 15, "title": "Visit of Russian Ambassador", "category": "Events", "image": "gallery_data/images/Untitled_design__27_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 14, "title": "Visit of RINA CEO", "category": "Events", "image": "gallery_data/images/Untitled_design__30_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 13, "title": "NSTL VISIT", "category": "Events", "image": "gallery_data/images/Untitled_design__34_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 12, "title": "SNAS NITE 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__87_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 11, "title": "Farewell to M.Tech.(CASAD) 2022 Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__46_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 10, "title": "Send Off Function of Prof. Mariamma Chacko", "category": "Events", "image": "gallery_data/images/Untitled_design__45_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 9, "title": "Snas Nite 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__41_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 8, "title": "Onam 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__39_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 7, "title": "ClassNK Global Alumni Meet", "category": "Events", "image": "gallery_data/images/Untitled_design__36_.png", "created_at": "2026-10-30 10:30:32"}], "testimonials": [{"id": 5, "name": "Madhu S Nair", "role": "Chairman and Managing Director, Cochin Shipyard Ltd. | Btech Naval Architecture& Shipbuilding , 1983-1988", "content": "The Department of Ship Technology, CUSAT, has contributed immensely to the field of Naval Architecture, Shipbuilding and various other allied sectors in the global maritime sector. Over the past 47 years, the department has produced professionals who have created a profound impact in the maritime community. The department can take pride in the fact that they have been able to nurture well rounded professionals who in addition to being technically well equipped, do also understand what it takes to be successful and are willing to continually learn and work extremely hard to achieve their goals. I wish the young graduates of the department a bright and prosperous future", "image": "testimonials_data/images/madhu_s.png", "created_at": "2026-10-30 10:34:07"}, {"id": 6, "name": "Abdul Rahim", "role": "Corporate Officer, Class NK. | Btech Naval Architecture & Shipbuilding , 1979-1984", "content": "I am very pleased to note that the next batch of naval architects is graduating from CUSAT. ClassNK has long been associated with CUSAT and over the years we have recruited more than 26 CUSAT naval architects who work around the world. They are well rounded team players, brilliant, hardworking, and their contribution to ClassNK has been enormous. They are truly professional with positive attitude, and excellent in client management with strong commitment and dedication. Wishing the new young graduates every success for a bright future.", "image": "testimonials_data/images/abdhul_rahman.png", "created_at": "2026-10-30 10:34:07"}, {"id": 7, "name": "Ashik Subahani", "role": "Vice President-RINA Middle East & Africa and Managing Director at Sea Delta Marine & Offshore. | Btech Naval Architecture & Shipbuilding, 1988-1993", "content": "Naval architects from \u2018Department of Ship Technology\u2019 are excellent. They understand the requirements and concept very fast and complete the given tasks very properly on time.They are all well accepted in the world wide maritime industry due to the professionalism they have shown", "image": "testimonials_data/images/Untitled_design.png", "created_at": "2026-10-30 10:34:07"}, {"id": 8, "name": "Shihabudeen K M", "role": "Commercial Director at Damen Shipyards Sharjah / Albwardy Marine Engineering Dubai. | Btech Naval Architecture& Shipbuilding , 1988-1993", "content": "Albwardy Damen has been hiring Naval Architects from the Department of Ship Technology, CUSAT, through campus interviews continuously for the past 16 years. The main qualities of CUSAT Naval Architects are their general attitude towards work, quick learning capabilities, ability to adapt to the work environment and get along with people from various nationalities. Their academic knowledge levels are found to be comparatively higher in a way that they can be trained and employed not only in core design departments but also in other areas like project management for ship building and ship repairs, cost estimation etc. The management of Albwardy Damen has always been appreciable of the performance of the CUSAT Naval Architects. I wish the young graduates every success in their future endeavors.", "image": "testimonials_data/images/Untitled_design__1_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 9, "name": "Renganathan S", "role": "Head of Plan Approval ,Indian Register of Shipping. | Btech Naval Architecture &Shipbuilding, 1980-1985", "content": "We take extreme pleasure in getting associated with CUSAT for the past so many years. The quality of students is excellent, so is their longevity in the organization is what keeps us coming back for more every year. The students from CUSAT are outstanding, and the ones we have employed from campus recruitment are generally an asset to IRCLASS. Their ability to apply theoretical knowledge acquired during their studies to practical work is indeed commendable. The placement process is always highly well-coordinated. We wish the fresh graduates from CUSAT all the best to achieve a successful career, and we anticipate CUSAT\u2019s extended service for fulfilling our workforce requirements in the long run.", "image": "testimonials_data/images/Untitled_design__2_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 10, "name": "Pyarilal Kandy", "role": "Managing Partner & Director of Operations at Great Waters Maritime L.L.C. | Btech Naval Architecture & Shipbuilding, 1989-1994", "content": "In the last 10 years Great Waters have hired graduates from Department of Ship technology and they all stood out as the best amongst other graduates from elsewhere in work performance, knowledge, ability to apply knowledge and most of all, attitude towards work. Attitude of an employee towards work is the most important aspect for a company in achieving results. Great Waters have been incredibly happy with all those graduates who have come and worked with us. Graduates from DOST have always shone in all industries, and which is why many of them are now at senior roles in major companies", "image": "testimonials_data/images/Untitled_design__3_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 11, "name": "Vinod Janardanan", "role": "Director, Consultancy & Outsourcing, South Asia Zone at Bureau Veritas Marine & Offshore - Singapore. | Btech Naval Architecture & Shipbuilding , 1980-1985", "content": "The graduates from Department of Ship Technology, Cochin University of Science and Technology stand out for the following reasons while recruiting them.\n\n1. The degree is aptly awarded for Naval Architecture & Ship building, encompassing theoretical tenets of ship design as well as practical aspects of ship construction. This makes them suitable for employment in design offices, class societies, research institutes and shipyards.\n\n2. In addition to the academic curriculum they also undergo internship in institutions of their choice after the first, second and third year of the course. This, I have observed, aligns their class room learning with real work and they are better equipped to commence their job.\n\n3. They undertake a full ship design project during the last year of the course, under the close guidance of the staff. This exercise, I have noticed, gives them a holistic understanding of ship design and especially the design spiral.\n\n4. They attend seminars and presentations made by stalwarts from the industry (now on a virtual platform) and remain aware of recent innovations and trends in the field.Recent graduates, with whom i have interacted, were knowledgeable, analytical, diligent and able to communicate effectively.\n\n\n\nIn view of the above I find the graduates from this institution to be highly employable and am confident that they would contribute significantly to the organisation that they are part of.", "image": "testimonials_data/images/2.png", "created_at": "2026-10-30 10:34:07"}], "placement_brochures": [{"id": 1, "title": "Placement Brochure 2021-2022", "file_path": "placement_data/brochures/Placement_Brochure_2021-22.pdf", "image": "img/career-mag.jpg", "sort_order": 1}, {"id": 2, "title": "Placement Brochure 2022-2023", "file_path": "placement_data/brochures/PLACEMENT_BROCHURE_2022-23.pdf", "image": "img/career-mag.jpg", "sort_order": 2}, {"id": 3, "title": "Placement Brochure 2024-25", "file_path": "placement_data/brochures/Placement_Brochure_2024-25.pdf", "image": "img/career-mag.jpg", "sort_order": 3}, {"id": 4, "title": "Placement Brochure 2025", "file_path": "placement_data/brochures/Placement_Brochure_2025.pdf", "image": "img/career-mag.jpg", "sort_order": 4}, {"id": 5, "title": "Placement Brochure 2026", "file_path": "placement_data/brochures/Placement_Brochure_2026.pdf", "image": "img/career-mag.jpg", "sort_order": 5}], "placement_coordinators": [{"id": 1, "name": "Dr. Satheesh babu P K", "role_type": "Faculty Coordinator", "email": "satheeshbabu@cusat.ac.in", "phone": "+919946063772", "sort_order": 1}, {"id": 2, "name": "Aravind K.R", "role_type": "Faculty Coordinator", "email": "aravind@cusat.ac.in", "phone": "+91 8089866415", "sort_order": 2}, {"id": 3, "name": "Mr. Devadath Uday P K", "role_type": "Student Coordinator", "email": "devadathudaypk@gmail.com", "phone": "+91 9072393613", "sort_order": 3}, {"id": 4, "name": "Mr. Advaith Ullas", "role_type": "Student Coordinator", "email": "adwaithullas@gmail.com", "phone": "+91  8590180472", "sort_order": 4}, {"id": 5, "name": "Mr. Aravind M Nath", "role_type": "Student Coordinator", "email": "aravind.m.rs49@gmail.com", "phone": "+91 8590903126", "sort_order": 5}, {"id": 6, "name": "Mr. Adithyan C", "role_type": "Student Coordinator", "email": "adithyanct@gmail.com", "phone": "+91 7736800613", "sort_order": 6}]};</script>
+<script src="js/site-data.js"></script>
+<!-- Footer End -->
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="testimonial/js/jquery-3.5.1.min.js"></script>
+    <script src="testimonial/js/owl.carousel.min.js"></script>
+    <script src="testimonial/js/aos.js"></script>
+    <script src="testimonial/js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/Scrolling.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Smooth, non-intrusive scroll-reveal choreography across landing page blocks
+        (function () {
+            var targets = document.querySelectorAll(
+                '.bento-card, .maritime-bento-panel, .maritime-stats-ribbon, .campus-showcase-frame, .hod-executive-card, .programme-bento-card'
+            );
+            if (!('IntersectionObserver' in window)) {
+                return;
+            }
+            targets.forEach(function (el, idx) {
+                el.classList.add('ship-scroll-reveal');
+                el.style.transitionDelay = ((idx % 4) * 0.07) + 's';
+            });
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+            targets.forEach(function (el) { obs.observe(el); });
+        })();
+
+        // Interactive Alumni Quick-Select Strip for Testimonials Carousel
+        $(function () {
+            var $slider = $('#testimonials-slider');
+            $(document).on('click', '.testimonial-alumni-pill', function (e) {
+                e.preventDefault();
+                var idx = parseInt($(this).attr('data-slide-to'), 10);
+                if (!isNaN(idx)) {
+                    $('.testimonial-alumni-pill').removeClass('active');
+                    $(this).addClass('active');
+                    $slider.trigger('to.owl.carousel', [idx, 450, true]);
+                }
+            });
+            $slider.on('changed.owl.carousel', function (event) {
+                if (!event || typeof event.item === 'undefined') return;
+                var count = event.item.count;
+                var index = event.item.index - event.relatedTarget._clones.length / 2;
+                if (index >= count) index = index % count;
+                if (index < 0) index = (count + (index % count)) % count;
+                $('.testimonial-alumni-pill').removeClass('active');
+                $('.testimonial-alumni-pill[data-slide-to="' + index + '"]').addClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

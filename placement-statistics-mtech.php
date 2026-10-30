@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>M.Tech Placement Statistics | Department of Ship Technology, CUSAT</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css?v=7" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+<style>
+/* ==========================================================================
+   GLOBAL MARITIME BENTO + SHIP-BOW HERO + GPU OCEAN WAVE DESIGN SYSTEM
+   ========================================================================== */
+body {
+    background-color: #f4f8fc;
+    color: #0f172a;
+}
+
+/* 1. Ship-Bow Maritime Subpage Hero + 4-Layer GPU Ocean Waves */
+.maritime-subpage-hero {
+    position: relative;
+    background:
+        radial-gradient(circle at 82% 22%, rgba(14, 165, 233, 0.24) 0%, transparent 48%),
+        radial-gradient(circle at 18% 78%, rgba(56, 189, 248, 0.16) 0%, transparent 50%),
+        linear-gradient(135deg, #030917 0%, #0a1936 48%, #07294d 100%);
+    padding: 4.5rem 0 6.75rem;
+    overflow: hidden;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.22);
+    margin-bottom: 1.5rem;
+}
+.maritime-subpage-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(56, 189, 248, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.85) 20%, transparent 80%);
+    pointer-events: none;
+}
+.maritime-hero-Ship-bg {
+    position: absolute;
+    right: -2%;
+    bottom: 18px;
+    width: 480px;
+    max-width: 46vw;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 1;
+}
+.maritime-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(14, 165, 233, 0.16);
+    border: 1px solid rgba(56, 189, 248, 0.42);
+    color: #7dd3fc;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    backdrop-filter: blur(8px);
+}
+.maritime-hero-title {
+    font-size: clamp(2.15rem, 3.8vw, 3.35rem);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+}
+.maritime-hero-subtitle {
+    font-size: 1.05rem;
+    color: rgba(226, 232, 240, 0.88);
+    max-width: 680px;
+    line-height: 1.68;
+    margin-bottom: 1.35rem;
+}
+.maritime-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(8, 23, 52, 0.68);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+    list-style: none;
+}
+.maritime-breadcrumb a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.maritime-breadcrumb a:hover {
+    color: #ffffff;
+}
+.maritime-breadcrumb .sep {
+    color: rgba(148, 163, 184, 0.5);
+}
+.maritime-breadcrumb .active {
+    color: #ffffff;
+}
+
+/* Subpage Hero Ocean Waves */
+.subpage-ocean-horizon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 76px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 3;
+    line-height: 0;
+}
+.subpage-ocean-svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 76px;
+}
+.subpage-wave-parallax > use {
+    animation: subpageWaveMove 22s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    will-change: transform;
+}
+.subpage-wave-parallax > use:nth-child(1) { animation-delay: -2s; animation-duration: 9s; }
+.subpage-wave-parallax > use:nth-child(2) { animation-delay: -4s; animation-duration: 13s; }
+.subpage-wave-parallax > use:nth-child(3) { animation-delay: -3s; animation-duration: 17s; }
+.subpage-wave-parallax > use:nth-child(4) { animation-delay: -5s; animation-duration: 24s; }
+@keyframes subpageWaveMove {
+    0% { transform: translate3d(-90px, 0, 0); }
+    100% { transform: translate3d(85px, 0, 0); }
+}
+
+/* 2. Unified Maritime Section Headers & Bento Containers */
+.maritime-section-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+.maritime-section-heading {
+    font-size: clamp(1.85rem, 3vw, 2.55rem);
+    font-weight: 800;
+    color: #09152f;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.65rem;
+}
+.maritime-section-lead {
+    color: #475569;
+    font-size: 1rem;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.65;
+}
+
+.maritime-bento-panel {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 26px;
+    padding: 2.5rem;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 22px 50px -18px rgba(8, 22, 56, 0.1);
+    overflow: hidden;
+}
+.maritime-bento-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 40%, #0284c7 80%, #38bdf8 100%);
+}
+
+/* 3. Programme / Course / Event Bento Cards */
+.programme-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 24px;
+    padding: 14px 14px 24px 14px;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 18px 42px -15px rgba(8, 22, 56, 0.09);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+.programme-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 85%, #38bdf8 100%);
+    z-index: 3;
+}
+.programme-bento-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(14, 165, 233, 0.42);
+    box-shadow: 0 26px 54px -14px rgba(14, 165, 233, 0.2);
+}
+.programme-img-wrap {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #09152f;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}
+.programme-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.programme-bento-card:hover .programme-img-wrap img {
+    transform: scale(1.06);
+}
+.programme-img-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6, 14, 34, 0.25) 0%, rgba(6, 14, 34, 0.05) 45%, rgba(6, 14, 34, 0.68) 100%);
+    pointer-events: none;
+}
+.programme-badge-top {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    background: rgba(8, 20, 48, 0.84);
+    backdrop-filter: blur(10px);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.42);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.programme-icon-orb {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    box-shadow: 0 10px 22px -6px rgba(9, 21, 47, 0.42);
+    border: 2px solid #ffffff;
+    position: relative;
+    z-index: 3;
+    margin-top: -23px;
+    margin-left: 14px;
+    margin-bottom: 8px;
+}
+.programme-card-body {
+    padding: 0.25rem 0.9rem 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.programme-card-body h4 {
+    color: #09152f;
+    font-weight: 800;
+    font-size: 1.28rem;
+    margin-bottom: 0.55rem;
+    line-height: 1.32;
+}
+.programme-desc-box {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.95);
+    border-left: 3.5px solid #0284c7;
+    border-radius: 11px;
+    padding: 0.8rem 0.95rem;
+    color: #334155;
+    font-size: 0.91rem;
+    line-height: 1.62;
+    margin-bottom: 0.95rem;
+    flex-grow: 1;
+}
+.programme-card-footer {
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(226, 232, 240, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.programme-level-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: #0369a1;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    padding: 5px 11px;
+    border-radius: 999px;
+}
+.programme-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #ffffff !important;
+    font-size: 0.81rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 18px -6px rgba(9, 21, 47, 0.35);
+}
+.programme-cta-btn:hover {
+    transform: translateX(3px);
+    box-shadow: 0 12px 24px -6px rgba(2, 132, 199, 0.5);
+    color: #7dd3fc !important;
+}
+
+/* 4. Faculty & Technical Staff Bento Profile Cards */
+.person-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 24px;
+    padding: 14px 14px 20px;
+    border: 1px solid rgba(14, 165, 233, 0.18);
+    box-shadow: 0 16px 38px -14px rgba(8, 22, 56, 0.09);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+.person-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 85%, #38bdf8 100%);
+    z-index: 3;
+}
+.person-bento-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(14, 165, 233, 0.45);
+    box-shadow: 0 24px 50px -14px rgba(14, 165, 233, 0.2);
+}
+.person-photo-frame {
+    position: relative;
+    height: 310px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #09152f 0%, #112a5c 100%);
+    margin-bottom: 14px;
+    border: 1px solid rgba(14, 165, 233, 0.16);
+}
+.person-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.55s ease;
+}
+.person-bento-card:hover .person-photo-frame img {
+    transform: scale(1.04);
+}
+.person-role-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    padding: 4px 11px;
+    border-radius: 999px;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+.person-card-body {
+    padding: 0 6px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.person-name {
+    font-size: 1.18rem;
+    font-weight: 800;
+    color: #09152f;
+    margin-bottom: 4px;
+    line-height: 1.3;
+}
+.person-name a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.person-name a:hover {
+    color: #0284c7;
+}
+.person-qual {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #0284c7;
+    margin-bottom: 8px;
+}
+.person-spec-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #0284c7;
+    border-radius: 10px;
+    padding: 8px 11px;
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    flex-grow: 1;
+}
+.person-card-footer {
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.person-email-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+    word-break: break-all;
+}
+.person-email-chip i {
+    color: #0284c7;
+}
+.person-email-chip:hover {
+    color: #0284c7;
+}
+.person-profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #09152f 0%, #0284c7 100%);
+    color: #ffffff !important;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+/* 5. Coordinator & Document Bento Cards (Placement / Approvals) */
+.coord-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 22px;
+    padding: 1.65rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    box-shadow: 0 16px 36px -14px rgba(8, 22, 56, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+.coord-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #09152f 0%, #0284c7 65%, #38bdf8 100%);
+}
+.coord-bento-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(14, 165, 233, 0.45);
+    box-shadow: 0 22px 44px -14px rgba(14, 165, 233, 0.18);
+}
+.coord-icon-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    box-shadow: 0 8px 18px -6px rgba(9, 21, 47, 0.35);
+}
+.coord-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 8px;
+    font-size: 0.86rem;
+}
+.coord-contact-row i {
+    color: #0284c7;
+    width: 16px;
+    text-align: center;
+}
+.coord-contact-row a {
+    color: #1e293b;
+    font-weight: 600;
+    text-decoration: none;
+    word-break: break-all;
+}
+.coord-contact-row a:hover {
+    color: #0284c7;
+}
+
+.doc-bento-card {
+    position: relative;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 22px;
+    padding: 1.65rem 1.4rem;
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    box-shadow: 0 15px 34px -14px rgba(8, 22, 56, 0.08);
+    transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none !important;
+}
+.doc-bento-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #09152f 0%, #150754 45%, #0284c7 85%, #38bdf8 100%);
+}
+.doc-bento-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(14, 165, 233, 0.45);
+    box-shadow: 0 24px 48px -14px rgba(14, 165, 233, 0.2);
+}
+.doc-bento-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
+    color: #38bdf8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    box-shadow: 0 10px 22px -6px rgba(9, 21, 47, 0.35);
+}
+</style>
+<div class="wrap bg-upper-nav upper-header py-2 px-0" style="background: linear-gradient(90deg, #040b1d 0%, #0d1f47 50%, #07284a 100%); border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-auto d-flex align-items-center flex-wrap gap-3 py-1">
+                <span class="mb-0 text-white d-inline-flex align-items-center gap-2" style="font-size: 13px; font-weight: 500;">
+                    <span class="fa fa-envelope text-info"></span>
+                    <a id="header-email" class="text-white text-decoration-none" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </span>
+                <span style="color: rgba(255,255,255,0.25);">|</span>
+                <span class="mb-0 text-white d-inline-flex align-items-center gap-2" style="font-size: 13px; font-weight: 500;">
+                    <span class="fa fa-phone-alt text-info"></span>
+                    <a id="header-phone" class="text-white text-decoration-none" href="tel:+914842575714">0484-2575714</a>
+                </span>
+            </div>
+            <div class="col-auto d-flex justify-content-end align-items-center">
+                <div class="social-media">
+                    <div class="mb-0 d-flex align-items-center gap-3" style="font-size: 13px; font-weight: 600;">
+                        <a class="text-white text-decoration-none d-inline-flex align-items-center gap-1" href="https://www.cusat.ac.in/" target="_blank">
+                            <i class="fa fa-university text-info" style="font-size: 11px;"></i> CUSAT Website
+                        </a>
+                        <span style="color: rgba(255,255,255,0.25);">|</span>
+                        <a class="text-white text-decoration-none d-inline-flex align-items-center gap-1" style="background: rgba(56, 189, 248, 0.16); border: 1px solid rgba(56, 189, 248, 0.35); padding: 3px 12px; border-radius: 999px;" href="https://admissions.cusat.ac.in/" target="_blank">
+                            <i class="fa fa-graduation-cap text-info" style="font-size: 11px;"></i> Admissions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5" style="box-shadow: 0 10px 30px -10px rgba(8, 18, 44, 0.12); border-bottom: 1px solid rgba(15, 23, 42, 0.06);">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="Department of Ship Technology, CUSAT">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv" style="background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0b2954 100%); box-shadow: 0 12px 28px -8px rgba(15, 23, 62, 0.45); border: 1px solid rgba(56, 189, 248, 0.25);">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="academics.html" class="dropdown-item">Courses</a>
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.html" class="dropdown-item">Faculty</a>
+                    <a href="technical-staff.html" class="dropdown-item">Technical Staff</a>
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="academics.html#phd" class="dropdown-item">Ph.D.</a>
+                    <a href="department-library.html" class="dropdown-item">Facilities</a>
+                    <a href="connect.html#collaborations" class="dropdown-item">MoU</a>
+                    <a href="events.html" class="dropdown-item">Achievements</a>
+                    <a href="academics.html#phd" class="dropdown-item">Current Ph.D. Students</a>
+                    <a href="academics.html#phd" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="university-library.html" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="Approvals-and-Affiliations.html" class="dropdown-item">Approvals &amp; Affiliations</a>
+                    <a href="placement.html" class="dropdown-item">Placement</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opportunity
+                        cell</a>
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+    <!-- Maritime Subpage Hero Start -->
+    <section class="maritime-subpage-hero">
+        <svg class="maritime-hero-Ship-bg" viewBox="0 0 600 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 190 L550 190 L500 235 L90 235 Z" stroke="#38bdf8" stroke-width="2.5" fill="rgba(14,165,233,0.08)"/>
+            <path d="M130 190 L165 115 L370 115 L400 190" stroke="#7dd3fc" stroke-width="2" fill="rgba(56,189,248,0.06)"/>
+            <path d="M220 115 L240 60 L315 60 L330 115" stroke="#38bdf8" stroke-width="2"/>
+            <line x1="275" y1="20" x2="275" y2="60" stroke="#38bdf8" stroke-width="2.5"/>
+            <circle cx="275" cy="18" r="5" fill="#38bdf8"/>
+        </svg>
+        <div class="container position-relative" style="z-index: 2;">
+            <span class="maritime-hero-eyebrow"><i class="fa fa-cogs"></i> Postgraduate CASAD Placements</span>
+            <h1 class="maritime-hero-title">M.Tech. Placement Statistics</h1>
+            <p class="maritime-hero-subtitle">Batch-wise placement records of M.Tech. Computer Aided Structural Analysis &amp; Design (CASAD) graduates.</p>
+            <ul class="maritime-breadcrumb">
+                <li><a href="index.html"><i class="fa fa-home me-1"></i> Home</a></li>
+                <li class="sep">/</li>
+                <li><a href="placement.html">Placement</a></li>
+                <li class="sep">/</li>
+                <li class="active">M.Tech Statistics</li>
+            </ul>
+        </div>
+        <div class="subpage-ocean-horizon">
+            <svg class="subpage-ocean-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="subpage-wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="subpage-wave-parallax">
+                    <use xlink:href="#subpage-wave-path" x="48" y="0" fill="rgba(14, 165, 233, 0.25)" />
+                    <use xlink:href="#subpage-wave-path" x="48" y="3" fill="rgba(56, 189, 248, 0.40)" />
+                    <use xlink:href="#subpage-wave-path" x="48" y="5" fill="rgba(224, 242, 254, 0.65)" />
+                    <use xlink:href="#subpage-wave-path" x="48" y="7" fill="#f4f8fc" />
+                </g>
+            </svg>
+        </div>
+    </section>
+
+    <div class="container-xxl py-5 mb-4">
+        <div class="container">
+            <div class="maritime-bento-panel">
+                <div class="text-center mb-5">
+                    <span class="maritime-section-pill"><i class="fa fa-chart-line"></i> Yearly Placement Dossiers</span>
+                    <h2 class="maritime-section-heading">Select Graduating Batch (M.Tech CASAD)</h2>
+                    <p class="maritime-section-lead">Click on an academic year below to inspect the official list of placed M.Tech. CASAD students and recruiting companies.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="https://shiptech.cusat.ac.in/placed-students-mtech.php?id=2025" target="_blank" class="doc-bento-card text-center align-items-center">
+                            <div class="doc-bento-icon mb-3"><i class="fa fa-user-graduate"></i></div>
+                            <span class="person-role-pill mx-auto mb-2">M.Tech CASAD</span>
+                            <h3 style="color:#09152f; font-weight:800;" class="mb-2">Batch 2025</h3>
+                            <span class="programme-cta-btn mt-auto"><span>View Placed Students</span> <i class="fa fa-external-link-alt"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="https://shiptech.cusat.ac.in/placed-students-mtech.php?id=2024" target="_blank" class="doc-bento-card text-center align-items-center">
+                            <div class="doc-bento-icon mb-3"><i class="fa fa-user-graduate"></i></div>
+                            <span class="person-role-pill mx-auto mb-2">M.Tech CASAD</span>
+                            <h3 style="color:#09152f; font-weight:800;" class="mb-2">Batch 2024</h3>
+                            <span class="programme-cta-btn mt-auto"><span>View Placed Students</span> <i class="fa fa-external-link-alt"></i></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a href="https://shiptech.cusat.ac.in/placed-students-mtech.php?id=2023" target="_blank" class="doc-bento-card text-center align-items-center">
+                            <div class="doc-bento-icon mb-3"><i class="fa fa-user-graduate"></i></div>
+                            <span class="person-role-pill mx-auto mb-2">M.Tech CASAD</span>
+                            <h3 style="color:#09152f; font-weight:800;" class="mb-2">Batch 2023</h3>
+                            <span class="programme-cta-btn mt-auto"><span>View Placed Students</span> <i class="fa fa-external-link-alt"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+<style>
+    /* ==========================================================================
+       INTERNATIONAL MARITIME FOOTER — MULTI-CREST OCEAN WAVES & FULL-BLEED MAP
+       ========================================================================== */
+    .maritime-footer-wrapper {
+        position: relative;
+        clear: both;
+        width: 100%;
+        margin-top: 3.5rem;
+        background: transparent;
+        color: #e2e8f0;
+        overflow: hidden;
+    }
+
+    /* 1. Multi-Crest Seamless GPU Ocean Wave Horizon (viewBox 0 0 1440 84) */
+    .footer-ocean-wave-top {
+        position: relative;
+        width: 100%;
+        height: 76px;
+        overflow: hidden;
+        line-height: 0;
+        background: transparent;
+        margin-bottom: -2px;
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .footer-wave-svg {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 76px;
+    }
+
+    .footer-wave-parallax > use {
+        will-change: transform;
+    }
+
+    .footer-wave-parallax > use:nth-child(1) {
+        animation: footerWaveLoop 18s linear infinite;
+    }
+
+    .footer-wave-parallax > use:nth-child(2) {
+        animation: footerWaveLoop 13s linear infinite reverse;
+    }
+
+    .footer-wave-parallax > use:nth-child(3) {
+        animation: footerWaveLoop 10s linear infinite;
+    }
+
+    .footer-wave-parallax > use:nth-child(4) {
+        animation: footerWaveLoop 7.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes footerWaveLoop {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+        100% {
+            transform: translate3d(-720px, 0, 0);
+        }
+    }
+
+    /* 2. Deep-Ocean Footer Stage (#051129 top matches 4th wave fill seamlessly) */
+    .maritime-footer-stage {
+        position: relative;
+        z-index: 2;
+        background:
+            radial-gradient(circle at 14% 20%, rgba(14, 165, 233, 0.14) 0%, transparent 45%),
+            radial-gradient(circle at 86% 25%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+            linear-gradient(180deg, #051129 0%, #071736 55%, #030917 100%);
+        padding: 36px 0 0;
+        overflow: hidden;
+    }
+
+    .maritime-footer-stage::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url('img/map.png') center center no-repeat;
+        background-size: contain;
+        opacity: 0.14;
+        pointer-events: none;
+    }
+
+    /* Water Caustics Shimmer Reflection at Top of Footer Stage */
+    .footer-caustic-shimmer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background:
+            radial-gradient(ellipse 40% 35% at 25% 0%, rgba(56, 189, 248, 0.18) 0%, transparent 70%),
+            radial-gradient(ellipse 45% 35% at 75% 0%, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+        filter: blur(8px);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* 3. Unified Architectural Footer Shell */
+    .footer-main-shell {
+        position: relative;
+        z-index: 2;
+        background: rgba(10, 24, 54, 0.62);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+        border-radius: 24px;
+        padding: 28px 30px;
+        box-shadow: 0 22px 48px -18px rgba(0, 0, 0, 0.65);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-main-shell::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #0284c7 0%, #38bdf8 50%, #0284c7 100%);
+    }
+
+    .footer-col-divider {
+        border-right: 1px solid rgba(255, 255, 255, 0.09);
+        padding-right: 24px;
+    }
+
+    @media (max-width: 991.98px) {
+        .footer-col-divider {
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+            padding-right: 12px;
+            padding-bottom: 22px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .footer-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #38bdf8;
+        margin-bottom: 3px;
+    }
+
+    .footer-heading {
+        font-size: 19px;
+        font-weight: 800;
+        color: #ffffff !important;
+        margin-bottom: 14px;
+        letter-spacing: -0.015em;
+    }
+
+    /* Column 1: Compact Address & Direct Contact */
+    .footer-contact-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-contact-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 13.5px;
+        color: #cbd5e1;
+        line-height: 1.5;
+    }
+
+    .footer-contact-icon {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        border-radius: 9px;
+        background: rgba(56, 189, 248, 0.14);
+        border: 1px solid rgba(56, 189, 248, 0.32);
+        color: #38bdf8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        margin-top: 1px;
+    }
+
+    .footer-social-strip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 16px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .footer-social-btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        text-decoration: none !important;
+        transition: all 0.22s ease;
+    }
+
+    .footer-social-btn:hover {
+        background: #38bdf8;
+        border-color: #38bdf8;
+        color: #041028 !important;
+        transform: translateY(-2px);
+    }
+
+    /* Column 2: Clean 2-Column Navigation Grid */
+    .footer-links-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px 10px;
+    }
+
+    .footer-nav-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 11px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        color: #e2e8f0 !important;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: all 0.2s ease;
+    }
+
+    .footer-nav-link span {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+    .footer-nav-link i.link-bullet {
+        color: #38bdf8;
+        font-size: 11.5px;
+    }
+
+    .footer-nav-link i.link-arrow {
+        font-size: 10px;
+        color: rgba(148, 163, 184, 0.6);
+        transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .footer-nav-link:hover {
+        background: rgba(56, 189, 248, 0.15);
+        border-color: rgba(56, 189, 248, 0.4);
+        color: #ffffff !important;
+        transform: translateX(2px);
+    }
+
+    .footer-nav-link:hover i.link-arrow {
+        transform: translateX(2px);
+        color: #38bdf8;
+    }
+
+    .footer-portal-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 14px;
+        padding-top: 13px;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+    }
+
+    .footer-mini-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #cbd5e1 !important;
+        font-size: 11.5px;
+        font-weight: 700;
+        text-decoration: none !important;
+        transition: all 0.2s ease;
+    }
+
+    .footer-mini-pill:hover {
+        background: rgba(56, 189, 248, 0.18);
+        border-color: rgba(56, 189, 248, 0.45);
+        color: #ffffff !important;
+    }
+
+    .footer-mini-pill.admin-pill {
+        background: linear-gradient(90deg, rgba(2, 132, 199, 0.28) 0%, rgba(56, 189, 248, 0.14) 100%);
+        border-color: rgba(56, 189, 248, 0.4);
+        color: #7dd3fc !important;
+    }
+
+    /* Column 3: Edge-to-Edge Full-Fill Map Showcase (Zero Wasted Space!) */
+    .footer-map-column {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .footer-map-frame {
+        position: relative;
+        flex: 1 1 auto;
+        width: 100%;
+        min-height: 225px;
+        height: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(56, 189, 248, 0.32);
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+        background: #061229;
+    }
+
+    .footer-map-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border: 0;
+        display: block;
+    }
+
+    .footer-map-badge-overlay {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 5px 12px;
+        border-radius: 999px;
+        background: rgba(5, 17, 41, 0.88);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(56, 189, 248, 0.4);
+        color: #7dd3fc !important;
+        font-size: 11px;
+        font-weight: 700;
+        text-decoration: none !important;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+        transition: all 0.2s ease;
+    }
+
+    .footer-map-badge-overlay:hover {
+        background: #0284c7;
+        color: #ffffff !important;
+    }
+
+    /* Bottom Copyright Bar */
+    .footer-copyright-bar {
+        position: relative;
+        z-index: 2;
+        margin-top: 26px;
+        padding: 16px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        background: rgba(2, 6, 16, 0.65);
+        font-size: 13px;
+        color: #94a3b8;
+    }
+
+    .footer-copyright-bar a {
+        color: #7dd3fc !important;
+        font-weight: 600;
+        text-decoration: none !important;
+        transition: color 0.2s ease;
+    }
+
+    .footer-copyright-bar a:hover {
+        color: #ffffff !important;
+    }
+</style>
+
+<footer class="maritime-footer-wrapper">
+    <!-- 4-Layer Multi-Crest Ocean Wave Horizon (viewBox 0 0 1440 84 — Seamless Periodic Loop) -->
+    <div class="footer-ocean-wave-top">
+        <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 1440 84" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="footer-ocean-wave-path"
+                    d="M 0 44 Q 180 12 360 44 T 720 44 T 1080 44 T 1440 44 T 1800 44 T 2160 44 T 2520 44 T 2880 44 L 2880 86 L 0 86 Z" />
+            </defs>
+            <g class="footer-wave-parallax">
+                <use xlink:href="#footer-ocean-wave-path" x="0" y="0" fill="rgba(56, 189, 248, 0.26)" />
+                <use xlink:href="#footer-ocean-wave-path" x="-180" y="6" fill="rgba(14, 165, 233, 0.45)" />
+                <use xlink:href="#footer-ocean-wave-path" x="-360" y="12" fill="rgba(10, 34, 78, 0.80)" />
+                <use xlink:href="#footer-ocean-wave-path" x="-90" y="18" fill="#051129" />
+            </g>
+        </svg>
+    </div>
+
+    <div class="maritime-footer-stage">
+        <!-- Subtle Water Caustics Shimmer -->
+        <div class="footer-caustic-shimmer"></div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="footer-main-shell">
+                <div class="row g-4 align-items-stretch">
+                    <!-- COLUMN 1: ADDRESS & DIRECT CONTACT -->
+                    <div class="col-lg-4 col-md-6 footer-col-divider d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="footer-eyebrow"><i class="fa fa-anchor"></i> Est. 1974 • CUSAT</span>
+                            <h4 class="footer-heading">Address &amp; Contact</h4>
+
+                            <div class="footer-contact-stack">
+                                <div class="footer-contact-row">
+                                    <div class="footer-contact-icon">
+                                        <i class="fa fa-map-marker-alt"></i>
+                                    </div>
+                                    <span id="footer-address">Department of Ship Technology,<br>
+                                        Cochin University of Science and Technology,<br>
+                                        Cochin-22, Kerala, India</span>
+                                </div>
+                                <div class="footer-contact-row align-items-center">
+                                    <div class="footer-contact-icon">
+                                        <i class="fa fa-phone-alt"></i>
+                                    </div>
+                                    <span id="footer-phone" class="fw-semibold text-white">+91-484 257-5714</span>
+                                </div>
+                                <div class="footer-contact-row align-items-center">
+                                    <div class="footer-contact-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <span id="footer-email" class="fw-semibold text-white">ship@cusat.ac.in</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-social-strip">
+                            <span class="small fw-bold text-uppercase me-1" style="font-size: 10.5px; letter-spacing: 0.08em; color: #7dd3fc;">Connect:</span>
+                            <a target="_blank" class="footer-social-btn" title="DoST CUSAT LinkedIn" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                            <a target="_blank" class="footer-social-btn" title="Placement Cell LinkedIn" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+                            <a target="_blank" class="footer-social-btn" title="Facebook" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" class="footer-social-btn" title="YouTube" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 2: 2-COLUMN QUICK LINKS & PORTALS -->
+                    <div class="col-lg-4 col-md-6 footer-col-divider d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="footer-eyebrow"><i class="fa fa-compass"></i> Navigation</span>
+                            <h4 class="footer-heading">Quick Links</h4>
+
+                            <div class="footer-links-grid">
+                                <a class="footer-nav-link" href="academics.html">
+                                    <span><i class="fa fa-graduation-cap link-bullet"></i> Courses</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="placement.html">
+                                    <span><i class="fa fa-briefcase link-bullet"></i> Placement</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="faculty.html">
+                                    <span><i class="fa fa-user-tie link-bullet"></i> Faculty</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="Approvals-and-Affiliations.html">
+                                    <span><i class="fa fa-certificate link-bullet"></i> Affiliations</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="news.html">
+                                    <span><i class="fa fa-newspaper link-bullet"></i> News</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="events.html">
+                                    <span><i class="fa fa-calendar-check link-bullet"></i> Events</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="gallery.html">
+                                    <span><i class="fa fa-images link-bullet"></i> Gallery</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                                <a class="footer-nav-link" href="contact.html">
+                                    <span><i class="fa fa-envelope link-bullet"></i> Contact Us</span>
+                                    <i class="fa fa-angle-right link-arrow"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="footer-portal-bar">
+                            <div class="d-flex align-items-center gap-1 flex-wrap">
+                                <a class="footer-mini-pill" target="_blank" href="https://www.dostas.org/">DOSTAS</a>
+                                <a class="footer-mini-pill" target="_blank" href="https://descon.cusat.ac.in/">DESCON</a>
+                                <a class="footer-mini-pill" target="_blank" href="https://snas.in/">SNAS</a>
+                            </div>
+                            <a class="footer-mini-pill admin-pill" href="/shipadmin">
+                                <i class="fa fa-lock"></i> Admin Portal
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 3: FULL-BLEED CAMPUS MAP (FILLS ENTIRE COLUMN HEIGHT) -->
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer-map-column">
+                            <div class="footer-map-frame">
+                                <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                                <a target="_blank" href="https://maps.google.com/?q=Department+of+Ship+Technology+CUSAT" class="footer-map-badge-overlay">
+                                    <i class="fa fa-location-arrow"></i> South Kalamassery, Kochi
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright-bar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        &copy; <a href="index.html">Department of Ship Technology, CUSAT</a>. All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a target="_blank" href="https://infinio.co.in">Infinio Technology Solutions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>window.__SHIPTECH_DATA__ = {"settings": {"department_name": "Department of Ship Technology", "university_name": "Cochin University of Science and Technology", "email": "ship@cusat.ac.in", "phone_header": "0484 - 2577602", "phone_footer": "+91-484 257-5714", "address": "Department of Ship Technology, Cochin University of Science and Technology, Cochin-22, Kerala, India", "vision": "To evolve into a globally recognized department in the frontier areas of Naval Architecture and Ship Building.", "about_title": "Surging ahead since 1975", "about_text": "This Department is one of the pioneers in the field of Naval Architecture education in this country and was established in 1975 with an aim to create a new and dynamic generation of Naval Architects to meet the requirements of the Indian Shipbuilding Industry, Ship Classification Societies, R&D organizations, Indian Navy, and related organisations. This Department maintains active collaboration and interaction with IITs, foreign Universities, shipyards and other industries. These organizations have been generous in extending their facilities and expertise to impart training to our students. The fruitful collaboration of this Department with Rostock University, Germany dates back to 1978 and remains as an important milestone in the development of this Department. The curriculum was drawn up and updated in consultation with experts from various academic institutions and industries. This has brought the course curriculum in conformity with international standards. The quality of education imparted and the resulting professional competence of the graduates enabled the Department to achieve a unique record of 100 percent placement of its graduates in India and abroad.", "hod_title": "Shiptech CUSAT", "hod_message": "Greetings from the Department of Ship Technology (DoST), Cochin University of Science & Technology (CUSAT), Kerala, India!!\n\nThe DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a pioneer in the field of Naval Architecture education in the country and has produced global leaders in maritime sector, in diverse fields including design, construction, operation, survey, maintenance, education and research.\nWe are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates have a 100% placement record for the past several years, a M.Tech course in Computer Aided Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine industry, and a Ph.D programme with 41 scholars at present.\nWe are a truly interdisciplinary department with a very strong research atmosphere. Much of the graduate level research is done at the Computational Hydrodynamics and Structural Engineering (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The DoST has collaboration with the Indian Navy, MoUs with leading shipyards, Classification Societies and academic institutions.\nThe support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters to the overall development is highly encouraging.\nStudent achievements are recognized through RINA (Royal Institution of Naval Architects, London) student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for developing technical and professional leadership among students is provided by the SNAS (Society of Naval Architecture Students). Department training and placement cell provides professional assistance for student placement as well as internship in leading companies.\nWe are also actively participating in industrial projects as well as consultancy services through DESON, the consultancy wing of DoST.\nI invite you to browse through the web pages for further information", "hod_image": "uploads/mathi.png"}, "announcements": [{"id": 2, "title": "Annual Technical Symposium & Industry Meet scheduled for next month.", "link": "events.php", "is_active": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "Admissions open for B.Tech Naval Architecture & Ship Building and M.Tech programmes.", "link": "https://admissions.cusat.ac.in/", "is_active": 1, "created_at": "2026-10-30 06:12:22"}], "faculty": [{"id": 19, "name": "Dr. A. Mathiazhagan", "designation": "Professor and Head of the Department", "specialization": "Ph.D. | Materials Technology and Corrosion Engg, Welding Technology, Composite Technology", "email": "alagan@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/mathi.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=22&name=dr-a-mathiazhagan", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/199/Prof.Dr.AMATHIAZHAGAN", "sort_order": 1, "created_at": "2026-10-30 09:56:22"}, {"id": 20, "name": "Dr. Satheesh Babu P.K", "designation": "Associate Professor", "specialization": "Ph.D. | Naval Architecture, Marine Hydrodynamics, Ship Design", "email": "satheeshbabu@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/satheeshbabu.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=23&name=dr-satheesh-babu-pk", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/449/DRSATHEESHBABUPK", "sort_order": 2, "created_at": "2026-10-30 09:56:22"}, {"id": 21, "name": "Dr. D. D. Ebenezer", "designation": "Adjunct Faculty", "specialization": "Ph. D. | Computational Fluid Dynamics, Analysis and Design of St, Underwater Electroacousti", "email": "ebenezer@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-6.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=11&name=dr-d-d-ebenezer", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/510/Dr.D.D.EBENEZER", "sort_order": 3, "created_at": "2026-10-30 09:56:22"}, {"id": 22, "name": "Dr. Rajesh P Nair", "designation": "Assistant Professor", "specialization": "Ph.D. | Finite Element method, Impact Mechanics, Blast Analysis", "email": "rajeshpnair@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=7&name=dr-rajesh-p-nair", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/27/Dr.RAJESHPNAIR", "sort_order": 4, "created_at": "2026-10-30 09:56:22"}, {"id": 23, "name": "Dr. Manoj T. Issac", "designation": "Assistant Professor", "specialization": "Ph.D. | Experimental and Numerical Hydrodynamics of Unmanned Underwater Vehicles, Dynamics Modeling of Underwater Vehicles using Identification Techniques, Dynamics of Floating Offshore Structures", "email": "m.issac@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__5_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=13&name=dr-manoj-t-issac", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/50/Dr.MANOJTISSAC", "sort_order": 5, "created_at": "2026-10-30 09:56:22"}, {"id": 24, "name": "Dr. Favas T K", "designation": "Assistant Professor (Lien)", "specialization": "Ph.D. | Computational Fluid Dynamics, Numerical Heat Transfer, Computational Methods in", "email": "favastk@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-4.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=9&name=dr-favas-t-k", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/394", "sort_order": 6, "created_at": "2026-10-30 09:56:22"}, {"id": 25, "name": "Akram P. A.", "designation": "Assistant Professor (On Leave)", "specialization": "M. Tech. | Finite Element Analysis, Ship Structural Analysis, Offshore Structures", "email": "akrampa@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__24_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=16&name=akram-p-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/397/Mr.AKRAMP.A.", "sort_order": 7, "created_at": "2026-10-30 09:56:22"}, {"id": 26, "name": "Dr. Aravind K.R", "designation": "Assistant Professor", "specialization": "Ph.D | Inland Waterways Transport, Ship Design, Marine Engineering", "email": "aravind@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/IMG_0154_copy__1_.JPG", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=18&name=dr-aravind-kr", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/facdetails#faculty.list", "sort_order": 8, "created_at": "2026-10-30 09:56:22"}, {"id": 27, "name": "Dr. Beena Mary John", "designation": "Assistant Professor", "specialization": "Ph.D | Computational Fluid Dynamics, Physical model studies of marine structures, Fluid structure interaction", "email": "beena.john@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Beena_MJ2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=20&name=dr-beena-mary-john", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/569/Dr.BEENAMARYJOHN", "sort_order": 9, "created_at": "2026-10-30 09:56:22"}, {"id": 28, "name": "Dr. Haseena K A", "designation": "Assistant Professor", "specialization": "Ph.D | Renewable/Green Energy Systems-Modeling, Optimization and Integration, Electric Propulsion Systems- Dynamics and Control, Machine Learning and AI Techniques for Energy Systems", "email": "haseenaka@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/haseena.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=21&name=dr-haseena-k-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/571/Dr.HASEENA.KA", "sort_order": 10, "created_at": "2026-10-30 09:56:22"}], "technical_staff": [{"id": 5, "name": "SHIJU S", "designation": "Technical Officer Gr I", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac1.jpg", "sort_order": 1, "created_at": "2026-10-30 10:13:10"}, {"id": 6, "name": "SANTHOSH KUMAR K", "designation": "Technical Assistant", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac2.jpg", "sort_order": 2, "created_at": "2026-10-30 10:13:10"}, {"id": 7, "name": "Dr. Sheeja N.K.", "designation": "Deputy Librarian", "email": "", "phone": "", "image": "technical_staff_data/images/admin_staff_2.jpg", "sort_order": 3, "created_at": "2026-10-30 10:13:10"}], "courses": [{"id": 1, "title": "B.Tech in Naval Architecture & Ship Building", "description": "Four-year full-time undergraduate programme covering ship design, hydrodynamics, marine structures, ship production, and marine engineering with 100% placement track record.", "duration": "4 Years (8 Semesters)", "image": "uploads/btchnavel.jpg", "link": "academics.php#btech", "sort_order": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "M.Tech in Computer Aided Structural Analysis & Design (CASAD)", "description": "Two-year postgraduate programme focusing on finite element analysis, offshore and marine structures, structural dynamics, and CAD.", "duration": "2 Years (4 Semesters)", "image": "uploads/mtech.jpg", "link": "academics.php#mtech", "sort_order": 2, "created_at": "2026-10-30 06:12:22"}, {"id": 3, "title": "Ph.D. in Naval Architecture & Ocean Engineering", "description": "Doctoral research programme in ship hydrodynamics, structural mechanics, ship recycling, green shipping, and ocean engineering.", "duration": "3 - 5 Years", "image": "img/phd_image-thumb.jpg", "link": "academics.php#phd", "sort_order": 3, "created_at": "2026-10-30 06:12:22"}, {"id": 4, "title": "Short-Term Industry Training Courses", "description": "Specialized continuing education programmes for shipyard engineers, classification society surveyors, and Indian Navy officers.", "duration": "2 - 6 Weeks", "image": "img/service-4.jpg", "link": "academics.php", "sort_order": 4, "created_at": "2026-10-30 06:12:22"}, {"id": 5, "title": "CAD/CAM & Ship Design Studio", "description": "Hands-on training in hull surface modeling, stability calculations, and structural design software suites.", "duration": "Semester Module", "image": "img/service-5.jpg", "link": "academics.php", "sort_order": 5, "created_at": "2026-10-30 06:12:22"}, {"id": 6, "title": "Towing Tank & Model Testing", "description": "Experimental hydrodynamics and ship model testing training for undergraduate and postgraduate researchers.", "duration": "Lab Course", "image": "img/service-6.jpg", "link": "academics.php", "sort_order": 6, "created_at": "2026-10-30 06:12:22"}], "events": [{"id": 3, "title": "Golden Jubilee Alumni & Industry Conclave", "event_date": "2027-01-20", "description": "Gathering of Shiptech CUSAT alumni from global shipyards, R&D institutes, Indian Navy, and classification societies.", "image": "img/service-6.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "International Workshop on Green Shipping & Decarbonization", "event_date": "2026-12-05", "description": "Two-day workshop in collaboration with industry experts and classification societies on sustainable ship propulsion and IMO regulations.", "image": "img/service-5.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "ANCHOR - Annual National Technical Symposium", "event_date": "2026-11-15", "description": "National-level technical fest and symposium organized by the Society of Naval Architecture Students (SNAS) featuring paper presentations and design competitions.", "image": "img/service-4.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}], "gallery": [{"id": 41, "title": "Department Video", "category": "Video", "image": "gallery_data/images/department-video.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 40, "title": "Welcome to Captain Manoj Kumar, OIC of the Naval Construction Wing , Southern Naval Command to the Department of Ship Technology on 29.06.2026", "category": "Events", "image": "gallery_data/images/WhatsApp_Image_2026-07-01_at_17.42.53.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 39, "title": "Visit of Netherlands Team-14 May 2026", "category": "Events", "image": "gallery_data/images/IMG-20260629-WA0021.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 38, "title": "AICTE Student Induction Programme 2025, for First year B.Tech admissions", "category": "Events", "image": "gallery_data/images/1_SIP_2025.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 37, "title": "B.Tech. 46th Batch- Achieves 100% Placement", "category": "Events", "image": "gallery_data/images/46TH_BATCH.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 36, "title": "Graduation Ceremony May 3, 2025", "category": "Events", "image": "gallery_data/images/PIC_1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 35, "title": "Golden Jubilee Celebration o 1st Batch- 07 Jan 2025", "category": "Events", "image": "gallery_data/images/IMG-20250109-WA0004.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 34, "title": "PTA General Body Meeting 19-10-2024", "category": "Events", "image": "gallery_data/images/IMG-20241020-WA0005.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 33, "title": "Visit of the Team from University of Ruhuna, Sri Lanka", "category": "Events", "image": "gallery_data/images/photo1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 32, "title": "M.Tech. (CASAD) Alumni Meet -7th Oct 2023", "category": "Events", "image": "gallery_data/images/Alumni.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 31, "title": "DOSTAS ONAM CELEBRATION 2023", "category": "Events", "image": "gallery_data/images/ONAM.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 30, "title": "PTA GENERAL BODY MEETING (16-09-2023)", "category": "Events", "image": "gallery_data/images/PTA.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 29, "title": "Inauguration of B.Tech. NA&SB 48th Batch- 16-08-2023", "category": "Events", "image": "gallery_data/images/inauguration_of_48th_batch.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 28, "title": "Visit of HE Dr. Saeed Hamad Al- Rubaie ,Vice Chancellor , University of Technology & Applied Sciences, Oman-16-8-2023", "category": "Events", "image": "gallery_data/images/Visit_2.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 27, "title": "Fresher\u2019s Day \u2013 28th batch of Computer Aided Structural Analysis and Design", "category": "Events", "image": "gallery_data/images/Image_1.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 26, "title": "Visit of Cmde Sritanu Guru, CMD(Trg), HQSNC", "category": "Events", "image": "gallery_data/images/VISIT_OF_CMDE.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 25, "title": "DRDO Award Presentation to Dr. P. Krishnankutty", "category": "Events", "image": "gallery_data/images/AWARD_function.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 24, "title": "FAREWELL", "category": "Events", "image": "gallery_data/images/farewell_to_44th_batch_NA_SB.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 23, "title": "RINA Student Award Function", "category": "Events", "image": "gallery_data/images/Untitled_design__78_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 22, "title": "Silver Jubilee- B.Tech. 17th Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__74_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 21, "title": "Class NK Award 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__71_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 20, "title": "Alumni Get-Together", "category": "Events", "image": "gallery_data/images/Untitled_design__70_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 19, "title": "MoU with CSL Renewal Ceremony", "category": "Events", "image": "gallery_data/images/Untitled_design__62_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 18, "title": "3 Day National Workshop on \u201cGreen Hydrogen Pathways To Sustainable Future\u201d", "category": "Events", "image": "gallery_data/images/Untitled_design__57_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 17, "title": "Student Induction Programme 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__54_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 16, "title": "Visit to INS VIKRANT", "category": "Events", "image": "gallery_data/images/Untitled_design__17_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 15, "title": "Visit of Russian Ambassador", "category": "Events", "image": "gallery_data/images/Untitled_design__27_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 14, "title": "Visit of RINA CEO", "category": "Events", "image": "gallery_data/images/Untitled_design__30_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 13, "title": "NSTL VISIT", "category": "Events", "image": "gallery_data/images/Untitled_design__34_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 12, "title": "SNAS NITE 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__87_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 11, "title": "Farewell to M.Tech.(CASAD) 2022 Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__46_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 10, "title": "Send Off Function of Prof. Mariamma Chacko", "category": "Events", "image": "gallery_data/images/Untitled_design__45_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 9, "title": "Snas Nite 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__41_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 8, "title": "Onam 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__39_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 7, "title": "ClassNK Global Alumni Meet", "category": "Events", "image": "gallery_data/images/Untitled_design__36_.png", "created_at": "2026-10-30 10:30:32"}], "testimonials": [{"id": 5, "name": "Madhu S Nair", "role": "Chairman and Managing Director, Cochin Shipyard Ltd. | Btech Naval Architecture& Shipbuilding , 1983-1988", "content": "The Department of Ship Technology, CUSAT, has contributed immensely to the field of Naval Architecture, Shipbuilding and various other allied sectors in the global maritime sector. Over the past 47 years, the department has produced professionals who have created a profound impact in the maritime community. The department can take pride in the fact that they have been able to nurture well rounded professionals who in addition to being technically well equipped, do also understand what it takes to be successful and are willing to continually learn and work extremely hard to achieve their goals. I wish the young graduates of the department a bright and prosperous future", "image": "testimonials_data/images/madhu_s.png", "created_at": "2026-10-30 10:34:07"}, {"id": 6, "name": "Abdul Rahim", "role": "Corporate Officer, Class NK. | Btech Naval Architecture & Shipbuilding , 1979-1984", "content": "I am very pleased to note that the next batch of naval architects is graduating from CUSAT. ClassNK has long been associated with CUSAT and over the years we have recruited more than 26 CUSAT naval architects who work around the world. They are well rounded team players, brilliant, hardworking, and their contribution to ClassNK has been enormous. They are truly professional with positive attitude, and excellent in client management with strong commitment and dedication. Wishing the new young graduates every success for a bright future.", "image": "testimonials_data/images/abdhul_rahman.png", "created_at": "2026-10-30 10:34:07"}, {"id": 7, "name": "Ashik Subahani", "role": "Vice President-RINA Middle East & Africa and Managing Director at Sea Delta Marine & Offshore. | Btech Naval Architecture & Shipbuilding, 1988-1993", "content": "Naval architects from \u2018Department of Ship Technology\u2019 are excellent. They understand the requirements and concept very fast and complete the given tasks very properly on time.They are all well accepted in the world wide maritime industry due to the professionalism they have shown", "image": "testimonials_data/images/Untitled_design.png", "created_at": "2026-10-30 10:34:07"}, {"id": 8, "name": "Shihabudeen K M", "role": "Commercial Director at Damen Shipyards Sharjah / Albwardy Marine Engineering Dubai. | Btech Naval Architecture& Shipbuilding , 1988-1993", "content": "Albwardy Damen has been hiring Naval Architects from the Department of Ship Technology, CUSAT, through campus interviews continuously for the past 16 years. The main qualities of CUSAT Naval Architects are their general attitude towards work, quick learning capabilities, ability to adapt to the work environment and get along with people from various nationalities. Their academic knowledge levels are found to be comparatively higher in a way that they can be trained and employed not only in core design departments but also in other areas like project management for ship building and ship repairs, cost estimation etc. The management of Albwardy Damen has always been appreciable of the performance of the CUSAT Naval Architects. I wish the young graduates every success in their future endeavors.", "image": "testimonials_data/images/Untitled_design__1_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 9, "name": "Renganathan S", "role": "Head of Plan Approval ,Indian Register of Shipping. | Btech Naval Architecture &Shipbuilding, 1980-1985", "content": "We take extreme pleasure in getting associated with CUSAT for the past so many years. The quality of students is excellent, so is their longevity in the organization is what keeps us coming back for more every year. The students from CUSAT are outstanding, and the ones we have employed from campus recruitment are generally an asset to IRCLASS. Their ability to apply theoretical knowledge acquired during their studies to practical work is indeed commendable. The placement process is always highly well-coordinated. We wish the fresh graduates from CUSAT all the best to achieve a successful career, and we anticipate CUSAT\u2019s extended service for fulfilling our workforce requirements in the long run.", "image": "testimonials_data/images/Untitled_design__2_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 10, "name": "Pyarilal Kandy", "role": "Managing Partner & Director of Operations at Great Waters Maritime L.L.C. | Btech Naval Architecture & Shipbuilding, 1989-1994", "content": "In the last 10 years Great Waters have hired graduates from Department of Ship technology and they all stood out as the best amongst other graduates from elsewhere in work performance, knowledge, ability to apply knowledge and most of all, attitude towards work. Attitude of an employee towards work is the most important aspect for a company in achieving results. Great Waters have been incredibly happy with all those graduates who have come and worked with us. Graduates from DOST have always shone in all industries, and which is why many of them are now at senior roles in major companies", "image": "testimonials_data/images/Untitled_design__3_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 11, "name": "Vinod Janardanan", "role": "Director, Consultancy & Outsourcing, South Asia Zone at Bureau Veritas Marine & Offshore - Singapore. | Btech Naval Architecture & Shipbuilding , 1980-1985", "content": "The graduates from Department of Ship Technology, Cochin University of Science and Technology stand out for the following reasons while recruiting them.\n\n1. The degree is aptly awarded for Naval Architecture & Ship building, encompassing theoretical tenets of ship design as well as practical aspects of ship construction. This makes them suitable for employment in design offices, class societies, research institutes and shipyards.\n\n2. In addition to the academic curriculum they also undergo internship in institutions of their choice after the first, second and third year of the course. This, I have observed, aligns their class room learning with real work and they are better equipped to commence their job.\n\n3. They undertake a full ship design project during the last year of the course, under the close guidance of the staff. This exercise, I have noticed, gives them a holistic understanding of ship design and especially the design spiral.\n\n4. They attend seminars and presentations made by stalwarts from the industry (now on a virtual platform) and remain aware of recent innovations and trends in the field.Recent graduates, with whom i have interacted, were knowledgeable, analytical, diligent and able to communicate effectively.\n\n\n\nIn view of the above I find the graduates from this institution to be highly employable and am confident that they would contribute significantly to the organisation that they are part of.", "image": "testimonials_data/images/2.png", "created_at": "2026-10-30 10:34:07"}], "placement_brochures": [{"id": 1, "title": "Placement Brochure 2021-2022", "file_path": "placement_data/brochures/Placement_Brochure_2021-22.pdf", "image": "img/career-mag.jpg", "sort_order": 1}, {"id": 2, "title": "Placement Brochure 2022-2023", "file_path": "placement_data/brochures/PLACEMENT_BROCHURE_2022-23.pdf", "image": "img/career-mag.jpg", "sort_order": 2}, {"id": 3, "title": "Placement Brochure 2024-25", "file_path": "placement_data/brochures/Placement_Brochure_2024-25.pdf", "image": "img/career-mag.jpg", "sort_order": 3}, {"id": 4, "title": "Placement Brochure 2025", "file_path": "placement_data/brochures/Placement_Brochure_2025.pdf", "image": "img/career-mag.jpg", "sort_order": 4}, {"id": 5, "title": "Placement Brochure 2026", "file_path": "placement_data/brochures/Placement_Brochure_2026.pdf", "image": "img/career-mag.jpg", "sort_order": 5}], "placement_coordinators": [{"id": 1, "name": "Dr. Satheesh babu P K", "role_type": "Faculty Coordinator", "email": "satheeshbabu@cusat.ac.in", "phone": "+919946063772", "sort_order": 1}, {"id": 2, "name": "Aravind K.R", "role_type": "Faculty Coordinator", "email": "aravind@cusat.ac.in", "phone": "+91 8089866415", "sort_order": 2}, {"id": 3, "name": "Mr. Devadath Uday P K", "role_type": "Student Coordinator", "email": "devadathudaypk@gmail.com", "phone": "+91 9072393613", "sort_order": 3}, {"id": 4, "name": "Mr. Advaith Ullas", "role_type": "Student Coordinator", "email": "adwaithullas@gmail.com", "phone": "+91  8590180472", "sort_order": 4}, {"id": 5, "name": "Mr. Aravind M Nath", "role_type": "Student Coordinator", "email": "aravind.m.rs49@gmail.com", "phone": "+91 8590903126", "sort_order": 5}, {"id": 6, "name": "Mr. Adithyan C", "role_type": "Student Coordinator", "email": "adithyanct@gmail.com", "phone": "+91 7736800613", "sort_order": 6}]};</script>
+<script src="js/site-data.js"></script>
+<!-- Footer End -->
+
+
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>window.__SHIPTECH_DATA__ = {"settings": {"department_name": "Department of Ship Technology", "university_name": "Cochin University of Science and Technology", "email": "ship@cusat.ac.in", "phone_header": "0484 - 2577602", "phone_footer": "+91-484 257-5714", "address": "Department of Ship Technology, Cochin University of Science and Technology, Cochin-22, Kerala, India", "vision": "To evolve into a globally recognized department in the frontier areas of Naval Architecture and Ship Building.", "about_title": "Surging ahead since 1975", "about_text": "This Department is one of the pioneers in the field of Naval Architecture education in this country and was established in 1975 with an aim to create a new and dynamic generation of Naval Architects to meet the requirements of the Indian Shipbuilding Industry, Ship Classification Societies, R&D organizations, Indian Navy, and related organisations. This Department maintains active collaboration and interaction with IITs, foreign Universities, shipyards and other industries. These organizations have been generous in extending their facilities and expertise to impart training to our students. The fruitful collaboration of this Department with Rostock University, Germany dates back to 1978 and remains as an important milestone in the development of this Department. The curriculum was drawn up and updated in consultation with experts from various academic institutions and industries. This has brought the course curriculum in conformity with international standards. The quality of education imparted and the resulting professional competence of the graduates enabled the Department to achieve a unique record of 100 percent placement of its graduates in India and abroad.", "hod_title": "Shiptech CUSAT", "hod_message": "Greetings from the Department of Ship Technology (DoST), Cochin University of Science & Technology (CUSAT), Kerala, India!!\n\nThe DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a pioneer in the field of Naval Architecture education in the country and has produced global leaders in maritime sector, in diverse fields including design, construction, operation, survey, maintenance, education and research.\nWe are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates have a 100% placement record for the past several years, a M.Tech course in Computer Aided Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine industry, and a Ph.D programme with 41 scholars at present.\nWe are a truly interdisciplinary department with a very strong research atmosphere. Much of the graduate level research is done at the Computational Hydrodynamics and Structural Engineering (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The DoST has collaboration with the Indian Navy, MoUs with leading shipyards, Classification Societies and academic institutions.\nThe support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters to the overall development is highly encouraging.\nStudent achievements are recognized through RINA (Royal Institution of Naval Architects, London) student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for developing technical and professional leadership among students is provided by the SNAS (Society of Naval Architecture Students). Department training and placement cell provides professional assistance for student placement as well as internship in leading companies.\nWe are also actively participating in industrial projects as well as consultancy services through DESON, the consultancy wing of DoST.\nI invite you to browse through the web pages for further information", "hod_image": "uploads/mathi.png"}, "announcements": [{"id": 2, "title": "Annual Technical Symposium & Industry Meet scheduled for next month.", "link": "events.php", "is_active": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "Admissions open for B.Tech Naval Architecture & Ship Building and M.Tech programmes.", "link": "https://admissions.cusat.ac.in/", "is_active": 1, "created_at": "2026-10-30 06:12:22"}], "faculty": [{"id": 19, "name": "Dr. A. Mathiazhagan", "designation": "Professor and Head of the Department", "specialization": "Ph.D. | Materials Technology and Corrosion Engg, Welding Technology, Composite Technology", "email": "alagan@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/mathi.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=22&name=dr-a-mathiazhagan", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/199/Prof.Dr.AMATHIAZHAGAN", "sort_order": 1, "created_at": "2026-10-30 09:56:22"}, {"id": 20, "name": "Dr. Satheesh Babu P.K", "designation": "Associate Professor", "specialization": "Ph.D. | Naval Architecture, Marine Hydrodynamics, Ship Design", "email": "satheeshbabu@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/satheeshbabu.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=23&name=dr-satheesh-babu-pk", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/449/DRSATHEESHBABUPK", "sort_order": 2, "created_at": "2026-10-30 09:56:22"}, {"id": 21, "name": "Dr. D. D. Ebenezer", "designation": "Adjunct Faculty", "specialization": "Ph. D. | Computational Fluid Dynamics, Analysis and Design of St, Underwater Electroacousti", "email": "ebenezer@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-6.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=11&name=dr-d-d-ebenezer", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/510/Dr.D.D.EBENEZER", "sort_order": 3, "created_at": "2026-10-30 09:56:22"}, {"id": 22, "name": "Dr. Rajesh P Nair", "designation": "Assistant Professor", "specialization": "Ph.D. | Finite Element method, Impact Mechanics, Blast Analysis", "email": "rajeshpnair@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=7&name=dr-rajesh-p-nair", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/27/Dr.RAJESHPNAIR", "sort_order": 4, "created_at": "2026-10-30 09:56:22"}, {"id": 23, "name": "Dr. Manoj T. Issac", "designation": "Assistant Professor", "specialization": "Ph.D. | Experimental and Numerical Hydrodynamics of Unmanned Underwater Vehicles, Dynamics Modeling of Underwater Vehicles using Identification Techniques, Dynamics of Floating Offshore Structures", "email": "m.issac@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__5_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=13&name=dr-manoj-t-issac", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/50/Dr.MANOJTISSAC", "sort_order": 5, "created_at": "2026-10-30 09:56:22"}, {"id": 24, "name": "Dr. Favas T K", "designation": "Assistant Professor (Lien)", "specialization": "Ph.D. | Computational Fluid Dynamics, Numerical Heat Transfer, Computational Methods in", "email": "favastk@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-4.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=9&name=dr-favas-t-k", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/394", "sort_order": 6, "created_at": "2026-10-30 09:56:22"}, {"id": 25, "name": "Akram P. A.", "designation": "Assistant Professor (On Leave)", "specialization": "M. Tech. | Finite Element Analysis, Ship Structural Analysis, Offshore Structures", "email": "akrampa@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__24_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=16&name=akram-p-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/397/Mr.AKRAMP.A.", "sort_order": 7, "created_at": "2026-10-30 09:56:22"}, {"id": 26, "name": "Dr. Aravind K.R", "designation": "Assistant Professor", "specialization": "Ph.D | Inland Waterways Transport, Ship Design, Marine Engineering", "email": "aravind@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/IMG_0154_copy__1_.JPG", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=18&name=dr-aravind-kr", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/facdetails#faculty.list", "sort_order": 8, "created_at": "2026-10-30 09:56:22"}, {"id": 27, "name": "Dr. Beena Mary John", "designation": "Assistant Professor", "specialization": "Ph.D | Computational Fluid Dynamics, Physical model studies of marine structures, Fluid structure interaction", "email": "beena.john@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Beena_MJ2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=20&name=dr-beena-mary-john", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/569/Dr.BEENAMARYJOHN", "sort_order": 9, "created_at": "2026-10-30 09:56:22"}, {"id": 28, "name": "Dr. Haseena K A", "designation": "Assistant Professor", "specialization": "Ph.D | Renewable/Green Energy Systems-Modeling, Optimization and Integration, Electric Propulsion Systems- Dynamics and Control, Machine Learning and AI Techniques for Energy Systems", "email": "haseenaka@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/haseena.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=21&name=dr-haseena-k-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/571/Dr.HASEENA.KA", "sort_order": 10, "created_at": "2026-10-30 09:56:22"}], "technical_staff": [{"id": 5, "name": "SHIJU S", "designation": "Technical Officer Gr I", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac1.jpg", "sort_order": 1, "created_at": "2026-10-30 10:13:10"}, {"id": 6, "name": "SANTHOSH KUMAR K", "designation": "Technical Assistant", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac2.jpg", "sort_order": 2, "created_at": "2026-10-30 10:13:10"}, {"id": 7, "name": "Dr. Sheeja N.K.", "designation": "Deputy Librarian", "email": "", "phone": "", "image": "technical_staff_data/images/admin_staff_2.jpg", "sort_order": 3, "created_at": "2026-10-30 10:13:10"}], "courses": [{"id": 1, "title": "B.Tech in Naval Architecture & Ship Building", "description": "Four-year full-time undergraduate programme covering ship design, hydrodynamics, marine structures, ship production, and marine engineering with 100% placement track record.", "duration": "4 Years (8 Semesters)", "image": "uploads/btchnavel.jpg", "link": "academics.php#btech", "sort_order": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "M.Tech in Computer Aided Structural Analysis & Design (CASAD)", "description": "Two-year postgraduate programme focusing on finite element analysis, offshore and marine structures, structural dynamics, and CAD.", "duration": "2 Years (4 Semesters)", "image": "uploads/mtech.jpg", "link": "academics.php#mtech", "sort_order": 2, "created_at": "2026-10-30 06:12:22"}, {"id": 3, "title": "Ph.D. in Naval Architecture & Ocean Engineering", "description": "Doctoral research programme in ship hydrodynamics, structural mechanics, ship recycling, green shipping, and ocean engineering.", "duration": "3 - 5 Years", "image": "img/phd_image-thumb.jpg", "link": "academics.php#phd", "sort_order": 3, "created_at": "2026-10-30 06:12:22"}, {"id": 4, "title": "Short-Term Industry Training Courses", "description": "Specialized continuing education programmes for shipyard engineers, classification society surveyors, and Indian Navy officers.", "duration": "2 - 6 Weeks", "image": "img/service-4.jpg", "link": "academics.php", "sort_order": 4, "created_at": "2026-10-30 06:12:22"}, {"id": 5, "title": "CAD/CAM & Ship Design Studio", "description": "Hands-on training in hull surface modeling, stability calculations, and structural design software suites.", "duration": "Semester Module", "image": "img/service-5.jpg", "link": "academics.php", "sort_order": 5, "created_at": "2026-10-30 06:12:22"}, {"id": 6, "title": "Towing Tank & Model Testing", "description": "Experimental hydrodynamics and ship model testing training for undergraduate and postgraduate researchers.", "duration": "Lab Course", "image": "img/service-6.jpg", "link": "academics.php", "sort_order": 6, "created_at": "2026-10-30 06:12:22"}], "events": [{"id": 3, "title": "Golden Jubilee Alumni & Industry Conclave", "event_date": "2027-01-20", "description": "Gathering of Shiptech CUSAT alumni from global shipyards, R&D institutes, Indian Navy, and classification societies.", "image": "img/service-6.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "International Workshop on Green Shipping & Decarbonization", "event_date": "2026-12-05", "description": "Two-day workshop in collaboration with industry experts and classification societies on sustainable ship propulsion and IMO regulations.", "image": "img/service-5.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "ANCHOR - Annual National Technical Symposium", "event_date": "2026-11-15", "description": "National-level technical fest and symposium organized by the Society of Naval Architecture Students (SNAS) featuring paper presentations and design competitions.", "image": "img/service-4.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}], "gallery": [{"id": 41, "title": "Department Video", "category": "Video", "image": "gallery_data/images/department-video.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 40, "title": "Welcome to Captain Manoj Kumar, OIC of the Naval Construction Wing , Southern Naval Command to the Department of Ship Technology on 29.06.2026", "category": "Events", "image": "gallery_data/images/WhatsApp_Image_2026-07-01_at_17.42.53.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 39, "title": "Visit of Netherlands Team-14 May 2026", "category": "Events", "image": "gallery_data/images/IMG-20260629-WA0021.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 38, "title": "AICTE Student Induction Programme 2025, for First year B.Tech admissions", "category": "Events", "image": "gallery_data/images/1_SIP_2025.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 37, "title": "B.Tech. 46th Batch- Achieves 100% Placement", "category": "Events", "image": "gallery_data/images/46TH_BATCH.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 36, "title": "Graduation Ceremony May 3, 2025", "category": "Events", "image": "gallery_data/images/PIC_1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 35, "title": "Golden Jubilee Celebration o 1st Batch- 07 Jan 2025", "category": "Events", "image": "gallery_data/images/IMG-20250109-WA0004.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 34, "title": "PTA General Body Meeting 19-10-2024", "category": "Events", "image": "gallery_data/images/IMG-20241020-WA0005.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 33, "title": "Visit of the Team from University of Ruhuna, Sri Lanka", "category": "Events", "image": "gallery_data/images/photo1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 32, "title": "M.Tech. (CASAD) Alumni Meet -7th Oct 2023", "category": "Events", "image": "gallery_data/images/Alumni.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 31, "title": "DOSTAS ONAM CELEBRATION 2023", "category": "Events", "image": "gallery_data/images/ONAM.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 30, "title": "PTA GENERAL BODY MEETING (16-09-2023)", "category": "Events", "image": "gallery_data/images/PTA.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 29, "title": "Inauguration of B.Tech. NA&SB 48th Batch- 16-08-2023", "category": "Events", "image": "gallery_data/images/inauguration_of_48th_batch.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 28, "title": "Visit of HE Dr. Saeed Hamad Al- Rubaie ,Vice Chancellor , University of Technology & Applied Sciences, Oman-16-8-2023", "category": "Events", "image": "gallery_data/images/Visit_2.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 27, "title": "Fresher\u2019s Day \u2013 28th batch of Computer Aided Structural Analysis and Design", "category": "Events", "image": "gallery_data/images/Image_1.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 26, "title": "Visit of Cmde Sritanu Guru, CMD(Trg), HQSNC", "category": "Events", "image": "gallery_data/images/VISIT_OF_CMDE.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 25, "title": "DRDO Award Presentation to Dr. P. Krishnankutty", "category": "Events", "image": "gallery_data/images/AWARD_function.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 24, "title": "FAREWELL", "category": "Events", "image": "gallery_data/images/farewell_to_44th_batch_NA_SB.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 23, "title": "RINA Student Award Function", "category": "Events", "image": "gallery_data/images/Untitled_design__78_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 22, "title": "Silver Jubilee- B.Tech. 17th Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__74_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 21, "title": "Class NK Award 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__71_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 20, "title": "Alumni Get-Together", "category": "Events", "image": "gallery_data/images/Untitled_design__70_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 19, "title": "MoU with CSL Renewal Ceremony", "category": "Events", "image": "gallery_data/images/Untitled_design__62_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 18, "title": "3 Day National Workshop on \u201cGreen Hydrogen Pathways To Sustainable Future\u201d", "category": "Events", "image": "gallery_data/images/Untitled_design__57_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 17, "title": "Student Induction Programme 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__54_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 16, "title": "Visit to INS VIKRANT", "category": "Events", "image": "gallery_data/images/Untitled_design__17_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 15, "title": "Visit of Russian Ambassador", "category": "Events", "image": "gallery_data/images/Untitled_design__27_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 14, "title": "Visit of RINA CEO", "category": "Events", "image": "gallery_data/images/Untitled_design__30_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 13, "title": "NSTL VISIT", "category": "Events", "image": "gallery_data/images/Untitled_design__34_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 12, "title": "SNAS NITE 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__87_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 11, "title": "Farewell to M.Tech.(CASAD) 2022 Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__46_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 10, "title": "Send Off Function of Prof. Mariamma Chacko", "category": "Events", "image": "gallery_data/images/Untitled_design__45_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 9, "title": "Snas Nite 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__41_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 8, "title": "Onam 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__39_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 7, "title": "ClassNK Global Alumni Meet", "category": "Events", "image": "gallery_data/images/Untitled_design__36_.png", "created_at": "2026-10-30 10:30:32"}], "testimonials": [{"id": 5, "name": "Madhu S Nair", "role": "Chairman and Managing Director, Cochin Shipyard Ltd. | Btech Naval Architecture& Shipbuilding , 1983-1988", "content": "The Department of Ship Technology, CUSAT, has contributed immensely to the field of Naval Architecture, Shipbuilding and various other allied sectors in the global maritime sector. Over the past 47 years, the department has produced professionals who have created a profound impact in the maritime community. The department can take pride in the fact that they have been able to nurture well rounded professionals who in addition to being technically well equipped, do also understand what it takes to be successful and are willing to continually learn and work extremely hard to achieve their goals. I wish the young graduates of the department a bright and prosperous future", "image": "testimonials_data/images/madhu_s.png", "created_at": "2026-10-30 10:34:07"}, {"id": 6, "name": "Abdul Rahim", "role": "Corporate Officer, Class NK. | Btech Naval Architecture & Shipbuilding , 1979-1984", "content": "I am very pleased to note that the next batch of naval architects is graduating from CUSAT. ClassNK has long been associated with CUSAT and over the years we have recruited more than 26 CUSAT naval architects who work around the world. They are well rounded team players, brilliant, hardworking, and their contribution to ClassNK has been enormous. They are truly professional with positive attitude, and excellent in client management with strong commitment and dedication. Wishing the new young graduates every success for a bright future.", "image": "testimonials_data/images/abdhul_rahman.png", "created_at": "2026-10-30 10:34:07"}, {"id": 7, "name": "Ashik Subahani", "role": "Vice President-RINA Middle East & Africa and Managing Director at Sea Delta Marine & Offshore. | Btech Naval Architecture & Shipbuilding, 1988-1993", "content": "Naval architects from \u2018Department of Ship Technology\u2019 are excellent. They understand the requirements and concept very fast and complete the given tasks very properly on time.They are all well accepted in the world wide maritime industry due to the professionalism they have shown", "image": "testimonials_data/images/Untitled_design.png", "created_at": "2026-10-30 10:34:07"}, {"id": 8, "name": "Shihabudeen K M", "role": "Commercial Director at Damen Shipyards Sharjah / Albwardy Marine Engineering Dubai. | Btech Naval Architecture& Shipbuilding , 1988-1993", "content": "Albwardy Damen has been hiring Naval Architects from the Department of Ship Technology, CUSAT, through campus interviews continuously for the past 16 years. The main qualities of CUSAT Naval Architects are their general attitude towards work, quick learning capabilities, ability to adapt to the work environment and get along with people from various nationalities. Their academic knowledge levels are found to be comparatively higher in a way that they can be trained and employed not only in core design departments but also in other areas like project management for ship building and ship repairs, cost estimation etc. The management of Albwardy Damen has always been appreciable of the performance of the CUSAT Naval Architects. I wish the young graduates every success in their future endeavors.", "image": "testimonials_data/images/Untitled_design__1_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 9, "name": "Renganathan S", "role": "Head of Plan Approval ,Indian Register of Shipping. | Btech Naval Architecture &Shipbuilding, 1980-1985", "content": "We take extreme pleasure in getting associated with CUSAT for the past so many years. The quality of students is excellent, so is their longevity in the organization is what keeps us coming back for more every year. The students from CUSAT are outstanding, and the ones we have employed from campus recruitment are generally an asset to IRCLASS. Their ability to apply theoretical knowledge acquired during their studies to practical work is indeed commendable. The placement process is always highly well-coordinated. We wish the fresh graduates from CUSAT all the best to achieve a successful career, and we anticipate CUSAT\u2019s extended service for fulfilling our workforce requirements in the long run.", "image": "testimonials_data/images/Untitled_design__2_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 10, "name": "Pyarilal Kandy", "role": "Managing Partner & Director of Operations at Great Waters Maritime L.L.C. | Btech Naval Architecture & Shipbuilding, 1989-1994", "content": "In the last 10 years Great Waters have hired graduates from Department of Ship technology and they all stood out as the best amongst other graduates from elsewhere in work performance, knowledge, ability to apply knowledge and most of all, attitude towards work. Attitude of an employee towards work is the most important aspect for a company in achieving results. Great Waters have been incredibly happy with all those graduates who have come and worked with us. Graduates from DOST have always shone in all industries, and which is why many of them are now at senior roles in major companies", "image": "testimonials_data/images/Untitled_design__3_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 11, "name": "Vinod Janardanan", "role": "Director, Consultancy & Outsourcing, South Asia Zone at Bureau Veritas Marine & Offshore - Singapore. | Btech Naval Architecture & Shipbuilding , 1980-1985", "content": "The graduates from Department of Ship Technology, Cochin University of Science and Technology stand out for the following reasons while recruiting them.\n\n1. The degree is aptly awarded for Naval Architecture & Ship building, encompassing theoretical tenets of ship design as well as practical aspects of ship construction. This makes them suitable for employment in design offices, class societies, research institutes and shipyards.\n\n2. In addition to the academic curriculum they also undergo internship in institutions of their choice after the first, second and third year of the course. This, I have observed, aligns their class room learning with real work and they are better equipped to commence their job.\n\n3. They undertake a full ship design project during the last year of the course, under the close guidance of the staff. This exercise, I have noticed, gives them a holistic understanding of ship design and especially the design spiral.\n\n4. They attend seminars and presentations made by stalwarts from the industry (now on a virtual platform) and remain aware of recent innovations and trends in the field.Recent graduates, with whom i have interacted, were knowledgeable, analytical, diligent and able to communicate effectively.\n\n\n\nIn view of the above I find the graduates from this institution to be highly employable and am confident that they would contribute significantly to the organisation that they are part of.", "image": "testimonials_data/images/2.png", "created_at": "2026-10-30 10:34:07"}], "placement_brochures": [{"id": 1, "title": "Placement Brochure 2021-2022", "file_path": "placement_data/brochures/Placement_Brochure_2021-22.pdf", "image": "img/career-mag.jpg", "sort_order": 1}, {"id": 2, "title": "Placement Brochure 2022-2023", "file_path": "placement_data/brochures/PLACEMENT_BROCHURE_2022-23.pdf", "image": "img/career-mag.jpg", "sort_order": 2}, {"id": 3, "title": "Placement Brochure 2024-25", "file_path": "placement_data/brochures/Placement_Brochure_2024-25.pdf", "image": "img/career-mag.jpg", "sort_order": 3}, {"id": 4, "title": "Placement Brochure 2025", "file_path": "placement_data/brochures/Placement_Brochure_2025.pdf", "image": "img/career-mag.jpg", "sort_order": 4}, {"id": 5, "title": "Placement Brochure 2026", "file_path": "placement_data/brochures/Placement_Brochure_2026.pdf", "image": "img/career-mag.jpg", "sort_order": 5}], "placement_coordinators": [{"id": 1, "name": "Dr. Satheesh babu P K", "role_type": "Faculty Coordinator", "email": "satheeshbabu@cusat.ac.in", "phone": "+919946063772", "sort_order": 1}, {"id": 2, "name": "Aravind K.R", "role_type": "Faculty Coordinator", "email": "aravind@cusat.ac.in", "phone": "+91 8089866415", "sort_order": 2}, {"id": 3, "name": "Mr. Devadath Uday P K", "role_type": "Student Coordinator", "email": "devadathudaypk@gmail.com", "phone": "+91 9072393613", "sort_order": 3}, {"id": 4, "name": "Mr. Advaith Ullas", "role_type": "Student Coordinator", "email": "adwaithullas@gmail.com", "phone": "+91  8590180472", "sort_order": 4}, {"id": 5, "name": "Mr. Aravind M Nath", "role_type": "Student Coordinator", "email": "aravind.m.rs49@gmail.com", "phone": "+91 8590903126", "sort_order": 5}, {"id": 6, "name": "Mr. Adithyan C", "role_type": "Student Coordinator", "email": "adithyanct@gmail.com", "phone": "+91 7736800613", "sort_order": 6}]};</script>
+<script src="js/site-data.js"></script>
+</body>
+
+</html>

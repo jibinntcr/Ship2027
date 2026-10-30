@@ -1,0 +1,701 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Faculty | Department of Shiptechnology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./lib/icons/css/all.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/facultyDetails.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <!-- Topbar Start -->
+<div class="wrap bg-upper-nav upper-header py-2 px-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col d-flex">
+                <p class="mt-2 mb-2 d-flex">
+                <p class="mb-0 me-4 text-white"><span class="fa fa-envelope"></span>
+                    <a class="text-white" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </p>
+                <p class="mb-0 text-white"><span class="fa fa-phone-alt"></span>
+                    <a class="text-white" href=" tel:+914842575714">0484-2575714</a>
+                </p>
+                </p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="social-media">
+                    <p class="mb-0 d-flex">
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="course.php" class="dropdown-item">Courses</a>
+                    <!-- <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank"
+                        class="dropdown-item">Program Educational
+                        Objectives</a>
+                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="dropdown-item">Program
+                        Outcomes (POs)</a>
+                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="dropdown-item">Program
+                        Specific
+                        Outcomes (PSOs)</a> -->
+                    <!-- <a href="research.php" class="dropdown-item">Research</a> -->
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.php" class="dropdown-item">Faculty</a>
+                    <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
+                    <!-- <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a> -->
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="phd.php" target="_blank" class="dropdown-item">Ph.D.</a>
+                    <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
+                    <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
+                    <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Sudents</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+            <!-- <div class=" nav-item dropdown">
+                <a href="library.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank"
+                        class="dropdown-item">Department Library</a>
+
+                </div>
+            </div> -->
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="library.php" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+
+            <!-- <a href="library.php" class="nav-item nav-link">Library</a> -->
+            <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
+                    <!-- <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Committee 2022</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Form</a> -->
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+
+                </div>
+            </div>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="feature.html" class="dropdown-item">Features</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div> -->
+            <!-- <a href="contact.html" class="nav-item nav-link active">Contact Us</a> -->
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->    <!-- Navbar End -->
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Dr. Favas T K</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page"> Dr. Favas T K                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 px-lg-0" style="overflow:hidden;">
+        <div class="container  about py-5 px-lg-0 element">
+            <div class="row g-5 mx-lg-5">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
+                    style="min-height: 400px;">
+                    <!-- card  -->
+                    <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
+                        <img src="uploads/fac-4.jpg" class="card-img-top img-fluid"
+                            style="border-radius: 15px;" alt="faculty image" />
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-uppercase ">
+                                Dr. Favas T K                            </h4>
+                            <p class="card-text thick">Assistant Professor (Lien)</p>
+                        </div>
+                        <hr class="my-2">
+                        <div class="card-body ">
+                            <h6 class="card-title text-uppercase mb-3 ">
+                                CONTACT INFO
+                            </h6>
+                            <div class="small-text ">
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                    <div class="col-10 text-right"><a class="white col-11"
+                                            href="mailto:favastk@cusat.ac.in">favastk@cusat.ac.in</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-10 text-right">Room No - 304, Department of Ship Technology, 
+Cochin University of Science and Technology, 
+Kochi - 682022, Kerala, India</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"> <i class="fa fa-address-book"></i></div>
+                                    <div class="col-10 text-right">
+                                        <a class="white col-11" href="https://iqac.cusat.ac.in/Web/profile_view/394">CUSAT IQAC
+                                            Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+                <div class="col-lg-8 mx-lg-2 col-md-12 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h1 class="mb-5 title-color ">Dr. Favas T K </h1>
+                    <p class="mb-5 " style="margin-right: 3%;">Favas.T.K has been working as Assistant Professor at Department of Ship Technology of CUSAT since November, 2020. He worked as Lecturer in Mechanical Engineering at MES College of Engineering Kuttippuram (2004-2008) and as Ad-hoc Faculty at National Institute of Technology Calicut (2013-2018). He also served as Assistant Engineer in Kerala Water Authority (2018-2020). After completing B. Tech in Mechanical Engineering from Government Engineering College Thrissur in 2002, he completed M. Tech in Industrial Refrigeration and Cryogenic Engineering from TKM College of Engineering Kollam with Second Rank under University of Kerala in 2004. He obtained PhD in Mechanical Engineering from National Institute of Technology Calicut in 2018. He has more than 15 publications in refereed journals, national and international conferences.                    </p>
+                    <i class="fa-solid fa-book-open-readertext-primary fa-3x"></i>
+                    <div>
+                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="mb-5">Field Of Special Interest</h2>
+                            <div class="d-flex flex-wrap ">
+
+
+                                <!-- SPECIAL INTEREST 1 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Computational Fluid Dynamics</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 1 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Numerical Heat Transfer</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 2 END -->
+
+                                <!-- SPECIAL INTEREST 3 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Computational Methods in </h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 3 END -->
+
+                                <!-- SPECIAL INTEREST 4  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Hydraulics and Water Reso</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 4 END -->
+
+                                <!-- SPECIAL INTEREST 5  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Water Distribution Networ</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 5 END -->
+
+                                <!-- SPECIAL INTEREST 6  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Entropy Generation Analys</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 6 END -->
+
+                                <!-- SPECIAL INTEREST 7  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Cryogenics</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 7 END -->
+
+                                <!-- SPECIAL INTEREST 8  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Convective Heat Transfer</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 8 END -->
+
+                                <!-- SPECIAL INTEREST 9  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Conjugate Heat Transfer</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 9 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Nuclear Powered Ships and</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 10 END -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Experience</h2>
+            <div class="d-flex flex-wrap ">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Lecturer</h5>
+                        <p class="mb-0">MES College of Engineering Kuttippuram (2004-2008)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2   START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Adhoc Faculty </h5>
+                        <p class="mb-0">National Institute of Technology Calicut (2013-2018)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Assistant Engineer</h5>
+                        <p class="mb-0">Kerala Water Authority (2018-2020)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+                <!-- EXPERIENCE 6  START -->
+                                <!-- EXPERIENCE 6  END -->
+
+                <!-- EXPERIENCE 7  START -->
+                                <!-- EXPERIENCE 7  END -->
+
+                <!-- EXPERIENCE 8  START -->
+                                <!-- EXPERIENCE 8  END -->
+
+                <!-- EXPERIENCE 9  START -->
+                                <!-- EXPERIENCE 9  END -->
+
+                <!-- EXPERIENCE 10  START -->
+                                <!-- EXPERIENCE 10  END -->
+
+
+            </div>
+        </div>
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-wrap justify-para">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Ph.D.</h5>
+                        <p class="mb-0">National Institute of Technology Calicut</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>MTech Industrial Refrigeration and Cryogenics Engineering Engineering</h5>
+                        <p class="mb-0">TKM College of Engineering Kollam</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>BTech Mechanical Engineering</h5>
+                        <p class="mb-0">Government Engineering College Thrissur</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Pre Degree</h5>
+                        <p class="mb-0">Farook College Kozhikode</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>SSLC</h5>
+                        <p class="mb-0">PPMHS Kottukkara, Kondotty PO</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 5  END -->
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS START -->
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Publications
+            </h2>
+            <p class="mb-5"><p><strong><em>National/International Journals</em></strong></p>
+
+<ol>
+	<li>
+	<p><strong>T.K. Favas, G.Jilani</strong>,<strong> </strong>Effect of variable thermal conductivity on entropy generation in a plate with internal energy generation,<em>MATEC Web of Conferences, </em>Vol 144, 2018, (SSN 00002012)</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G.Jilani</strong>, The effect of non-uniform energy generation on entropy generation in a plate being cooled in a fluid medium,<em>Heat and Mass Transfer Research Journal,</em> Vol 1(1), 2017</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G.Jilani</strong>, Minimization of entropy generation in a plate with non-uniform energy generation, <em>Indian Journal of Engineering, </em>Vol 13(33), 2016, (ISSN 2319-7757)</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, N.K. Mohammed Sajid, John M. George, K.K. Abdul Rasheed, K.A. Shafi, B. Premlet,</strong> Development of an Orifice Pulse Tube Refrigerator, <em>Indian Journal of Cryogenics,</em> Vol 30(2), 2005, (ISSN: 0379-0479)</p>
+	</li>
+</ol>
+
+<p><strong><em>International Conference Papers</em></strong></p>
+
+<ol>
+	<li>
+	<p><strong>T.K. Favas, </strong>Computational Fluid Flow and Heat Transfer in the Safety of Engineering Systems, <em>2nd Virtual International Conference on Advanced Technologies and Research in Mechanical Engineering, </em>MEA Engineering College, Perinthalmanna, May 24 &ndash; 26, 2022</p>
+	</li>
+	<li>
+	<p><strong>Renu Raj, T.K. Favas</strong>, Heat Transfer Investigations in Thermal Protective Clothing &ndash; A Review, <em>2nd Virtual International Conference on Advanced Technologies and Research in Mechanical Engineering, </em>MEA Engineering College, Perinthalmanna, May 24 &ndash; 26, 2022</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, H. Mohammed Faizal</strong>, The effect of coolant Prandtl number on hotspots in plate type fuel element of a nuclear research reactor, <em>International Conference on Aerospace and Mechanical Engineering, </em>T K M College of Engineering, Kollam, December 16-18, 2021</p>
+	</li>
+	<li>
+	<p><strong>Renu Raj, T.K. Favas</strong>, A review of the computational fluid dynamics investigations on fire safety in ships, <em>International Conference on Advances in Naval and Ocean Engineering, </em>Cochin University of Science and Technology, November 19-20, 2021 (ISBN : 978-81-952577-5-1)</p>
+	</li>
+	<li>
+	<p><strong>Mohammed Faizal H, T.K. Favas</strong>, Computational heat transfer in marine transportation systems &ndash; A review, <em>International Conference on Advances in Naval and Ocean Engineering, </em>Cochin University of Science and Technology, November 19-20, 2021 (ISBN: 978-81-952577-5-1)</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Effect of variable thermal conductivity on heat transfer characteristics of a nuclear fuel element, <em>Fifth International Conference on Computational Methods for Thermal Problems, </em>Indian Institute of Science (IISc), Bangalore, India, July 9-11, 2018</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Effect of coolant Prandtl number on thermal performance of and entropy generation rates in an energy generating plate, <em>International Conference on Numerical Heat Transfer and Fluid Flow, </em>National Institute of Technology (NIT) Warangal, Telangana, India, January 19-21, 2018</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Conjugate heat transfer analysis of an energy generating plate with variable thermal conductivity, <em>1</em><em>st</em><em> International Conference on Mechanical Engineering, </em>Jadavpur University, Kolkata, India, January 4-6, 2018</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Entropy generation analysis of an energy generating plate dissipating heat into its surrounding fluid medium, <em>Seventh International Conference on Theoretical, Applied, Computational and Experimental Mechanics, </em>Indian Institute of Technology (IIT) Kharagpur, West Bengal, India, December 28-30, 2017</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Effect of variable thermal conductivity on entropy generation in a plate with internal energy generation, <em>International Conference on Research in Mechanical Engineering Sciences, </em>Manipal Institute of Technology, Manipal, Karnataka, India, December 21-23, 2017</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Thermal performance characteristics of a plate type nuclear fuel element with temperature dependent thermal conductivity, <em>2</em><em>nd</em><em> Energy System Modeling and Optimization Conference, </em>NIT Durgapur, West Bengal, India, December 11-13, 2017</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Entropy generation minimization in a plate type fuel element of a nuclear fission reactor, <em>International Conference and an Exhibition on Smart Technologies for Green and Sustainable Future, </em>Maulana Azad National Institute of Technology (MANIT) Bhopal, Madhya Pradesh, India, December 8-9, 2017</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani,</strong> Effect of variable thermal conductivity on thermal characteristics of an energy generating plate, <em>International Conference on Frontiers in Engineering, Applied Sciences and Technology, </em>NIT Trichy, Tamilnadu, India, March 31- April 1, 2017&nbsp;(ISBN: 978-81-90838-88-7)</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, G. Jilani</strong>, Minimization of entropy generation in a plate with non-uniform energy generation, <em>International Conference on Trends in Industrial and Mechanical Engineering, </em>MANIT, Bhopal, Madhya Pradesh, India, February 4-6, 2016</p>
+	</li>
+	<li>
+	<p><strong>T. K. Favas, G.Jilani</strong>, Entropy generation minimization in a rectangular plate with volumetric energy generation, <em>International Conference on Industrial, Mechanical and Production Engineering: Advancements and Current Trends, </em>MANIT, Bhopal, Madhya Pradesh, India, November 27-29, 2014 (ISBN: 978-93-84935-03-0)</p>
+	</li>
+</ol>
+
+<p><strong><em>National Conference Papers</em></strong></p>
+
+<ol>
+	<li>
+	<p><strong>T.K.Favas, G. Jilani,</strong> Conjugate conduction-forced convection heat transfer analysis of a plate type nuclear fuel element dissipating fission heat to liquid sodium, <em>44</em><em>th</em><em> National Conference on Fluid Mechanics and Fluid Power, </em>Amrita University, Kollam, Kerala, India, December 14-16, 2017</p>
+	</li>
+	<li>
+	<p><strong>T.K.Favas, G. Jilani</strong>, Numerical study of entropy generation in plate with internal energy generation, <em>National Conference on Advances in Thermal Engineering, </em>Jadavpur University, Kolkata, India, September 23-24, 2016</p>
+	</li>
+	<li>
+	<p><strong>T.K. Favas, N.K. Mohammed Sajid, John. M. George, K.K. Abdul Rasheed, K.A. Shafi, B. Premlet</strong>, Development of an Orifice Pulse Tube Refrigerator, <em>National Seminar and Conference on Cryogenics and its Frontier Applications , </em>Bengal Engineering College, Shibpur, West Bengal, India, March 25-27, 2004</p>
+	</li>
+</ol>
+
+<p><strong><em>Book Chapter</em></strong><strong>&nbsp;</strong></p>
+
+<ol>
+	<li>
+	<p><strong>T.K. Favas,G. Jilani,</strong> Minimization of entropy generation in a plate with non-uniform energy generation, <em>Trends in Industrial and Mechanical Engineering, </em>Verma A, Soni V K, Soni P K (Eds.), Excellent Publihing, (ISBN: 978-93-84935-68-9)</p>
+	</li>
+</ol>
+
+<p><strong><em>Edited Books / Conference Proceedings</em></strong><strong>&nbsp;</strong></p>
+
+<ol>
+	<li>
+	<p><strong>Prof. (Dr.) Deepa G. Nair, Dr. Favas T. K</strong>., <em>Proceedings of the Golden Jubilee International Conference on Sustainable Technology and Innovation for Industry 4.0, </em>Directorate of Public Relations and Publications, Cochin University of Science and Technology, Kochi, 2022, (ISBN 978-81-954804-2-5)</p>
+	</li>
+	<li>
+	<p><strong>Dr. Beena Mary John, Dr. Favas T. K., Dr. Satheesh Babu P. K.</strong>, <em>Proceedings of the International Conference on Advances in Ocean &amp; Naval Engineering, </em>Chess Educational Publishers, Chennai, 2021, (ISBN 978-81-952577-5-1)</p>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+            </p>
+        </div>
+        
+        <!-- PUBLICATIONS END  -->
+
+
+        <!-- FUNDED PROJECTS START -->
+
+        
+        <!-- FUNDED PROJECTS END -->
+
+
+        <!-- OTHER DETAILS START -->
+        
+        <!-- OTHER DETAILS END  -->
+    </div>
+    
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 ">
+                <h4 class="text-light mb-4">Address</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Department of Ship Technology,<br>
+                    Cochin University of Science and Technology,<br>
+                    Cochin-22, Kerala, India
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-484 257-5714</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
+                <div class="d-flex pt-2">
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
+                            class="fab fa-linkedin-in"></i></a> -->
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="course.php">Courses</a>
+                <a class="btn btn-link" href="news-home.php">News</a>
+                <a class="btn btn-link" href="events-home.php">Events</a>
+                <a class="btn btn-link" href="gallery.php">Gallery</a>
+                <!-- <a class="btn btn-link" href="#">Connect</a> -->
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row pt-2">
+                    <iframe class="row" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- Footer End -->    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

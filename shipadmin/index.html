@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ShipTech Command Center | Department of Ship Technology, CUSAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/img/favicon.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --sidebar-width: 288px;
+            --navy-950: #04091a;
+            --navy-900: #0a122c;
+            --navy-800: #111e42;
+            --brand-primary: #150754;
+            --brand-accent: #0284c7;
+            --brand-accent-light: #38bdf8;
+            --brand-gold: #f59e0b;
+            --surface-bg: #f1f5f9;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #64748b;
+            --border-subtle: #e2e8f0;
+            --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(15, 23, 42, 0.03);
+            --shadow-elevated: 0 20px 35px -10px rgba(15, 23, 42, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--surface-bg);
+            background-image:
+                radial-gradient(at 0% 0%, rgba(2, 132, 199, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(21, 7, 84, 0.05) 0px, transparent 50%);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6, .brand-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.025em;
+        }
+
+        code, .mono-font {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.4);
+            border-radius: 999px;
+        }
+
+        /* Sidebar Command Console */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-900) 55%, #091534 100%);
+            color: #f8fafc;
+            z-index: 1020;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 8px 0 32px rgba(2, 6, 23, 0.25);
+        }
+
+        .sidebar-brand-wrapper {
+            padding: 20px 18px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 70%);
+        }
+
+        .sidebar-logo-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28), inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar-logo-card:hover {
+            transform: translateY(-1px);
+        }
+
+        .sidebar-logo-card img {
+            max-height: 46px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .system-badge-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4px;
+        }
+
+        .system-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #38bdf8;
+            background: rgba(56, 189, 248, 0.12);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            padding: 3px 9px;
+            border-radius: 999px;
+        }
+
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+        }
+
+        .nav-section-label {
+            font-size: 10.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #64748b;
+            padding: 18px 16px 6px;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            overflow-y: auto;
+            padding: 4px 12px 16px;
+        }
+
+        .sidebar .nav-link {
+            color: #94a3b8;
+            padding: 10px 14px;
+            border-radius: 10px;
+            margin-bottom: 4px;
+            font-size: 13.5px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
+        }
+
+        .sidebar .nav-link i.nav-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            font-size: 13px;
+            margin-right: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.04);
+            color: #94a3b8;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar .nav-link:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: #f8fafc;
+            transform: translateX(2px);
+        }
+
+        .sidebar .nav-link:hover i.nav-icon {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar .nav-link.active {
+            background: linear-gradient(90deg, rgba(2, 132, 199, 0.28) 0%, rgba(2, 132, 199, 0.06) 100%);
+            color: #ffffff;
+            border-color: rgba(56, 189, 248, 0.28);
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.15);
+        }
+
+        .sidebar .nav-link.active i.nav-icon {
+            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
+        }
+
+        .nav-count {
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.07);
+            color: #cbd5e1;
+            font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .sidebar .nav-link.active .nav-count {
+            background: rgba(56, 189, 248, 0.22);
+            color: #7dd3fc;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .sidebar-footer {
+            padding: 14px 16px;
+            background: rgba(2, 6, 23, 0.45);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Main Area */
+        .main-wrapper {
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .topbar {
+            background: rgba(255, 255, 255, 0.86);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 14px 32px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+        }
+
+        .search-wrapper {
+            position: relative;
+            width: 380px;
+        }
+
+        .search-wrapper i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #64748b;
+            font-size: 13.5px;
+        }
+
+        .search-input {
+            padding-left: 40px;
+            padding-right: 16px;
+            border-radius: 10px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+            font-size: 13.5px;
+            height: 40px;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            background: #fff;
+            border-color: var(--brand-accent);
+            box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.12);
+        }
+
+        .topbar-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid var(--border-subtle);
+            font-size: 12.5px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .content-area {
+            padding: 28px 32px 56px;
+            flex: 1;
+        }
+
+        /* Executive Hero Command Banner */
+        .command-hero {
+            background: linear-gradient(125deg, #091332 0%, #150754 52%, #0369a1 100%);
+            border-radius: 18px;
+            padding: 28px 32px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 18px 38px -12px rgba(21, 7, 84, 0.35);
+            margin-bottom: 26px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .command-hero::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -80px;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-quick-btn {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            color: #ffffff;
+            border-radius: 10px;
+            padding: 8px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.18s ease;
+        }
+
+        .hero-quick-btn:hover {
+            background: #ffffff;
+            color: #0f172a;
+            transform: translateY(-2px);
+        }
+
+        /* KPI Cards */
+        .kpi-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand-primary), var(--brand-accent-light));
+            opacity: 0;
+            transition: opacity 0.22s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-elevated);
+            border-color: #cbd5e1;
+        }
+
+        .kpi-card:hover::before {
+            opacity: 1;
+        }
+
+        .kpi-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .kpi-blue { background: linear-gradient(135deg, #e0f2fe, #bae6fd); color: #0369a1; }
+        .kpi-indigo { background: linear-gradient(135deg, #e0e7ff, #c7d2fe); color: #4338ca; }
+        .kpi-emerald { background: linear-gradient(135deg, #d1fae5, #a7f3d0); color: #047857; }
+        .kpi-amber { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #b45309; }
+        .kpi-rose { background: linear-gradient(135deg, #ffe4e6, #fecdd3); color: #be123c; }
+        .kpi-purple { background: linear-gradient(135deg, #f3e8ff, #e9d5ff); color: #7e22ce; }
+
+        /* Surface Cards & Modern Data Tables */
+        .surface-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+        }
+
+        .surface-card-header {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .table-modern {
+            margin-bottom: 0;
+        }
+
+        .table-modern thead th {
+            background: #f8fafc;
+            color: #475569;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 14px 20px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .table-modern tbody td {
+            padding: 15px 20px;
+            vertical-align: middle;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 13.8px;
+            color: #334155;
+        }
+
+        .table-modern tbody tr {
+            transition: background-color 0.15s ease;
+        }
+
+        .table-modern tbody tr:hover {
+            background-color: #f8fafc;
+        }
+
+        .avatar-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            object-position: top center;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+            background: #f1f5f9;
+        }
+
+        .gallery-thumb {
+            width: 82px;
+            height: 54px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.12);
+        }
+
+        /* Badges & Buttons */
+        .badge-soft-success { background: #dcfce7; color: #15803d; font-weight: 600; padding: 5px 11px; border-radius: 999px; font-size: 11.5px; }
+        .badge-soft-secondary { background: #f1f5f9; color: #475569; font-weight: 600; padding: 5px 11px; border-radius: 999px; font-size: 11.5px; }
+        .badge-soft-info { background: #e0f2fe; color: #0369a1; font-weight: 600; padding: 5px 11px; border-radius: 999px; font-size: 11.5px; }
+
+        .btn-brand {
+            background: linear-gradient(135deg, #150754 0%, #0284c7 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 13.5px;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.25);
+            transition: all 0.2s ease;
+        }
+
+        .btn-brand:hover {
+            background: linear-gradient(135deg, #1e0b75 0%, #0369a1 100%);
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 8px 20px rgba(2, 132, 199, 0.35);
+        }
+
+        .action-btn {
+            width: 35px;
+            height: 35px;
+            border-radius: 9px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-subtle);
+            background: #fff;
+            color: #475569;
+            transition: all 0.16s ease;
+        }
+
+        .action-btn:hover {
+            background: #f0f9ff;
+            color: #0284c7;
+            border-color: #bae6fd;
+            transform: translateY(-1px);
+        }
+
+        .action-btn.delete:hover {
+            background: #fef2f2;
+            color: #dc2626;
+            border-color: #fecaca;
+        }
+
+        .index-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 6px 11px;
+            font-size: 11.5px;
+            color: #334155;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Executive Login Portal */
+        #login-overlay {
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(2, 132, 199, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(21, 7, 84, 0.45) 0%, transparent 50%),
+                linear-gradient(135deg, #030712 0%, #0a122c 60%, #150754 100%);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 22px;
+            padding: 42px 40px;
+            width: 100%;
+            max-width: 460px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.15);
+        }
+
+        .login-logo-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 14px 20px;
+            display: inline-block;
+            box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+            margin-bottom: 18px;
+        }
+
+        .login-logo-box img {
+            max-height: 58px;
+            width: auto;
+        }
+
+        /* Toast */
+        .toast-banner {
+            position: fixed;
+            bottom: 26px;
+            right: 26px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            padding: 13px 22px;
+            border-radius: 12px;
+            font-size: 13.5px;
+            font-weight: 600;
+            box-shadow: 0 15px 30px rgba(2, 6, 23, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 2100;
+            display: none;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.55);
+            backdrop-filter: blur(3px);
+            z-index: 1015;
+        }
+
+        @media (max-width: 991.98px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.25s ease;
+            }
+            .sidebar.show-mobile {
+                transform: translateX(0);
+            }
+            .sidebar-backdrop.show-mobile {
+                display: block;
+            }
+            .main-wrapper {
+                margin-left: 0;
+            }
+            .topbar {
+                padding: 12px 16px;
+            }
+            .search-wrapper {
+                width: 100%;
+                max-width: 230px;
+            }
+            .content-area {
+                padding: 18px 14px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Executive Login Overlay -->
+<div id="login-overlay" style="display: none;">
+    <div class="login-card">
+        <div class="text-center mb-4">
+            <div class="login-logo-box">
+                <img src="../img/logo.png" alt="Department of Ship Technology CUSAT">
+            </div>
+            <div class="mb-2">
+                <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-pill fw-bold" style="font-size: 11px; letter-spacing: 0.06em;">
+                    <i class="fa fa-shield-alt me-1"></i>ENTERPRISE COMMAND CONSOLE
+                </span>
+            </div>
+            <h4 class="fw-bold mb-1">ShipTech Digital CMS</h4>
+            <p class="text-muted small mb-0">Department of Ship Technology &bull; CUSAT</p>
+        </div>
+        <div id="login-error" class="alert alert-danger py-2 small" style="display:none;"></div>
+        <form id="login-form">
+            <div class="mb-3">
+                <label class="form-label small fw-bold text-secondary">ADMINISTRATOR ID</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0 text-muted"><i class="fa fa-user-shield"></i></span>
+                    <input type="text" id="login-username" class="form-control border-start-0 ps-0" value="admin" required>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="form-label small fw-bold text-secondary">SECURITY PASSKEY</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0 text-muted"><i class="fa fa-lock"></i></span>
+                    <input type="password" id="login-password" class="form-control border-start-0 ps-0" value="admin@ship" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-brand w-100 py-2 fs-6">
+                Launch Command Workspace <i class="fa fa-arrow-right ms-2"></i>
+            </button>
+            <div class="d-flex justify-content-between align-items-center mt-4 pt-3 border-top">
+                <span class="badge bg-light text-secondary border">Default: <b>admin</b> / <b>admin@ship</b></span>
+                <a href="../index.html" class="small text-decoration-none fw-semibold"><i class="fa fa-external-link-alt me-1"></i>View Public Website</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Sidebar Command Navigation -->
+<aside class="sidebar">
+    <div class="sidebar-brand-wrapper">
+        <a href="../index.html" target="_blank" class="text-decoration-none d-block">
+            <div class="sidebar-logo-card">
+                <img src="../img/logo.png" alt="Department of Ship Technology CUSAT">
+            </div>
+        </a>
+        <div class="system-badge-bar">
+            <span class="system-status-pill">
+                <span class="pulse-dot"></span>CMS Engine v2.6
+            </span>
+            <span class="text-white-50 mono-font" style="font-size: 11px;">CUSAT-DOST</span>
+        </div>
+    </div>
+
+    <div class="sidebar-nav" id="sidebar-nav">
+        <div class="nav-section-label">Command Center</div>
+        <a class="nav-link active" data-tab="dashboard">
+            <span><i class="fa fa-compass nav-icon"></i>Executive Overview</span>
+        </a>
+
+        <div class="nav-section-label">Academic &amp; Directorate</div>
+        <a class="nav-link" data-tab="faculty">
+            <span><i class="fa fa-user-tie nav-icon"></i>Faculty Directory</span>
+            <span class="nav-count" id="count-faculty">0</span>
+        </a>
+        <a class="nav-link" data-tab="technical_staff">
+            <span><i class="fa fa-user-cog nav-icon"></i>Technical Staff</span>
+            <span class="nav-count" id="count-technical_staff">0</span>
+        </a>
+        <a class="nav-link" data-tab="courses">
+            <span><i class="fa fa-graduation-cap nav-icon"></i>Academic Programmes</span>
+            <span class="nav-count" id="count-courses">0</span>
+        </a>
+
+        <div class="nav-section-label">Placement &amp; Career Cell</div>
+        <a class="nav-link" data-tab="placement_brochures">
+            <span><i class="fa fa-file-pdf nav-icon"></i>Placement Brochures</span>
+            <span class="nav-count" id="count-placement_brochures">0</span>
+        </a>
+        <a class="nav-link" data-tab="placement_coordinators">
+            <span><i class="fa fa-briefcase nav-icon"></i>Placement Coordinators</span>
+            <span class="nav-count" id="count-placement_coordinators">0</span>
+        </a>
+
+        <div class="nav-section-label">Media &amp; Publications</div>
+        <a class="nav-link" data-tab="gallery">
+            <span><i class="fa fa-images nav-icon"></i>Campus Gallery</span>
+            <span class="nav-count" id="count-gallery">0</span>
+        </a>
+        <a class="nav-link" data-tab="testimonials">
+            <span><i class="fa fa-quote-right nav-icon"></i>Alumni Testimonials</span>
+            <span class="nav-count" id="count-testimonials">0</span>
+        </a>
+        <a class="nav-link" data-tab="events">
+            <span><i class="fa fa-calendar-alt nav-icon"></i>Events &amp; Seminars</span>
+            <span class="nav-count" id="count-events">0</span>
+        </a>
+        <a class="nav-link" data-tab="announcements">
+            <span><i class="fa fa-bullhorn nav-icon"></i>Marquee News Ticker</span>
+            <span class="nav-count" id="count-announcements">0</span>
+        </a>
+
+        <div class="nav-section-label">System &amp; Governance</div>
+        <a class="nav-link" data-tab="inquiries">
+            <span><i class="fa fa-inbox nav-icon"></i>Public Inquiries</span>
+            <span class="nav-count" id="count-inquiries">0</span>
+        </a>
+        <a class="nav-link" data-tab="settings">
+            <span><i class="fa fa-sliders-h nav-icon"></i>Vision &amp; HOD Profile</span>
+        </a>
+        <a class="nav-link" onclick="openPasswordModal()">
+            <span><i class="fa fa-key nav-icon"></i>Security Credentials</span>
+        </a>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center gap-2">
+                <span class="pulse-dot"></span>
+                <small class="text-white-50 fw-medium" style="font-size:11.5px;">SQLite3 WAL Synced</small>
+            </div>
+            <small class="text-info mono-font fw-semibold" style="font-size:11px;" id="sidebar-db-size">56 KB</small>
+        </div>
+        <button id="logout-btn" class="btn btn-outline-light btn-sm w-100" style="border-color:rgba(255,255,255,0.16); border-radius: 8px; font-size: 12.5px;">
+            <i class="fa fa-power-off me-1 text-danger"></i>Lock &amp; Sign Out
+        </button>
+    </div>
+</aside>
+
+<!-- Mobile Sidebar Backdrop -->
+<div class="sidebar-backdrop" id="sidebar-backdrop" onclick="toggleMobileSidebar(false)"></div>
+
+<!-- Main Content Wrapper -->
+<div class="main-wrapper">
+    <!-- Glass Topbar -->
+    <header class="topbar">
+        <div class="d-flex align-items-center gap-3 flex-grow-1">
+            <button class="btn btn-sm btn-light border d-lg-none" onclick="toggleMobileSidebar(true)" aria-label="Open menu">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="search-wrapper">
+                <i class="fa fa-search"></i>
+                <input type="text" id="global-search" class="form-control search-input" placeholder="Instant search across faculty, gallery, brochures, courses...">
+            </div>
+            <div class="topbar-pill d-none d-xl-inline-flex">
+                <span class="pulse-dot"></span>
+                <span>Live Database Sync &bull; 25 MB Upload Ready</span>
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="openPasswordModal()" title="Change Admin Password">
+                <i class="fa fa-shield-alt text-primary"></i><span class="d-none d-sm-inline ms-1">Security</span>
+            </button>
+            <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="exportDatabaseJson()" title="Download Full Database Backup">
+                <i class="fa fa-cloud-download-alt text-secondary"></i><span class="d-none d-md-inline ms-1">Snapshot JSON</span>
+            </button>
+            <a href="../index.html" target="_blank" class="btn btn-sm btn-brand px-3 py-1" style="border-radius: 9px;">
+                <i class="fa fa-external-link-alt"></i><span class="d-none d-sm-inline ms-1">Open Live Website</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Dynamic Content -->
+    <main class="content-area">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
+            <div>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <span class="badge bg-primary bg-opacity-10 text-primary fw-bold" style="font-size: 11px;" id="active-module-pill">COMMAND CONSOLE</span>
+                    <span class="text-muted small mono-font" id="live-clock-display"></span>
+                </div>
+                <h3 class="fw-bold mb-1" id="page-title">Executive Overview</h3>
+                <p class="text-muted small mb-0" id="page-subtitle">Real-time portal administration, media repository &amp; indexed SQLite database telemetry</p>
+            </div>
+            <div id="top-action-area"></div>
+        </div>
+
+        <!-- TAB: DASHBOARD -->
+        <div class="tab-pane-custom" id="tab-dashboard">
+            <!-- Executive Hero Banner -->
+            <div class="command-hero">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(56, 189, 248, 0.16); border: 1px solid rgba(56, 189, 248, 0.3); font-size: 12px; font-weight: 600; color: #7dd3fc;">
+                            <i class="fa fa-anchor"></i> COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY
+                        </div>
+                        <h2 class="fw-bold text-white mb-2">Department of Ship Technology &mdash; Digital Control</h2>
+                        <p class="text-white-50 mb-4" style="max-width: 650px; font-size: 14.5px;">
+                            Manage faculty profiles, technical staff, campus gallery photos, alumni testimonials, and high-resolution placement brochures (up to 25 MB) with instant zero-latency publishing.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button class="hero-quick-btn" onclick="switchTab('faculty'); openModal();"><i class="fa fa-user-plus me-2 text-info"></i>Add Faculty</button>
+                            <button class="hero-quick-btn" onclick="switchTab('gallery'); openModal();"><i class="fa fa-camera me-2 text-warning"></i>Upload Gallery Photo</button>
+                            <button class="hero-quick-btn" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-file-pdf me-2 text-danger"></i>Add Placement Brochure</button>
+                            <button class="hero-quick-btn" onclick="switchTab('testimonials'); openModal();"><i class="fa fa-quote-left me-2 text-success"></i>Add Testimonial</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="d-inline-block text-start p-3 rounded-3" style="background: rgba(255, 255, 255, 0.96); color: #0f172a; box-shadow: 0 15px 35px rgba(0,0,0,0.25);">
+                            <img src="../img/logo.png" alt="CUSAT Logo" style="max-height: 54px; width: auto;" class="mb-2 d-block">
+                            <div class="border-top pt-2 mt-1 d-flex align-items-center justify-content-between gap-3">
+                                <span class="small fw-bold text-secondary">TOTAL DB RECORDS</span>
+                                <span class="badge bg-primary rounded-pill fs-6 mono-font" id="hero-total-records">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-4" id="stats-row"></div>
+
+            <div class="row g-4">
+                <!-- Recent Inquiries & Quick Actions -->
+                <div class="col-lg-7">
+                    <div class="surface-card h-100">
+                        <div class="surface-card-header">
+                            <div>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-envelope-open-text text-primary me-2"></i>Recent Website Inquiries</h6>
+                                <small class="text-muted">Submissions captured directly from contact.php</small>
+                            </div>
+                            <button class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('inquiries')">Open Inbox</button>
+                        </div>
+                        <div class="p-0" id="dashboard-inquiries-preview"></div>
+                    </div>
+                </div>
+
+                <!-- Database Engine & Index Status -->
+                <div class="col-lg-5">
+                    <div class="surface-card h-100">
+                        <div class="surface-card-header">
+                            <div>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-server text-primary me-2"></i>SQLite Storage &amp; B-Tree Telemetry</h6>
+                                <small class="text-muted">Write-Ahead Logging (WAL) &amp; In-Memory Cache</small>
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary fw-semibold" onclick="runDbOptimize()">
+                                <i class="fa fa-bolt me-1"></i>Optimize Engine
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <div class="row g-2 mb-3 text-center">
+                                <div class="col-4">
+                                    <div class="p-3 rounded-3 bg-light border">
+                                        <div class="small text-muted fw-bold" style="font-size:10px; letter-spacing:0.05em;">JOURNAL MODE</div>
+                                        <div class="fw-bold text-success fs-6 mt-1 mono-font" id="meta-journal">WAL</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-3 rounded-3 bg-light border">
+                                        <div class="small text-muted fw-bold" style="font-size:10px; letter-spacing:0.05em;">ACTIVE INDEXES</div>
+                                        <div class="fw-bold text-primary fs-6 mt-1 mono-font" id="meta-index-count">10</div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="p-3 rounded-3 bg-light border">
+                                        <div class="small text-muted fw-bold" style="font-size:10px; letter-spacing:0.05em;">DB FOOTPRINT</div>
+                                        <div class="fw-bold text-dark fs-6 mt-1 mono-font" id="meta-size">56 KB</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="small fw-bold text-secondary mb-2" style="font-size: 11px; letter-spacing: 0.05em;">INDEXED TABLES &amp; KEYS:</div>
+                            <div class="d-flex flex-wrap gap-1" id="meta-index-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: DYNAMIC LIST TABLE -->
+        <div class="tab-pane-custom" id="tab-list" style="display:none;">
+            <div class="surface-card">
+                <div class="surface-card-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill fw-bold" id="table-record-counter">Showing records</span>
+                    </div>
+                    <div id="category-filter-pills" class="d-flex gap-1"></div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-modern">
+                        <thead id="list-thead"></thead>
+                        <tbody id="list-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: SITE CONTENT & HOD SETTINGS -->
+        <div class="tab-pane-custom" id="tab-settings" style="display:none;">
+            <form id="settings-form">
+                <div class="row g-4">
+                    <div class="col-lg-5">
+                        <div class="surface-card p-4 h-100">
+                            <h6 class="fw-bold mb-3 border-bottom pb-3"><i class="fa fa-building text-primary me-2"></i>Official Department Coordinates</h6>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">Official Department Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <div class="col-6">
+                                    <label class="form-label small fw-bold text-secondary">Topbar Phone</label>
+                                    <input type="text" class="form-control" name="phone_header" required>
+                                </div>
+                                <div class="col-6">
+                                    <label class="form-label small fw-bold text-secondary">Footer Phone</label>
+                                    <input type="text" class="form-control" name="phone_footer" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">Mailing Address</label>
+                                <textarea class="form-control" rows="3" name="address" required></textarea>
+                            </div>
+                            <div class="mb-0">
+                                <label class="form-label small fw-bold text-secondary">Department Vision Statement</label>
+                                <textarea class="form-control" rows="3" name="vision" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="surface-card p-4 h-100">
+                            <h6 class="fw-bold mb-3 border-bottom pb-3"><i class="fa fa-user-graduate text-primary me-2"></i>Homepage Narrative &amp; Head of Department Message</h6>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">About Section Heading</label>
+                                    <input type="text" class="form-control" name="about_title" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label small fw-bold text-secondary">HOD Message Title</label>
+                                    <input type="text" class="form-control" name="hod_title" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">About Department Narrative</label>
+                                <textarea class="form-control" rows="4" name="about_text" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-secondary">HOD's Message Content</label>
+                                <textarea class="form-control" rows="4" name="hod_message" required></textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold text-secondary">HOD Portrait Image</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control mono-font small" name="hod_image" id="settings-hod-image">
+                                    <label class="btn btn-outline-primary mb-0">
+                                        <i class="fa fa-cloud-upload-alt me-1"></i>Upload Portrait
+                                        <input type="file" hidden accept="image/*" onchange="uploadFileToInput(this, 'settings-hod-image')">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-brand px-4 py-2">
+                                    <i class="fa fa-check-circle me-2"></i>Publish Site Content Changes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+</div>
+
+<!-- Add/Edit Record Modal -->
+<div class="modal fade" id="crudModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 18px; overflow: hidden;">
+            <form id="crud-form">
+                <div class="modal-header border-bottom px-4 py-3" style="background: linear-gradient(90deg, #0a122c 0%, #150754 100%); color: #fff;">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="fa fa-layer-group text-info"></i>
+                        <h5 class="modal-title fw-bold mb-0 text-white" id="modal-title">Add Record</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <input type="hidden" id="crud-id">
+                    <div class="row g-3" id="modal-fields"></div>
+                </div>
+                <div class="modal-footer border-top px-4 py-3 bg-light">
+                    <button type="button" class="btn btn-light border fw-semibold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-brand px-4"><i class="fa fa-save me-2"></i>Commit to Database</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Change Password Modal -->
+<div class="modal fade" id="passwordModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 18px; overflow: hidden;">
+            <form id="password-form">
+                <div class="modal-header border-bottom px-4 py-3" style="background: linear-gradient(90deg, #0a122c 0%, #150754 100%); color: #fff;">
+                    <h5 class="modal-title fw-bold text-white mb-0"><i class="fa fa-shield-alt text-info me-2"></i>Security Credentials</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="pw-modal-alert" class="alert py-2 small" style="display:none;"></div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-secondary">CURRENT PASSWORD</label>
+                        <input type="password" id="curr-password" class="form-control" placeholder="Enter current password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-secondary">NEW PASSWORD</label>
+                        <input type="password" id="new-password" class="form-control" placeholder="Enter new password" required minlength="4">
+                    </div>
+                    <div class="mb-0">
+                        <label class="form-label small fw-bold text-secondary">CONFIRM NEW PASSWORD</label>
+                        <input type="password" id="confirm-password" class="form-control" placeholder="Re-enter new password" required minlength="4">
+                    </div>
+                </div>
+                <div class="modal-footer border-top px-4 py-3 bg-light">
+                    <button type="button" class="btn btn-light border fw-semibold" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-brand px-4"><i class="fa fa-check me-2"></i>Update Credentials</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Notification Toast -->
+<div class="toast-banner" id="status-toast">
+    <i class="fa fa-check-circle text-info"></i>
+    <span id="toast-text">Saved successfully</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+(function() {
+    var SEED_DATA = {"settings": {"department_name": "Department of Ship Technology", "university_name": "Cochin University of Science and Technology", "email": "ship@cusat.ac.in", "phone_header": "0484 - 2577602", "phone_footer": "+91-484 257-5714", "address": "Department of Ship Technology, Cochin University of Science and Technology, Cochin-22, Kerala, India", "vision": "To evolve into a globally recognized department in the frontier areas of Naval Architecture and Ship Building.", "about_title": "Surging ahead since 1975", "about_text": "This Department is one of the pioneers in the field of Naval Architecture education in this country and was established in 1975 with an aim to create a new and dynamic generation of Naval Architects to meet the requirements of the Indian Shipbuilding Industry, Ship Classification Societies, R&D organizations, Indian Navy, and related organisations. This Department maintains active collaboration and interaction with IITs, foreign Universities, shipyards and other industries. These organizations have been generous in extending their facilities and expertise to impart training to our students. The fruitful collaboration of this Department with Rostock University, Germany dates back to 1978 and remains as an important milestone in the development of this Department. The curriculum was drawn up and updated in consultation with experts from various academic institutions and industries. This has brought the course curriculum in conformity with international standards. The quality of education imparted and the resulting professional competence of the graduates enabled the Department to achieve a unique record of 100 percent placement of its graduates in India and abroad.", "hod_title": "Shiptech CUSAT", "hod_message": "Greetings from the Department of Ship Technology (DoST), Cochin University of Science & Technology (CUSAT), Kerala, India!!\n\nThe DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a pioneer in the field of Naval Architecture education in the country and has produced global leaders in maritime sector, in diverse fields including design, construction, operation, survey, maintenance, education and research.\nWe are conducting a B.Tech course in Naval Architecture and Ship Building (NASB) whose graduates have a 100% placement record for the past several years, a M.Tech course in Computer Aided Structural Analysis and design (CASAD)whose graduates are well placed mostly in the marine industry, and a Ph.D programme with 41 scholars at present.\nWe are a truly interdisciplinary department with a very strong research atmosphere. Much of the graduate level research is done at the Computational Hydrodynamics and Structural Engineering (CHASE) Lab that software such as STAR-CCM+, CATIA, ABAQUS, ORCAFLEX, MATLAB, and ANSYS. The DoST has collaboration with the Indian Navy, MoUs with leading shipyards, Classification Societies and academic institutions.\nThe support from DOSTAS (Department of Ship Technology Alumni Society) and its various chapters to the overall development is highly encouraging.\nStudent achievements are recognized through RINA (Royal Institution of Naval Architects, London) student Naval Architect award, ClassNK best project award and also awards by PTA. A platform for developing technical and professional leadership among students is provided by the SNAS (Society of Naval Architecture Students). Department training and placement cell provides professional assistance for student placement as well as internship in leading companies.\nWe are also actively participating in industrial projects as well as consultancy services through DESON, the consultancy wing of DoST.\nI invite you to browse through the web pages for further information", "hod_image": "uploads/mathi.png"}, "announcements": [{"id": 2, "title": "Annual Technical Symposium & Industry Meet scheduled for next month.", "link": "events.php", "is_active": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "Admissions open for B.Tech Naval Architecture & Ship Building and M.Tech programmes.", "link": "https://admissions.cusat.ac.in/", "is_active": 1, "created_at": "2026-10-30 06:12:22"}], "faculty": [{"id": 19, "name": "Dr. A. Mathiazhagan", "designation": "Professor and Head of the Department", "specialization": "Ph.D. | Materials Technology and Corrosion Engg, Welding Technology, Composite Technology", "email": "alagan@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/mathi.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=22&name=dr-a-mathiazhagan", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/199/Prof.Dr.AMATHIAZHAGAN", "sort_order": 1, "created_at": "2026-10-30 09:56:22"}, {"id": 20, "name": "Dr. Satheesh Babu P.K", "designation": "Associate Professor", "specialization": "Ph.D. | Naval Architecture, Marine Hydrodynamics, Ship Design", "email": "satheeshbabu@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/satheeshbabu.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=23&name=dr-satheesh-babu-pk", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/449/DRSATHEESHBABUPK", "sort_order": 2, "created_at": "2026-10-30 09:56:22"}, {"id": 21, "name": "Dr. D. D. Ebenezer", "designation": "Adjunct Faculty", "specialization": "Ph. D. | Computational Fluid Dynamics, Analysis and Design of St, Underwater Electroacousti", "email": "ebenezer@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-6.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=11&name=dr-d-d-ebenezer", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/510/Dr.D.D.EBENEZER", "sort_order": 3, "created_at": "2026-10-30 09:56:22"}, {"id": 22, "name": "Dr. Rajesh P Nair", "designation": "Assistant Professor", "specialization": "Ph.D. | Finite Element method, Impact Mechanics, Blast Analysis", "email": "rajeshpnair@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=7&name=dr-rajesh-p-nair", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/27/Dr.RAJESHPNAIR", "sort_order": 4, "created_at": "2026-10-30 09:56:22"}, {"id": 23, "name": "Dr. Manoj T. Issac", "designation": "Assistant Professor", "specialization": "Ph.D. | Experimental and Numerical Hydrodynamics of Unmanned Underwater Vehicles, Dynamics Modeling of Underwater Vehicles using Identification Techniques, Dynamics of Floating Offshore Structures", "email": "m.issac@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__5_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=13&name=dr-manoj-t-issac", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/50/Dr.MANOJTISSAC", "sort_order": 5, "created_at": "2026-10-30 09:56:22"}, {"id": 24, "name": "Dr. Favas T K", "designation": "Assistant Professor (Lien)", "specialization": "Ph.D. | Computational Fluid Dynamics, Numerical Heat Transfer, Computational Methods in", "email": "favastk@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/fac-4.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=9&name=dr-favas-t-k", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/394", "sort_order": 6, "created_at": "2026-10-30 09:56:22"}, {"id": 25, "name": "Akram P. A.", "designation": "Assistant Professor (On Leave)", "specialization": "M. Tech. | Finite Element Analysis, Ship Structural Analysis, Offshore Structures", "email": "akrampa@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Untitled_design__24_.png", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=16&name=akram-p-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/397/Mr.AKRAMP.A.", "sort_order": 7, "created_at": "2026-10-30 09:56:22"}, {"id": 26, "name": "Dr. Aravind K.R", "designation": "Assistant Professor", "specialization": "Ph.D | Inland Waterways Transport, Ship Design, Marine Engineering", "email": "aravind@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/IMG_0154_copy__1_.JPG", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=18&name=dr-aravind-kr", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/facdetails#faculty.list", "sort_order": 8, "created_at": "2026-10-30 09:56:22"}, {"id": 27, "name": "Dr. Beena Mary John", "designation": "Assistant Professor", "specialization": "Ph.D | Computational Fluid Dynamics, Physical model studies of marine structures, Fluid structure interaction", "email": "beena.john@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/Beena_MJ2.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=20&name=dr-beena-mary-john", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/569/Dr.BEENAMARYJOHN", "sort_order": 9, "created_at": "2026-10-30 09:56:22"}, {"id": 28, "name": "Dr. Haseena K A", "designation": "Assistant Professor", "specialization": "Ph.D | Renewable/Green Energy Systems-Modeling, Optimization and Integration, Electric Propulsion Systems- Dynamics and Control, Machine Learning and AI Techniques for Energy Systems", "email": "haseenaka@cusat.ac.in", "phone": "+914842575714", "image": "faculty_data/images/haseena.jpg", "profile_url": "https://shiptech.cusat.ac.in/faculty-details.php?id=21&name=dr-haseena-k-a", "facebook": "", "twitter": "", "linkedin": "https://iqac.cusat.ac.in/Web/profile_view/571/Dr.HASEENA.KA", "sort_order": 10, "created_at": "2026-10-30 09:56:22"}], "technical_staff": [{"id": 5, "name": "SHIJU S", "designation": "Technical Officer Gr I", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac1.jpg", "sort_order": 1, "created_at": "2026-10-30 10:13:10"}, {"id": 6, "name": "SANTHOSH KUMAR K", "designation": "Technical Assistant", "email": "", "phone": "", "image": "technical_staff_data/images/tech-fac2.jpg", "sort_order": 2, "created_at": "2026-10-30 10:13:10"}, {"id": 7, "name": "Dr. Sheeja N.K.", "designation": "Deputy Librarian", "email": "", "phone": "", "image": "technical_staff_data/images/admin_staff_2.jpg", "sort_order": 3, "created_at": "2026-10-30 10:13:10"}], "courses": [{"id": 1, "title": "B.Tech in Naval Architecture & Ship Building", "description": "Four-year full-time undergraduate programme covering ship design, hydrodynamics, marine structures, ship production, and marine engineering with 100% placement track record.", "duration": "4 Years (8 Semesters)", "image": "uploads/btchnavel.jpg", "link": "academics.php#btech", "sort_order": 1, "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "M.Tech in Computer Aided Structural Analysis & Design (CASAD)", "description": "Two-year postgraduate programme focusing on finite element analysis, offshore and marine structures, structural dynamics, and CAD.", "duration": "2 Years (4 Semesters)", "image": "uploads/mtech.jpg", "link": "academics.php#mtech", "sort_order": 2, "created_at": "2026-10-30 06:12:22"}, {"id": 3, "title": "Ph.D. in Naval Architecture & Ocean Engineering", "description": "Doctoral research programme in ship hydrodynamics, structural mechanics, ship recycling, green shipping, and ocean engineering.", "duration": "3 - 5 Years", "image": "img/phd_image-thumb.jpg", "link": "academics.php#phd", "sort_order": 3, "created_at": "2026-10-30 06:12:22"}, {"id": 4, "title": "Short-Term Industry Training Courses", "description": "Specialized continuing education programmes for shipyard engineers, classification society surveyors, and Indian Navy officers.", "duration": "2 - 6 Weeks", "image": "img/service-4.jpg", "link": "academics.php", "sort_order": 4, "created_at": "2026-10-30 06:12:22"}, {"id": 5, "title": "CAD/CAM & Ship Design Studio", "description": "Hands-on training in hull surface modeling, stability calculations, and structural design software suites.", "duration": "Semester Module", "image": "img/service-5.jpg", "link": "academics.php", "sort_order": 5, "created_at": "2026-10-30 06:12:22"}, {"id": 6, "title": "Towing Tank & Model Testing", "description": "Experimental hydrodynamics and ship model testing training for undergraduate and postgraduate researchers.", "duration": "Lab Course", "image": "img/service-6.jpg", "link": "academics.php", "sort_order": 6, "created_at": "2026-10-30 06:12:22"}], "events": [{"id": 3, "title": "Golden Jubilee Alumni & Industry Conclave", "event_date": "2027-01-20", "description": "Gathering of Shiptech CUSAT alumni from global shipyards, R&D institutes, Indian Navy, and classification societies.", "image": "img/service-6.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 2, "title": "International Workshop on Green Shipping & Decarbonization", "event_date": "2026-12-05", "description": "Two-day workshop in collaboration with industry experts and classification societies on sustainable ship propulsion and IMO regulations.", "image": "img/service-5.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}, {"id": 1, "title": "ANCHOR - Annual National Technical Symposium", "event_date": "2026-11-15", "description": "National-level technical fest and symposium organized by the Society of Naval Architecture Students (SNAS) featuring paper presentations and design competitions.", "image": "img/service-4.jpg", "link": "#", "created_at": "2026-10-30 06:12:22"}], "gallery": [{"id": 41, "title": "Department Video", "category": "Video", "image": "gallery_data/images/department-video.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 40, "title": "Welcome to Captain Manoj Kumar, OIC of the Naval Construction Wing , Southern Naval Command to the Department of Ship Technology on 29.06.2026", "category": "Events", "image": "gallery_data/images/WhatsApp_Image_2026-07-01_at_17.42.53.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 39, "title": "Visit of Netherlands Team-14 May 2026", "category": "Events", "image": "gallery_data/images/IMG-20260629-WA0021.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 38, "title": "AICTE Student Induction Programme 2025, for First year B.Tech admissions", "category": "Events", "image": "gallery_data/images/1_SIP_2025.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 37, "title": "B.Tech. 46th Batch- Achieves 100% Placement", "category": "Events", "image": "gallery_data/images/46TH_BATCH.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 36, "title": "Graduation Ceremony May 3, 2025", "category": "Events", "image": "gallery_data/images/PIC_1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 35, "title": "Golden Jubilee Celebration o 1st Batch- 07 Jan 2025", "category": "Events", "image": "gallery_data/images/IMG-20250109-WA0004.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 34, "title": "PTA General Body Meeting 19-10-2024", "category": "Events", "image": "gallery_data/images/IMG-20241020-WA0005.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 33, "title": "Visit of the Team from University of Ruhuna, Sri Lanka", "category": "Events", "image": "gallery_data/images/photo1.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 32, "title": "M.Tech. (CASAD) Alumni Meet -7th Oct 2023", "category": "Events", "image": "gallery_data/images/Alumni.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 31, "title": "DOSTAS ONAM CELEBRATION 2023", "category": "Events", "image": "gallery_data/images/ONAM.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 30, "title": "PTA GENERAL BODY MEETING (16-09-2023)", "category": "Events", "image": "gallery_data/images/PTA.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 29, "title": "Inauguration of B.Tech. NA&SB 48th Batch- 16-08-2023", "category": "Events", "image": "gallery_data/images/inauguration_of_48th_batch.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 28, "title": "Visit of HE Dr. Saeed Hamad Al- Rubaie ,Vice Chancellor , University of Technology & Applied Sciences, Oman-16-8-2023", "category": "Events", "image": "gallery_data/images/Visit_2.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 27, "title": "Fresher\u2019s Day \u2013 28th batch of Computer Aided Structural Analysis and Design", "category": "Events", "image": "gallery_data/images/Image_1.jpeg", "created_at": "2026-10-30 10:30:32"}, {"id": 26, "title": "Visit of Cmde Sritanu Guru, CMD(Trg), HQSNC", "category": "Events", "image": "gallery_data/images/VISIT_OF_CMDE.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 25, "title": "DRDO Award Presentation to Dr. P. Krishnankutty", "category": "Events", "image": "gallery_data/images/AWARD_function.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 24, "title": "FAREWELL", "category": "Events", "image": "gallery_data/images/farewell_to_44th_batch_NA_SB.jpg", "created_at": "2026-10-30 10:30:32"}, {"id": 23, "title": "RINA Student Award Function", "category": "Events", "image": "gallery_data/images/Untitled_design__78_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 22, "title": "Silver Jubilee- B.Tech. 17th Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__74_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 21, "title": "Class NK Award 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__71_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 20, "title": "Alumni Get-Together", "category": "Events", "image": "gallery_data/images/Untitled_design__70_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 19, "title": "MoU with CSL Renewal Ceremony", "category": "Events", "image": "gallery_data/images/Untitled_design__62_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 18, "title": "3 Day National Workshop on \u201cGreen Hydrogen Pathways To Sustainable Future\u201d", "category": "Events", "image": "gallery_data/images/Untitled_design__57_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 17, "title": "Student Induction Programme 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__54_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 16, "title": "Visit to INS VIKRANT", "category": "Events", "image": "gallery_data/images/Untitled_design__17_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 15, "title": "Visit of Russian Ambassador", "category": "Events", "image": "gallery_data/images/Untitled_design__27_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 14, "title": "Visit of RINA CEO", "category": "Events", "image": "gallery_data/images/Untitled_design__30_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 13, "title": "NSTL VISIT", "category": "Events", "image": "gallery_data/images/Untitled_design__34_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 12, "title": "SNAS NITE 2022", "category": "Events", "image": "gallery_data/images/Untitled_design__87_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 11, "title": "Farewell to M.Tech.(CASAD) 2022 Batch", "category": "Events", "image": "gallery_data/images/Untitled_design__46_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 10, "title": "Send Off Function of Prof. Mariamma Chacko", "category": "Events", "image": "gallery_data/images/Untitled_design__45_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 9, "title": "Snas Nite 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__41_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 8, "title": "Onam 2019", "category": "Events", "image": "gallery_data/images/Untitled_design__39_.png", "created_at": "2026-10-30 10:30:32"}, {"id": 7, "title": "ClassNK Global Alumni Meet", "category": "Events", "image": "gallery_data/images/Untitled_design__36_.png", "created_at": "2026-10-30 10:30:32"}], "testimonials": [{"id": 5, "name": "Madhu S Nair", "role": "Chairman and Managing Director, Cochin Shipyard Ltd. | Btech Naval Architecture& Shipbuilding , 1983-1988", "content": "The Department of Ship Technology, CUSAT, has contributed immensely to the field of Naval Architecture, Shipbuilding and various other allied sectors in the global maritime sector. Over the past 47 years, the department has produced professionals who have created a profound impact in the maritime community. The department can take pride in the fact that they have been able to nurture well rounded professionals who in addition to being technically well equipped, do also understand what it takes to be successful and are willing to continually learn and work extremely hard to achieve their goals. I wish the young graduates of the department a bright and prosperous future", "image": "testimonials_data/images/madhu_s.png", "created_at": "2026-10-30 10:34:07"}, {"id": 6, "name": "Abdul Rahim", "role": "Corporate Officer, Class NK. | Btech Naval Architecture & Shipbuilding , 1979-1984", "content": "I am very pleased to note that the next batch of naval architects is graduating from CUSAT. ClassNK has long been associated with CUSAT and over the years we have recruited more than 26 CUSAT naval architects who work around the world. They are well rounded team players, brilliant, hardworking, and their contribution to ClassNK has been enormous. They are truly professional with positive attitude, and excellent in client management with strong commitment and dedication. Wishing the new young graduates every success for a bright future.", "image": "testimonials_data/images/abdhul_rahman.png", "created_at": "2026-10-30 10:34:07"}, {"id": 7, "name": "Ashik Subahani", "role": "Vice President-RINA Middle East & Africa and Managing Director at Sea Delta Marine & Offshore. | Btech Naval Architecture & Shipbuilding, 1988-1993", "content": "Naval architects from \u2018Department of Ship Technology\u2019 are excellent. They understand the requirements and concept very fast and complete the given tasks very properly on time.They are all well accepted in the world wide maritime industry due to the professionalism they have shown", "image": "testimonials_data/images/Untitled_design.png", "created_at": "2026-10-30 10:34:07"}, {"id": 8, "name": "Shihabudeen K M", "role": "Commercial Director at Damen Shipyards Sharjah / Albwardy Marine Engineering Dubai. | Btech Naval Architecture& Shipbuilding , 1988-1993", "content": "Albwardy Damen has been hiring Naval Architects from the Department of Ship Technology, CUSAT, through campus interviews continuously for the past 16 years. The main qualities of CUSAT Naval Architects are their general attitude towards work, quick learning capabilities, ability to adapt to the work environment and get along with people from various nationalities. Their academic knowledge levels are found to be comparatively higher in a way that they can be trained and employed not only in core design departments but also in other areas like project management for ship building and ship repairs, cost estimation etc. The management of Albwardy Damen has always been appreciable of the performance of the CUSAT Naval Architects. I wish the young graduates every success in their future endeavors.", "image": "testimonials_data/images/Untitled_design__1_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 9, "name": "Renganathan S", "role": "Head of Plan Approval ,Indian Register of Shipping. | Btech Naval Architecture &Shipbuilding, 1980-1985", "content": "We take extreme pleasure in getting associated with CUSAT for the past so many years. The quality of students is excellent, so is their longevity in the organization is what keeps us coming back for more every year. The students from CUSAT are outstanding, and the ones we have employed from campus recruitment are generally an asset to IRCLASS. Their ability to apply theoretical knowledge acquired during their studies to practical work is indeed commendable. The placement process is always highly well-coordinated. We wish the fresh graduates from CUSAT all the best to achieve a successful career, and we anticipate CUSAT\u2019s extended service for fulfilling our workforce requirements in the long run.", "image": "testimonials_data/images/Untitled_design__2_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 10, "name": "Pyarilal Kandy", "role": "Managing Partner & Director of Operations at Great Waters Maritime L.L.C. | Btech Naval Architecture & Shipbuilding, 1989-1994", "content": "In the last 10 years Great Waters have hired graduates from Department of Ship technology and they all stood out as the best amongst other graduates from elsewhere in work performance, knowledge, ability to apply knowledge and most of all, attitude towards work. Attitude of an employee towards work is the most important aspect for a company in achieving results. Great Waters have been incredibly happy with all those graduates who have come and worked with us. Graduates from DOST have always shone in all industries, and which is why many of them are now at senior roles in major companies", "image": "testimonials_data/images/Untitled_design__3_.png", "created_at": "2026-10-30 10:34:07"}, {"id": 11, "name": "Vinod Janardanan", "role": "Director, Consultancy & Outsourcing, South Asia Zone at Bureau Veritas Marine & Offshore - Singapore. | Btech Naval Architecture & Shipbuilding , 1980-1985", "content": "The graduates from Department of Ship Technology, Cochin University of Science and Technology stand out for the following reasons while recruiting them.\n\n1. The degree is aptly awarded for Naval Architecture & Ship building, encompassing theoretical tenets of ship design as well as practical aspects of ship construction. This makes them suitable for employment in design offices, class societies, research institutes and shipyards.\n\n2. In addition to the academic curriculum they also undergo internship in institutions of their choice after the first, second and third year of the course. This, I have observed, aligns their class room learning with real work and they are better equipped to commence their job.\n\n3. They undertake a full ship design project during the last year of the course, under the close guidance of the staff. This exercise, I have noticed, gives them a holistic understanding of ship design and especially the design spiral.\n\n4. They attend seminars and presentations made by stalwarts from the industry (now on a virtual platform) and remain aware of recent innovations and trends in the field.Recent graduates, with whom i have interacted, were knowledgeable, analytical, diligent and able to communicate effectively.\n\n\n\nIn view of the above I find the graduates from this institution to be highly employable and am confident that they would contribute significantly to the organisation that they are part of.", "image": "testimonials_data/images/2.png", "created_at": "2026-10-30 10:34:07"}], "placement_brochures": [{"id": 1, "title": "Placement Brochure 2021-2022", "file_path": "placement_data/brochures/Placement_Brochure_2021-22.pdf", "image": "img/career-mag.jpg", "sort_order": 1}, {"id": 2, "title": "Placement Brochure 2022-2023", "file_path": "placement_data/brochures/PLACEMENT_BROCHURE_2022-23.pdf", "image": "img/career-mag.jpg", "sort_order": 2}, {"id": 3, "title": "Placement Brochure 2024-25", "file_path": "placement_data/brochures/Placement_Brochure_2024-25.pdf", "image": "img/career-mag.jpg", "sort_order": 3}, {"id": 4, "title": "Placement Brochure 2025", "file_path": "placement_data/brochures/Placement_Brochure_2025.pdf", "image": "img/career-mag.jpg", "sort_order": 4}, {"id": 5, "title": "Placement Brochure 2026", "file_path": "placement_data/brochures/Placement_Brochure_2026.pdf", "image": "img/career-mag.jpg", "sort_order": 5}], "placement_coordinators": [{"id": 1, "name": "Dr. Satheesh babu P K", "role_type": "Faculty Coordinator", "email": "satheeshbabu@cusat.ac.in", "phone": "+919946063772", "sort_order": 1}, {"id": 2, "name": "Aravind K.R", "role_type": "Faculty Coordinator", "email": "aravind@cusat.ac.in", "phone": "+91 8089866415", "sort_order": 2}, {"id": 3, "name": "Mr. Devadath Uday P K", "role_type": "Student Coordinator", "email": "devadathudaypk@gmail.com", "phone": "+91 9072393613", "sort_order": 3}, {"id": 4, "name": "Mr. Advaith Ullas", "role_type": "Student Coordinator", "email": "adwaithullas@gmail.com", "phone": "+91  8590180472", "sort_order": 4}, {"id": 5, "name": "Mr. Aravind M Nath", "role_type": "Student Coordinator", "email": "aravind.m.rs49@gmail.com", "phone": "+91 8590903126", "sort_order": 5}, {"id": 6, "name": "Mr. Adithyan C", "role_type": "Student Coordinator", "email": "adithyanct@gmail.com", "phone": "+91 7736800613", "sort_order": 6}], "inquiries": [], "db_meta": {"journal_mode": "WAL", "size_kb": 132.0, "index_count": 10, "indexes": [{"name": "idx_announcements_active", "tbl_name": "announcements"}, {"name": "idx_courses_sort", "tbl_name": "courses"}, {"name": "idx_events_date", "tbl_name": "events"}, {"name": "idx_faculty_name", "tbl_name": "faculty"}, {"name": "idx_faculty_sort", "tbl_name": "faculty"}, {"name": "idx_gallery_category", "tbl_name": "gallery"}, {"name": "idx_inquiries_created", "tbl_name": "inquiries"}, {"name": "idx_inquiries_type", "tbl_name": "inquiries"}, {"name": "idx_staff_sort", "tbl_name": "technical_staff"}, {"name": "idx_testimonials_id", "tbl_name": "testimonials"}]}};
+    function getStore() {
+        try {
+            var raw = localStorage.getItem("shiptech_cloud_db_v1");
+            if (raw) return JSON.parse(raw);
+        } catch (e) {}
+        localStorage.setItem("shiptech_cloud_db_v1", JSON.stringify(SEED_DATA));
+        return JSON.parse(JSON.stringify(SEED_DATA));
+    }
+    function saveStore(db) {
+        try { localStorage.setItem("shiptech_cloud_db_v1", JSON.stringify(db)); } catch (e) {}
+    }
+    try {
+        var customRaw = localStorage.getItem("shiptech_cloud_db_v1");
+        if (customRaw) {
+            window.__SHIPTECH_DATA__ = JSON.parse(customRaw);
+        }
+    } catch (e) {}
+
+    var origFetch = window.fetch;
+    window.fetch = function(input, init) {
+        var url = typeof input === "string" ? input : (input && input.url ? input.url : "");
+        var method = (init && init.method ? init.method : "GET").toUpperCase();
+        if (url.indexOf("/api/") !== -1 && (location.hostname.indexOf("github.io") !== -1 || location.protocol === "file:")) {
+            return handleVirtualApi(url, method, init);
+        }
+        return origFetch.apply(this, arguments).then(function(resp) {
+            if (!resp.ok && url.indexOf("/api/") !== -1) {
+                return handleVirtualApi(url, method, init);
+            }
+            return resp;
+        }).catch(function(err) {
+            if (url.indexOf("/api/") !== -1) {
+                return handleVirtualApi(url, method, init);
+            }
+            throw err;
+        });
+    };
+
+    function jsonResp(obj, status) {
+        return Promise.resolve(new Response(JSON.stringify(obj), {
+            status: status || 200,
+            headers: { "Content-Type": "application/json" }
+        }));
+    }
+
+    function handleVirtualApi(url, method, init) {
+        var body = {};
+        try { if (init && init.body) body = JSON.parse(init.body); } catch (e) {}
+        var db = getStore();
+
+        if (url.indexOf("/api/public-data") !== -1 || url.indexOf("/api/admin/all") !== -1) {
+            return jsonResp(db, 200);
+        }
+        if (url.indexOf("/api/login") !== -1 && method === "POST") {
+            var savedPw = localStorage.getItem("shiptech_admin_pw") || "admin@ship";
+            if (body.username === "admin" && body.password === savedPw) {
+                return jsonResp({ ok: true, token: "shipadmin-session-cloud", username: "admin" }, 200);
+            }
+            return jsonResp({ ok: false, error: "Invalid username or password" }, 401);
+        }
+        if (url.indexOf("/api/admin/change-password") !== -1 && method === "POST") {
+            var currPw = localStorage.getItem("shiptech_admin_pw") || "admin@ship";
+            if (body.current_password !== currPw) {
+                return jsonResp({ ok: false, error: "Current password is incorrect" }, 400);
+            }
+            localStorage.setItem("shiptech_admin_pw", body.new_password);
+            return jsonResp({ ok: true }, 200);
+        }
+        if (url.indexOf("/api/admin/optimize") !== -1 && method === "POST") {
+            return jsonResp({ ok: true, db_meta: db.db_meta }, 200);
+        }
+        if (url.indexOf("/api/inquiries") !== -1 && method === "POST") {
+            db.inquiries = db.inquiries || [];
+            var nextInqId = db.inquiries.reduce(function(m, x){ return Math.max(m, x.id || 0); }, 0) + 1;
+            db.inquiries.unshift({
+                id: nextInqId,
+                type: body.type || "contact",
+                name: body.name || "",
+                email: body.email || "",
+                subject_or_batch: body.subject_or_batch || "",
+                category: body.category || "General",
+                message: body.message || "",
+                created_at: new Date().toISOString().slice(0, 19).replace("T", " ")
+            });
+            saveStore(db);
+            return jsonResp({ ok: true, id: nextInqId }, 200);
+        }
+        if (url.indexOf("/api/admin/settings") !== -1 && method === "POST") {
+            db.settings = Object.assign({}, db.settings || {}, body);
+            saveStore(db);
+            return jsonResp({ ok: true }, 200);
+        }
+        if (url.indexOf("/api/admin/upload") !== -1 && method === "POST") {
+            return jsonResp({ ok: true, path: body.data || "img/cusat.jpg", size_kb: 120 }, 200);
+        }
+        var delMatch = url.match(/\/api\/admin\/([a-z_]+)\/(\d+)/);
+        if (delMatch && method === "DELETE") {
+            var tbl = delMatch[1];
+            var rid = parseInt(delMatch[2], 10);
+            db[tbl] = (db[tbl] || []).filter(function(r){ return Number(r.id) !== rid; });
+            saveStore(db);
+            return jsonResp({ ok: true }, 200);
+        }
+        var postMatch = url.match(/\/api\/admin\/([a-z_]+)$/);
+        if (postMatch && method === "POST") {
+            var t = postMatch[1];
+            db[t] = db[t] || [];
+            if (body.id) {
+                db[t] = db[t].map(function(r){
+                    return Number(r.id) === Number(body.id) ? Object.assign({}, r, body) : r;
+                });
+            } else {
+                var nextId = db[t].reduce(function(m, x){ return Math.max(m, Number(x.id) || 0); }, 0) + 1;
+                body.id = nextId;
+                db[t].push(body);
+            }
+            saveStore(db);
+            return jsonResp({ ok: true, id: body.id }, 200);
+        }
+        return jsonResp({ ok: true }, 200);
+    }
+})();
+
+
+var currentTab = 'dashboard';
+var searchQuery = '';
+var dbData = {};
+var crudModalInstance = null;
+
+var schemas = {
+    faculty: {
+        title: 'Faculty Directory',
+        subtitle: 'Manage professors, researchers, specializations, and sort order on faculty.php',
+        singular: 'Faculty Member',
+        fields: [
+            { name: 'name', label: 'Full Name', type: 'text', required: true, col: 6 },
+            { name: 'designation', label: 'Designation / Rank', type: 'text', required: true, col: 6 },
+            { name: 'specialization', label: 'Specialization & Research Interests', type: 'text', col: 12 },
+            { name: 'email', label: 'Official Email', type: 'email', col: 6 },
+            { name: 'phone', label: 'Phone / Extension', type: 'text', col: 6 },
+            { name: 'image', label: 'Profile Photo (Path or Upload)', type: 'image', default: 'faculty_data/images/dr-satheesh-babu-p-k.jpg', col: 8 },
+            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 4 },
+            { name: 'linkedin', label: 'LinkedIn URL', type: 'text', col: 6 },
+            { name: 'profile_url', label: 'Profile Page Link', type: 'text', default: '#', col: 6 }
+        ]
+    },
+    technical_staff: {
+        title: 'Technical & Laboratory Staff',
+        subtitle: 'Manage laboratory instructors, technical officers, and support staff',
+        singular: 'Technical Staff',
+        fields: [
+            { name: 'name', label: 'Full Name', type: 'text', required: true, col: 6 },
+            { name: 'designation', label: 'Designation & Lab', type: 'text', required: true, col: 6 },
+            { name: 'email', label: 'Email Address', type: 'email', col: 6 },
+            { name: 'phone', label: 'Phone Number', type: 'text', col: 6 },
+            { name: 'image', label: 'Staff Photo (Path or Upload)', type: 'image', default: 'technical_staff_data/images/tech-fac1.jpg', col: 8 },
+            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 4 }
+        ]
+    },
+    courses: {
+        title: 'Academic Programmes & Courses',
+        subtitle: 'Manage B.Tech, M.Tech, Ph.D., and industry training programmes',
+        singular: 'Course',
+        fields: [
+            { name: 'title', label: 'Programme / Course Title', type: 'text', required: true, col: 8 },
+            { name: 'duration', label: 'Duration (e.g. 4 Years)', type: 'text', col: 4 },
+            { name: 'description', label: 'Syllabus & Programme Overview', type: 'textarea', required: true, col: 12 },
+            { name: 'image', label: 'Cover Image (Path or Upload)', type: 'image', default: 'uploads/btchnavel.jpg', col: 6 },
+            { name: 'link', label: 'Target Page Link', type: 'text', default: 'academics.php', col: 3 },
+            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 3 }
+        ]
+    },
+    events: {
+        title: 'Department Events & Seminars',
+        subtitle: 'Publish symposiums, workshops, conferences, and industry conclaves',
+        singular: 'Event',
+        fields: [
+            { name: 'title', label: 'Event Title', type: 'text', required: true, col: 8 },
+            { name: 'event_date', label: 'Event Date', type: 'date', required: true, col: 4 },
+            { name: 'description', label: 'Event Summary & Details', type: 'textarea', required: true, col: 12 },
+            { name: 'image', label: 'Event Banner (Path or Upload)', type: 'image', default: 'img/service-4.jpg', col: 8 },
+            { name: 'link', label: 'Registration / Details URL', type: 'text', default: '#', col: 4 }
+        ]
+    },
+    gallery: {
+        title: 'Campus & Laboratory Photo Gallery',
+        subtitle: 'Curate photos displayed on gallery.php across Campus, Labs, Events, and Activities',
+        singular: 'Gallery Photo',
+        fields: [
+            { name: 'title', label: 'Photo Title / Caption', type: 'text', required: true, col: 8 },
+            { name: 'category', label: 'Category or Album Link', type: 'text', default: 'Campus', col: 4 },
+            { name: 'image', label: 'Image File (Path or Upload)', type: 'image', default: 'gallery_data/images/02_DSC_8646.JPG', required: true, col: 12 }
+        ]
+    },
+    announcements: {
+        title: 'Homepage News Ticker Announcements',
+        subtitle: 'Manage breaking news and admissions alerts scrolling on the homepage',
+        singular: 'Announcement',
+        fields: [
+            { name: 'title', label: 'Announcement Headline', type: 'text', required: true, col: 12 },
+            { name: 'link', label: 'Target Link URL', type: 'text', default: '#', col: 8 },
+            { name: 'is_active', label: 'Visibility (1 = Active, 0 = Hidden)', type: 'number', default: 1, col: 4 }
+        ]
+    },
+    testimonials: {
+        title: 'Alumni & Industry Testimonials',
+        subtitle: 'Manage testimonials displayed on the homepage carousel',
+        singular: 'Testimonial',
+        fields: [
+            { name: 'name', label: 'Person Name', type: 'text', required: true, col: 6 },
+            { name: 'role', label: 'Designation / Organization', type: 'text', required: true, col: 6 },
+            { name: 'content', label: 'Testimonial Quote', type: 'textarea', required: true, col: 12 },
+            { name: 'image', label: 'Photo (Path or Upload)', type: 'image', default: 'testimonials_data/images/madhu_s.png', col: 12 }
+        ]
+    },
+    placement_brochures: {
+        title: 'Placement Brochures (Up to 25 MB PDF Upload)',
+        subtitle: 'Upload & manage Placement Brochure PDFs (5 MB to 25 MB supported) displayed on placement.php',
+        singular: 'Placement Brochure',
+        fields: [
+            { name: 'title', label: 'Brochure Title (e.g. Placement Brochure 2026)', type: 'text', required: true, col: 8 },
+            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 4 },
+            { name: 'file_path', label: 'Brochure PDF File (Max 25 MB — 5 MB+ supported)', type: 'pdf', default: 'placement_data/brochures/Placement_Brochure_2026.pdf', required: true, col: 12 },
+            { name: 'image', label: 'Cover Image (Path or Upload)', type: 'image', default: 'img/career-mag.jpg', col: 12 }
+        ]
+    },
+    placement_coordinators: {
+        title: 'Placement Cell Coordinators',
+        subtitle: 'Manage Faculty & Student Placement Coordinators displayed on placement.php',
+        singular: 'Placement Coordinator',
+        fields: [
+            { name: 'name', label: 'Coordinator Name', type: 'text', required: true, col: 6 },
+            { name: 'role_type', label: 'Role (Faculty Coordinator / Student Coordinator)', type: 'text', default: 'Faculty Coordinator', required: true, col: 6 },
+            { name: 'email', label: 'Email Address', type: 'email', col: 6 },
+            { name: 'phone', label: 'Phone Number', type: 'text', col: 4 },
+            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 2 }
+        ]
+    }
+};
+
+function esc(s) {
+    if (s === null || s === undefined) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function showToast(msg) {
+    var t = document.getElementById('status-toast');
+    document.getElementById('toast-text').textContent = msg;
+    t.style.display = 'inline-flex';
+    setTimeout(function () { t.style.display = 'none'; }, 3500);
+}
+
+function checkAuth() {
+    if (!localStorage.getItem('shipadmin_token')) {
+        document.getElementById('login-overlay').style.display = 'flex';
+    } else {
+        document.getElementById('login-overlay').style.display = 'none';
+        loadAllData();
+    }
+}
+
+document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var u = document.getElementById('login-username').value;
+    var p = document.getElementById('login-password').value;
+    fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: u, password: p })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (res) {
+        if (res.ok) {
+            localStorage.setItem('shipadmin_token', res.token);
+            document.getElementById('login-error').style.display = 'none';
+            checkAuth();
+        } else {
+            var err = document.getElementById('login-error');
+            err.textContent = res.error || 'Invalid credentials';
+            err.style.display = 'block';
+        }
+    });
+});
+
+document.getElementById('logout-btn').addEventListener('click', function () {
+    localStorage.removeItem('shipadmin_token');
+    checkAuth();
+});
+
+document.getElementById('global-search').addEventListener('input', function (e) {
+    searchQuery = e.target.value.trim().toLowerCase();
+    if (currentTab === 'dashboard' && searchQuery.length > 0) {
+        switchTab('faculty');
+    } else {
+        renderCurrentTab();
+    }
+});
+
+function loadAllData() {
+    fetch('/api/admin/all')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+            dbData = data;
+            var totalRecords = 0;
+            ['faculty', 'technical_staff', 'courses', 'events', 'gallery', 'announcements', 'testimonials', 'placement_brochures', 'placement_coordinators', 'inquiries'].forEach(function (k) {
+                var len = (data[k] || []).length;
+                totalRecords += len;
+                var badge = document.getElementById('count-' + k);
+                if (badge) badge.textContent = len;
+            });
+            var heroTotal = document.getElementById('hero-total-records');
+            if (heroTotal) heroTotal.textContent = totalRecords;
+            if (data.db_meta) {
+                document.getElementById('sidebar-db-size').textContent = data.db_meta.size_kb + ' KB';
+            }
+            renderCurrentTab();
+        });
+}
+
+function toggleMobileSidebar(show) {
+    var sb = document.querySelector('.sidebar');
+    var bd = document.getElementById('sidebar-backdrop');
+    if (show) {
+        sb.classList.add('show-mobile');
+        bd.classList.add('show-mobile');
+    } else {
+        sb.classList.remove('show-mobile');
+        bd.classList.remove('show-mobile');
+    }
+}
+
+function switchTab(tab) {
+    currentTab = tab;
+    document.querySelectorAll('#sidebar-nav .nav-link').forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('data-tab') === tab);
+    });
+    var pill = document.getElementById('active-module-pill');
+    if (pill) pill.textContent = tab.replace(/_/g, ' ').toUpperCase();
+    toggleMobileSidebar(false);
+    renderCurrentTab();
+}
+
+document.querySelectorAll('#sidebar-nav .nav-link[data-tab]').forEach(function (el) {
+    el.addEventListener('click', function () {
+        switchTab(el.getAttribute('data-tab'));
+    });
+});
+
+function matchesSearch(obj) {
+    if (!searchQuery) return true;
+    return Object.values(obj).some(function (v) {
+        return String(v || '').toLowerCase().indexOf(searchQuery) !== -1;
+    });
+}
+
+function renderCurrentTab() {
+    document.querySelectorAll('.tab-pane-custom').forEach(function (p) { p.style.display = 'none'; });
+    var topAction = document.getElementById('top-action-area');
+    topAction.innerHTML = '';
+
+    if (currentTab === 'dashboard') {
+        document.getElementById('page-title').textContent = 'Executive Overview';
+        document.getElementById('page-subtitle').textContent = 'Real-time portal administration, media repository & indexed SQLite database telemetry';
+        document.getElementById('tab-dashboard').style.display = 'block';
+
+        var cards = [
+            { tab: 'faculty', label: 'Faculty Members', count: (dbData.faculty || []).length, icon: 'fa-user-tie', cls: 'kpi-blue' },
+            { tab: 'technical_staff', label: 'Technical Staff', count: (dbData.technical_staff || []).length, icon: 'fa-user-cog', cls: 'kpi-indigo' },
+            { tab: 'gallery', label: 'Gallery Photos', count: (dbData.gallery || []).length, icon: 'fa-images', cls: 'kpi-rose' },
+            { tab: 'testimonials', label: 'Testimonials', count: (dbData.testimonials || []).length, icon: 'fa-quote-right', cls: 'kpi-purple' },
+            { tab: 'placement_brochures', label: 'Brochures (PDF)', count: (dbData.placement_brochures || []).length, icon: 'fa-file-pdf', cls: 'kpi-amber' },
+            { tab: 'courses', label: 'Programmes', count: (dbData.courses || []).length, icon: 'fa-graduation-cap', cls: 'kpi-emerald' }
+        ];
+
+        document.getElementById('stats-row').innerHTML = cards.map(function (c) {
+            return (
+                '<div class="col-md-4 col-xl-2">' +
+                '  <div class="kpi-card h-100" onclick="switchTab(\'' + c.tab + '\')">' +
+                '    <div class="d-flex align-items-center justify-content-between mb-3">' +
+                '      <div class="kpi-icon ' + c.cls + '"><i class="fa ' + c.icon + '"></i></div>' +
+                '      <span class="badge bg-light text-secondary border"><i class="fa fa-arrow-right"></i></span>' +
+                '    </div>' +
+                '    <h3 class="fw-bold mb-1 mono-font">' + c.count + '</h3>' +
+                '    <div class="text-muted small fw-semibold">' + c.label + '</div>' +
+                '  </div>' +
+                '</div>'
+            );
+        }).join('');
+
+        // Inquiries Preview
+        var inq = (dbData.inquiries || []).slice(0, 4);
+        var inqContainer = document.getElementById('dashboard-inquiries-preview');
+        if (inq.length === 0) {
+            inqContainer.innerHTML = '<div class="p-5 text-center text-muted small"><i class="fa fa-check-circle text-success fs-4 d-block mb-2"></i>All caught up! No pending inquiries in the queue.</div>';
+        } else {
+            inqContainer.innerHTML = '<div class="list-group list-group-flush">' + inq.map(function (item) {
+                return '<div class="list-group-item px-4 py-3">' +
+                    '<div class="d-flex justify-content-between align-items-center mb-1">' +
+                    '  <div><strong>' + esc(item.name) + '</strong> <span class="text-muted small">&lt;' + esc(item.email) + '&gt;</span></div>' +
+                    '  <span class="badge-soft-info">' + esc(item.type) + '</span>' +
+                    '</div>' +
+                    '<div class="small text-secondary">' + esc(item.message) + '</div>' +
+                    '</div>';
+            }).join('') + '</div>';
+        }
+
+        // DB Meta
+        var meta = dbData.db_meta || { journal_mode: 'WAL', index_count: 10, size_kb: 56, indexes: [] };
+        document.getElementById('meta-journal').textContent = meta.journal_mode;
+        document.getElementById('meta-index-count').textContent = meta.index_count;
+        document.getElementById('meta-size').textContent = meta.size_kb + ' KB';
+        document.getElementById('meta-index-list').innerHTML = (meta.indexes || []).map(function (idx) {
+            return '<span class="index-pill"><i class="fa fa-check-circle text-success"></i>' + esc(idx.name) + ' <span class="text-muted">(' + esc(idx.tbl_name) + ')</span></span>';
+        }).join('');
+        return;
+    }
+
+    if (currentTab === 'settings') {
+        document.getElementById('page-title').textContent = 'Vision & Head of Department Profile';
+        document.getElementById('page-subtitle').textContent = 'Update global contact coordinates, Vision statement, About section, and HOD message';
+        document.getElementById('tab-settings').style.display = 'block';
+        var s = dbData.settings || {};
+        var form = document.getElementById('settings-form');
+        Object.keys(s).forEach(function (k) {
+            if (form.elements[k]) form.elements[k].value = s[k];
+        });
+        return;
+    }
+
+    if (currentTab === 'inquiries') {
+        document.getElementById('page-title').textContent = 'Public Contact & Connect Inquiries';
+        document.getElementById('page-subtitle').textContent = 'Submissions captured from contact.php and connect.php';
+        document.getElementById('tab-list').style.display = 'block';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Timestamp</th><th>Channel</th><th>Sender</th><th>Subject / Batch</th><th>Category</th><th>Message</th><th class="text-end">Action</th></tr>';
+        var inqRows = (dbData.inquiries || []).filter(matchesSearch);
+        document.getElementById('table-record-counter').textContent = 'Showing ' + inqRows.length + ' inquiry records';
+        if (inqRows.length === 0) {
+            document.getElementById('list-tbody').innerHTML = '<tr><td colspan="7" class="text-center py-5 text-muted">No matching inquiries found.</td></tr>';
+        } else {
+            document.getElementById('list-tbody').innerHTML = inqRows.map(function (item) {
+                return '<tr>' +
+                    '<td class="small text-muted mono-font">' + esc(item.created_at) + '</td>' +
+                    '<td><span class="badge-soft-info text-uppercase">' + esc(item.type) + '</span></td>' +
+                    '<td><div class="fw-bold text-dark">' + esc(item.name) + '</div><div class="small text-muted">' + esc(item.email) + '</div></td>' +
+                    '<td>' + esc(item.subject_or_batch || '-') + '</td>' +
+                    '<td><span class="badge-soft-secondary">' + esc(item.category || 'General') + '</span></td>' +
+                    '<td style="max-width:340px;">' + esc(item.message) + '</td>' +
+                    '<td class="text-end"><button class="action-btn delete" onclick="deleteRecord(\'inquiries\', ' + item.id + ')"><i class="fa fa-trash-alt"></i></button></td>' +
+                '</tr>';
+            }).join('');
+        }
+        return;
+    }
+
+    var schema = schemas[currentTab];
+    if (!schema) return;
+
+    document.getElementById('page-title').textContent = schema.title;
+    document.getElementById('page-subtitle').textContent = schema.subtitle;
+    topAction.innerHTML = '<button class="btn btn-brand" onclick="openModal()"><i class="fa fa-plus-circle me-2"></i>Add New ' + schema.singular + '</button>';
+    document.getElementById('tab-list').style.display = 'block';
+
+    var rows = (dbData[currentTab] || []).filter(matchesSearch);
+    document.getElementById('table-record-counter').textContent = rows.length + ' ' + schema.title;
+
+    if (currentTab === 'faculty' || currentTab === 'technical_staff') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Portrait</th><th>Name &amp; Specialization</th><th>Designation</th><th>Contact Details</th><th>Order</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><img class="avatar-thumb" src="../' + esc(r.image || 'faculty_data/images/dr-satheesh-babu-p-k.jpg').replace(/^\//,'') + '"></td>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.name) + '</div>' + (r.specialization ? '<div class="small text-muted">' + esc(r.specialization) + '</div>' : '') + '</td>' +
+                '<td><span class="badge-soft-info">' + esc(r.designation) + '</span></td>' +
+                '<td class="small"><div><i class="fa fa-envelope text-muted me-1"></i>' + esc(r.email || '-') + '</div><div><i class="fa fa-phone-alt text-muted me-1"></i>' + esc(r.phone || '-') + '</div></td>' +
+                '<td><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    } else if (currentTab === 'courses' || currentTab === 'events') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Thumbnail</th><th>Title</th><th>Duration / Date</th><th>Overview</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><img class="gallery-thumb" src="../' + esc(r.image || 'uploads/btchnavel.jpg').replace(/^\//,'') + '"></td>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td><span class="badge-soft-info">' + esc(r.duration || r.event_date || 'Standard') + '</span></td>' +
+                '<td class="small text-muted" style="max-width:380px;">' + esc(r.description) + '</td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    } else if (currentTab === 'gallery') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Preview</th><th>Caption / Title</th><th>Category / Link</th><th>Repository Path</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><img class="gallery-thumb" src="../' + esc(r.image).replace(/^\//,'') + '"></td>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td><span class="badge-soft-info">' + esc(r.category) + '</span></td>' +
+                '<td><code class="small">' + esc(r.image) + '</code></td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    } else if (currentTab === 'announcements') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Announcement Headline</th><th>Target Link</th><th>Status</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td><code class="small">' + esc(r.link) + '</code></td>' +
+                '<td>' + (r.is_active ? '<span class="badge-soft-success">Active</span>' : '<span class="badge-soft-secondary">Hidden</span>') + '</td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    } else if (currentTab === 'testimonials') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Portrait</th><th>Name &amp; Designation</th><th>Testimonial Quote</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><img class="avatar-thumb" src="../' + esc(r.image || 'testimonials_data/images/madhu_s.png').replace(/^\//,'') + '"></td>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.name) + '</div><div class="small text-muted">' + esc(r.role) + '</div></td>' +
+                '<td class="small text-secondary" style="max-width:420px;">"' + esc(r.content) + '"</td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    } else if (currentTab === 'placement_brochures') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Cover</th><th>Brochure Title</th><th>PDF Document (Up to 25 MB)</th><th>Order</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><img class="gallery-thumb" src="../' + esc(r.image || 'img/career-mag.jpg').replace(/^\//,'') + '"></td>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td><a href="../' + esc(r.file_path).replace(/^\//,'') + '" target="_blank" class="btn btn-sm btn-light border"><i class="fa fa-file-pdf text-danger me-2"></i><code class="small text-dark">' + esc(r.file_path) + '</code> <i class="fa fa-external-link-alt ms-2 text-muted small"></i></a></td>' +
+                '<td><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    } else if (currentTab === 'placement_coordinators') {
+        document.getElementById('list-thead').innerHTML = '<tr><th>Coordinator Name</th><th>Role Type</th><th>Email</th><th>Phone</th><th>Order</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            return '<tr>' +
+                '<td><div class="fw-bold text-dark">' + esc(r.name) + '</div></td>' +
+                '<td><span class="badge-soft-info">' + esc(r.role_type) + '</span></td>' +
+                '<td>' + esc(r.email || '-') + '</td>' +
+                '<td>' + esc(r.phone || '-') + '</td>' +
+                '<td><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td class="text-end">' +
+                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '</td></tr>';
+        }).join('');
+    }
+}
+
+function openModal(id) {
+    var schema = schemas[currentTab];
+    if (!schema) return;
+    var record = null;
+    if (id) {
+        record = (dbData[currentTab] || []).find(function (x) { return x.id === id; });
+    }
+    document.getElementById('crud-id').value = id || '';
+    document.getElementById('modal-title').textContent = (id ? 'Edit ' : 'Create New ') + schema.singular;
+
+    var fieldsHtml = schema.fields.map(function (f) {
+        var val = record ? (record[f.name] !== undefined ? record[f.name] : '') : (f.default !== undefined ? f.default : '');
+        var inputHtml = '';
+        if (f.type === 'textarea') {
+            inputHtml = '<textarea class="form-control" name="' + f.name + '" rows="3" ' + (f.required ? 'required' : '') + '>' + esc(val) + '</textarea>';
+        } else if (f.type === 'image') {
+            var inputId = 'field-img-' + f.name;
+            inputHtml = '<div class="input-group">' +
+                '<input type="text" class="form-control mono-font small" id="' + inputId + '" name="' + f.name + '" value="' + esc(val) + '" ' + (f.required ? 'required' : '') + '>' +
+                '<label class="btn btn-outline-primary mb-0 fw-semibold"><i class="fa fa-cloud-upload-alt me-1"></i>Upload Photo <input type="file" hidden accept="image/*" onchange="uploadFileToInput(this, \'' + inputId + '\')"></label>' +
+                '</div>';
+        } else if (f.type === 'pdf') {
+            var pdfInputId = 'field-pdf-' + f.name;
+            inputHtml = '<div class="input-group">' +
+                '<input type="text" class="form-control mono-font small" id="' + pdfInputId + '" name="' + f.name + '" value="' + esc(val) + '" ' + (f.required ? 'required' : '') + '>' +
+                '<label class="btn btn-outline-danger mb-0 fw-semibold"><i class="fa fa-file-pdf me-1"></i>Upload PDF (Max 25 MB) <input type="file" hidden accept=".pdf,application/pdf" onchange="uploadFileToInput(this, \'' + pdfInputId + '\')"></label>' +
+                '</div>' +
+                '<div class="form-text text-success small mt-1"><i class="fa fa-check-circle me-1"></i>High-capacity upload enabled: supports 5 MB to 25 MB PDF brochures.</div>';
+        } else {
+            inputHtml = '<input type="' + f.type + '" class="form-control" name="' + f.name + '" value="' + esc(val) + '" ' + (f.required ? 'required' : '') + '>';
+        }
+        return '<div class="col-md-' + (f.col || 12) + '">' +
+            '<label class="form-label small fw-bold text-secondary">' + f.label + '</label>' +
+            inputHtml +
+            '</div>';
+    }).join('');
+
+    document.getElementById('modal-fields').innerHTML = fieldsHtml;
+    if (!crudModalInstance) {
+        crudModalInstance = new bootstrap.Modal(document.getElementById('crudModal'));
+    }
+    crudModalInstance.show();
+}
+
+function uploadFileToInput(fileInput, targetInputId) {
+    var file = fileInput.files[0];
+    if (!file) return;
+    var maxBytes = 25 * 1024 * 1024; // 25 MB limit
+    if (file.size > maxBytes) {
+        alert('File size exceeds the 25 MB limit. Please select a file under 25 MB.');
+        fileInput.value = '';
+        return;
+    }
+    showToast('Uploading ' + file.name + ' (' + (file.size / (1024 * 1024)).toFixed(2) + ' MB)...');
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        fetch('/api/admin/upload', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                filename: file.name,
+                tab: currentTab,
+                data: e.target.result
+            })
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+            if (res.path) {
+                document.getElementById(targetInputId).value = res.path;
+                showToast('Uploaded: ' + res.path + (res.size_kb ? ' (' + res.size_kb + ' KB)' : ''));
+            } else if (res.error) {
+                alert(res.error);
+            }
+        });
+    };
+    reader.readAsDataURL(file);
+}
+
+document.getElementById('crud-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var schema = schemas[currentTab];
+    var payload = {};
+    var idVal = document.getElementById('crud-id').value;
+    if (idVal) payload.id = parseInt(idVal, 10);
+    var formEl = e.target;
+    schema.fields.forEach(function (f) {
+        payload[f.name] = formEl.elements[f.name].value;
+    });
+
+    fetch('/api/admin/' + currentTab, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(function (r) { return r.json(); })
+    .then(function () {
+        if (crudModalInstance) crudModalInstance.hide();
+        showToast(schema.singular + ' committed to SQLite database!');
+        loadAllData();
+    });
+});
+
+function deleteRecord(table, id) {
+    if (!confirm('Delete this record permanently from the database?')) return;
+    fetch('/api/admin/' + table + '/' + id, { method: 'DELETE' })
+        .then(function (r) { return r.json(); })
+        .then(function () {
+            showToast('Record deleted from database.');
+            loadAllData();
+        });
+}
+
+document.getElementById('settings-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var formEl = e.target;
+    var payload = {};
+    Array.from(formEl.elements).forEach(function (el) {
+        if (el.name) payload[el.name] = el.value;
+    });
+    fetch('/api/admin/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(function (r) { return r.json(); })
+    .then(function () {
+        showToast('Site content & HOD message published!');
+        loadAllData();
+    });
+});
+
+function runDbOptimize() {
+    fetch('/api/admin/optimize', { method: 'POST' })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+            if (res.ok) {
+                showToast('SQLite PRAGMA analyze & optimize completed!');
+                loadAllData();
+            }
+        });
+}
+
+function exportDatabaseJson() {
+    var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dbData, null, 2));
+    var a = document.createElement('a');
+    a.setAttribute("href", dataStr);
+    a.setAttribute("download", "shiptech_db_backup.json");
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    showToast('Database snapshot downloaded!');
+}
+
+var pwModalInstance = null;
+
+function openPasswordModal() {
+    document.getElementById('password-form').reset();
+    document.getElementById('pw-modal-alert').style.display = 'none';
+    if (!pwModalInstance) {
+        pwModalInstance = new bootstrap.Modal(document.getElementById('passwordModal'));
+    }
+    pwModalInstance.show();
+}
+
+document.getElementById('password-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var currPassword = document.getElementById('curr-password').value;
+    var newPassword = document.getElementById('new-password').value;
+    var confirmPassword = document.getElementById('confirm-password').value;
+    var alertEl = document.getElementById('pw-modal-alert');
+
+    if (newPassword !== confirmPassword) {
+        alertEl.className = 'alert alert-danger py-2 small';
+        alertEl.textContent = 'New password and confirmation do not match.';
+        alertEl.style.display = 'block';
+        return;
+    }
+
+    fetch('/api/admin/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            username: 'admin',
+            current_password: currPassword,
+            new_password: newPassword
+        })
+    })
+    .then(function (r) { return r.json(); })
+    .then(function (res) {
+        if (res.ok) {
+            if (pwModalInstance) pwModalInstance.hide();
+            showToast('Admin security credentials updated!');
+        } else {
+            alertEl.className = 'alert alert-danger py-2 small';
+            alertEl.textContent = res.error || 'Failed to update password.';
+            alertEl.style.display = 'block';
+        }
+    });
+});
+
+checkAuth();
+</script>
+</body>
+</html>

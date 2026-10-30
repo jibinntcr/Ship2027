@@ -1,0 +1,619 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Faculty | Department of Shiptechnology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./lib/icons/css/all.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/facultyDetails.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <!-- Topbar Start -->
+<div class="wrap bg-upper-nav upper-header py-2 px-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col d-flex">
+                <p class="mt-2 mb-2 d-flex">
+                <p class="mb-0 me-4 text-white"><span class="fa fa-envelope"></span>
+                    <a class="text-white" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </p>
+                <p class="mb-0 text-white"><span class="fa fa-phone-alt"></span>
+                    <a class="text-white" href=" tel:+914842575714">0484-2575714</a>
+                </p>
+                </p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="social-media">
+                    <p class="mb-0 d-flex">
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="course.php" class="dropdown-item">Courses</a>
+                    <!-- <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank"
+                        class="dropdown-item">Program Educational
+                        Objectives</a>
+                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="dropdown-item">Program
+                        Outcomes (POs)</a>
+                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="dropdown-item">Program
+                        Specific
+                        Outcomes (PSOs)</a> -->
+                    <!-- <a href="research.php" class="dropdown-item">Research</a> -->
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.php" class="dropdown-item">Faculty</a>
+                    <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
+                    <!-- <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a> -->
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="phd.php" target="_blank" class="dropdown-item">Ph.D.</a>
+                    <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
+                    <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
+                    <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Sudents</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+            <!-- <div class=" nav-item dropdown">
+                <a href="library.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank"
+                        class="dropdown-item">Department Library</a>
+
+                </div>
+            </div> -->
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="library.php" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+
+            <!-- <a href="library.php" class="nav-item nav-link">Library</a> -->
+            <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
+                    <!-- <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Committee 2022</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Form</a> -->
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+
+                </div>
+            </div>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="feature.html" class="dropdown-item">Features</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div> -->
+            <!-- <a href="contact.html" class="nav-item nav-link active">Contact Us</a> -->
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->    <!-- Navbar End -->
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Dr. Satheesh Babu P.K</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page"> Dr. Satheesh Babu P.K                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 px-lg-0" style="overflow:hidden;">
+        <div class="container  about py-5 px-lg-0 element">
+            <div class="row g-5 mx-lg-5">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
+                    style="min-height: 400px;">
+                    <!-- card  -->
+                    <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
+                        <img src="uploads/satheeshbabu.jpg" class="card-img-top img-fluid"
+                            style="border-radius: 15px;" alt="faculty image" />
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-uppercase ">
+                                Dr. Satheesh Babu P.K                            </h4>
+                            <p class="card-text thick">Associate Professor</p>
+                        </div>
+                        <hr class="my-2">
+                        <div class="card-body ">
+                            <h6 class="card-title text-uppercase mb-3 ">
+                                CONTACT INFO
+                            </h6>
+                            <div class="small-text ">
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                    <div class="col-10 text-right"><a class="white col-11"
+                                            href="mailto:satheeshbabu@cusat.ac.in">satheeshbabu@cusat.ac.in</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-10 text-right">Associate professor, 
+Dept of Ship Technology, 
+CUSAT, Kochi - 22
+</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"> <i class="fa fa-address-book"></i></div>
+                                    <div class="col-10 text-right">
+                                        <a class="white col-11" href="https://iqac.cusat.ac.in/Web/profile_view/449/DRSATHEESHBABUPK">CUSAT IQAC
+                                            Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+                <div class="col-lg-8 mx-lg-2 col-md-12 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h1 class="mb-5 title-color ">Dr. Satheesh Babu P.K </h1>
+                    <p class="mb-5 " style="margin-right: 3%;">Naval Architect from the 1988-92 batch of Dept of Ship Technology, CUSAT. Served Indian Navy for 22 years and retired as Commander. Experienced in various fields such as design, building and operation of ships/ submarines, quality control, research and academics.                    </p>
+                    <i class="fa-solid fa-book-open-readertext-primary fa-3x"></i>
+                    <div>
+                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="mb-5">Field Of Special Interest</h2>
+                            <div class="d-flex flex-wrap ">
+
+
+                                <!-- SPECIAL INTEREST 1 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Naval Architecture</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 1 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Marine Hydrodynamics</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 2 END -->
+
+                                <!-- SPECIAL INTEREST 3 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Ship Design</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 3 END -->
+
+                                <!-- SPECIAL INTEREST 4  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Material Science</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 4 END -->
+
+                                <!-- SPECIAL INTEREST 5  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Corrosion Engineering</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 5 END -->
+
+                                <!-- SPECIAL INTEREST 6  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Ocean Technology</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 6 END -->
+
+                                <!-- SPECIAL INTEREST 7  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Cryogenics</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 7 END -->
+
+                                <!-- SPECIAL INTEREST 8  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Convective Heat Transfer</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 8 END -->
+
+                                <!-- SPECIAL INTEREST 9  START -->
+                                                                <!-- SPECIAL INTEREST 9 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <!-- SPECIAL INTEREST 10 END -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Experience</h2>
+            <div class="d-flex flex-wrap ">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Associate Professor</h5>
+                        <p class="mb-0">Dept of Ship Technology, CUSAT during 2022-2025</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2   START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Professor and Head </h5>
+                        <p class="mb-0">Dept of Naval Architecture and Ship Building, SNGCE (affiliated to KTU) during 2014-2021</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5> Naval Architect Officer </h5>
+                        <p class="mb-0">Indian Navy (1992-2014)</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5> Lecturer </h5>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+                <!-- EXPERIENCE 6  START -->
+                                <!-- EXPERIENCE 6  END -->
+
+                <!-- EXPERIENCE 7  START -->
+                                <!-- EXPERIENCE 7  END -->
+
+                <!-- EXPERIENCE 8  START -->
+                                <!-- EXPERIENCE 8  END -->
+
+                <!-- EXPERIENCE 9  START -->
+                                <!-- EXPERIENCE 9  END -->
+
+                <!-- EXPERIENCE 10  START -->
+                                <!-- EXPERIENCE 10  END -->
+
+
+            </div>
+        </div>
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-wrap justify-para">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Ph.D.</h5>
+                        <p class="mb-0">Ship Technology, 2018</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>M.Tech</h5>
+                        <p class="mb-0">IIT, Bombay,2001</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>PG Diploma in Management</h5>
+                        <p class="mb-0">IGNOU, 2012</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Diploma in Naval Construction</h5>
+                        <p class="mb-0">IIT, Delhi, 1996</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>B.Tech</h5>
+                        <p class="mb-0">Naval Architecture and Ship Building, CUSAT,1992</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 5  END -->
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS START -->
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Publications
+            </h2>
+            <p class="mb-5"><ol>
+	<li>PK Satheesh Babu, A Mathiazhagan, C.G. Nandakumar, &ldquo;Corrosion Health Monitoring System for Steel Ship Structures&rdquo;, International Journal of Environmental Science and Development, Vol. 5, No. 5, October 2014.</li>
+	<li>Satheesh Babu P.K, Mathiazhagan A, &ldquo;Integrated Corrosion Protection System for Ship Structures&rdquo;, International Journal of Design and Manufacturing Technology (IJDMT), pp 29-34, Dec 2014.</li>
+	<li>Jishnu Saji, Jose Prasobh, Satheesh Babu, P.K, &ldquo;Requirement of Volume Dredging and Capacity Enhancement of Dredgers in India&rdquo;, International Journal of Design and Manufacturing Technology (IJDMT), pp 60-67, Dec 2014.</li>
+	<li>Satheesh Babu P.K and Geena J Perumal, &ldquo;The Development of Expert-System for Corrosion Protection of Ship Structures&rdquo;, IOSR Journal of Mechanical and Civil Engineering (IOSR-JMCE), pp 56-63, Jan 2016.</li>
+	<li>Gautham Rajagopal, Rahul Nath R, Savin V and Satheesh Babu P.K &ldquo;Determination of Efficient Recovery Methods Based on Nature of Spilled Oil&rdquo;, IOSR Journal of Mechanical and Civil Engineering (IOSR-JMCE), pp 32-41, Jan 2016.</li>
+	<li>Mathesh B, Satheesh Babu P.K &ldquo;Energy Consumption for Ship Dismantling through Beaching Method&rdquo;, IOSR Journal of Mechanical and Civil Engineering (IOSR-JMCE), pp 64-67, Jan 2016.</li>
+	<li>PK Satheesh Babu, M Bobby Kannan, VS Raja: Effect of Temper on Environmental Assisted Failure in 7010 Aluminum Alloy&rdquo; paper No 02435, Corrosion, 2002, ISBN:&nbsp;02435 2002 CP.</li>
+	<li>PK Satheesh Babu, A Mathiazhagan, &ldquo;New horizon in Ship safety and reliability &ndash; Corrosion Management Approach&rdquo;, 3rd Asian Symposium of Materials and Processing, IIT Madras, 2012.</li>
+	<li>Abhijith. K. Sujith, Aadith Mathew, Adarsh K.S, Josna John, Sane Shajan, Sreekumar Pai G, Satheesh Babu P.K, P.G Sunil Kumar, &ldquo;Development of Underwater Drone, ROV Varuna&rdquo;, Proceedings of the International Conference on Shipbuilding &amp; Offshore Engineering 2018, (ICSOE 2018), October 25-26, 2018, pp 125-137, ISBN: 978-93-85434-72-3.</li>
+	<li>PK Satheesh Babu, &ldquo;Influence of form parameters on performance of ships&rdquo;, Conference on Marine Hydrodynamics, NSTL Visakhapatnam, 2002</li>
+	<li>PK Satheesh Babu, A Mathiazhagan, Surface preparation for Coatings, Proceedings of the one day workshop on Marine Corrosion and its Prevention, CUSAT, 24th Mar 12.</li>
+	<li>Anant Ajitkumar, Satheesh Babu PK, LNG As Marine Fuel, A Solution for Suphur Cap, Ships Technic, Published by SNAS, Department of Ship Technology, Vol XXXI, pp 49-54, 2020</li>
+	<li>Anant Ajithkumar, Satheesh Babu P K, A review on applicability of hydrogen fuel cells in shipping for a sustainable future, Sustainability, Agri, Food and Environmental Research, (ISSN: 0719-3726), 10(X), 2022: http://dx.doi.org/10.7770/safer-V10N1-art2835.&nbsp;</li>
+	<li>Arya V P, Akshara Priya Vinod, Satheesh Babu P K (2022), Carbon footprint levels and recommendations for sustainable shipping industry, Sustainability, Agri, Food and Environmental Research, (ISSN: 0719-3726), 11(X), 2023.</li>
+	<li>Jayaram S., Najdan Waris C. P., Satheesh Babu P.K. and Sivaprasad K (2022), SUSTAINABLE DEVELOPMENT OF INDIAN SHIP RECYCLING INDUSTRY IN COMPLIANCE WITH RECYCLING&nbsp;OF SHIPS ACT, 2019, International Journal of Mechanical Engineering and Technology (IJMET), Volume 13, Issue 6, (June 2022), ISSN Print: 0976 &ndash; 6340 / ISSN Online: 0976 &ndash;6359.</li>
+	<li>Arunprasath, Satheesh Babu, Sunil Kumar and Mangesh, (2021), Methodologies to be followed to minimize the loss of containers at sea, Proceedings of the Third International Conference on Shipbuilding and Offshore Engineering (CSE2021), ISBN: 978-93-85434-91-4, pp 81-90.</li>
+	<li>Gowtham Rajagopal and Satheesh Babu (2021), Mechanical Strength of Triclad Subjected to Thermal Loading - A Descriptive Study, International Conference on Advances in Materials Science (ICAMS-2021) on 11-12 Sep 2021 - Yet to be published</li>
+	<li>Savin Viswanathan, Satheesh Babu, Christian Holden and Olav Egeland A, (2021), Co-simulation methodology for offshore load handling, Proceedings of the International Conference on Advances in Naval and Ocean Engineering (iCANOE&rsquo;21), ISBN 9788-1952-57751, pp 8-14.</li>
+	<li>Gaurav, Satheesh babu PK, (2022), The concept design of hybrid wind-solar ferry for inland waters of Kerala, Proceedings of the Golden Jubilee International conference on Sustainable technology and Innovation for Industry 4.0 (icsi 2022), April 21-22, 2022, CUSAT, Kochi, Kerala,India, ISBN No. 978-81-954804-2-5 pp. 93-102.</li>
+	<li>C Singh Uppa and S Babu PK, (2022), Dynamic Optimisation of port operations on-board a typical RO-RO Vessel, aided by a smart decision support system, International Conference on Computer Applications in Shipbuilding, Royal Institution of Naval Architects, 13th-15th of September 2022, Yokohama, Japan, ISBN No: 978-1-911649-35-9,&nbsp;&nbsp;pp 401-410.</li>
+</ol>
+            </p>
+        </div>
+        
+        <!-- PUBLICATIONS END  -->
+
+
+        <!-- FUNDED PROJECTS START -->
+
+        
+        <!-- FUNDED PROJECTS END -->
+
+
+        <!-- OTHER DETAILS START -->
+        
+        <!-- OTHER DETAILS END  -->
+    </div>
+    
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 ">
+                <h4 class="text-light mb-4">Address</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Department of Ship Technology,<br>
+                    Cochin University of Science and Technology,<br>
+                    Cochin-22, Kerala, India
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-484 257-5714</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
+                <div class="d-flex pt-2">
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
+                            class="fab fa-linkedin-in"></i></a> -->
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="course.php">Courses</a>
+                <a class="btn btn-link" href="news-home.php">News</a>
+                <a class="btn btn-link" href="events-home.php">Events</a>
+                <a class="btn btn-link" href="gallery.php">Gallery</a>
+                <!-- <a class="btn btn-link" href="#">Connect</a> -->
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row pt-2">
+                    <iframe class="row" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- Footer End -->    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,666 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Faculty | Department of Shiptechnology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
+
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="./lib/icons/css/all.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/facultyDetails.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <!-- Topbar Start -->
+<div class="wrap bg-upper-nav upper-header py-2 px-0">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col d-flex">
+                <p class="mt-2 mb-2 d-flex">
+                <p class="mb-0 me-4 text-white"><span class="fa fa-envelope"></span>
+                    <a class="text-white" href="mailto:ship@cusat.ac.in">ship@cusat.ac.in</a>
+                </p>
+                <p class="mb-0 text-white"><span class="fa fa-phone-alt"></span>
+                    <a class="text-white" href=" tel:+914842575714">0484-2575714</a>
+                </p>
+                </p>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <div class="social-media">
+                    <p class="mb-0 d-flex">
+                        <a class="text-white d-flex align-items-center justify-content-center border-separator me-4" href="https://www.cusat.ac.in/" target="_blank">CUSAT Website</a>
+                        <a class="text-white d-flex align-items-center justify-content-center " href="https://admissions.cusat.ac.in/" target="_blank">Admissions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-white shadow navbar-light sticky-top px-4 px-lg-5">
+    <a href="index.php" class="navbar-brand d-flex align-items-center">
+        <img class="img-fluid me-3 m-0" src="img/logo.png" alt="logo">
+    </a>
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-new-nav pe-4 py-3 py-lg-0 fac-img-curv">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="course.php" class="dropdown-item">Courses</a>
+                    <!-- <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank"
+                        class="dropdown-item">Program Educational
+                        Objectives</a>
+                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="dropdown-item">Program
+                        Outcomes (POs)</a>
+                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="dropdown-item">Program
+                        Specific
+                        Outcomes (PSOs)</a> -->
+                    <!-- <a href="research.php" class="dropdown-item">Research</a> -->
+                </div>
+            </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">People </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
+                    <a href="faculty.php" class="dropdown-item">Faculty</a>
+                    <a href="technical-fac.php" class="dropdown-item">Technical Staff</a>
+                    <!-- <a href="administrative-staff.php" class="dropdown-item">Administrative Staff</a> -->
+                </div>
+            </div>
+            <div class=" nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
+                    Facilities</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="phd.php" target="_blank" class="dropdown-item">Ph.D.</a>
+                    <a href="facilities.php" target="_blank" class="dropdown-item">Facilities</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
+                    <!-- <a href="funded-projects.php" class="dropdown-item">Funded Project</a> -->
+                    <a href="achivements.php" class="dropdown-item">Achievements</a>
+                    <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Sudents</a>
+                    <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>
+                </div>
+            </div>
+            <!-- <div class=" nav-item dropdown">
+                <a href="library.php" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank"
+                        class="dropdown-item">Department Library</a>
+
+                </div>
+            </div> -->
+
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Library </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="library.php" class="dropdown-item">Library</a>
+                    <a href="https://sites.google.com/view/shiptechnologylibrarycusat/home" target="_blank" class="dropdown-item">Department Library</a>
+                </div>
+            </div>
+
+
+            <!-- <a href="library.php" class="nav-item nav-link">Library</a> -->
+            <a href="gallery.php" class="nav-item nav-link">Gallery</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Connect </a>
+                <div class="dropdown-menu bg-light border-0 m-0" style="width: 270px;">
+                    <a href="https://snas.in/" target="_blank" class="dropdown-item">SNAS</a>
+                    <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
+                    <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
+                        Registration</a>
+                    <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opprotunity
+                        cell</a>
+                    <!-- <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Committee 2022</a>
+                    <a href="#" target="_blank" class="dropdown-item">Students Grievance <br>
+                        Redressal Form</a> -->
+                    <a href="https://cusat.ac.in/student/antiragging.php" target="_blank" class="dropdown-item">Anti
+                        Ragging Cell</a>
+                    <a href="https://cusatech.cusat.ac.in/" target="_blank" class="dropdown-item">CUSAT
+                        Tech</a>
+                    <a href="https://swayam.gov.in/nc_details/NPTEL" target="_blank" class="dropdown-item">Swayam</a>
+                    <a href="https://www.dostas.org/" target="_blank" class="dropdown-item">Department
+                        Alumni (DOSTAS)</a>
+                    <a href="https://alumni.cusat.ac.in/" target="_blank" class="dropdown-item">University Alumni</a>
+
+                </div>
+            </div>
+            <a href="contact.php" class="nav-item nav-link">Contact</a>
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="feature.html" class="dropdown-item">Features</a>
+                    <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div> -->
+            <!-- <a href="contact.html" class="nav-item nav-link active">Contact Us</a> -->
+        </div>
+
+    </div>
+</nav>
+<!-- Navbar End -->    <!-- Navbar End -->
+    
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 6rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Dr. Aravind K.R</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.php">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="faculty.php">Faculty</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page"> Dr. Aravind K.R                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 px-lg-0" style="overflow:hidden;">
+        <div class="container  about py-5 px-lg-0 element">
+            <div class="row g-5 mx-lg-5">
+                <div class="col-12 mx-lg-2 col-lg-3 ps-lg-0 wow fadeInLeft" data-wow-delay="0.1s"
+                    style="min-height: 400px;">
+                    <!-- card  -->
+                    <div class="card overflow-hidden card1" style="width: 18rem; border-radius: 25px;">
+                        <img src="uploads/IMG_0154 copy (1).JPG" class="card-img-top img-fluid"
+                            style="border-radius: 15px;" alt="faculty image" />
+                        <div class="card-body text-center">
+                            <h4 class="card-title text-uppercase ">
+                                Dr. Aravind K.R                            </h4>
+                            <p class="card-text thick">Assistant Professor </p>
+                        </div>
+                        <hr class="my-2">
+                        <div class="card-body ">
+                            <h6 class="card-title text-uppercase mb-3 ">
+                                CONTACT INFO
+                            </h6>
+                            <div class="small-text ">
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2"> <i class="fa fa-envelope "></i></div>
+                                    <div class="col-10 text-right"><a class="white col-11"
+                                            href="mailto:aravind@cusat.ac.in">aravind@cusat.ac.in</a>
+                                    </div>
+                                </div>
+                                <div class="row mb-md-3 mb-2">
+                                    <div class="col-2">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="col-10 text-right">Flat No 1202, Purva Grandbay, Marine drive, Cochin-682013</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2"> <i class="fa fa-address-book"></i></div>
+                                    <div class="col-10 text-right">
+                                        <a class="white col-11" href="https://iqac.cusat.ac.in/Web/facdetails#faculty.list">CUSAT IQAC
+                                            Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card end -->
+                <div class="col-lg-8 mx-lg-2 col-md-12 about-text wow fadeInUp justify-para" data-wow-delay="0.3s">
+                    <h1 class="mb-5 title-color ">Dr. Aravind K.R </h1>
+                    <p class="mb-5 " style="margin-right: 3%;">Experienced Assistant Professor in Naval Architecture and Marine Engineering with 9+ years of industry and academic experience, specializing in Inland Water Transport, Ship Design, and Marine Engineering. 
+
+Engaged in various committees and projects, including serving as a Technical Expert for the Kerala State Water Transport Department, an Expert Committee Member for the Kerala Shipping and Inland Navigation Corporation, Kerala  Forest and Wildlife Department  and an expert for the Kerala Maritime Board. 
+
+Additionally, contributing expertise to the Kerala Startup Mission and Samagra Shiksha Kerala initiatives. Committed to advancing  in the field of Naval Architecture and Marine Engineering  and making impactful contributions in academia and industry.                    </p>
+                    <i class="fa-solid fa-book-open-readertext-primary fa-3x"></i>
+                    <div>
+                        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+                            <h2 class="mb-5">Field Of Special Interest</h2>
+                            <div class="d-flex flex-wrap ">
+
+
+                                <!-- SPECIAL INTEREST 1 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Inland Waterways Transport </h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 1 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5> Ship Design </h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 2 END -->
+
+                                <!-- SPECIAL INTEREST 3 START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5> Marine Engineering</h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 3 END -->
+
+                                <!-- SPECIAL INTEREST 4  START -->
+                                                                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                                    <i class="fa-solid fa-paperclip text-primary fa-2x flex-shrink-0"></i>
+                                    <div class="ms-4">
+                                        <h5>Sustainable Fuels </h5>
+                                    </div>
+                                </div>
+                                                                <!-- SPECIAL INTEREST 4 END -->
+
+                                <!-- SPECIAL INTEREST 5  START -->
+                                                                <!-- SPECIAL INTEREST 5 END -->
+
+                                <!-- SPECIAL INTEREST 6  START -->
+                                                                <!-- SPECIAL INTEREST 6 END -->
+
+                                <!-- SPECIAL INTEREST 7  START -->
+                                                                <!-- SPECIAL INTEREST 7 END -->
+
+                                <!-- SPECIAL INTEREST 8  START -->
+                                                                <!-- SPECIAL INTEREST 8 END -->
+
+                                <!-- SPECIAL INTEREST 9  START -->
+                                                                <!-- SPECIAL INTEREST 9 END -->
+
+                                <!-- SPECIAL INTEREST2  START -->
+                                                                <!-- SPECIAL INTEREST 10 END -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Experience</h2>
+            <div class="d-flex flex-wrap ">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Manager -Technical and Procurement    ( May 2019 - Oct 2020)</h5>
+                        <p class="mb-0">Worked as a Technical and Procurement Manager with The Viswa Group of Companies Singapore. </p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2   START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Assistant Professor (Dec 2017 - May 2019)</h5>
+                        <p class="mb-0">Worked as an Assistant Professor (Contract)  with the Department of Ship Technology of Cochin University of Science and Technology
+</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Assistant Professor  (Jul 2016 -Dec 2017)</h5>
+                        <p class="mb-0">Worked as an Assistant Professor with  the Department of Department  of Naval Architecture & Ship Building, Sree Narayana Gurukulam College of Engineering (SNGCE), Cochin. </p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Assistant Manager- LOTS Shipping Ltd  (Feb 2014 – Aug 2014)</h5>
+                        <p class="mb-0">-</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-briefcase text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Project Manager  -Western interior designers and Marine Contractors (July 2013-Feb 2014)</h5>
+                        <p class="mb-0">-</p>
+                    </div>
+                </div>
+                                <!-- EXPERIENCE 5  END -->
+
+                <!-- EXPERIENCE 6  START -->
+                                <!-- EXPERIENCE 6  END -->
+
+                <!-- EXPERIENCE 7  START -->
+                                <!-- EXPERIENCE 7  END -->
+
+                <!-- EXPERIENCE 8  START -->
+                                <!-- EXPERIENCE 8  END -->
+
+                <!-- EXPERIENCE 9  START -->
+                                <!-- EXPERIENCE 9  END -->
+
+                <!-- EXPERIENCE 10  START -->
+                                <!-- EXPERIENCE 10  END -->
+
+
+            </div>
+        </div>
+        <div class="col-lg-12 feature-text wow fadeInUp" data-wow-delay="0.1s">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-wrap justify-para">
+
+                <!-- EXPERIENCE 1  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>M.Tech.</h5>
+                        <p class="mb-0">Marine Engineering </p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 1  END -->
+
+                <!-- EXPERIENCE 2  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>B.E. Naval Architecture and Offshore Engineering </h5>
+                        <p class="mb-0">Naval Architecture and Offshore Engineering </p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 2  END -->
+
+                <!-- EXPERIENCE 3  START -->
+                
+                <div class="d-flex col-md-5  mb-5 mx-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fa-solid fa-graduation-cap text-primary fa-2x flex-shrink-0"></i>
+                    <div class="ms-4">
+                        <h5>Ph.D</h5>
+                        <p class="mb-0">Inland Water Transport</p>
+                    </div>
+                </div>
+
+                                <!-- EXPERIENCE 3  END -->
+
+                <!-- EXPERIENCE 4  START -->
+                                <!-- EXPERIENCE 4  END -->
+
+                <!-- EXPERIENCE 5  START -->
+                                <!-- EXPERIENCE 5  END -->
+
+            </div>
+        </div>
+
+        <!-- PUBLICATIONS START -->
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Publications
+            </h2>
+            <p class="mb-5"><p><strong>List of Latest Publications</strong></p>
+
+<ol>
+	<li>
+	<p>Aravind, K. R., Mathiazhagan, A., &amp; Sudheer, C. B.<strong> (2024)</strong>. &quot;Viability and Environmental Sustainability of Composite Materials in Inland Vessel Construction: A Case Study of Kerala&#39;s Waterway Network&quot;&nbsp;&nbsp;In Proceedings of the International Conference on Advances in Polymer Composites organized by Anna University, Madras Institute of Technology (MIT), Chennai.</p>
+	</li>
+	<li>
+	<p>Aravind, K. R., &amp; Sudheer, C. B.<strong> (2023).</strong> &quot;Revolutionizing Maritime Transport: A Blueprint for Sustainable Mobility - Conceptualizing an Electric Roll-On/Roll-Off (RO-RO) Ferry System for India&#39;s National Waterway 3&quot;. In Proceedings of the First International Conference on Science, Engineering and Technology Practices for Sustainable Development, ICSETPSD 2023 .</p>
+	</li>
+	<li>
+	<p>Aravind, K. R., Satheesh Babu, P. K., &amp; Mathiazhagan, A. <strong>(2023)</strong>. &quot;Effective Corrosion Management in Inland Ships: A Case Study-Based Approach, Integrating Materials, Methods, and Management&quot;. Paper No. CM 016 presented at CORCON 2023, NACE.</p>
+	</li>
+	<li>
+	<p>Mathiazhagan, A., &amp; Aravind, K. R. <strong>(2023)</strong>. &quot;An Overview of Circular Economy with an Emphasis on the Basel and Hong Kong Conventions of the IMO-Sustainability Approach.&quot; In IIPV3EBS03_G16 Futuristic Trends in Management 2023.</p>
+	</li>
+</ol>
+
+<p>&nbsp;</p>
+            </p>
+        </div>
+        
+        <!-- PUBLICATIONS END  -->
+
+
+        <!-- FUNDED PROJECTS START -->
+
+                <div class="container my-5 justify-para" style="margin-top: 80px;">
+            <h2 class=" mt-5 mb-3 mb-lg-5 mx-auto justify-content-center flex">Funded Projects
+            </h2>
+            <table class="table table-bordered table-hover">
+                <thead class="bg-primary text-white">
+                    <tr class="text-center">
+                        <th scope="col">Role</th>
+                        <th scope="col">Project</th>
+                        <th scope="col">Funding Agency</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <!-- FUNDED PROJECT 1 START -->
+                                        <tr>
+                    <tr>
+                        <td>Principal Investigator </td>
+                        <td> Development of an eco-friendly vessel design approach for National Waterway 3</td>
+                        <td>Cochin University of Science and Technology </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 1 END -->
+
+                    <!-- FUNDED PROJECT 2 START -->
+                                        <tr>
+                        <td>Co-Investigator </td>
+                        <td>Development of Electric Propulsion System for Energy Efficient House Boats</td>
+                        <td> National Mission on Power Electronics Technology Phase III (NaMPET-III). Under Ministry of Electronics and Information Technology (MEITY), Government of India. </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 2 END -->
+
+                    <!-- FUNDED PROJECT 3 START -->
+                                        <tr>
+                        <td>Consultant </td>
+                        <td>Concept design of survey boat for Kerala Forest Department </td>
+                        <td>Kerala Forest and Wildlife Department </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 3 END -->
+
+                    <!-- FUNDED PROJECT 4 START -->
+                                        <tr>
+                        <td>Consultant </td>
+                        <td>Development of Concept Design of the rescue boat for Kerala State Water Transport Department </td>
+                        <td>Kerala State Water Transport Department </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 4 END -->
+
+                    <!-- FUNDED PROJECT 5 START -->
+                                        <tr>
+                        <td>Consultant </td>
+                        <td>Development of Concept Design of Ambulance boat for Kerala State Water Transport Department </td>
+                        <td>Kerala State Water Transport Department </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 5 END -->
+
+                    <!-- FUNDED PROJECT 6 START -->
+                                        <tr>
+                        <td>Consultant </td>
+                        <td>Development of Concept Design of inland barge for Kerala State Water Transport Department </td>
+                        <td>Kerala State Water Transport Department </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 6 END -->
+
+                    <!-- FUNDED PROJECT 7 START -->
+                                        <tr>
+                        <td>Expert Member </td>
+                        <td>Investigation on the feasibility  for starting boat service for Nilambur Panchayat </td>
+                        <td>Malappuram District Panchayat </td>
+                    </tr>
+                                        <!-- FUNDED PROJECT 7 END -->
+
+                    <!-- FUNDED PROJECT 8 START -->
+                                        <!-- FUNDED PROJECT 8 END -->
+
+                    <!-- FUNDED PROJECT 9 START -->
+                                        <!-- FUNDED PROJECT 9 END -->
+
+                    <!-- FUNDED PROJECT 10 START -->
+                                        <!-- FUNDED PROJECT 10 END -->
+
+
+                </tbody>
+            </table>
+                    </div>
+        
+        <!-- FUNDED PROJECTS END -->
+
+
+        <!-- OTHER DETAILS START -->
+        
+        <!-- OTHER DETAILS END  -->
+    </div>
+    
+    <!-- Footer Start -->
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 ">
+                <h4 class="text-light mb-4">Address</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Department of Ship Technology,<br>
+                    Cochin University of Science and Technology,<br>
+                    Cochin-22, Kerala, India
+                </p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-484 257-5714</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>ship@cusat.ac.in</p>
+                <div class="d-flex pt-2">
+                    <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a target="_blank" class="btn btn-outline-light btn-social"
+                        href="https://www.linkedin.com/in/society-of-naval-architecture-students-snas-department-of-ship-technology-a5938a182/"><i
+                            class="fab fa-linkedin-in"></i></a> -->
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/dost-cusat/about/"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/placement-cell-dost-cusat/"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.facebook.com/shiptechcusat/"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" class="btn btn-outline-light btn-social" href="https://www.youtube.com/@societyofnavalarchitecture1487"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="course.php">Courses</a>
+                <a class="btn btn-link" href="news-home.php">News</a>
+                <a class="btn btn-link" href="events-home.php">Events</a>
+                <a class="btn btn-link" href="gallery.php">Gallery</a>
+                <!-- <a class="btn btn-link" href="#">Connect</a> -->
+                <a class="btn btn-link" href="contact.php">Contact Us</a>
+            </div>
+            <div class="col-lg-6 ">
+                <div class="row pt-2">
+                    <iframe class="row" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125724.19392967212!2d76.19946067960882!3d10.026672760305035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c3155555555%3A0x5aa9af2d46753df2!2sDepartment%20of%20Ship%20Technology%2C%20Cochin%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2sin!4v1675399969431!5m2!1sen!2sin" frameborder="0" style="min-height: 300px; border-radius: 20px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div>    <!-- <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Department of Ship Technology, CUSAT</a>. All Right
+                    Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a class="border-bottom" target="_blank" href="https://infinio.co.in">Infinio Technology
+                        Solutions</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+<!-- Footer End -->    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

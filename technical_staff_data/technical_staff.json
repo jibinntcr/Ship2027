@@ -1,0 +1,29 @@
+[
+  {
+    "sort_order": 1,
+    "name": "SHIJU S",
+    "designation": "Technical Officer Gr I",
+    "email": "",
+    "phone": "",
+    "image": "technical_staff_data/images/tech-fac1.jpg",
+    "original_image": "uploads/tech-fac1.jpg"
+  },
+  {
+    "sort_order": 2,
+    "name": "SANTHOSH KUMAR K",
+    "designation": "Technical Assistant",
+    "email": "",
+    "phone": "",
+    "image": "technical_staff_data/images/tech-fac2.jpg",
+    "original_image": "uploads/tech-fac2.jpg"
+  },
+  {
+    "sort_order": 3,
+    "name": "Dr. Sheeja N.K.",
+    "designation": "Deputy Librarian",
+    "email": "",
+    "phone": "",
+    "image": "technical_staff_data/images/admin_staff_2.jpg",
+    "original_image": "uploads/admin staff 2.jpg"
+  }
+]
