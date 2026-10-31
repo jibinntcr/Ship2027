@@ -917,23 +917,23 @@
         </div>
         <div class="system-badge-bar">
             <span class="system-status-pill">
-                <span class="pulse-dot"></span>CMS Engine v2.6
+                <span class="pulse-dot"></span>Website Admin Portal
             </span>
             <span class="text-white-50 mono-font" style="font-size: 11px;">CUSAT-DOST</span>
         </div>
     </div>
 
     <div class="sidebar-nav" id="sidebar-nav">
-        <div class="nav-section-label">Command Center</div>
+        <div class="nav-section-label">Main Menu &amp; Help</div>
         <a class="nav-link active" data-tab="dashboard">
-            <span><i class="fa fa-compass nav-icon"></i>Executive Overview</span>
+            <span><i class="fa fa-compass nav-icon"></i>Home Dashboard</span>
         </a>
         <a class="nav-link" data-tab="guidelines">
-            <span><i class="fa fa-book-open nav-icon"></i>User Guidelines &amp; Help</span>
-            <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.35); font-size: 10px;">GUIDE</span>
+            <span><i class="fa fa-book-open nav-icon"></i>How to Use (Easy Guide)</span>
+            <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.25); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.45); font-size: 10px;">HELP</span>
         </a>
 
-        <div class="nav-section-label">Academic &amp; Directorate</div>
+        <div class="nav-section-label">People &amp; Courses</div>
         <a class="nav-link" data-tab="faculty">
             <span><i class="fa fa-user-tie nav-icon"></i>Faculty Directory</span>
             <span class="nav-count" id="count-faculty">0</span>
@@ -943,11 +943,11 @@
             <span class="nav-count" id="count-technical_staff">0</span>
         </a>
         <a class="nav-link" data-tab="courses">
-            <span><i class="fa fa-graduation-cap nav-icon"></i>Academic Programmes</span>
+            <span><i class="fa fa-graduation-cap nav-icon"></i>Courses &amp; Programmes</span>
             <span class="nav-count" id="count-courses">0</span>
         </a>
 
-        <div class="nav-section-label">Placement &amp; Career Cell</div>
+        <div class="nav-section-label">Placements</div>
         <a class="nav-link" data-tab="placement_brochures">
             <span><i class="fa fa-file-pdf nav-icon"></i>Placement Brochures</span>
             <span class="nav-count" id="count-placement_brochures">0</span>
@@ -957,9 +957,9 @@
             <span class="nav-count" id="count-placement_coordinators">0</span>
         </a>
 
-        <div class="nav-section-label">Media &amp; Publications</div>
+        <div class="nav-section-label">Photos, News &amp; Events</div>
         <a class="nav-link" data-tab="gallery">
-            <span><i class="fa fa-images nav-icon"></i>Campus Gallery</span>
+            <span><i class="fa fa-images nav-icon"></i>Campus Photo Gallery</span>
             <span class="nav-count" id="count-gallery">0</span>
         </a>
         <a class="nav-link" data-tab="testimonials">
@@ -971,20 +971,20 @@
             <span class="nav-count" id="count-events">0</span>
         </a>
         <a class="nav-link" data-tab="announcements">
-            <span><i class="fa fa-bullhorn nav-icon"></i>Marquee News Ticker</span>
+            <span><i class="fa fa-bullhorn nav-icon"></i>Scrolling News Bar</span>
             <span class="nav-count" id="count-announcements">0</span>
         </a>
 
-        <div class="nav-section-label">System &amp; Governance</div>
+        <div class="nav-section-label">Department Settings &amp; Inbox</div>
         <a class="nav-link" data-tab="inquiries">
-            <span><i class="fa fa-inbox nav-icon"></i>Public Inquiries</span>
+            <span><i class="fa fa-inbox nav-icon"></i>Visitor Messages</span>
             <span class="nav-count" id="count-inquiries">0</span>
         </a>
         <a class="nav-link" data-tab="settings">
-            <span><i class="fa fa-sliders-h nav-icon"></i>Vision &amp; HOD Profile</span>
+            <span><i class="fa fa-sliders-h nav-icon"></i>HOD Message &amp; Contact Info</span>
         </a>
         <a class="nav-link" onclick="openPasswordModal()">
-            <span><i class="fa fa-key nav-icon"></i>Security Credentials</span>
+            <span><i class="fa fa-key nav-icon"></i>Change Admin Password</span>
         </a>
     </div>
 
@@ -992,12 +992,12 @@
         <div class="d-flex align-items-center justify-content-between mb-2">
             <div class="d-flex align-items-center gap-2">
                 <span class="pulse-dot"></span>
-                <small class="text-white-50 fw-medium" style="font-size:11.5px;">SQLite3 WAL Synced</small>
+                <small class="text-white-50 fw-medium" style="font-size:11.5px;">Website Online &amp; Ready</small>
             </div>
             <small class="text-info mono-font fw-semibold" style="font-size:11px;" id="sidebar-db-size">56 KB</small>
         </div>
         <button id="logout-btn" class="btn btn-outline-light btn-sm w-100" style="border-color:rgba(255,255,255,0.16); border-radius: 8px; font-size: 12.5px;">
-            <i class="fa fa-power-off me-1 text-danger"></i>Lock &amp; Sign Out
+            <i class="fa fa-power-off me-1 text-danger"></i>Sign Out Safely
         </button>
     </div>
 </aside>
@@ -1015,22 +1015,22 @@
             </button>
             <div class="search-wrapper">
                 <i class="fa fa-search"></i>
-                <input type="text" id="global-search" class="form-control search-input" placeholder="Instant search across faculty, gallery, brochures, courses...">
+                <input type="text" id="global-search" class="form-control search-input" placeholder="Type a name or word to search faculty, photos, brochures...">
             </div>
             <div class="topbar-pill d-none d-xl-inline-flex">
                 <span class="pulse-dot"></span>
-                <span>Live Database Sync &bull; 25 MB Upload Ready</span>
+                <span>Auto-Save Active &bull; Large PDF Upload (25 MB)</span>
             </div>
         </div>
         <div class="d-flex align-items-center gap-2">
-            <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="switchTab('guidelines')" title="Open User Guidelines & Manual">
-                <i class="fa fa-book-open text-info"></i><span class="d-none d-sm-inline ms-1">User Guide</span>
+            <button class="btn btn-sm btn-info text-dark border-0 fw-bold px-3" style="border-radius: 9px; background: #e0f2fe; color: #0369a1 !important;" onclick="switchTab('guidelines')" title="Read Easy Step-by-Step Instructions">
+                <i class="fa fa-question-circle"></i><span class="d-none d-sm-inline ms-1">How to Use Guide</span>
             </button>
             <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="openPasswordModal()" title="Change Admin Password">
-                <i class="fa fa-shield-alt text-primary"></i><span class="d-none d-sm-inline ms-1">Security</span>
+                <i class="fa fa-key text-primary"></i><span class="d-none d-sm-inline ms-1">Password</span>
             </button>
-            <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="exportDatabaseJson()" title="Download Full Database Backup">
-                <i class="fa fa-cloud-download-alt text-secondary"></i><span class="d-none d-md-inline ms-1">Snapshot JSON</span>
+            <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="exportDatabaseJson()" title="Download a Backup Copy of All Website Data">
+                <i class="fa fa-cloud-download-alt text-secondary"></i><span class="d-none d-md-inline ms-1">Download Backup</span>
             </button>
             <a href="../index.html" target="_blank" class="btn btn-sm btn-brand px-3 py-1" style="border-radius: 9px;">
                 <i class="fa fa-external-link-alt"></i><span class="d-none d-sm-inline ms-1">Open Live Website</span>
@@ -1043,11 +1043,11 @@
         <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-3">
             <div>
                 <div class="d-flex align-items-center gap-2 mb-1">
-                    <span class="badge bg-primary bg-opacity-10 text-primary fw-bold" style="font-size: 11px;" id="active-module-pill">COMMAND CONSOLE</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary fw-bold" style="font-size: 11px;" id="active-module-pill">HOME DASHBOARD</span>
                     <span class="text-muted small mono-font" id="live-clock-display"></span>
                 </div>
-                <h3 class="fw-bold mb-1" id="page-title">Executive Overview</h3>
-                <p class="text-muted small mb-0" id="page-subtitle">Real-time portal administration, media repository &amp; indexed SQLite database telemetry</p>
+                <h3 class="fw-bold mb-1" id="page-title">Website Control Panel</h3>
+                <p class="text-muted small mb-0" id="page-subtitle">Easy website management — add or update faculty, staff, photos, placement brochures &amp; announcements</p>
             </div>
             <div id="top-action-area"></div>
         </div>
@@ -1061,22 +1061,22 @@
                         <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(56, 189, 248, 0.16); border: 1px solid rgba(56, 189, 248, 0.3); font-size: 12px; font-weight: 600; color: #7dd3fc;">
                             <i class="fa fa-anchor"></i> COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY
                         </div>
-                        <h2 class="fw-bold text-white mb-2">Department of Ship Technology &mdash; Digital Control</h2>
+                        <h2 class="fw-bold text-white mb-2">Welcome to the Ship Technology Website Admin</h2>
                         <p class="text-white-50 mb-4" style="max-width: 650px; font-size: 14.5px;">
-                            Manage faculty profiles, technical staff, campus gallery photos, alumni testimonials, and high-resolution placement brochures (up to 25 MB) with instant zero-latency publishing.
+                            Easily add or edit faculty profiles, staff members, campus photos, alumni quotes, and placement brochure PDFs. No technical knowledge is needed — just click a button below to start!
                         </p>
                         <div class="d-flex flex-wrap gap-2 hero-quick-grid">
-                            <button class="hero-quick-btn" onclick="switchTab('faculty'); openModal();"><i class="fa fa-user-plus me-2 text-info"></i>Add Faculty</button>
+                            <button class="hero-quick-btn" style="background: rgba(56, 189, 248, 0.28); border-color: #38bdf8;" onclick="switchTab('guidelines')"><i class="fa fa-book-open me-2 text-info"></i>Read Easy "How to Use" Guide</button>
+                            <button class="hero-quick-btn" onclick="switchTab('faculty'); openModal();"><i class="fa fa-user-plus me-2 text-info"></i>Add Faculty Member</button>
                             <button class="hero-quick-btn" onclick="switchTab('gallery'); openModal();"><i class="fa fa-camera me-2 text-warning"></i>Upload Gallery Photo</button>
-                            <button class="hero-quick-btn" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-file-pdf me-2 text-danger"></i>Add Placement Brochure</button>
-                            <button class="hero-quick-btn" onclick="switchTab('testimonials'); openModal();"><i class="fa fa-quote-left me-2 text-success"></i>Add Testimonial</button>
+                            <button class="hero-quick-btn" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-file-pdf me-2 text-danger"></i>Upload Placement PDF</button>
                         </div>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <div class="d-inline-block text-start p-3 rounded-3 hero-db-summary-box" style="background: rgba(255, 255, 255, 0.96); color: #0f172a; box-shadow: 0 15px 35px rgba(0,0,0,0.25);">
                             <img src="../img/logo.png" alt="CUSAT Logo" style="max-height: 54px; width: auto;" class="mb-2 d-block">
                             <div class="border-top pt-2 mt-1 d-flex align-items-center justify-content-between gap-3">
-                                <span class="small fw-bold text-secondary">TOTAL DB RECORDS</span>
+                                <span class="small fw-bold text-secondary">TOTAL ITEMS ON SITE</span>
                                 <span class="badge bg-primary rounded-pill fs-6 mono-font" id="hero-total-records">0</span>
                             </div>
                         </div>
@@ -1092,50 +1092,55 @@
                     <div class="surface-card h-100">
                         <div class="surface-card-header">
                             <div>
-                                <h6 class="fw-bold mb-0"><i class="fa fa-envelope-open-text text-primary me-2"></i>Recent Website Inquiries</h6>
-                                <small class="text-muted">Submissions captured directly from contact.php</small>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-envelope-open-text text-primary me-2"></i>Recent Messages from Website Visitors</h6>
+                                <small class="text-muted">Messages sent by students &amp; visitors from the Contact Us page</small>
                             </div>
-                            <button class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('inquiries')">Open Inbox</button>
+                            <button class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('inquiries')">View All Messages</button>
                         </div>
                         <div class="p-0" id="dashboard-inquiries-preview"></div>
                     </div>
                 </div>
 
-                <!-- Database Engine & Index Status -->
+                <!-- Friendly Quick Help Card for Non-Technical Staff -->
                 <div class="col-lg-5">
                     <div class="surface-card h-100">
                         <div class="surface-card-header">
                             <div>
-                                <h6 class="fw-bold mb-0"><i class="fa fa-server text-primary me-2"></i>SQLite Storage &amp; B-Tree Telemetry</h6>
-                                <small class="text-muted">Write-Ahead Logging (WAL) &amp; In-Memory Cache</small>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-lightbulb text-warning me-2"></i>New Here? How It Works in 3 Easy Steps</h6>
+                                <small class="text-muted">Anyone can update the website in less than 1 minute</small>
                             </div>
-                            <button class="btn btn-sm btn-outline-primary fw-semibold" onclick="runDbOptimize()">
-                                <i class="fa fa-bolt me-1"></i>Optimize Engine
+                            <button class="btn btn-sm btn-primary fw-semibold" onclick="switchTab('guidelines')">
+                                <i class="fa fa-book-open me-1"></i>Full Guide
                             </button>
                         </div>
                         <div class="p-4">
-                            <div class="row g-2 mb-3 text-center">
-                                <div class="col-4">
-                                    <div class="p-3 rounded-3 bg-light border">
-                                        <div class="small text-muted fw-bold" style="font-size:10px; letter-spacing:0.05em;">JOURNAL MODE</div>
-                                        <div class="fw-bold text-success fs-6 mt-1 mono-font" id="meta-journal">WAL</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="p-3 rounded-3 bg-light border">
-                                        <div class="small text-muted fw-bold" style="font-size:10px; letter-spacing:0.05em;">ACTIVE INDEXES</div>
-                                        <div class="fw-bold text-primary fs-6 mt-1 mono-font" id="meta-index-count">10</div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="p-3 rounded-3 bg-light border">
-                                        <div class="small text-muted fw-bold" style="font-size:10px; letter-spacing:0.05em;">DB FOOTPRINT</div>
-                                        <div class="fw-bold text-dark fs-6 mt-1 mono-font" id="meta-size">56 KB</div>
-                                    </div>
+                            <div class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom">
+                                <span class="badge bg-primary rounded-pill px-2 py-1">1</span>
+                                <div class="small">
+                                    <strong class="text-dark d-block">Pick a Section from the Left Menu</strong>
+                                    <span class="text-secondary">Click what you want to update (for example: <b>Faculty Directory</b>, <b>Campus Photo Gallery</b>, or <b>Placement Brochures</b>).</span>
                                 </div>
                             </div>
-                            <div class="small fw-bold text-secondary mb-2" style="font-size: 11px; letter-spacing: 0.05em;">INDEXED TABLES &amp; KEYS:</div>
-                            <div class="d-flex flex-wrap gap-1" id="meta-index-list"></div>
+                            <div class="d-flex align-items-start gap-3 mb-3 pb-3 border-bottom">
+                                <span class="badge bg-info text-dark rounded-pill px-2 py-1">2</span>
+                                <div class="small">
+                                    <strong class="text-dark d-block">Click "+ Add New" or the Pencil (<i class="fa fa-pen"></i>) Icon</strong>
+                                    <span class="text-secondary">Click the blue <b>+ Add New</b> button to add something new, or click the <b>Pencil (<i class="fa fa-pen"></i>)</b> button next to any item to change it.</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <span class="badge bg-success rounded-pill px-2 py-1">3</span>
+                                <div class="small">
+                                    <strong class="text-dark d-block">Upload Your File &amp; Click "Save &amp; Publish"</strong>
+                                    <span class="text-secondary">Use the <b>Upload Photo</b> or <b>Upload PDF</b> button to choose a file from your computer/phone, then click <b>Save &amp; Publish</b>!</span>
+                                </div>
+                            </div>
+                            <div class="d-none">
+                                <span id="meta-journal">WAL</span>
+                                <span id="meta-index-count">10</span>
+                                <span id="meta-size">56 KB</span>
+                                <div id="meta-index-list"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1234,278 +1239,353 @@
             </form>
         </div>
 
-        <!-- TAB: USER GUIDELINES & CMS ADMINISTRATOR MANUAL -->
+        <!-- TAB: USER GUIDELINES & EASY STEP-BY-STEP HELP FOR STAFF -->
         <div class="tab-pane-custom" id="tab-guidelines" style="display:none;">
-            <!-- Hero Banner for Guidelines -->
+            <!-- Friendly Welcome Banner -->
             <div class="command-hero mb-4">
                 <div class="row align-items-center g-3">
                     <div class="col-lg-8">
-                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-2" style="background: rgba(56, 189, 248, 0.16); border: 1px solid rgba(56, 189, 248, 0.3); font-size: 11.5px; font-weight: 700; color: #7dd3fc;">
-                            <i class="fa fa-book-open"></i> OFFICIAL CMS ADMINISTRATOR HANDBOOK
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-2" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.4); font-size: 12px; font-weight: 700; color: #7dd3fc;">
+                            <i class="fa fa-smile"></i> EASY GUIDE FOR NON-TECHNICAL STAFF &amp; FACULTY
                         </div>
-                        <h3 class="fw-bold text-white mb-2">How to Add, Update &amp; Manage Website Content</h3>
-                        <p class="text-white-50 mb-0" style="max-width: 680px; font-size: 14px;">
-                            Complete step-by-step instructions, recommended image &amp; PDF specifications, display order rules, mobile optimization tips, and backup procedures for the Department of Ship Technology portal.
+                        <h3 class="fw-bold text-white mb-2">How to Update the Website (Step-by-Step in Plain English)</h3>
+                        <p class="text-white-50 mb-0" style="max-width: 700px; font-size: 14.5px; line-height: 1.6;">
+                            <b>You do NOT need any computer programming or technical skills!</b> If you know how to type a message or attach a photo on WhatsApp/Email, you can easily update this website. And don't worry about making a mistake &mdash; anything you add can be edited or removed anytime with one click.
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end">
                         <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
                             <button type="button" class="hero-quick-btn" onclick="exportDatabaseJson()">
-                                <i class="fa fa-cloud-download-alt me-1 text-info"></i>Download DB Backup
+                                <i class="fa fa-cloud-download-alt me-1 text-info"></i>Download Safety Backup
                             </button>
                             <button type="button" class="hero-quick-btn" onclick="openPasswordModal()">
-                                <i class="fa fa-key me-1 text-warning"></i>Change Password
+                                <i class="fa fa-key me-1 text-warning"></i>Change Login Password
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 3-Step Quick Workflow -->
+            <!-- PART 1: What Do the Buttons Mean? (Visual Dictionary) -->
+            <div class="surface-card p-4 mb-4">
+                <h6 class="fw-bold mb-1">
+                    <i class="fa fa-hand-pointer text-primary me-2"></i>1. First, Meet the 4 Simple Buttons You Will Use
+                </h6>
+                <p class="small text-muted mb-3 pb-2 border-bottom">Every page in this control panel uses the exact same 4 buttons:</p>
+                <div class="row g-3">
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="mb-2">
+                                <span class="btn btn-sm btn-brand pe-none"><i class="fa fa-plus-circle me-1"></i>Add New ...</span>
+                            </div>
+                            <strong class="text-dark small d-block mb-1">To Add Something New</strong>
+                            <p class="small text-secondary mb-0">
+                                Found at the <b>top-right corner</b> of each section. Click this whenever you want to add a new teacher, new photo, new brochure, or new notice.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="mb-2">
+                                <span class="action-btn pe-none me-1"><i class="fa fa-pen"></i></span>
+                                <span class="badge bg-white text-dark border">Pencil Icon</span>
+                            </div>
+                            <strong class="text-dark small d-block mb-1">To Edit / Fix a Mistake</strong>
+                            <p class="small text-secondary mb-0">
+                                Click this <b>Pencil button</b> next to any person or photo to fix a spelling error, change a phone number, or replace their photo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="mb-2">
+                                <span class="action-btn delete pe-none me-1" style="background:#fef2f2; color:#dc2626; border-color:#fecaca;"><i class="fa fa-trash-alt"></i></span>
+                                <span class="badge bg-white text-danger border">Trash Icon</span>
+                            </div>
+                            <strong class="text-dark small d-block mb-1">To Delete / Remove</strong>
+                            <p class="small text-secondary mb-0">
+                                Click this <b>Trash button</b> to remove an old item from the website. Don't worry &mdash; it will always ask <i>"Are you sure?"</i> before deleting.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="mb-2">
+                                <span class="btn btn-sm btn-outline-primary pe-none fw-semibold"><i class="fa fa-cloud-upload-alt me-1"></i>Upload Photo / PDF</span>
+                            </div>
+                            <strong class="text-dark small d-block mb-1">To Pick a Photo or PDF</strong>
+                            <p class="small text-secondary mb-0">
+                                <b>Never type file names by hand!</b> Just click this button, pick the picture or PDF from your computer/phone, and it fills in automatically.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PART 2: The 3 Easy Steps to Update Anything -->
             <div class="surface-card p-4 mb-4">
                 <h6 class="fw-bold mb-3 pb-2 border-bottom">
-                    <i class="fa fa-rocket text-primary me-2"></i>1. Quick-Start Publishing Workflow (3 Simple Steps)
+                    <i class="fa fa-list-ol text-primary me-2"></i>2. How to Add or Change Anything in 3 Easy Steps
                 </h6>
                 <div class="row g-3">
                     <div class="col-md-4">
-                        <div class="p-3 rounded-3 bg-light border h-100">
+                        <div class="p-3 rounded-3 border h-100" style="background: #f0f9ff; border-color: #bae6fd !important;">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <span class="badge bg-primary rounded-pill">STEP 1</span>
-                                <strong class="text-dark small">Select a Module Tab</strong>
+                                <span class="badge bg-primary rounded-pill px-3 py-1">STEP 1</span>
+                                <strong class="text-dark small">Click the Section on the Left Menu</strong>
                             </div>
                             <p class="small text-secondary mb-0">
-                                Choose any section from the left sidebar (on mobile phones, tap the <b><i class="fa fa-bars"></i> Menu</b> button at the top-left) such as <b>Faculty Directory</b>, <b>Campus Gallery</b>, or <b>Placement Brochures</b>.
+                                Look at the dark blue menu on the left side of the screen (on a mobile phone, tap the <b><i class="fa fa-bars"></i> 3-lines icon</b> at the top-left corner). Click the section you want to change &mdash; for example, <b>Faculty Directory</b> or <b>Campus Photo Gallery</b>.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="p-3 rounded-3 bg-light border h-100">
+                        <div class="p-3 rounded-3 border h-100" style="background: #f0fdf4; border-color: #bbf7d0 !important;">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <span class="badge bg-info text-dark rounded-pill">STEP 2</span>
-                                <strong class="text-dark small">Add, Upload or Edit</strong>
+                                <span class="badge bg-success rounded-pill px-3 py-1">STEP 2</span>
+                                <strong class="text-dark small">Fill the Simple Form &amp; Upload File</strong>
                             </div>
                             <p class="small text-secondary mb-0">
-                                Click <b>+ Add New ...</b> at the top-right to create an entry, or click the <b><i class="fa fa-pen"></i> Edit</b> button on any existing row/card. Click <b>Upload Photo</b> or <b>Upload PDF</b> to pick files directly from your device.
+                                Click <b>+ Add New</b> (or the <b><i class="fa fa-pen"></i> Pencil</b> to edit). A simple pop-up window will open. Type the details in the boxes. If it asks for a photo or PDF, click <b>Upload Photo</b> or <b>Upload PDF</b> and choose the file from your computer or phone.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="p-3 rounded-3 bg-light border h-100">
+                        <div class="p-3 rounded-3 border h-100" style="background: #fefce8; border-color: #fde047 !important;">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <span class="badge bg-success rounded-pill">STEP 3</span>
-                                <strong class="text-dark small">Commit &amp; Verify Live</strong>
+                                <span class="badge bg-warning text-dark rounded-pill px-3 py-1">STEP 3</span>
+                                <strong class="text-dark small">Click "Save &amp; Publish"</strong>
                             </div>
                             <p class="small text-secondary mb-0">
-                                Click <b>Commit to Database</b>. Your changes are saved immediately and reflected on the public website. Click <b>Open Live Website</b> in the topbar to preview your update.
+                                Click the blue <b>Save &amp; Publish</b> button at the bottom of the pop-up window. That's it! Your change is immediately live. You can click <b>Open Live Website</b> at the top-right to see how it looks.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Module-by-Module Content Guidelines -->
+            <!-- PART 3: Step-by-Step Instructions for Each Section -->
             <h6 class="fw-bold text-uppercase text-secondary small mb-3" style="letter-spacing: 0.06em;">
-                <i class="fa fa-layer-group text-primary me-2"></i>2. Module-by-Module Content Guidelines
+                <i class="fa fa-layer-group text-primary me-2"></i>3. Step-by-Step Guide for Every Website Section
             </h6>
             <div class="row g-3 mb-4">
-                <!-- Faculty & Technical Staff -->
+                <!-- 1. Faculty & Technical Staff -->
                 <div class="col-lg-6">
                     <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="fw-bold mb-0"><i class="fa fa-user-tie text-primary me-2"></i>Faculty Directory &amp; Technical Staff</h6>
-                                <span class="badge-soft-info">faculty.html / technical-staff.html</span>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-user-tie text-primary me-2"></i>A. Adding or Editing Faculty &amp; Technical Staff</h6>
+                                <span class="badge-soft-info">Teachers &amp; Lab Staff</span>
                             </div>
-                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
-                                <li><b>Required Fields:</b> Enter the full name with honorifics (e.g., <i>Dr. A. Mathiazhagan</i>) and official designation (e.g., <i>Professor &amp; Head</i>, <i>Associate Professor</i>).</li>
-                                <li><b>Display Order (`sort_order`):</b> Controls the sequence on the public page. Use <code>1</code> for the Head of Department, <code>2, 3, 4...</code> for Professors and Assistant Professors in seniority order.</li>
-                                <li><b>Portrait Photo:</b> Upload a clear vertical headshot (recommended <code>400 &times; 480 px</code>, JPG/PNG, under <code>2 MB</code>). Keep the face centered near the top so automatic smart-cropping looks sharp on both desktop and mobile cards.</li>
-                            </ul>
+                            <p class="small text-muted mb-2">Use this when a new Professor/Staff member joins, or when someone's designation, phone, or photo changes.</p>
+                            <ol class="small text-secondary ps-3 mb-3" style="line-height: 1.7;">
+                                <li>Click <b>Faculty Directory</b> (for teachers) or <b>Technical Staff</b> (for lab staff) on the left menu.</li>
+                                <li>Click <b>+ Add New</b> at the top-right, or click the <b>Pencil (<i class="fa fa-pen"></i>)</b> next to an existing person.</li>
+                                <li><b>Full Name &amp; Designation:</b> Type their full name (e.g., <i>Dr. A. Mathiazhagan</i>) and post (e.g., <i>Professor &amp; Head</i>).</li>
+                                <li><b>Photo:</b> Click the blue <b>Upload Photo</b> button and select a passport-style photo from your computer/phone.</li>
+                                <li><b>What is "Display Order"?</b> This simply decides who is shown first on the page! Type <b><code>1</code></b> for the Head of Department (to show first), <b><code>2</code></b> for the next senior professor, <b><code>3</code></b> for the next, and so on.</li>
+                                <li>Click <b>Save &amp; Publish</b>.</li>
+                            </ol>
                         </div>
                         <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('faculty'); openModal();"><i class="fa fa-plus me-1"></i>Add Faculty</button>
-                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('technical_staff')">Manage Technical Staff <i class="fa fa-arrow-right ms-1"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('faculty'); openModal();"><i class="fa fa-plus me-1"></i>Add Faculty Member Now</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('technical_staff')">Open Technical Staff <i class="fa fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Placement Brochures & Coordinators -->
+                <!-- 2. Placement Brochures & Coordinators -->
                 <div class="col-lg-6">
                     <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="fw-bold mb-0"><i class="fa fa-file-pdf text-danger me-2"></i>Placement Brochures &amp; Coordinators</h6>
-                                <span class="badge-soft-info">placement.html</span>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-file-pdf text-danger me-2"></i>B. Uploading Placement Brochures (PDF) &amp; Coordinators</h6>
+                                <span class="badge-soft-info">Placement Cell</span>
                             </div>
-                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
-                                <li><b>PDF Brochure Upload (Up to 25 MB):</b> Click <b>Upload PDF (Max 25 MB)</b> to upload official placement brochures (<code>5 MB – 25 MB</code> supported) or enter a path inside <code>placement_data/brochures/</code>.</li>
-                                <li><b>Cover Image:</b> Upload a vertical cover thumbnail (<code>600 &times; 800 px</code>) for the brochure card.</li>
-                                <li><b>Placement Coordinators:</b> Set <b>Role Type</b> to either <code>Faculty Coordinator</code> or <code>Student Coordinator</code> so they automatically group into their respective sections on the Placement page.</li>
-                            </ul>
+                            <p class="small text-muted mb-2">Use this to upload the latest Placement Brochure PDF or update Faculty/Student Placement Coordinators.</p>
+                            <ol class="small text-secondary ps-3 mb-3" style="line-height: 1.7;">
+                                <li>Click <b>Placement Brochures</b> on the left menu and click <b>+ Add New Placement Brochure</b>.</li>
+                                <li><b>Brochure Title:</b> Type a clear name like <i>Placement Brochure 2026-27</i>.</li>
+                                <li><b>Brochure PDF File:</b> Click the red <b>Upload PDF (Max 25 MB)</b> button and pick the PDF file from your computer. Wait 1–2 seconds until you see the green <i>"Uploaded"</i> message at the bottom-right.</li>
+                                <li><b>Cover Image:</b> Click <b>Upload Photo</b> if you want to put a front-page picture on the brochure card (or leave the default cover image).</li>
+                                <li><b>To Update Coordinators:</b> Click <b>Placement Coordinators</b> on the left menu. In the <b>Role</b> box, type either <b><code>Faculty Coordinator</code></b> or <b><code>Student Coordinator</code></b> so the website puts them under the right heading automatically.</li>
+                            </ol>
                         </div>
                         <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                            <button type="button" class="btn btn-sm btn-outline-danger fw-semibold" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-upload me-1"></i>Upload Brochure PDF</button>
-                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('placement_coordinators')">Manage Coordinators <i class="fa fa-arrow-right ms-1"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-danger fw-semibold" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-upload me-1"></i>Upload Brochure PDF Now</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('placement_coordinators')">Open Coordinators <i class="fa fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Campus Gallery & Lightbox -->
+                <!-- 3. Campus Photo Gallery -->
                 <div class="col-lg-6">
                     <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="fw-bold mb-0"><i class="fa fa-images text-warning me-2"></i>Campus &amp; Laboratory Photo Gallery</h6>
-                                <span class="badge-soft-info">gallery.html</span>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-images text-warning me-2"></i>C. Adding Photos to the Campus Photo Gallery</h6>
+                                <span class="badge-soft-info">Photo Gallery</span>
                             </div>
-                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
-                                <li><b>Caption &amp; Category:</b> Provide a descriptive title (e.g., <i>Ship Model Testing Tank Laboratory</i>). Set Category to <code>Campus</code>, <code>Labs</code>, <code>Events</code>, or paste an external Google Photos album URL to link the card to a full external album.</li>
-                                <li><b>Photo Specifications:</b> Use landscape photos (<code>1200 &times; 800 px</code> or <code>16:10</code> ratio, JPG/PNG, under <code>5 MB</code>) for best visual quality in the Bento grid and full-screen swipeable Lightbox viewer.</li>
-                            </ul>
+                            <p class="small text-muted mb-2">Use this to add photos of laboratories, campus buildings, student activities, or functions.</p>
+                            <ol class="small text-secondary ps-3 mb-3" style="line-height: 1.7;">
+                                <li>Click <b>Campus Photo Gallery</b> on the left menu, then click <b>+ Add New Gallery Photo</b>.</li>
+                                <li><b>Photo Title / Caption:</b> Type a short line explaining what is in the picture (for example: <i>Ship Model Testing Tank Lab</i> or <i>Onam Celebration</i>).</li>
+                                <li><b>Category:</b> Type <b><code>Campus</code></b>, <b><code>Labs</code></b>, or <b><code>Events</code></b>. (Tip: If you have a Google Photos album link, you can also paste that link here!)</li>
+                                <li><b>Image File:</b> Click <b>Upload Photo</b>, choose the picture from your computer or phone, and click <b>Save &amp; Publish</b>.</li>
+                            </ol>
                         </div>
                         <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('gallery'); openModal();"><i class="fa fa-camera me-1"></i>Upload Gallery Photo</button>
-                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('gallery')">View Gallery List <i class="fa fa-arrow-right ms-1"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('gallery'); openModal();"><i class="fa fa-camera me-1"></i>Upload a Gallery Photo</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('gallery')">View All Photos <i class="fa fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Academic Programmes & Events -->
+                <!-- 4. Scrolling News Bar & Alumni Testimonials -->
                 <div class="col-lg-6">
                     <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="fw-bold mb-0"><i class="fa fa-graduation-cap text-success me-2"></i>Academic Programmes &amp; Events</h6>
-                                <span class="badge-soft-info">index.html / academics.html / events.html</span>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-bullhorn text-info me-2"></i>D. Scrolling News Bar &amp; Alumni Testimonials</h6>
+                                <span class="badge-soft-info">Homepage Notices</span>
                             </div>
-                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
-                                <li><b>Academic Programmes:</b> Manage B.Tech (NA&amp;SB), M.Tech (CASAD), Ph.D., and Industry Training cards. Include Duration (e.g., <code>4 Years (8 Semesters)</code>) and a clear syllabus overview.</li>
-                                <li><b>Events &amp; Seminars:</b> Add conferences (such as <i>ICANOE</i>), workshops, and jubilee celebrations with an Event Date, summary, and banner image (<code>800 &times; 500 px</code>).</li>
-                                <li><b>Auto Mobile "Read More":</b> Any programme or event description longer than <code>210 characters</code> is automatically given a collapsible <b>Read More / Show Less</b> button on mobile phones!</li>
-                            </ul>
+                            <p class="small text-muted mb-2">Use this to put important moving announcements at the top of the homepage or add alumni quotes.</p>
+                            <ol class="small text-secondary ps-3 mb-3" style="line-height: 1.7;">
+                                <li><b>To Add a Scrolling Notice:</b> Click <b>Scrolling News Bar</b> on the left menu &rarr; <b>+ Add New Announcement</b>.</li>
+                                <li>Type your short notice in <b>Announcement Headline</b> (e.g., <i>M.Tech Admissions Open for 2026 Batch</i>).</li>
+                                <li><b>How to Show or Hide a Notice:</b> In the <b>Show on Website?</b> box, type <b><code>1</code></b> to show it on the website immediately. If an announcement is old and you want to hide it without deleting, edit it and type <b><code>0</code></b>!</li>
+                                <li><b>To Add an Alumni Quote:</b> Click <b>Alumni Testimonials</b> &rarr; <b>+ Add New Testimonial</b>, type the student's name, company/post, their message, and upload their photo.</li>
+                            </ol>
                         </div>
                         <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                            <button type="button" class="btn btn-sm btn-outline-success fw-semibold" onclick="switchTab('courses')">Manage Courses</button>
-                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('events')">Manage Events <i class="fa fa-arrow-right ms-1"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('announcements'); openModal();"><i class="fa fa-bullhorn me-1"></i>Post New Scrolling Notice</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('testimonials')">Open Testimonials <i class="fa fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Testimonials & News Ticker -->
+                <!-- 5. Courses & Events -->
                 <div class="col-lg-6">
                     <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="fw-bold mb-0"><i class="fa fa-quote-right text-info me-2"></i>Alumni Testimonials &amp; News Ticker</h6>
-                                <span class="badge-soft-info">Homepage Carousel &amp; Ticker</span>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-calendar-alt text-success me-2"></i>E. Courses, Seminars &amp; Department Events</h6>
+                                <span class="badge-soft-info">Academics &amp; Events</span>
                             </div>
-                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
-                                <li><b>Alumni Testimonials:</b> Enter the alumnus name, designation/company (e.g., <i>Lead Naval Architect, Classification Society</i>), quote, and square portrait photo (<code>300 &times; 300 px</code>).</li>
-                                <li><b>Marquee News Ticker:</b> Add scrolling homepage announcements and admission alerts. Set <b>Visibility</b> to <code>1</code> to show live on the homepage ticker, or <code>0</code> to hide temporarily without deleting.</li>
-                            </ul>
+                            <p class="small text-muted mb-2">Use this to publish upcoming conferences, workshops, seminars, or update B.Tech / M.Tech / Ph.D details.</p>
+                            <ol class="small text-secondary ps-3 mb-3" style="line-height: 1.7;">
+                                <li><b>To Add an Event:</b> Click <b>Events &amp; Seminars</b> &rarr; <b>+ Add New Event</b>. Enter the Event Title, pick the Event Date from the calendar box, write a summary, and click <b>Upload Photo</b> for the event poster/photo.</li>
+                                <li><b>To Edit a Course:</b> Click <b>Courses &amp; Programmes</b> and click the <b>Pencil (<i class="fa fa-pen"></i>)</b> icon next to B.Tech, M.Tech, or Ph.D to update its description.</li>
+                                <li><b>Don't Worry About Long Paragraphs!</b> Write as much detail as you like. On mobile phones, the website automatically adds a neat <b>"Read More / Show Less"</b> button so the page stays clean and easy to read.</li>
+                            </ol>
                         </div>
                         <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('testimonials'); openModal();"><i class="fa fa-plus me-1"></i>Add Testimonial</button>
-                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('announcements')">Manage News Ticker <i class="fa fa-arrow-right ms-1"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-success fw-semibold" onclick="switchTab('events'); openModal();"><i class="fa fa-plus me-1"></i>Add New Event</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('courses')">Open Courses <i class="fa fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Vision, HOD Profile & Inquiries -->
+                <!-- 6. HOD Message, Phone Numbers & Visitor Messages -->
                 <div class="col-lg-6">
                     <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
                         <div>
                             <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="fw-bold mb-0"><i class="fa fa-sliders-h text-primary me-2"></i>Vision, HOD Profile &amp; Public Inquiries</h6>
-                                <span class="badge-soft-info">Global Settings &amp; Inbox</span>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-sliders-h text-primary me-2"></i>F. HOD Message, Phone Numbers &amp; Visitor Inbox</h6>
+                                <span class="badge-soft-info">Department Info</span>
                             </div>
-                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
-                                <li><b>Department Coordinates:</b> Update the official email (<code>ship@cusat.ac.in</code>), topbar/footer phone numbers, and mailing address across the header, footer, and contact page simultaneously.</li>
-                                <li><b>Vision, About &amp; HOD Message:</b> Edit the Vision statement, <i>"Surging ahead since 1975"</i> overview, and HOD's message/portrait from a single screen.</li>
-                                <li><b>Public Inquiries:</b> Review messages submitted via the Contact and Connect pages and delete resolved inquiries.</li>
-                            </ul>
+                            <p class="small text-muted mb-2">Use this to update the Head of Department's message/photo, official phone/email, or read visitor inquiries.</p>
+                            <ol class="small text-secondary ps-3 mb-3" style="line-height: 1.7;">
+                                <li><b>Changing HOD Message or Photo:</b> Click <b>HOD Message &amp; Contact Info</b> on the left menu. Edit the HOD message text or click <b>Upload Portrait</b> to select a new HOD photo, then click <b>Publish Site Content Changes</b> at the bottom-right.</li>
+                                <li><b>Changing Phone or Email:</b> On the same page, any change to the Email or Phone Number automatically updates the top bar, bottom footer, and Contact Us page across the entire website!</li>
+                                <li><b>Reading Visitor Messages:</b> Click <b>Visitor Messages</b> on the left menu to read messages sent by students or visitors from the Contact Us page.</li>
+                            </ol>
                         </div>
                         <div class="d-flex flex-wrap gap-2 pt-2 border-top">
-                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('settings')"><i class="fa fa-sliders-h me-1"></i>Edit Vision &amp; HOD</button>
-                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('inquiries')">Open Inquiries Inbox <i class="fa fa-arrow-right ms-1"></i></button>
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('settings')"><i class="fa fa-edit me-1"></i>Edit HOD Message &amp; Contact Info</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('inquiries')">Read Visitor Messages <i class="fa fa-arrow-right ms-1"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Media Specifications & Best Practices Reference -->
+            <!-- PART 4: Common Questions (FAQ) & Helpful Photo Guide -->
             <div class="row g-4">
                 <div class="col-lg-7">
+                    <div class="surface-card p-4 h-100">
+                        <h6 class="fw-bold mb-3 pb-2 border-bottom">
+                            <i class="fa fa-question-circle text-primary me-2"></i>4. Frequently Asked Questions (Common Doubts Answered)
+                        </h6>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold small text-dark mb-1">Q1: "When adding a photo or PDF, there is a text box next to the Upload button. Do I need to type anything in that box?"</div>
+                            <p class="small text-secondary mb-0">
+                                <b>Answer: NO!</b> You never have to type anything in that box. Just click the <b>Upload Photo</b> or <b>Upload PDF</b> button, choose the file from your computer or mobile phone, and the system will fill that box automatically for you.
+                            </p>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold small text-dark mb-1">Q2: "What if I make a mistake or upload the wrong photo?"</div>
+                            <p class="small text-secondary mb-0">
+                                <b>Answer:</b> Nothing is permanent! Simply find that item in the list, click the <b>Pencil (<i class="fa fa-pen"></i>)</b> button to fix it, or click the red <b>Trash (<i class="fa fa-trash-alt"></i>)</b> button to delete it.
+                            </p>
+                        </div>
+                        <div class="mb-3 pb-3 border-bottom">
+                            <div class="fw-bold small text-dark mb-1">Q3: "How do I check if my new photo or text is showing properly on the website?"</div>
+                            <p class="small text-secondary mb-0">
+                                <b>Answer:</b> Click the dark blue <b>Open Live Website</b> button at the top-right corner of this screen. It will open the public website in a new tab so you can see your changes immediately.
+                            </p>
+                        </div>
+                        <div class="mb-0">
+                            <div class="fw-bold small text-dark mb-1">Q4: "Can I update the website using my mobile phone?"</div>
+                            <p class="small text-secondary mb-0">
+                                <b>Answer: YES!</b> Both the public website and this Admin Control Panel work smoothly on mobile phones. You can even take a photo on your phone and upload it directly to the Campus Gallery or Events page.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
                     <div class="surface-card h-100">
                         <div class="surface-card-header">
                             <div>
-                                <h6 class="fw-bold mb-0"><i class="fa fa-photo-video text-primary me-2"></i>3. Media &amp; File Upload Specifications Cheat-Sheet</h6>
-                                <small class="text-muted">Recommended dimensions and file formats for crisp rendering on all devices</small>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-camera-retro text-primary me-2"></i>5. Best Photo &amp; PDF Shapes to Use</h6>
+                                <small class="text-muted">Simple tips so your photos look neat &amp; clear</small>
                             </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table table-modern">
                                 <thead>
                                     <tr>
-                                        <th>Asset Type</th>
-                                        <th>Recommended Size</th>
-                                        <th>Formats</th>
-                                        <th>Max Size</th>
+                                        <th>Where You Upload</th>
+                                        <th>Best Photo Shape</th>
+                                        <th>File Limit</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-label="Asset Type"><b>Faculty / Staff / HOD Portrait</b></td>
-                                        <td data-label="Recommended Size"><code class="small">400 &times; 480 px</code> (Vertical)</td>
-                                        <td data-label="Formats"><span class="badge-soft-info">JPG / PNG / WebP</span></td>
-                                        <td data-label="Max Size"><span class="badge-soft-secondary">2 MB</span></td>
+                                        <td data-label="Where You Upload"><b>Faculty / Staff / HOD</b></td>
+                                        <td data-label="Best Photo Shape">Passport-style Vertical Photo (Face centered)</td>
+                                        <td data-label="File Limit"><span class="badge-soft-info">JPG / PNG (Up to 5 MB)</span></td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Asset Type"><b>Alumni Testimonial Photo</b></td>
-                                        <td data-label="Recommended Size"><code class="small">300 &times; 300 px</code> (Square)</td>
-                                        <td data-label="Formats"><span class="badge-soft-info">PNG / JPG</span></td>
-                                        <td data-label="Max Size"><span class="badge-soft-secondary">2 MB</span></td>
+                                        <td data-label="Where You Upload"><b>Campus Gallery / Events</b></td>
+                                        <td data-label="Best Photo Shape">Horizontal (Landscape) Photo</td>
+                                        <td data-label="File Limit"><span class="badge-soft-info">JPG / PNG (Up to 5 MB)</span></td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Asset Type"><b>Campus Gallery / Event Banner</b></td>
-                                        <td data-label="Recommended Size"><code class="small">1200 &times; 800 px</code> (Landscape)</td>
-                                        <td data-label="Formats"><span class="badge-soft-info">JPG / PNG</span></td>
-                                        <td data-label="Max Size"><span class="badge-soft-secondary">5 MB</span></td>
+                                        <td data-label="Where You Upload"><b>Alumni Testimonials</b></td>
+                                        <td data-label="Best Photo Shape">Square or Passport Photo</td>
+                                        <td data-label="File Limit"><span class="badge-soft-info">JPG / PNG (Up to 5 MB)</span></td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Asset Type"><b>Placement Brochure Document</b></td>
-                                        <td data-label="Recommended Size">A4 Portrait Document</td>
-                                        <td data-label="Formats"><span class="badge-soft-success">PDF (.pdf)</span></td>
-                                        <td data-label="Max Size"><span class="badge-soft-success">Up to 25 MB</span></td>
+                                        <td data-label="Where You Upload"><b>Placement Brochure</b></td>
+                                        <td data-label="Best Photo Shape">PDF Document File (<code>.pdf</code>)</td>
+                                        <td data-label="File Limit"><span class="badge-soft-success">Up to 25 MB PDF</span></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5">
-                    <div class="surface-card p-4 h-100">
-                        <h6 class="fw-bold mb-3 pb-2 border-bottom">
-                            <i class="fa fa-shield-alt text-primary me-2"></i>4. Security, Backups &amp; Mobile Rules
-                        </h6>
-                        <div class="mb-3">
-                            <div class="fw-bold small text-dark mb-1"><i class="fa fa-mobile-alt text-info me-2"></i>Automatic Mobile "Read More" Optimization</div>
-                            <p class="small text-secondary mb-0">
-                                You can write detailed, comprehensive descriptions for Courses, Events, About Us, HOD Message, and Testimonials without worrying about mobile clutter. On smartphones and tablets (<code>&lt; 992px</code>), long paragraphs automatically collapse with an interactive <b>Read More / Show Less</b> button.
-                            </p>
-                        </div>
-                        <div class="mb-3">
-                            <div class="fw-bold small text-dark mb-1"><i class="fa fa-cloud-download-alt text-success me-2"></i>Regular Database Backups (Snapshot JSON)</div>
-                            <p class="small text-secondary mb-0">
-                                After making batch updates, click <b>Snapshot JSON</b> in the topbar to download <code>shiptech_db_backup.json</code>. This file contains a complete snapshot of all faculty, staff, gallery items, courses, brochures, and settings.
-                            </p>
-                        </div>
-                        <div class="mb-0">
-                            <div class="fw-bold small text-dark mb-1"><i class="fa fa-lock text-warning me-2"></i>Admin Password &amp; Session Security</div>
-                            <p class="small text-secondary mb-0">
-                                Use the <b>Security</b> button in the topbar to change your administrator passkey at any time. Always click <b>Lock &amp; Sign Out</b> at the bottom of the sidebar when using a shared computer.
-                            </p>
+                        <div class="p-3 bg-light border-top small text-secondary">
+                            <i class="fa fa-shield-alt text-success me-1"></i> <b>Safety Tip:</b> Before making many changes at once, click <b>Download Backup</b> at the top-right to save a backup copy on your computer.Always click <b>Sign Out Safely</b> (bottom-left) when finished on a shared office computer.
                         </div>
                     </div>
                 </div>
@@ -1522,17 +1602,20 @@
                 <div class="modal-header border-bottom px-4 py-3" style="background: linear-gradient(90deg, #0a122c 0%, #150754 100%); color: #fff;">
                     <div class="d-flex align-items-center gap-2">
                         <i class="fa fa-layer-group text-info"></i>
-                        <h5 class="modal-title fw-bold mb-0 text-white" id="modal-title">Add Record</h5>
+                        <h5 class="modal-title fw-bold mb-0 text-white" id="modal-title">Add Item</h5>
                     </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body p-4">
                     <input type="hidden" id="crud-id">
+                    <div class="alert alert-info py-2 px-3 small mb-3 border-0" style="background:#f0f9ff; color:#0369a1;">
+                        <i class="fa fa-info-circle me-1"></i> <b>Tip:</b> Fill in the details below. To add a photo or PDF, click the <b>Upload Photo</b> or <b>Upload PDF</b> button and choose a file from your computer/phone &mdash; then click <b>Save &amp; Publish</b>.
+                    </div>
                     <div class="row g-3" id="modal-fields"></div>
                 </div>
                 <div class="modal-footer border-top px-4 py-3 bg-light">
                     <button type="button" class="btn btn-light border fw-semibold" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-brand px-4"><i class="fa fa-save me-2"></i>Commit to Database</button>
+                    <button type="submit" class="btn btn-brand px-4"><i class="fa fa-check-circle me-2"></i>Save &amp; Publish</button>
                 </div>
             </form>
         </div>
@@ -1545,27 +1628,27 @@
         <div class="modal-content border-0 shadow-lg" style="border-radius: 18px; overflow: hidden;">
             <form id="password-form">
                 <div class="modal-header border-bottom px-4 py-3" style="background: linear-gradient(90deg, #0a122c 0%, #150754 100%); color: #fff;">
-                    <h5 class="modal-title fw-bold text-white mb-0"><i class="fa fa-shield-alt text-info me-2"></i>Security Credentials</h5>
+                    <h5 class="modal-title fw-bold text-white mb-0"><i class="fa fa-key text-info me-2"></i>Change Admin Login Password</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body p-4">
                     <div id="pw-modal-alert" class="alert py-2 small" style="display:none;"></div>
                     <div class="mb-3">
                         <label class="form-label small fw-bold text-secondary">CURRENT PASSWORD</label>
-                        <input type="password" id="curr-password" class="form-control" placeholder="Enter current password" required>
+                        <input type="password" id="curr-password" class="form-control" placeholder="Type your current password" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label small fw-bold text-secondary">NEW PASSWORD</label>
-                        <input type="password" id="new-password" class="form-control" placeholder="Enter new password" required minlength="4">
+                        <input type="password" id="new-password" class="form-control" placeholder="Type your new password" required minlength="4">
                     </div>
                     <div class="mb-0">
                         <label class="form-label small fw-bold text-secondary">CONFIRM NEW PASSWORD</label>
-                        <input type="password" id="confirm-password" class="form-control" placeholder="Re-enter new password" required minlength="4">
+                        <input type="password" id="confirm-password" class="form-control" placeholder="Type the new password again" required minlength="4">
                     </div>
                 </div>
                 <div class="modal-footer border-top px-4 py-3 bg-light">
                     <button type="button" class="btn btn-light border fw-semibold" data-bs-dismiss="modal">Cancel</button>
-                    <button type="submit" class="btn btn-brand px-4"><i class="fa fa-check me-2"></i>Update Credentials</button>
+                    <button type="submit" class="btn btn-brand px-4"><i class="fa fa-check me-2"></i>Save New Password</button>
                 </div>
             </form>
         </div>
@@ -1714,111 +1797,111 @@ var crudModalInstance = null;
 
 var schemas = {
     faculty: {
-        title: 'Faculty Directory',
-        subtitle: 'Manage professors, researchers, specializations, and sort order on faculty.php',
+        title: 'Faculty Directory (Teachers & Professors)',
+        subtitle: 'Add or edit faculty members, their designation, email, phone, and photo shown on the Faculty page',
         singular: 'Faculty Member',
         fields: [
-            { name: 'name', label: 'Full Name', type: 'text', required: true, col: 6 },
-            { name: 'designation', label: 'Designation / Rank', type: 'text', required: true, col: 6 },
-            { name: 'specialization', label: 'Specialization & Research Interests', type: 'text', col: 12 },
-            { name: 'email', label: 'Official Email', type: 'email', col: 6 },
-            { name: 'phone', label: 'Phone / Extension', type: 'text', col: 6 },
-            { name: 'image', label: 'Profile Photo (Path or Upload)', type: 'image', default: 'faculty_data/images/dr-satheesh-babu-p-k.jpg', col: 8 },
-            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 4 },
-            { name: 'linkedin', label: 'LinkedIn URL', type: 'text', col: 6 },
-            { name: 'profile_url', label: 'Profile Page Link', type: 'text', default: '#', col: 6 }
+            { name: 'name', label: 'Full Name (e.g. Dr. A. Mathiazhagan)', type: 'text', required: true, col: 6 },
+            { name: 'designation', label: 'Designation / Post (e.g. Professor & Head)', type: 'text', required: true, col: 6 },
+            { name: 'specialization', label: 'Area of Specialization / Subjects', type: 'text', col: 12 },
+            { name: 'email', label: 'Official Email Address', type: 'email', col: 6 },
+            { name: 'phone', label: 'Phone Number', type: 'text', col: 6 },
+            { name: 'image', label: 'Profile Photo (Click "Upload Photo" button on the right ->)', type: 'image', default: 'faculty_data/images/dr-satheesh-babu-p-k.jpg', col: 8 },
+            { name: 'sort_order', label: 'Display Order (1 = First, 2 = Second...)', type: 'number', default: 1, col: 4 },
+            { name: 'linkedin', label: 'LinkedIn Link (Optional)', type: 'text', col: 6 },
+            { name: 'profile_url', label: 'CUSAT IQAC Profile Link (Optional)', type: 'text', default: '#', col: 6 }
         ]
     },
     technical_staff: {
         title: 'Technical & Laboratory Staff',
-        subtitle: 'Manage laboratory instructors, technical officers, and support staff',
+        subtitle: 'Add or edit laboratory instructors, technical officers, and support staff shown on the Technical Staff page',
         singular: 'Technical Staff',
         fields: [
             { name: 'name', label: 'Full Name', type: 'text', required: true, col: 6 },
-            { name: 'designation', label: 'Designation & Lab', type: 'text', required: true, col: 6 },
+            { name: 'designation', label: 'Designation / Lab Role', type: 'text', required: true, col: 6 },
             { name: 'email', label: 'Email Address', type: 'email', col: 6 },
             { name: 'phone', label: 'Phone Number', type: 'text', col: 6 },
-            { name: 'image', label: 'Staff Photo (Path or Upload)', type: 'image', default: 'technical_staff_data/images/tech-fac1.jpg', col: 8 },
-            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 4 }
+            { name: 'image', label: 'Staff Photo (Click "Upload Photo" button on the right ->)', type: 'image', default: 'technical_staff_data/images/tech-fac1.jpg', col: 8 },
+            { name: 'sort_order', label: 'Display Order (1 = First, 2 = Second...)', type: 'number', default: 1, col: 4 }
         ]
     },
     courses: {
-        title: 'Academic Programmes & Courses',
-        subtitle: 'Manage B.Tech, M.Tech, Ph.D., and industry training programmes',
+        title: 'Courses & Academic Programmes',
+        subtitle: 'Add or edit B.Tech, M.Tech, Ph.D., and training programmes shown on the Homepage and Academics page',
         singular: 'Course',
         fields: [
-            { name: 'title', label: 'Programme / Course Title', type: 'text', required: true, col: 8 },
-            { name: 'duration', label: 'Duration (e.g. 4 Years)', type: 'text', col: 4 },
-            { name: 'description', label: 'Syllabus & Programme Overview', type: 'textarea', required: true, col: 12 },
-            { name: 'image', label: 'Cover Image (Path or Upload)', type: 'image', default: 'uploads/btchnavel.jpg', col: 6 },
-            { name: 'link', label: 'Target Page Link', type: 'text', default: 'academics.php', col: 3 },
-            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 3 }
+            { name: 'title', label: 'Programme / Course Name', type: 'text', required: true, col: 8 },
+            { name: 'duration', label: 'Duration (e.g. 4 Years / 8 Semesters)', type: 'text', col: 4 },
+            { name: 'description', label: 'Programme Details & Overview', type: 'textarea', required: true, col: 12 },
+            { name: 'image', label: 'Course Picture (Click "Upload Photo" ->)', type: 'image', default: 'uploads/btchnavel.jpg', col: 6 },
+            { name: 'link', label: 'Page Link (Keep as academics.php)', type: 'text', default: 'academics.php', col: 3 },
+            { name: 'sort_order', label: 'Display Order (1, 2, 3...)', type: 'number', default: 1, col: 3 }
         ]
     },
     events: {
-        title: 'Department Events & Seminars',
-        subtitle: 'Publish symposiums, workshops, conferences, and industry conclaves',
+        title: 'Department Events, Workshops & Seminars',
+        subtitle: 'Add or edit conferences, workshops, seminars, and celebrations shown on the Events page',
         singular: 'Event',
         fields: [
-            { name: 'title', label: 'Event Title', type: 'text', required: true, col: 8 },
+            { name: 'title', label: 'Event Name / Title', type: 'text', required: true, col: 8 },
             { name: 'event_date', label: 'Event Date', type: 'date', required: true, col: 4 },
-            { name: 'description', label: 'Event Summary & Details', type: 'textarea', required: true, col: 12 },
-            { name: 'image', label: 'Event Banner (Path or Upload)', type: 'image', default: 'img/service-4.jpg', col: 8 },
-            { name: 'link', label: 'Registration / Details URL', type: 'text', default: '#', col: 4 }
+            { name: 'description', label: 'About the Event (Summary & Details)', type: 'textarea', required: true, col: 12 },
+            { name: 'image', label: 'Event Photo / Poster (Click "Upload Photo" ->)', type: 'image', default: 'img/service-4.jpg', col: 8 },
+            { name: 'link', label: 'Website / Registration Link (Optional, or leave #)', type: 'text', default: '#', col: 4 }
         ]
     },
     gallery: {
         title: 'Campus & Laboratory Photo Gallery',
-        subtitle: 'Curate photos displayed on gallery.php across Campus, Labs, Events, and Activities',
+        subtitle: 'Upload and manage photos of campus, laboratories, and student events shown on the Gallery page',
         singular: 'Gallery Photo',
         fields: [
-            { name: 'title', label: 'Photo Title / Caption', type: 'text', required: true, col: 8 },
-            { name: 'category', label: 'Category or Album Link', type: 'text', default: 'Campus', col: 4 },
-            { name: 'image', label: 'Image File (Path or Upload)', type: 'image', default: 'gallery_data/images/02_DSC_8646.JPG', required: true, col: 12 }
+            { name: 'title', label: 'Photo Caption / Short Title (e.g. Ship Model Testing Tank)', type: 'text', required: true, col: 8 },
+            { name: 'category', label: 'Category (Type: Campus, Labs, or Events)', type: 'text', default: 'Campus', col: 4 },
+            { name: 'image', label: 'Photo File (Click "Upload Photo" button on the right ->)', type: 'image', default: 'gallery_data/images/02_DSC_8646.JPG', required: true, col: 12 }
         ]
     },
     announcements: {
-        title: 'Homepage News Ticker Announcements',
-        subtitle: 'Manage breaking news and admissions alerts scrolling on the homepage',
+        title: 'Scrolling News Bar (Top of Homepage)',
+        subtitle: 'Add or edit important notices and admission alerts scrolling across the top of the homepage',
         singular: 'Announcement',
         fields: [
-            { name: 'title', label: 'Announcement Headline', type: 'text', required: true, col: 12 },
-            { name: 'link', label: 'Target Link URL', type: 'text', default: '#', col: 8 },
-            { name: 'is_active', label: 'Visibility (1 = Active, 0 = Hidden)', type: 'number', default: 1, col: 4 }
+            { name: 'title', label: 'Notice / Announcement Text', type: 'text', required: true, col: 12 },
+            { name: 'link', label: 'Link When Clicked (Optional, or leave #)', type: 'text', default: '#', col: 7 },
+            { name: 'is_active', label: 'Show on Website? (Type 1 to Show, 0 to Hide)', type: 'number', default: 1, col: 5 }
         ]
     },
     testimonials: {
         title: 'Alumni & Industry Testimonials',
-        subtitle: 'Manage testimonials displayed on the homepage carousel',
+        subtitle: 'Add or edit quotes from former students and industry leaders shown on the Homepage',
         singular: 'Testimonial',
         fields: [
-            { name: 'name', label: 'Person Name', type: 'text', required: true, col: 6 },
-            { name: 'role', label: 'Designation / Organization', type: 'text', required: true, col: 6 },
-            { name: 'content', label: 'Testimonial Quote', type: 'textarea', required: true, col: 12 },
-            { name: 'image', label: 'Photo (Path or Upload)', type: 'image', default: 'testimonials_data/images/madhu_s.png', col: 12 }
+            { name: 'name', label: 'Alumnus / Person Name', type: 'text', required: true, col: 6 },
+            { name: 'role', label: 'Job Title & Company / Batch', type: 'text', required: true, col: 6 },
+            { name: 'content', label: 'Their Quote / Message', type: 'textarea', required: true, col: 12 },
+            { name: 'image', label: 'Person Photo (Click "Upload Photo" button on the right ->)', type: 'image', default: 'testimonials_data/images/madhu_s.png', col: 12 }
         ]
     },
     placement_brochures: {
-        title: 'Placement Brochures (Up to 25 MB PDF Upload)',
-        subtitle: 'Upload & manage Placement Brochure PDFs (5 MB to 25 MB supported) displayed on placement.php',
+        title: 'Placement Brochures (PDF Files)',
+        subtitle: 'Upload official Placement Brochure PDF files (up to 25 MB) for students and recruiters to download',
         singular: 'Placement Brochure',
         fields: [
-            { name: 'title', label: 'Brochure Title (e.g. Placement Brochure 2026)', type: 'text', required: true, col: 8 },
-            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 4 },
-            { name: 'file_path', label: 'Brochure PDF File (Max 25 MB — 5 MB+ supported)', type: 'pdf', default: 'placement_data/brochures/Placement_Brochure_2026.pdf', required: true, col: 12 },
-            { name: 'image', label: 'Cover Image (Path or Upload)', type: 'image', default: 'img/career-mag.jpg', col: 12 }
+            { name: 'title', label: 'Brochure Name (e.g. Placement Brochure 2026)', type: 'text', required: true, col: 8 },
+            { name: 'sort_order', label: 'Display Order (1 = First, 2 = Second...)', type: 'number', default: 1, col: 4 },
+            { name: 'file_path', label: 'Brochure PDF File (Click red "Upload PDF" button on the right ->)', type: 'pdf', default: 'placement_data/brochures/Placement_Brochure_2026.pdf', required: true, col: 12 },
+            { name: 'image', label: 'Front Cover Picture (Click "Upload Photo" ->)', type: 'image', default: 'img/career-mag.jpg', col: 12 }
         ]
     },
     placement_coordinators: {
         title: 'Placement Cell Coordinators',
-        subtitle: 'Manage Faculty & Student Placement Coordinators displayed on placement.php',
+        subtitle: 'Add or edit Faculty and Student Placement Coordinators shown on the Placement page',
         singular: 'Placement Coordinator',
         fields: [
             { name: 'name', label: 'Coordinator Name', type: 'text', required: true, col: 6 },
-            { name: 'role_type', label: 'Role (Faculty Coordinator / Student Coordinator)', type: 'text', default: 'Faculty Coordinator', required: true, col: 6 },
+            { name: 'role_type', label: 'Group (Type: Faculty Coordinator OR Student Coordinator)', type: 'text', default: 'Faculty Coordinator', required: true, col: 6 },
             { name: 'email', label: 'Email Address', type: 'email', col: 6 },
             { name: 'phone', label: 'Phone Number', type: 'text', col: 4 },
-            { name: 'sort_order', label: 'Display Order', type: 'number', default: 1, col: 2 }
+            { name: 'sort_order', label: 'Order (1, 2...)', type: 'number', default: 1, col: 2 }
         ]
     }
 };
@@ -1969,8 +2052,8 @@ function renderCurrentTab() {
     topAction.innerHTML = '';
 
     if (currentTab === 'dashboard') {
-        document.getElementById('page-title').textContent = 'Executive Overview';
-        document.getElementById('page-subtitle').textContent = 'Real-time portal administration, media repository & indexed SQLite database telemetry';
+        document.getElementById('page-title').textContent = 'Website Control Panel';
+        document.getElementById('page-subtitle').textContent = 'Easy website management — add or update faculty, staff, photos, placement brochures & announcements';
         document.getElementById('tab-dashboard').style.display = 'block';
 
         var cards = [
@@ -2001,7 +2084,7 @@ function renderCurrentTab() {
         var inq = (dbData.inquiries || []).slice(0, 4);
         var inqContainer = document.getElementById('dashboard-inquiries-preview');
         if (inq.length === 0) {
-            inqContainer.innerHTML = '<div class="p-5 text-center text-muted small"><i class="fa fa-check-circle text-success fs-4 d-block mb-2"></i>All caught up! No pending inquiries in the queue.</div>';
+            inqContainer.innerHTML = '<div class="p-5 text-center text-muted small"><i class="fa fa-check-circle text-success fs-4 d-block mb-2"></i>All caught up! No pending messages in the inbox.</div>';
         } else {
             inqContainer.innerHTML = '<div class="list-group list-group-flush">' + inq.map(function (item) {
                 return '<div class="list-group-item px-4 py-3">' +
@@ -2026,8 +2109,8 @@ function renderCurrentTab() {
     }
 
     if (currentTab === 'settings') {
-        document.getElementById('page-title').textContent = 'Vision & Head of Department Profile';
-        document.getElementById('page-subtitle').textContent = 'Update global contact coordinates, Vision statement, About section, and HOD message';
+        document.getElementById('page-title').textContent = 'HOD Message, Vision & Department Contact Info';
+        document.getElementById('page-subtitle').textContent = 'Update the official email, phone numbers, Vision statement, About section, and Head of Department message';
         document.getElementById('tab-settings').style.display = 'block';
         var s = dbData.settings || {};
         var form = document.getElementById('settings-form');
@@ -2038,31 +2121,31 @@ function renderCurrentTab() {
     }
 
     if (currentTab === 'guidelines') {
-        document.getElementById('page-title').textContent = 'User Guidelines & Administrator Manual';
-        document.getElementById('page-subtitle').textContent = 'Step-by-step instructions for adding content, media specifications, display ordering & backups';
+        document.getElementById('page-title').textContent = 'How to Use This Control Panel (Easy Step-by-Step Guide)';
+        document.getElementById('page-subtitle').textContent = 'Simple instructions in plain English for adding photos, PDF brochures, faculty, events, and announcements';
         document.getElementById('tab-guidelines').style.display = 'block';
         return;
     }
 
     if (currentTab === 'inquiries') {
-        document.getElementById('page-title').textContent = 'Public Contact & Connect Inquiries';
-        document.getElementById('page-subtitle').textContent = 'Submissions captured from contact.php and connect.php';
+        document.getElementById('page-title').textContent = 'Messages from Website Visitors';
+        document.getElementById('page-subtitle').textContent = 'Messages sent by students, alumni, and visitors from the Contact Us & Connect pages';
         document.getElementById('tab-list').style.display = 'block';
-        document.getElementById('list-thead').innerHTML = '<tr><th>Timestamp</th><th>Channel</th><th>Sender</th><th>Subject / Batch</th><th>Category</th><th>Message</th><th class="text-end">Action</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Date</th><th>From Page</th><th>Sender Name &amp; Email</th><th>Subject / Batch</th><th>Topic</th><th>Message</th><th class="text-end">Delete</th></tr>';
         var inqRows = (dbData.inquiries || []).filter(matchesSearch);
-        document.getElementById('table-record-counter').textContent = 'Showing ' + inqRows.length + ' inquiry records';
+        document.getElementById('table-record-counter').textContent = 'Showing ' + inqRows.length + ' visitor messages';
         if (inqRows.length === 0) {
-            document.getElementById('list-tbody').innerHTML = '<tr><td colspan="7" class="text-center py-5 text-muted">No matching inquiries found.</td></tr>';
+            document.getElementById('list-tbody').innerHTML = '<tr><td colspan="7" class="text-center py-5 text-muted">No messages found.</td></tr>';
         } else {
             document.getElementById('list-tbody').innerHTML = inqRows.map(function (item) {
                 return '<tr>' +
-                    '<td data-label="Timestamp" class="small text-muted mono-font">' + esc(item.created_at) + '</td>' +
-                    '<td data-label="Channel"><span class="badge-soft-info text-uppercase">' + esc(item.type) + '</span></td>' +
+                    '<td data-label="Date" class="small text-muted mono-font">' + esc(item.created_at) + '</td>' +
+                    '<td data-label="From Page"><span class="badge-soft-info text-uppercase">' + esc(item.type) + '</span></td>' +
                     '<td data-label="Sender"><div><div class="fw-bold text-dark">' + esc(item.name) + '</div><div class="small text-muted">' + esc(item.email) + '</div></div></td>' +
                     '<td data-label="Subject / Batch">' + esc(item.subject_or_batch || '-') + '</td>' +
-                    '<td data-label="Category"><span class="badge-soft-secondary">' + esc(item.category || 'General') + '</span></td>' +
+                    '<td data-label="Topic"><span class="badge-soft-secondary">' + esc(item.category || 'General') + '</span></td>' +
                     '<td data-label="Message" style="max-width:340px;">' + renderCollapsibleText(item.message, false) + '</td>' +
-                    '<td data-label="Action" class="text-end"><button class="action-btn delete" onclick="deleteRecord(\'inquiries\', ' + item.id + ')"><i class="fa fa-trash-alt"></i></button></td>' +
+                    '<td data-label="Delete" class="text-end"><button class="action-btn delete" title="Delete Message" onclick="deleteRecord(\'inquiries\', ' + item.id + ')"><i class="fa fa-trash-alt"></i></button></td>' +
                 '</tr>';
             }).join('');
         }
@@ -2078,97 +2161,97 @@ function renderCurrentTab() {
     document.getElementById('tab-list').style.display = 'block';
 
     var rows = (dbData[currentTab] || []).filter(matchesSearch);
-    document.getElementById('table-record-counter').textContent = rows.length + ' ' + schema.title;
+    document.getElementById('table-record-counter').textContent = rows.length + ' items in ' + schema.title;
 
     if (currentTab === 'faculty' || currentTab === 'technical_staff') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Portrait</th><th>Name &amp; Specialization</th><th>Designation</th><th>Contact Details</th><th>Order</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Photo</th><th>Name &amp; Specialization</th><th>Designation</th><th>Email &amp; Phone</th><th>Order on Page</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td data-label="Portrait"><img class="avatar-thumb" src="' + esc(resolveAssetUrl(r.image, 'faculty_data/images/dr-satheesh-babu-p-k.jpg')) + '"></td>' +
+                '<td data-label="Photo"><img class="avatar-thumb" src="' + esc(resolveAssetUrl(r.image, 'faculty_data/images/dr-satheesh-babu-p-k.jpg')) + '"></td>' +
                 '<td data-label="Name & Specialization"><div><div class="fw-bold text-dark">' + esc(r.name) + '</div>' + (r.specialization ? '<div class="small text-muted">' + esc(r.specialization) + '</div>' : '') + '</div></td>' +
                 '<td data-label="Designation"><span class="badge-soft-info">' + esc(r.designation) + '</span></td>' +
-                '<td data-label="Contact Details" class="small"><div><div><i class="fa fa-envelope text-muted me-1"></i>' + esc(r.email || '-') + '</div><div><i class="fa fa-phone-alt text-muted me-1"></i>' + esc(r.phone || '-') + '</div></div></td>' +
-                '<td data-label="Order"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Email & Phone" class="small"><div><div><i class="fa fa-envelope text-muted me-1"></i>' + esc(r.email || '-') + '</div><div><i class="fa fa-phone-alt text-muted me-1"></i>' + esc(r.phone || '-') + '</div></div></td>' +
+                '<td data-label="Order on Page"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'courses' || currentTab === 'events') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Thumbnail</th><th>Title</th><th>Duration / Date</th><th>Overview</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Picture</th><th>Title</th><th>Duration / Date</th><th>Details</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td data-label="Thumbnail"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, 'uploads/btchnavel.jpg')) + '"></td>' +
+                '<td data-label="Picture"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, 'uploads/btchnavel.jpg')) + '"></td>' +
                 '<td data-label="Title"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
                 '<td data-label="Duration / Date"><span class="badge-soft-info">' + esc(r.duration || r.event_date || 'Standard') + '</span></td>' +
-                '<td data-label="Overview" class="small text-muted" style="max-width:380px;">' + renderCollapsibleText(r.description, false) + '</td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Details" class="small text-muted" style="max-width:380px;">' + renderCollapsibleText(r.description, false) + '</td>' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'gallery') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Preview</th><th>Caption / Title</th><th>Category / Link</th><th>Repository Path</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Photo</th><th>Caption / Title</th><th>Category</th><th>File Name</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
-            var displayPath = /^data:/i.test(r.image || '') ? '[Uploaded Data Image]' : (r.image || '');
+            var displayPath = /^data:/i.test(r.image || '') ? 'Uploaded Photo' : (r.image || '');
             return '<tr>' +
-                '<td data-label="Preview"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, '')) + '"></td>' +
+                '<td data-label="Photo"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, '')) + '"></td>' +
                 '<td data-label="Caption / Title"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td data-label="Category / Link"><span class="badge-soft-info">' + esc(r.category) + '</span></td>' +
-                '<td data-label="Repository Path"><code class="small">' + esc(displayPath) + '</code></td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Category"><span class="badge-soft-info">' + esc(r.category) + '</span></td>' +
+                '<td data-label="File Name"><code class="small">' + esc(displayPath) + '</code></td>' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'announcements') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Announcement Headline</th><th>Target Link</th><th>Status</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Notice / Announcement Text</th><th>Link</th><th>Showing on Website?</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td data-label="Headline"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td data-label="Target Link"><code class="small">' + esc(r.link) + '</code></td>' +
-                '<td data-label="Status">' + (r.is_active ? '<span class="badge-soft-success">Active</span>' : '<span class="badge-soft-secondary">Hidden</span>') + '</td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Notice Text"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td data-label="Link"><code class="small">' + esc(r.link) + '</code></td>' +
+                '<td data-label="Showing on Website?">' + (r.is_active ? '<span class="badge-soft-success">Yes (Showing)</span>' : '<span class="badge-soft-secondary">No (Hidden)</span>') + '</td>' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'testimonials') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Portrait</th><th>Name &amp; Designation</th><th>Testimonial Quote</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Photo</th><th>Name &amp; Job / Batch</th><th>Quote / Message</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td data-label="Portrait"><img class="avatar-thumb" src="' + esc(resolveAssetUrl(r.image, 'testimonials_data/images/madhu_s.png')) + '"></td>' +
+                '<td data-label="Photo"><img class="avatar-thumb" src="' + esc(resolveAssetUrl(r.image, 'testimonials_data/images/madhu_s.png')) + '"></td>' +
                 '<td data-label="Alumni"><div><div class="fw-bold text-dark">' + esc(r.name) + '</div><div class="small text-muted">' + esc(r.role) + '</div></div></td>' +
                 '<td data-label="Quote" class="small text-secondary" style="max-width:420px;">' + renderCollapsibleText(r.content, true) + '</td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'placement_brochures') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Cover</th><th>Brochure Title</th><th>PDF Document (Up to 25 MB)</th><th>Order</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Cover</th><th>Brochure Name</th><th>PDF File</th><th>Order on Page</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             var pdfLabel = /^data:/i.test(r.file_path || '') ? 'Uploaded_Brochure.pdf' : (r.file_path || '');
             return '<tr>' +
                 '<td data-label="Cover"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, 'img/career-mag.jpg')) + '"></td>' +
-                '<td data-label="Brochure Title"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td data-label="PDF Document"><a href="' + esc(resolveAssetUrl(r.file_path, '')) + '" target="_blank" class="btn btn-sm btn-light border"><i class="fa fa-file-pdf text-danger me-2"></i><code class="small text-dark">' + esc(pdfLabel) + '</code> <i class="fa fa-external-link-alt ms-2 text-muted small"></i></a></td>' +
-                '<td data-label="Order"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Brochure Name"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td data-label="PDF File"><a href="' + esc(resolveAssetUrl(r.file_path, '')) + '" target="_blank" class="btn btn-sm btn-light border"><i class="fa fa-file-pdf text-danger me-2"></i><code class="small text-dark">' + esc(pdfLabel) + '</code> <i class="fa fa-external-link-alt ms-2 text-muted small"></i></a></td>' +
+                '<td data-label="Order on Page"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'placement_coordinators') {
-        document.getElementById('list-thead').innerHTML = '<tr><th>Coordinator Name</th><th>Role Type</th><th>Email</th><th>Phone</th><th>Order</th><th class="text-end">Actions</th></tr>';
+        document.getElementById('list-thead').innerHTML = '<tr><th>Coordinator Name</th><th>Group (Faculty / Student)</th><th>Email</th><th>Phone</th><th>Order</th><th class="text-end">Edit / Delete</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
                 '<td data-label="Coordinator"><div class="fw-bold text-dark">' + esc(r.name) + '</div></td>' +
-                '<td data-label="Role Type"><span class="badge-soft-info">' + esc(r.role_type) + '</span></td>' +
+                '<td data-label="Group"><span class="badge-soft-info">' + esc(r.role_type) + '</span></td>' +
                 '<td data-label="Email">' + esc(r.email || '-') + '</td>' +
                 '<td data-label="Phone">' + esc(r.phone || '-') + '</td>' +
                 '<td data-label="Order"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
-                '<td data-label="Actions" class="text-end">' +
+                '<td data-label="Edit / Delete" class="text-end">' +
                 '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
                 '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
@@ -2184,7 +2267,7 @@ function openModal(id) {
         record = (dbData[currentTab] || []).find(function (x) { return x.id === id; });
     }
     document.getElementById('crud-id').value = id || '';
-    document.getElementById('modal-title').textContent = (id ? 'Edit ' : 'Create New ') + schema.singular;
+    document.getElementById('modal-title').textContent = (id ? 'Edit ' : 'Add New ') + schema.singular;
 
     var fieldsHtml = schema.fields.map(function (f) {
         var val = record ? (record[f.name] !== undefined ? record[f.name] : '') : (f.default !== undefined ? f.default : '');
@@ -2203,7 +2286,7 @@ function openModal(id) {
                 '<input type="text" class="form-control mono-font small" id="' + pdfInputId + '" name="' + f.name + '" value="' + esc(val) + '" ' + (f.required ? 'required' : '') + '>' +
                 '<label class="btn btn-outline-danger mb-0 fw-semibold"><i class="fa fa-file-pdf me-1"></i>Upload PDF (Max 25 MB) <input type="file" hidden accept=".pdf,application/pdf" onchange="uploadFileToInput(this, \'' + pdfInputId + '\')"></label>' +
                 '</div>' +
-                '<div class="form-text text-success small mt-1"><i class="fa fa-check-circle me-1"></i>High-capacity upload enabled: supports 5 MB to 25 MB PDF brochures.</div>';
+                '<div class="form-text text-success small mt-1"><i class="fa fa-check-circle me-1"></i>Click "Upload PDF" to choose a PDF file from your computer (up to 25 MB).</div>';
         } else {
             inputHtml = '<input type="' + f.type + '" class="form-control" name="' + f.name + '" value="' + esc(val) + '" ' + (f.required ? 'required' : '') + '>';
         }
@@ -2245,7 +2328,7 @@ function uploadFileToInput(fileInput, targetInputId) {
         .then(function (res) {
             if (res.path) {
                 document.getElementById(targetInputId).value = res.path;
-                showToast('Uploaded: ' + res.path + (res.size_kb ? ' (' + res.size_kb + ' KB)' : ''));
+                showToast('File ready! Now click "Save & Publish" below.');
             } else if (res.error) {
                 alert(res.error);
             }
@@ -2273,17 +2356,17 @@ document.getElementById('crud-form').addEventListener('submit', function (e) {
     .then(function (r) { return r.json(); })
     .then(function () {
         if (crudModalInstance) crudModalInstance.hide();
-        showToast(schema.singular + ' committed to SQLite database!');
+        showToast(schema.singular + ' saved and published to the website!');
         loadAllData();
     });
 });
 
 function deleteRecord(table, id) {
-    if (!confirm('Delete this record permanently from the database?')) return;
+    if (!confirm('Are you sure you want to delete this item from the website?')) return;
     fetch('/api/admin/' + table + '/' + id, { method: 'DELETE' })
         .then(function (r) { return r.json(); })
         .then(function () {
-            showToast('Record deleted from database.');
+            showToast('Item removed from the website.');
             loadAllData();
         });
 }
@@ -2302,7 +2385,7 @@ document.getElementById('settings-form').addEventListener('submit', function (e)
     })
     .then(function (r) { return r.json(); })
     .then(function () {
-        showToast('Site content & HOD message published!');
+        showToast('HOD message & contact details saved and published!');
         loadAllData();
     });
 });
@@ -2312,7 +2395,7 @@ function runDbOptimize() {
         .then(function (r) { return r.json(); })
         .then(function (res) {
             if (res.ok) {
-                showToast('SQLite PRAGMA analyze & optimize completed!');
+                showToast('Website storage refreshed!');
                 loadAllData();
             }
         });
@@ -2326,7 +2409,7 @@ function exportDatabaseJson() {
     document.body.appendChild(a);
     a.click();
     a.remove();
-    showToast('Database snapshot downloaded!');
+    showToast('Backup file downloaded to your computer!');
 }
 
 var pwModalInstance = null;
