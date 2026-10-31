@@ -399,9 +399,13 @@
                     '              <span class="vision-tag-pill"><i class="fa-solid fa-quote-left"></i> Industry &amp; Alumni Endorsement</span>' +
                     '              <span class="maritime-header-pill"><i class="fa-solid fa-ship"></i> Voice ' + numStr + ' / ' + totStr + '</span>' +
                     '            </div>' +
-                    '            <div class="testimonial-quote-body justify-para">' +
+                    '            <div id="testimonial-quote-' + idx + '" class="testimonial-quote-body justify-para mobile-collapsible-text">' +
                     '              <p class="mb-0">' + formattedContent + '</p>' +
                     '            </div>' +
+                    '            <button type="button" class="mobile-readmore-btn" data-target="#testimonial-quote-' + idx + '" data-more-label="Read Full Testimonial" data-less-label="Show Less">' +
+                    '              <span>Read Full Testimonial</span>' +
+                    '              <i class="fa-solid fa-chevron-down"></i>' +
+                    '            </button>' +
                     '          </div>' +
                     '          <div class="testimonial-quote-footer">' +
                     '            <span class="maritime-footer-note"><i class="fa-solid fa-circle-check text-info"></i> Official Graduate &amp; Recruiter Testimony &mdash; DoST CUSAT</span>' +
@@ -496,7 +500,59 @@
             }).join('');
         }
         rewriteStaticLinks(document);
+        initMobileReadMore();
     }
+
+    var autoReadMoreCounter = 0;
+    function initMobileReadMore() {
+        var candidates = document.querySelectorAll(
+            '.maritime-bento-panel p, .maritime-bento-panel div[style*="line-height:1.75"], .video-spotlight-bento p'
+        );
+        for (var i = 0; i < candidates.length; i++) {
+            var el = candidates[i];
+            if (el.classList.contains('mobile-collapsible-text')) continue;
+            if (el.closest('.mobile-collapsible-text') || el.closest('#testimonials-slider') || el.closest('#hod-message')) continue;
+            var txt = (el.textContent || '').trim();
+            if (txt.length < 210) continue;
+            autoReadMoreCounter++;
+            if (!el.id) {
+                el.id = 'mobile-collapse-auto-' + autoReadMoreCounter;
+            }
+            el.classList.add('mobile-collapsible-text');
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'mobile-readmore-btn mb-2';
+            btn.setAttribute('data-target', '#' + el.id);
+            btn.setAttribute('data-more-label', 'Read More');
+            btn.setAttribute('data-less-label', 'Show Less');
+            btn.innerHTML = '<span>Read More</span> <i class="fa-solid fa-chevron-down"></i>';
+            el.insertAdjacentElement('afterend', btn);
+        }
+    }
+
+    // Delegated click handler for all Mobile "Read More / Show Less" toggle buttons
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest('.mobile-readmore-btn');
+        if (!btn) return;
+        e.preventDefault();
+        var targetSel = btn.getAttribute('data-target');
+        var targetEl = targetSel ? document.querySelector(targetSel) : btn.previousElementSibling;
+        if (!targetEl) return;
+        var expanded = targetEl.classList.toggle('is-expanded');
+        btn.classList.toggle('is-expanded', expanded);
+        var labelSpan = btn.querySelector('span');
+        var moreText = btn.getAttribute('data-more-label') || 'Read More';
+        var lessText = btn.getAttribute('data-less-label') || 'Show Less';
+        if (labelSpan) {
+            labelSpan.textContent = expanded ? lessText : moreText;
+        }
+        // If inside Owl Carousel (#testimonials-slider), refresh autoHeight smoothly
+        if (window.jQuery && btn.closest('#testimonials-slider')) {
+            setTimeout(function () {
+                window.jQuery('#testimonials-slider').trigger('refresh.owl.carousel');
+            }, 60);
+        }
+    });
 
     // Intercept clicks on any dynamically rendered .php links on static hosts
     document.addEventListener('click', function (e) {

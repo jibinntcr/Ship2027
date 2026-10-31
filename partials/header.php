@@ -808,6 +808,68 @@ html, body {
     max-width: 100%;
 }
 
+/* Desktop default: hide mobile-only Read More buttons */
+.mobile-readmore-btn {
+    display: none !important;
+}
+
+/* Tablet & Mobile Collapsible Long Content ("Read More / Show Less") (< 991.98px) */
+@media (max-width: 991.98px) {
+    .mobile-collapsible-text {
+        position: relative;
+        transition: max-height 0.35s ease;
+    }
+    .mobile-collapsible-text:not(.is-expanded) {
+        max-height: 6.8em;
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(180deg, #000000 55%, rgba(0, 0, 0, 0.05) 100%);
+        mask-image: linear-gradient(180deg, #000000 55%, rgba(0, 0, 0, 0.05) 100%);
+    }
+    .mobile-collapsible-text.hod-collapsible:not(.is-expanded) {
+        max-height: 7.8em;
+    }
+    .mobile-collapsible-text.is-expanded {
+        max-height: none !important;
+        overflow: visible !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
+    .mobile-collapsible-list:not(.is-expanded) > li:nth-child(n+3) {
+        display: none !important;
+    }
+    .mobile-readmore-btn {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.11) 0%, rgba(56, 189, 248, 0.16) 100%);
+        border: 1px solid rgba(2, 132, 199, 0.3);
+        color: #0369a1 !important;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        text-decoration: none !important;
+        transition: all 0.22s ease;
+        box-shadow: 0 2px 8px rgba(2, 132, 199, 0.08);
+    }
+    .mobile-readmore-btn:hover,
+    .mobile-readmore-btn:active {
+        background: #0284c7;
+        color: #ffffff !important;
+        border-color: #0284c7;
+    }
+    .mobile-readmore-btn i {
+        font-size: 10px;
+        transition: transform 0.25s ease;
+    }
+    .mobile-readmore-btn.is-expanded i {
+        transform: rotate(180deg);
+    }
+}
+
 /* Tablet & Mobile Navigation + Layout (< 991.98px) */
 @media (max-width: 991.98px) {
     .upper-header .row {

@@ -1981,9 +1981,41 @@
     }
 
     @media (max-width: 575.98px) {
-        .about-milestone-strip,
+        .about-milestone-strip {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+        .about-milestone-chip {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 8px 9px;
+            gap: 5px;
+        }
+        .about-milestone-icon {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            font-size: 11px;
+            border-radius: 8px;
+        }
+        .about-milestone-val {
+            font-size: 13.5px;
+        }
+        .about-milestone-lbl {
+            font-size: 9px;
+            line-height: 1.15;
+        }
+        .about-narrative-card {
+            padding: 15px 16px;
+        }
         .about-partner-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .about-partner-pill {
+            padding: 8px 10px;
+            font-size: 11px;
+            gap: 6px;
         }
     }
 
@@ -2942,7 +2974,7 @@
                         <div class="mission-section-subhead">
                             <span class="maritime-panel-eyebrow mb-0"><i class="fa-solid fa-bullseye me-1"></i> Core Mission Pillars</span>
                         </div>
-                        <ul class="mission-modern-list">
+                        <ul id="mission-pillars-list" class="mission-modern-list mobile-collapsible-list">
                             <li>
                                 <div class="mission-icon-badge"><i class="fa fa-ship" aria-hidden="true"></i></div>
                                 <span>We are committed to achieve academic excellence in the field of Naval Architecture and ShipBuilding through innovative teaching and learning processes.</span>
@@ -2964,6 +2996,10 @@
                                 <span>Motivate the students to acquire entrepreneurial skills to become global leaders.</span>
                             </li>
                         </ul>
+                        <button type="button" class="mobile-readmore-btn" data-target="#mission-pillars-list" data-more-label="View All 5 Mission Pillars" data-less-label="Show Fewer Pillars">
+                            <span>View All 5 Mission Pillars</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -3024,7 +3060,7 @@
                             <div class="vision-highlight-header mb-2">
                                 <span class="vision-tag-pill"><i class="fa-solid fa-ship"></i> Naval Architecture &amp; Ship Building</span>
                             </div>
-                            <p id="about-text" class="mb-0 justify-para" style="font-size: 14.5px; line-height: 1.72; color: #334155;">This Department is one of the pioneers in the field of Naval
+                            <p id="about-text" class="mb-0 justify-para mobile-collapsible-text" style="font-size: 14.5px; line-height: 1.72; color: #334155;">This Department is one of the pioneers in the field of Naval
                                 Architecture
                                 education in this country and was established in 1975 with an aim to create a new and
                                 dynamic generation of Naval Architects to meet the requirements of the Indian
@@ -3040,6 +3076,10 @@
                                 imparted and the resulting professional competence of the graduates enabled the
                                 Department to achieve a unique record of 100 percent placement of its graduates in India
                                 and abroad.</p>
+                            <button type="button" class="mobile-readmore-btn" data-target="#about-text" data-more-label="Read Full Overview" data-less-label="Show Less">
+                                <span>Read Full Overview</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
                         </div>
 
                         <!-- Strategic Collaborations Grid -->
@@ -3121,7 +3161,7 @@
                             <span class="text-muted small fw-semibold"><i class="fa-solid fa-compass text-info me-1"></i> Naval Architecture &amp; Ship Building</span>
                         </div>
                         <h2 id="hod-title" class="fw-bold mb-3" style="font-size: 32px; color: #0f172a; letter-spacing: -0.02em;">Shiptech CUSAT</h2>
-                        <div id="hod-message" class="justify-para" style="font-size: 15px; line-height: 1.72; color: #334155;">
+                        <div id="hod-message" class="justify-para mobile-collapsible-text hod-collapsible" style="font-size: 15px; line-height: 1.72; color: #334155;">
                             <p class="fw-semibold text-dark">Greetings from the Department of Ship Technology (DoST), Cochin University of Science &amp; Technology (CUSAT), Kerala, India!!</p>
 
                             <p>The DoST was established in 1974 and is one of the oldest departments in CUSAT. DoST is a pioneer in the field of Naval Architecture education in the country and has produced global leaders in maritime sector, in diverse fields including design, construction, operation, survey, maintenance, education and research.<br />
@@ -3132,6 +3172,10 @@
                             We are also actively participating in industrial projects as well as consultancy services through DESON, the consultancy wing of DoST.<br />
                             I invite you to browse through the web pages for further information</p>
                         </div>
+                        <button type="button" class="mobile-readmore-btn" data-target="#hod-message" data-more-label="Read Full HOD Message" data-less-label="Show Less">
+                            <span>Read Full HOD Message</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
                         <div class="mt-3 pt-3 d-flex align-items-center justify-content-between flex-wrap gap-2" style="border-top: 1px solid rgba(15, 23, 42, 0.08);">
                             <div>
                                 <div class="fw-bold" style="font-size: 16px; color: #0f172a;">Dr. A. Mathiazhagan</div>
