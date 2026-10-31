@@ -583,5 +583,5 @@
         </div>
     </div>
 </footer>
-<script src="js/site-data.js?v=20261031"></script>
+<script src="js/site-data.js"></script>
 <!-- Footer End -->
