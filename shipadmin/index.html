@@ -593,10 +593,18 @@
             z-index: 1015;
         }
 
+        /* Admin Collapsible Long Text ("Read More / Show Less") on Mobile/Tablet */
+        .admin-readmore-btn {
+            display: none;
+        }
+
         @media (max-width: 991.98px) {
             .sidebar {
+                height: 100vh;
+                height: 100dvh;
+                max-width: 86vw;
                 transform: translateX(-100%);
-                transition: transform 0.25s ease;
+                transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
             }
             .sidebar.show-mobile {
                 transform: translateX(0);
@@ -608,46 +616,244 @@
                 margin-left: 0;
             }
             .topbar {
-                padding: 12px 16px;
+                padding: 10px 14px;
                 gap: 8px;
             }
             .search-wrapper {
                 width: 100%;
-                max-width: 230px;
+                flex: 1;
+                min-width: 0;
+                max-width: 340px;
             }
             .content-area {
-                padding: 18px 14px 40px;
+                padding: 18px 14px 44px;
+            }
+            .admin-collapsible-text:not(.is-expanded) {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .admin-readmore-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 5px;
+                margin-top: 6px;
+                padding: 3px 10px;
+                border-radius: 999px;
+                background: #e0f2fe;
+                border: 1px solid #bae6fd;
+                color: #0369a1;
+                font-size: 11px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        /* Mobile Card-View Transformation for Admin Data Tables & Panels (< 767.98px) */
+        @media (max-width: 767.98px) {
+            .surface-card-header {
+                padding: 14px 16px;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .kpi-card {
+                padding: 14px;
+                border-radius: 14px;
+            }
+            .kpi-icon {
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+            .kpi-card h3 {
+                font-size: 1.35rem;
+            }
+            /* Transform Data Tables into Clean Mobile Bento Record Cards */
+            .table-modern thead {
+                display: none;
+            }
+            .table-modern,
+            .table-modern tbody {
+                display: block;
+                width: 100%;
+            }
+            .table-modern tbody tr {
+                display: block;
+                background: #ffffff;
+                border: 1px solid #e2e8f0;
+                border-radius: 14px;
+                margin: 12px;
+                padding: 12px 14px;
+                box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+            }
+            .table-modern tbody td {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                gap: 12px;
+                padding: 8px 0;
+                border-bottom: 1px dashed #e2e8f0;
+                text-align: right;
+                font-size: 13px;
+                max-width: none !important;
+                word-break: break-word;
+            }
+            .table-modern tbody td:last-child {
+                border-bottom: none;
+                padding-top: 10px;
+                padding-bottom: 2px;
+                justify-content: flex-end;
+            }
+            .table-modern tbody td::before {
+                content: attr(data-label);
+                font-size: 10.5px;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: #64748b;
+                text-align: left;
+                flex-shrink: 0;
+                padding-top: 2px;
+            }
+            .table-modern tbody td[data-label="Overview"],
+            .table-modern tbody td[data-label="Quote"],
+            .table-modern tbody td[data-label="Message"],
+            .table-modern tbody td[data-label="Name & Specialization"] {
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+                gap: 4px;
+            }
+            .table-modern tbody td[colspan] {
+                display: block;
+                text-align: center;
+            }
+            .table-modern tbody td[colspan]::before {
+                display: none;
+            }
+            .action-btn {
+                width: 38px;
+                height: 38px;
+            }
+            .modal-dialog {
+                margin: 10px;
+            }
+            .modal-body {
+                padding: 16px !important;
+                max-height: calc(100dvh - 150px);
+                overflow-y: auto;
+            }
+            .toast-banner {
+                left: 12px;
+                right: 12px;
+                bottom: 16px;
+                justify-content: center;
+                text-align: center;
+                padding: 12px 16px;
             }
         }
 
         @media (max-width: 575.98px) {
             .login-card {
-                padding: 26px 20px;
+                padding: 24px 18px;
                 border-radius: 18px;
             }
             .login-logo-box img {
                 max-height: 44px;
             }
             .topbar {
-                padding: 10px 12px;
+                padding: 9px 10px;
+                gap: 6px;
             }
             .search-wrapper {
-                max-width: 165px;
+                max-width: none;
             }
             .search-input {
-                padding-left: 34px;
+                padding-left: 32px;
+                padding-right: 10px;
+                font-size: 12.5px;
+                height: 36px;
+            }
+            .search-wrapper i {
+                left: 11px;
                 font-size: 12px;
             }
+            #top-action-area {
+                width: 100%;
+            }
+            #top-action-area .btn {
+                width: 100%;
+                justify-content: center;
+            }
             .command-hero {
-                padding: 20px 16px;
+                padding: 18px 15px;
                 border-radius: 16px;
+                margin-bottom: 18px;
             }
             .command-hero h2 {
-                font-size: 1.25rem;
+                font-size: 1.2rem;
+                line-height: 1.3;
+            }
+            .command-hero p {
+                font-size: 13px !important;
+                margin-bottom: 14px !important;
+            }
+            .hero-quick-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px !important;
             }
             .hero-quick-btn {
                 width: 100%;
                 justify-content: center;
+                padding: 9px 8px;
+                font-size: 11.5px;
+                text-align: center;
+            }
+            .hero-db-summary-box {
+                width: 100%;
+                display: flex !important;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 14px !important;
+            }
+            .hero-db-summary-box img {
+                max-height: 36px !important;
+                margin-bottom: 0 !important;
+            }
+            .hero-db-summary-box .border-top {
+                border-top: none !important;
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+            /* Stack upload input-groups cleanly on narrow phones */
+            #crud-form .input-group,
+            #settings-form .input-group {
+                flex-direction: column;
+                gap: 6px;
+            }
+            #crud-form .input-group > .form-control,
+            #crud-form .input-group > .btn,
+            #settings-form .input-group > .form-control,
+            #settings-form .input-group > .btn {
+                width: 100%;
+                border-radius: 8px !important;
+            }
+            #tab-settings .surface-card.p-4 {
+                padding: 16px !important;
+            }
+            #settings-form button[type="submit"] {
+                width: 100%;
+            }
+            .modal-footer {
+                flex-direction: column-reverse;
+                gap: 8px;
+            }
+            .modal-footer .btn {
+                width: 100%;
+                margin: 0 !important;
             }
         }
     </style>
@@ -699,11 +905,16 @@
 <!-- Sidebar Command Navigation -->
 <aside class="sidebar">
     <div class="sidebar-brand-wrapper">
-        <a href="../index.html" target="_blank" class="text-decoration-none d-block">
-            <div class="sidebar-logo-card">
-                <img src="../img/logo.png" alt="Department of Ship Technology CUSAT">
-            </div>
-        </a>
+        <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+            <a href="../index.html" target="_blank" class="text-decoration-none flex-grow-1">
+                <div class="sidebar-logo-card mb-0">
+                    <img src="../img/logo.png" alt="Department of Ship Technology CUSAT">
+                </div>
+            </a>
+            <button type="button" class="btn btn-sm btn-outline-light d-lg-none px-2 py-2" style="border-radius:10px; border-color:rgba(255,255,255,0.2);" onclick="toggleMobileSidebar(false)" aria-label="Close sidebar">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
         <div class="system-badge-bar">
             <span class="system-status-pill">
                 <span class="pulse-dot"></span>CMS Engine v2.6
@@ -847,7 +1058,7 @@
                         <p class="text-white-50 mb-4" style="max-width: 650px; font-size: 14.5px;">
                             Manage faculty profiles, technical staff, campus gallery photos, alumni testimonials, and high-resolution placement brochures (up to 25 MB) with instant zero-latency publishing.
                         </p>
-                        <div class="d-flex flex-wrap gap-2">
+                        <div class="d-flex flex-wrap gap-2 hero-quick-grid">
                             <button class="hero-quick-btn" onclick="switchTab('faculty'); openModal();"><i class="fa fa-user-plus me-2 text-info"></i>Add Faculty</button>
                             <button class="hero-quick-btn" onclick="switchTab('gallery'); openModal();"><i class="fa fa-camera me-2 text-warning"></i>Upload Gallery Photo</button>
                             <button class="hero-quick-btn" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-file-pdf me-2 text-danger"></i>Add Placement Brochure</button>
@@ -855,7 +1066,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <div class="d-inline-block text-start p-3 rounded-3" style="background: rgba(255, 255, 255, 0.96); color: #0f172a; box-shadow: 0 15px 35px rgba(0,0,0,0.25);">
+                        <div class="d-inline-block text-start p-3 rounded-3 hero-db-summary-box" style="background: rgba(255, 255, 255, 0.96); color: #0f172a; box-shadow: 0 15px 35px rgba(0,0,0,0.25);">
                             <img src="../img/logo.png" alt="CUSAT Logo" style="max-height: 54px; width: auto;" class="mb-2 d-block">
                             <div class="border-top pt-2 mt-1 d-flex align-items-center justify-content-between gap-3">
                                 <span class="small fw-bold text-secondary">TOTAL DB RECORDS</span>
@@ -1332,6 +1543,31 @@ function esc(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+function resolveAssetUrl(path, fallback) {
+    var raw = String(path || fallback || '').trim();
+    if (!raw) return '';
+    if (/^(data:|https?:|blob:)/i.test(raw)) return raw;
+    return '../' + raw.replace(/^\.?\/+/, '');
+}
+
+function renderCollapsibleText(text, quotes) {
+    var s = String(text || '');
+    var displayStr = quotes ? ('"' + esc(s) + '"') : esc(s);
+    if (s.length <= 130) {
+        return '<div>' + displayStr + '</div>';
+    }
+    return '<div class="admin-collapsible-text">' + displayStr + '</div>' +
+        '<button type="button" class="admin-readmore-btn" onclick="toggleAdminReadMore(this)"><span>Read More</span> <i class="fa fa-chevron-down" style="font-size:9px;"></i></button>';
+}
+
+function toggleAdminReadMore(btn) {
+    var box = btn.previousElementSibling;
+    if (!box) return;
+    var exp = box.classList.toggle('is-expanded');
+    var sp = btn.querySelector('span');
+    if (sp) sp.textContent = exp ? 'Show Less' : 'Read More';
+}
+
 function showToast(msg) {
     var t = document.getElementById('status-toast');
     document.getElementById('toast-text').textContent = msg;
@@ -1463,7 +1699,7 @@ function renderCurrentTab() {
 
         document.getElementById('stats-row').innerHTML = cards.map(function (c) {
             return (
-                '<div class="col-md-4 col-xl-2">' +
+                '<div class="col-6 col-md-4 col-xl-2">' +
                 '  <div class="kpi-card h-100" onclick="switchTab(\'' + c.tab + '\')">' +
                 '    <div class="d-flex align-items-center justify-content-between mb-3">' +
                 '      <div class="kpi-icon ' + c.cls + '"><i class="fa ' + c.icon + '"></i></div>' +
@@ -1528,13 +1764,13 @@ function renderCurrentTab() {
         } else {
             document.getElementById('list-tbody').innerHTML = inqRows.map(function (item) {
                 return '<tr>' +
-                    '<td class="small text-muted mono-font">' + esc(item.created_at) + '</td>' +
-                    '<td><span class="badge-soft-info text-uppercase">' + esc(item.type) + '</span></td>' +
-                    '<td><div class="fw-bold text-dark">' + esc(item.name) + '</div><div class="small text-muted">' + esc(item.email) + '</div></td>' +
-                    '<td>' + esc(item.subject_or_batch || '-') + '</td>' +
-                    '<td><span class="badge-soft-secondary">' + esc(item.category || 'General') + '</span></td>' +
-                    '<td style="max-width:340px;">' + esc(item.message) + '</td>' +
-                    '<td class="text-end"><button class="action-btn delete" onclick="deleteRecord(\'inquiries\', ' + item.id + ')"><i class="fa fa-trash-alt"></i></button></td>' +
+                    '<td data-label="Timestamp" class="small text-muted mono-font">' + esc(item.created_at) + '</td>' +
+                    '<td data-label="Channel"><span class="badge-soft-info text-uppercase">' + esc(item.type) + '</span></td>' +
+                    '<td data-label="Sender"><div><div class="fw-bold text-dark">' + esc(item.name) + '</div><div class="small text-muted">' + esc(item.email) + '</div></div></td>' +
+                    '<td data-label="Subject / Batch">' + esc(item.subject_or_batch || '-') + '</td>' +
+                    '<td data-label="Category"><span class="badge-soft-secondary">' + esc(item.category || 'General') + '</span></td>' +
+                    '<td data-label="Message" style="max-width:340px;">' + renderCollapsibleText(item.message, false) + '</td>' +
+                    '<td data-label="Action" class="text-end"><button class="action-btn delete" onclick="deleteRecord(\'inquiries\', ' + item.id + ')"><i class="fa fa-trash-alt"></i></button></td>' +
                 '</tr>';
             }).join('');
         }
@@ -1556,91 +1792,93 @@ function renderCurrentTab() {
         document.getElementById('list-thead').innerHTML = '<tr><th>Portrait</th><th>Name &amp; Specialization</th><th>Designation</th><th>Contact Details</th><th>Order</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td><img class="avatar-thumb" src="../' + esc(r.image || 'faculty_data/images/dr-satheesh-babu-p-k.jpg').replace(/^\//,'') + '"></td>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.name) + '</div>' + (r.specialization ? '<div class="small text-muted">' + esc(r.specialization) + '</div>' : '') + '</td>' +
-                '<td><span class="badge-soft-info">' + esc(r.designation) + '</span></td>' +
-                '<td class="small"><div><i class="fa fa-envelope text-muted me-1"></i>' + esc(r.email || '-') + '</div><div><i class="fa fa-phone-alt text-muted me-1"></i>' + esc(r.phone || '-') + '</div></td>' +
-                '<td><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Portrait"><img class="avatar-thumb" src="' + esc(resolveAssetUrl(r.image, 'faculty_data/images/dr-satheesh-babu-p-k.jpg')) + '"></td>' +
+                '<td data-label="Name & Specialization"><div><div class="fw-bold text-dark">' + esc(r.name) + '</div>' + (r.specialization ? '<div class="small text-muted">' + esc(r.specialization) + '</div>' : '') + '</div></td>' +
+                '<td data-label="Designation"><span class="badge-soft-info">' + esc(r.designation) + '</span></td>' +
+                '<td data-label="Contact Details" class="small"><div><div><i class="fa fa-envelope text-muted me-1"></i>' + esc(r.email || '-') + '</div><div><i class="fa fa-phone-alt text-muted me-1"></i>' + esc(r.phone || '-') + '</div></div></td>' +
+                '<td data-label="Order"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'courses' || currentTab === 'events') {
         document.getElementById('list-thead').innerHTML = '<tr><th>Thumbnail</th><th>Title</th><th>Duration / Date</th><th>Overview</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td><img class="gallery-thumb" src="../' + esc(r.image || 'uploads/btchnavel.jpg').replace(/^\//,'') + '"></td>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td><span class="badge-soft-info">' + esc(r.duration || r.event_date || 'Standard') + '</span></td>' +
-                '<td class="small text-muted" style="max-width:380px;">' + esc(r.description) + '</td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Thumbnail"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, 'uploads/btchnavel.jpg')) + '"></td>' +
+                '<td data-label="Title"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td data-label="Duration / Date"><span class="badge-soft-info">' + esc(r.duration || r.event_date || 'Standard') + '</span></td>' +
+                '<td data-label="Overview" class="small text-muted" style="max-width:380px;">' + renderCollapsibleText(r.description, false) + '</td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'gallery') {
         document.getElementById('list-thead').innerHTML = '<tr><th>Preview</th><th>Caption / Title</th><th>Category / Link</th><th>Repository Path</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            var displayPath = /^data:/i.test(r.image || '') ? '[Uploaded Data Image]' : (r.image || '');
             return '<tr>' +
-                '<td><img class="gallery-thumb" src="../' + esc(r.image).replace(/^\//,'') + '"></td>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td><span class="badge-soft-info">' + esc(r.category) + '</span></td>' +
-                '<td><code class="small">' + esc(r.image) + '</code></td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Preview"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, '')) + '"></td>' +
+                '<td data-label="Caption / Title"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td data-label="Category / Link"><span class="badge-soft-info">' + esc(r.category) + '</span></td>' +
+                '<td data-label="Repository Path"><code class="small">' + esc(displayPath) + '</code></td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'announcements') {
         document.getElementById('list-thead').innerHTML = '<tr><th>Announcement Headline</th><th>Target Link</th><th>Status</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td><code class="small">' + esc(r.link) + '</code></td>' +
-                '<td>' + (r.is_active ? '<span class="badge-soft-success">Active</span>' : '<span class="badge-soft-secondary">Hidden</span>') + '</td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Headline"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td data-label="Target Link"><code class="small">' + esc(r.link) + '</code></td>' +
+                '<td data-label="Status">' + (r.is_active ? '<span class="badge-soft-success">Active</span>' : '<span class="badge-soft-secondary">Hidden</span>') + '</td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'testimonials') {
         document.getElementById('list-thead').innerHTML = '<tr><th>Portrait</th><th>Name &amp; Designation</th><th>Testimonial Quote</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td><img class="avatar-thumb" src="../' + esc(r.image || 'testimonials_data/images/madhu_s.png').replace(/^\//,'') + '"></td>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.name) + '</div><div class="small text-muted">' + esc(r.role) + '</div></td>' +
-                '<td class="small text-secondary" style="max-width:420px;">"' + esc(r.content) + '"</td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Portrait"><img class="avatar-thumb" src="' + esc(resolveAssetUrl(r.image, 'testimonials_data/images/madhu_s.png')) + '"></td>' +
+                '<td data-label="Alumni"><div><div class="fw-bold text-dark">' + esc(r.name) + '</div><div class="small text-muted">' + esc(r.role) + '</div></div></td>' +
+                '<td data-label="Quote" class="small text-secondary" style="max-width:420px;">' + renderCollapsibleText(r.content, true) + '</td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'placement_brochures') {
         document.getElementById('list-thead').innerHTML = '<tr><th>Cover</th><th>Brochure Title</th><th>PDF Document (Up to 25 MB)</th><th>Order</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
+            var pdfLabel = /^data:/i.test(r.file_path || '') ? 'Uploaded_Brochure.pdf' : (r.file_path || '');
             return '<tr>' +
-                '<td><img class="gallery-thumb" src="../' + esc(r.image || 'img/career-mag.jpg').replace(/^\//,'') + '"></td>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
-                '<td><a href="../' + esc(r.file_path).replace(/^\//,'') + '" target="_blank" class="btn btn-sm btn-light border"><i class="fa fa-file-pdf text-danger me-2"></i><code class="small text-dark">' + esc(r.file_path) + '</code> <i class="fa fa-external-link-alt ms-2 text-muted small"></i></a></td>' +
-                '<td><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Cover"><img class="gallery-thumb" src="' + esc(resolveAssetUrl(r.image, 'img/career-mag.jpg')) + '"></td>' +
+                '<td data-label="Brochure Title"><div class="fw-bold text-dark">' + esc(r.title) + '</div></td>' +
+                '<td data-label="PDF Document"><a href="' + esc(resolveAssetUrl(r.file_path, '')) + '" target="_blank" class="btn btn-sm btn-light border"><i class="fa fa-file-pdf text-danger me-2"></i><code class="small text-dark">' + esc(pdfLabel) + '</code> <i class="fa fa-external-link-alt ms-2 text-muted small"></i></a></td>' +
+                '<td data-label="Order"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     } else if (currentTab === 'placement_coordinators') {
         document.getElementById('list-thead').innerHTML = '<tr><th>Coordinator Name</th><th>Role Type</th><th>Email</th><th>Phone</th><th>Order</th><th class="text-end">Actions</th></tr>';
         document.getElementById('list-tbody').innerHTML = rows.map(function (r) {
             return '<tr>' +
-                '<td><div class="fw-bold text-dark">' + esc(r.name) + '</div></td>' +
-                '<td><span class="badge-soft-info">' + esc(r.role_type) + '</span></td>' +
-                '<td>' + esc(r.email || '-') + '</td>' +
-                '<td>' + esc(r.phone || '-') + '</td>' +
-                '<td><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
-                '<td class="text-end">' +
-                '  <button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
-                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button>' +
+                '<td data-label="Coordinator"><div class="fw-bold text-dark">' + esc(r.name) + '</div></td>' +
+                '<td data-label="Role Type"><span class="badge-soft-info">' + esc(r.role_type) + '</span></td>' +
+                '<td data-label="Email">' + esc(r.email || '-') + '</td>' +
+                '<td data-label="Phone">' + esc(r.phone || '-') + '</td>' +
+                '<td data-label="Order"><span class="badge-soft-secondary mono-font">#' + esc(r.sort_order) + '</span></td>' +
+                '<td data-label="Actions" class="text-end">' +
+                '  <div><button class="action-btn me-1" title="Edit" onclick="openModal(' + r.id + ')"><i class="fa fa-pen"></i></button>' +
+                '  <button class="action-btn delete" title="Delete" onclick="deleteRecord(\'' + currentTab + '\', ' + r.id + ')"><i class="fa fa-trash-alt"></i></button></div>' +
                 '</td></tr>';
         }).join('');
     }
@@ -1802,6 +2040,7 @@ function exportDatabaseJson() {
 var pwModalInstance = null;
 
 function openPasswordModal() {
+    toggleMobileSidebar(false);
     document.getElementById('password-form').reset();
     document.getElementById('pw-modal-alert').style.display = 'none';
     if (!pwModalInstance) {
