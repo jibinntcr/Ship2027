@@ -1235,299 +1235,6 @@
         transform: rotate(15deg) scale(1.08);
     }
 
-    @media (max-width: 991.98px) {
-        .hero-welcome-slide-stage {
-            height: auto !important;
-            min-height: 220px;
-            padding: 0 0 34px;
-            background: #ffffff;
-        }
-        .hero-welcome-slide-stage .welcome-banner-img {
-            position: relative !important;
-            width: 100% !important;
-            height: auto !important;
-            object-fit: contain !important;
-            transform: none !important;
-        }
-        .hero-slide-stage {
-            flex-direction: column;
-            min-height: 360px;
-            justify-content: center;
-        }
-        .hero-slide-stage::after {
-            display: none;
-        }
-        .hero-visual-pane {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            clip-path: none;
-            z-index: 1;
-            opacity: 0.36;
-        }
-        .hero-visual-pane::before {
-            background: linear-gradient(180deg, rgba(4, 11, 29, 0.72) 0%, rgba(6, 18, 44, 0.84) 100%);
-        }
-        .hero-content-container {
-            padding: 36px 24px 68px;
-            z-index: 4;
-        }
-        .hero-text-column {
-            max-width: 100%;
-        }
-        .header-carousel .owl-dots {
-            bottom: 38px;
-            left: 24px;
-            right: 24px;
-        }
-        .header-carousel .owl-nav {
-            bottom: 32px;
-            right: 20px;
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .ship-hero-wrapper {
-            margin-bottom: 0.75rem !important;
-        }
-        .hero-welcome-slide-stage {
-            min-height: 0;
-            padding: 0 0 26px;
-        }
-        .hero-slide-stage {
-            min-height: 310px;
-        }
-        .hero-content-container {
-            padding: 26px 18px 54px;
-        }
-        .hero-overline {
-            font-size: 10.5px;
-            letter-spacing: 0.14em;
-            margin-bottom: 10px;
-        }
-        .hero-main-heading {
-            font-size: clamp(23px, 6.2vw, 30px) !important;
-            line-height: 1.16;
-            margin-bottom: 12px;
-        }
-        .hero-subtitle-lead {
-            font-size: 13.5px !important;
-            line-height: 1.55;
-            margin-bottom: 18px;
-        }
-        .hero-minimal-cta {
-            padding: 10px 20px;
-            font-size: 12.5px;
-        }
-        .hero-ocean-horizon,
-        .hero-ocean-waves {
-            height: 36px;
-        }
-        .header-carousel .owl-dots {
-            bottom: 28px;
-            left: 18px;
-            right: 18px;
-        }
-        .header-carousel .owl-nav {
-            display: none !important;
-        }
-        .bento-portal-grid {
-            margin-top: 0;
-            padding-top: 0.5rem !important;
-            padding-bottom: 0.5rem !important;
-        }
-        .bento-card {
-            height: 185px;
-            padding: 16px 15px 14px;
-            border-radius: 18px;
-        }
-        .bento-badge {
-            font-size: 9px;
-            padding: 3px 8px;
-            letter-spacing: 0.05em;
-        }
-        .bento-icon-orb {
-            width: 46px;
-            height: 46px;
-            border-radius: 13px;
-            padding: 7px;
-        }
-        .bento-title {
-            font-size: 1.15rem;
-            margin-bottom: 2px;
-        }
-        .bento-subtitle {
-            font-size: 0.74rem;
-            margin-bottom: 8px;
-            line-height: 1.28;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .bento-cta {
-            font-size: 11px;
-            padding: 5px 12px;
-        }
-        .modern-ticker-wrap {
-            padding: 6px 8px 6px 6px;
-            border-radius: 18px;
-        }
-        .modern-ticker-badge {
-            padding: 7px 12px;
-            font-size: 11px;
-            gap: 6px;
-        }
-        .modern-ticker-viewport {
-            margin: 0 8px;
-        }
-        .ticker-item-pill {
-            font-size: 12.5px;
-            padding: 5px 12px;
-        }
-        .maritime-stats-ribbon {
-            padding: 14px;
-            border-radius: 20px;
-        }
-        .maritime-stat-box {
-            padding: 13px 12px;
-            gap: 10px;
-            border-radius: 15px;
-        }
-        .maritime-stat-icon {
-            width: 42px;
-            height: 42px;
-            min-width: 42px;
-            font-size: 16px;
-            border-radius: 12px;
-        }
-        .maritime-stat-num {
-            font-size: 21px;
-        }
-        .maritime-stat-label {
-            font-size: 11px;
-            line-height: 1.25;
-        }
-        .campus-showcase-frame {
-            min-height: 270px;
-            border-radius: 20px;
-            padding: 8px;
-        }
-        .campus-floating-badge {
-            left: 12px;
-            right: 12px;
-            bottom: 12px;
-            padding: 11px 13px;
-            border-radius: 14px;
-            gap: 10px;
-        }
-        .hod-executive-card {
-            padding: 22px 18px;
-            border-radius: 22px;
-        }
-        .hod-portrait-panel {
-            padding: 20px 16px;
-            border-radius: 18px;
-        }
-        .hod-portrait-img {
-            width: 155px;
-            height: 175px;
-            margin-bottom: 12px;
-        }
-        #hod-title {
-            font-size: 24px !important;
-        }
-        .testimonial-alumni-strip {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
-            padding-bottom: 12px;
-            margin-bottom: 14px;
-        }
-        .testimonial-alumni-strip::-webkit-scrollbar {
-            display: none;
-        }
-        .testimonial-alumni-pill {
-            flex-shrink: 0;
-        }
-        .testimonial-author-panel {
-            padding: 20px 16px;
-            border-radius: 18px;
-        }
-        .testimonial-portrait-img {
-            width: 100px !important;
-            height: 100px !important;
-            min-width: 100px !important;
-            border-radius: 18px;
-            margin-bottom: 12px !important;
-        }
-        .testimonial-author-name {
-            font-size: 19px;
-        }
-        .testimonial-quote-panel {
-            padding: 18px 16px;
-            border-radius: 18px;
-        }
-        .testimonial-quote-body {
-            font-size: 13.8px;
-            line-height: 1.65;
-        }
-    }
-
-    @media (max-width: 575.98px) {
-        .modern-ticker-badge span:not(.ticker-pulse-dot) {
-            display: none;
-        }
-        .modern-ticker-badge {
-            padding: 8px 11px;
-        }
-        .maritime-item-card {
-            padding: 12px;
-            gap: 12px;
-            border-radius: 15px;
-        }
-        .maritime-date-badge {
-            width: 64px;
-            min-width: 64px;
-            height: 70px;
-            border-radius: 13px;
-        }
-        .maritime-date-day {
-            font-size: 20px;
-        }
-        .maritime-date-month {
-            font-size: 10.5px;
-        }
-        .maritime-date-year {
-            font-size: 9.5px;
-            padding: 1px 6px;
-        }
-        .maritime-news-thumb-wrap {
-            width: 68px;
-            min-width: 68px;
-            height: 68px;
-            border-radius: 12px;
-        }
-        .maritime-item-title {
-            font-size: 13.8px;
-            line-height: 1.36;
-        }
-        .maritime-item-arrow {
-            display: none;
-        }
-        .campus-floating-badge .maritime-header-pill {
-            display: none;
-        }
-        .maritime-stat-box {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            padding: 12px;
-        }
-    }
-
     /* ==========================================================================
        INTERNATIONAL MARITIME TELEMETRY STATS RIBBON (BENTO STYLE ADHERING TO ABOVE)
        ========================================================================== */
@@ -1980,45 +1687,6 @@
         transform: translateY(-2px);
     }
 
-    @media (max-width: 575.98px) {
-        .about-milestone-strip {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 6px;
-        }
-        .about-milestone-chip {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 8px 9px;
-            gap: 5px;
-        }
-        .about-milestone-icon {
-            width: 28px;
-            height: 28px;
-            min-width: 28px;
-            font-size: 11px;
-            border-radius: 8px;
-        }
-        .about-milestone-val {
-            font-size: 13.5px;
-        }
-        .about-milestone-lbl {
-            font-size: 9px;
-            line-height: 1.15;
-        }
-        .about-narrative-card {
-            padding: 15px 16px;
-        }
-        .about-partner-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-        }
-        .about-partner-pill {
-            padding: 8px 10px;
-            font-size: 11px;
-            gap: 6px;
-        }
-    }
-
     /* Executive HOD Leadership Showcase */
     .hod-executive-card {
         background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
@@ -2103,7 +1771,7 @@
     .programme-img-wrap {
         position: relative;
         height: 215px;
-        margin: 12px 12px 0;
+        margin: 0;
         border-radius: 18px;
         overflow: hidden;
         background: #0a1938;
@@ -2446,6 +2114,387 @@
     #testimonials-slider .owl-dots .owl-dot.active span {
         width: 28px !important;
         background: #0284c7 !important;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS FOR ALL HOME PAGE SECTIONS (PLACED AT END OF CASCADE)
+       ========================================================================== */
+    @media (max-width: 991.98px) {
+        .hero-welcome-slide-stage {
+            height: auto !important;
+            min-height: 220px;
+            padding: 0 0 34px;
+            background: #ffffff;
+        }
+        .hero-welcome-slide-stage .welcome-banner-img {
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+            object-fit: contain !important;
+            transform: none !important;
+        }
+        .hero-slide-stage {
+            flex-direction: column;
+            min-height: 360px;
+            justify-content: center;
+        }
+        .hero-slide-stage::after {
+            display: none;
+        }
+        .hero-visual-pane {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: none;
+            z-index: 1;
+            opacity: 0.36;
+        }
+        .hero-visual-pane::before {
+            background: linear-gradient(180deg, rgba(4, 11, 29, 0.72) 0%, rgba(6, 18, 44, 0.84) 100%);
+        }
+        .hero-content-container {
+            padding: 36px 24px 68px;
+            z-index: 4;
+        }
+        .hero-text-column {
+            max-width: 100%;
+        }
+        .header-carousel .owl-dots {
+            bottom: 38px;
+            left: 24px;
+            right: 24px;
+        }
+        .header-carousel .owl-nav {
+            bottom: 32px;
+            right: 20px;
+        }
+        .campus-showcase-frame {
+            min-height: 340px;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .ship-hero-wrapper {
+            margin-bottom: 0.75rem !important;
+        }
+        .hero-welcome-slide-stage {
+            min-height: 0;
+            padding: 0 0 26px;
+        }
+        .hero-slide-stage {
+            min-height: 310px;
+        }
+        .hero-content-container {
+            padding: 26px 18px 54px;
+        }
+        .hero-overline {
+            font-size: 10.5px;
+            letter-spacing: 0.14em;
+            margin-bottom: 10px;
+        }
+        .hero-main-heading {
+            font-size: clamp(23px, 6.2vw, 30px) !important;
+            line-height: 1.16;
+            margin-bottom: 12px;
+        }
+        .hero-subtitle-lead {
+            font-size: 13.5px !important;
+            line-height: 1.55;
+            margin-bottom: 18px;
+        }
+        .hero-minimal-cta {
+            padding: 10px 20px;
+            font-size: 12.5px;
+        }
+        .hero-ocean-horizon,
+        .hero-ocean-waves {
+            height: 36px;
+        }
+        .header-carousel .owl-dots {
+            bottom: 28px;
+            left: 18px;
+            right: 18px;
+        }
+        .header-carousel .owl-nav {
+            display: none !important;
+        }
+        .bento-portal-grid {
+            margin-top: 0;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
+        }
+        .bento-card {
+            height: 185px;
+            padding: 16px 15px 14px;
+            border-radius: 18px;
+        }
+        .bento-badge {
+            font-size: 9px;
+            padding: 3px 8px;
+            letter-spacing: 0.05em;
+        }
+        .bento-icon-orb {
+            width: 46px;
+            height: 46px;
+            border-radius: 13px;
+            padding: 7px;
+        }
+        .bento-title {
+            font-size: 1.15rem;
+            margin-bottom: 2px;
+        }
+        .bento-subtitle {
+            font-size: 0.74rem;
+            margin-bottom: 8px;
+            line-height: 1.28;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .bento-cta {
+            font-size: 11px;
+            padding: 5px 12px;
+        }
+        .modern-ticker-wrap {
+            padding: 6px 8px 6px 6px;
+            border-radius: 18px;
+        }
+        .modern-ticker-badge {
+            padding: 7px 12px;
+            font-size: 11px;
+            gap: 6px;
+        }
+        .modern-ticker-viewport {
+            margin: 0 8px;
+        }
+        .ticker-item-pill {
+            font-size: 12.5px;
+            padding: 5px 12px;
+        }
+        .maritime-stats-ribbon {
+            padding: 14px;
+            border-radius: 20px;
+        }
+        .maritime-stat-box {
+            padding: 13px 12px;
+            gap: 10px;
+            border-radius: 15px;
+        }
+        .maritime-stat-icon {
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            font-size: 16px;
+            border-radius: 12px;
+        }
+        .maritime-stat-num {
+            font-size: 21px;
+        }
+        .maritime-stat-label {
+            font-size: 11px;
+            line-height: 1.25;
+        }
+        .campus-showcase-frame {
+            min-height: 260px;
+            border-radius: 20px;
+            padding: 8px;
+        }
+        .campus-floating-badge {
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            padding: 11px 13px;
+            border-radius: 14px;
+            gap: 10px;
+        }
+        .vision-highlight-box {
+            padding: 16px 16px;
+            border-radius: 15px;
+            margin-bottom: 16px;
+        }
+        .mission-modern-list li,
+        .ship-contact-data ul.mission-modern-list li {
+            padding: 11px 13px !important;
+            gap: 11px !important;
+            font-size: 13.5px;
+            border-radius: 14px;
+        }
+        .about-milestone-strip {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+        .about-milestone-chip {
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 10px 10px;
+            gap: 6px;
+            height: 100%;
+        }
+        .about-milestone-icon {
+            width: 30px;
+            height: 30px;
+            min-width: 30px;
+            font-size: 12px;
+            border-radius: 9px;
+        }
+        .about-milestone-val {
+            font-size: 14.5px;
+        }
+        .about-milestone-lbl {
+            font-size: 9.5px;
+            line-height: 1.2;
+        }
+        .about-narrative-card {
+            padding: 16px 16px;
+            border-radius: 16px;
+        }
+        .about-partner-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        .about-partner-pill {
+            padding: 9px 11px;
+            font-size: 11.5px;
+            gap: 7px;
+            line-height: 1.25;
+        }
+        .hod-executive-card {
+            padding: 20px 16px;
+            border-radius: 22px;
+        }
+        .hod-portrait-panel {
+            padding: 20px 16px;
+            border-radius: 18px;
+        }
+        .hod-portrait-img {
+            width: 150px;
+            height: 170px;
+            margin-bottom: 12px;
+        }
+        #hod-title {
+            font-size: 22px !important;
+        }
+        .programme-card-body {
+            padding: 16px 14px 18px;
+        }
+        .programme-desc-box {
+            padding: 12px 14px;
+            font-size: 13.5px;
+            margin-bottom: 12px;
+        }
+        .testimonial-alumni-strip {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 12px;
+            margin-bottom: 14px;
+        }
+        .testimonial-alumni-strip::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-alumni-pill {
+            flex-shrink: 0;
+        }
+        .testimonial-author-panel {
+            padding: 20px 16px;
+            border-radius: 18px;
+        }
+        .testimonial-portrait-img {
+            width: 100px !important;
+            height: 100px !important;
+            min-width: 100px !important;
+            border-radius: 18px;
+            margin-bottom: 12px !important;
+        }
+        .testimonial-author-name {
+            font-size: 19px;
+        }
+        .testimonial-quote-panel {
+            padding: 18px 16px;
+            border-radius: 18px;
+        }
+        .testimonial-quote-body {
+            font-size: 13.8px;
+            line-height: 1.65;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .modern-ticker-badge span:not(.ticker-pulse-dot) {
+            display: none;
+        }
+        .modern-ticker-badge {
+            padding: 8px 11px;
+        }
+        .maritime-item-card {
+            padding: 12px;
+            gap: 12px;
+            border-radius: 15px;
+        }
+        .maritime-date-badge {
+            width: 64px;
+            min-width: 64px;
+            height: 70px;
+            border-radius: 13px;
+        }
+        .maritime-date-day {
+            font-size: 20px;
+        }
+        .maritime-date-month {
+            font-size: 10.5px;
+        }
+        .maritime-date-year {
+            font-size: 9.5px;
+            padding: 1px 6px;
+        }
+        .maritime-news-thumb-wrap {
+            width: 68px;
+            min-width: 68px;
+            height: 68px;
+            border-radius: 12px;
+        }
+        .maritime-item-title {
+            font-size: 13.8px;
+            line-height: 1.36;
+        }
+        .maritime-item-arrow {
+            display: none;
+        }
+        .campus-floating-badge .maritime-header-pill {
+            display: none;
+        }
+        .maritime-stat-box {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 12px;
+        }
+        .about-milestone-strip {
+            gap: 6px;
+        }
+        .about-milestone-chip {
+            padding: 8px 8px;
+            gap: 5px;
+        }
+        .about-milestone-val {
+            font-size: 13.5px;
+        }
+        .about-milestone-lbl {
+            font-size: 9px;
+            line-height: 1.15;
+        }
+        .about-partner-grid {
+            grid-template-columns: 1fr;
+            gap: 7px;
+        }
+        .about-partner-pill {
+            padding: 9px 12px;
+            font-size: 12px;
+        }
     }
     </style>
 </head>

@@ -554,6 +554,16 @@
         }
     });
 
+    // Auto-close mobile navbar collapse when a dropdown item or anchor is tapped
+    document.addEventListener('click', function (e) {
+        var navLink = e.target.closest('#navbarCollapse .dropdown-item, #navbarCollapse a.nav-link:not(.dropdown-toggle)');
+        if (!navLink) return;
+        var collapseEl = document.getElementById('navbarCollapse');
+        if (collapseEl && collapseEl.classList.contains('show')) {
+            collapseEl.classList.remove('show');
+        }
+    });
+
     // Intercept clicks on any dynamically rendered .php links on static hosts
     document.addEventListener('click', function (e) {
         if (!isStaticHost) return;

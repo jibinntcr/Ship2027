@@ -808,6 +808,61 @@ html, body {
     max-width: 100%;
 }
 
+/* Reset legacy css/style.css and css/index.css layout conflicts */
+section {
+    float: none !important;
+    background: transparent;
+    padding: 0;
+}
+.about-text,
+.feature-text {
+    padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5) !important;
+    padding-right: calc(var(--bs-gutter-x, 1.5rem) * 0.5) !important;
+}
+.navbar.sticky-top {
+    top: 0 !important;
+}
+
+/* Placement Partner Logos Carousel (Slick Slider) */
+.customer-logos {
+    position: relative;
+    overflow: hidden;
+}
+.customer-logos .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 8px 0;
+}
+.customer-logos .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex !important;
+    align-items: center !important;
+}
+.customer-logos .slick-slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+    float: none !important;
+    padding: 0 10px;
+}
+.customer-logos .slick-slide img {
+    max-height: 70px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 8px 12px;
+    border: 1px solid rgba(14, 165, 233, 0.16);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+}
+
 /* Desktop default: hide mobile-only Read More buttons */
 .mobile-readmore-btn {
     display: none !important;
@@ -996,8 +1051,12 @@ html, body {
         padding: 1.35rem 1.15rem;
         border-radius: 20px;
     }
-    .maritime-section-title {
+    .maritime-section-title,
+    .maritime-section-heading {
         font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+    }
+    .maritime-section-lead {
+        font-size: 0.92rem;
     }
     .maritime-panel-header {
         padding-bottom: 14px;
@@ -1014,30 +1073,42 @@ html, body {
         border-radius: 12px;
     }
     .programme-bento-card {
+        padding: 12px 12px 18px 12px;
         border-radius: 20px;
     }
     .programme-card-body {
-        padding: 1.25rem;
+        padding: 0.35rem 0.45rem 0;
     }
+    .programme-card-body h4 {
+        font-size: 1.15rem;
+    }
+    .programme-img-wrap,
     .programme-img-frame {
-        height: 200px;
+        height: 195px;
+    }
+    .person-bento-card {
+        padding: 12px 12px 16px;
+        border-radius: 20px;
     }
     .person-photo-frame {
         height: 265px;
     }
     .person-card-body {
-        padding: 1.25rem 1.15rem;
+        padding: 0 0.35rem;
     }
     .coord-bento-card,
     .doc-bento-card {
         padding: 1.35rem 1.15rem;
         border-radius: 18px;
     }
-    /* Subpage inline fixed-height image containers (Libraries, Academics, Contact) */
+    /* Subpage inline fixed-height image & map containers (Libraries, Academics, Contact) */
     .maritime-bento-panel div[style*="height: 410px"],
     .maritime-bento-panel div[style*="height: 390px"],
     .maritime-bento-panel div[style*="height: 310px"] {
         height: 235px !important;
+    }
+    .maritime-bento-panel div[style*="min-height: 400px"] {
+        min-height: 260px !important;
     }
     .back-to-top {
         right: 16px !important;
@@ -1094,6 +1165,10 @@ html, body {
         height: 44px;
         font-size: 1.1rem;
         border-radius: 12px;
+    }
+    .programme-card-footer {
+        flex-wrap: wrap;
+        gap: 8px;
     }
     .person-photo-frame {
         height: 245px;
