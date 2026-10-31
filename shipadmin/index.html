@@ -928,6 +928,10 @@
         <a class="nav-link active" data-tab="dashboard">
             <span><i class="fa fa-compass nav-icon"></i>Executive Overview</span>
         </a>
+        <a class="nav-link" data-tab="guidelines">
+            <span><i class="fa fa-book-open nav-icon"></i>User Guidelines &amp; Help</span>
+            <span class="badge rounded-pill" style="background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.35); font-size: 10px;">GUIDE</span>
+        </a>
 
         <div class="nav-section-label">Academic &amp; Directorate</div>
         <a class="nav-link" data-tab="faculty">
@@ -1019,6 +1023,9 @@
             </div>
         </div>
         <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="switchTab('guidelines')" title="Open User Guidelines & Manual">
+                <i class="fa fa-book-open text-info"></i><span class="d-none d-sm-inline ms-1">User Guide</span>
+            </button>
             <button class="btn btn-sm btn-light border fw-semibold px-3" style="border-radius: 9px;" onclick="openPasswordModal()" title="Change Admin Password">
                 <i class="fa fa-shield-alt text-primary"></i><span class="d-none d-sm-inline ms-1">Security</span>
             </button>
@@ -1225,6 +1232,284 @@
                     </div>
                 </div>
             </form>
+        </div>
+
+        <!-- TAB: USER GUIDELINES & CMS ADMINISTRATOR MANUAL -->
+        <div class="tab-pane-custom" id="tab-guidelines" style="display:none;">
+            <!-- Hero Banner for Guidelines -->
+            <div class="command-hero mb-4">
+                <div class="row align-items-center g-3">
+                    <div class="col-lg-8">
+                        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-2" style="background: rgba(56, 189, 248, 0.16); border: 1px solid rgba(56, 189, 248, 0.3); font-size: 11.5px; font-weight: 700; color: #7dd3fc;">
+                            <i class="fa fa-book-open"></i> OFFICIAL CMS ADMINISTRATOR HANDBOOK
+                        </div>
+                        <h3 class="fw-bold text-white mb-2">How to Add, Update &amp; Manage Website Content</h3>
+                        <p class="text-white-50 mb-0" style="max-width: 680px; font-size: 14px;">
+                            Complete step-by-step instructions, recommended image &amp; PDF specifications, display order rules, mobile optimization tips, and backup procedures for the Department of Ship Technology portal.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <div class="d-flex flex-wrap gap-2 justify-content-lg-end">
+                            <button type="button" class="hero-quick-btn" onclick="exportDatabaseJson()">
+                                <i class="fa fa-cloud-download-alt me-1 text-info"></i>Download DB Backup
+                            </button>
+                            <button type="button" class="hero-quick-btn" onclick="openPasswordModal()">
+                                <i class="fa fa-key me-1 text-warning"></i>Change Password
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3-Step Quick Workflow -->
+            <div class="surface-card p-4 mb-4">
+                <h6 class="fw-bold mb-3 pb-2 border-bottom">
+                    <i class="fa fa-rocket text-primary me-2"></i>1. Quick-Start Publishing Workflow (3 Simple Steps)
+                </h6>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="badge bg-primary rounded-pill">STEP 1</span>
+                                <strong class="text-dark small">Select a Module Tab</strong>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                Choose any section from the left sidebar (on mobile phones, tap the <b><i class="fa fa-bars"></i> Menu</b> button at the top-left) such as <b>Faculty Directory</b>, <b>Campus Gallery</b>, or <b>Placement Brochures</b>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="badge bg-info text-dark rounded-pill">STEP 2</span>
+                                <strong class="text-dark small">Add, Upload or Edit</strong>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                Click <b>+ Add New ...</b> at the top-right to create an entry, or click the <b><i class="fa fa-pen"></i> Edit</b> button on any existing row/card. Click <b>Upload Photo</b> or <b>Upload PDF</b> to pick files directly from your device.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="p-3 rounded-3 bg-light border h-100">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <span class="badge bg-success rounded-pill">STEP 3</span>
+                                <strong class="text-dark small">Commit &amp; Verify Live</strong>
+                            </div>
+                            <p class="small text-secondary mb-0">
+                                Click <b>Commit to Database</b>. Your changes are saved immediately and reflected on the public website. Click <b>Open Live Website</b> in the topbar to preview your update.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module-by-Module Content Guidelines -->
+            <h6 class="fw-bold text-uppercase text-secondary small mb-3" style="letter-spacing: 0.06em;">
+                <i class="fa fa-layer-group text-primary me-2"></i>2. Module-by-Module Content Guidelines
+            </h6>
+            <div class="row g-3 mb-4">
+                <!-- Faculty & Technical Staff -->
+                <div class="col-lg-6">
+                    <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0"><i class="fa fa-user-tie text-primary me-2"></i>Faculty Directory &amp; Technical Staff</h6>
+                                <span class="badge-soft-info">faculty.html / technical-staff.html</span>
+                            </div>
+                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
+                                <li><b>Required Fields:</b> Enter the full name with honorifics (e.g., <i>Dr. A. Mathiazhagan</i>) and official designation (e.g., <i>Professor &amp; Head</i>, <i>Associate Professor</i>).</li>
+                                <li><b>Display Order (`sort_order`):</b> Controls the sequence on the public page. Use <code>1</code> for the Head of Department, <code>2, 3, 4...</code> for Professors and Assistant Professors in seniority order.</li>
+                                <li><b>Portrait Photo:</b> Upload a clear vertical headshot (recommended <code>400 &times; 480 px</code>, JPG/PNG, under <code>2 MB</code>). Keep the face centered near the top so automatic smart-cropping looks sharp on both desktop and mobile cards.</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('faculty'); openModal();"><i class="fa fa-plus me-1"></i>Add Faculty</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('technical_staff')">Manage Technical Staff <i class="fa fa-arrow-right ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placement Brochures & Coordinators -->
+                <div class="col-lg-6">
+                    <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0"><i class="fa fa-file-pdf text-danger me-2"></i>Placement Brochures &amp; Coordinators</h6>
+                                <span class="badge-soft-info">placement.html</span>
+                            </div>
+                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
+                                <li><b>PDF Brochure Upload (Up to 25 MB):</b> Click <b>Upload PDF (Max 25 MB)</b> to upload official placement brochures (<code>5 MB – 25 MB</code> supported) or enter a path inside <code>placement_data/brochures/</code>.</li>
+                                <li><b>Cover Image:</b> Upload a vertical cover thumbnail (<code>600 &times; 800 px</code>) for the brochure card.</li>
+                                <li><b>Placement Coordinators:</b> Set <b>Role Type</b> to either <code>Faculty Coordinator</code> or <code>Student Coordinator</code> so they automatically group into their respective sections on the Placement page.</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                            <button type="button" class="btn btn-sm btn-outline-danger fw-semibold" onclick="switchTab('placement_brochures'); openModal();"><i class="fa fa-upload me-1"></i>Upload Brochure PDF</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('placement_coordinators')">Manage Coordinators <i class="fa fa-arrow-right ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campus Gallery & Lightbox -->
+                <div class="col-lg-6">
+                    <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0"><i class="fa fa-images text-warning me-2"></i>Campus &amp; Laboratory Photo Gallery</h6>
+                                <span class="badge-soft-info">gallery.html</span>
+                            </div>
+                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
+                                <li><b>Caption &amp; Category:</b> Provide a descriptive title (e.g., <i>Ship Model Testing Tank Laboratory</i>). Set Category to <code>Campus</code>, <code>Labs</code>, <code>Events</code>, or paste an external Google Photos album URL to link the card to a full external album.</li>
+                                <li><b>Photo Specifications:</b> Use landscape photos (<code>1200 &times; 800 px</code> or <code>16:10</code> ratio, JPG/PNG, under <code>5 MB</code>) for best visual quality in the Bento grid and full-screen swipeable Lightbox viewer.</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('gallery'); openModal();"><i class="fa fa-camera me-1"></i>Upload Gallery Photo</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('gallery')">View Gallery List <i class="fa fa-arrow-right ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Programmes & Events -->
+                <div class="col-lg-6">
+                    <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0"><i class="fa fa-graduation-cap text-success me-2"></i>Academic Programmes &amp; Events</h6>
+                                <span class="badge-soft-info">index.html / academics.html / events.html</span>
+                            </div>
+                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
+                                <li><b>Academic Programmes:</b> Manage B.Tech (NA&amp;SB), M.Tech (CASAD), Ph.D., and Industry Training cards. Include Duration (e.g., <code>4 Years (8 Semesters)</code>) and a clear syllabus overview.</li>
+                                <li><b>Events &amp; Seminars:</b> Add conferences (such as <i>ICANOE</i>), workshops, and jubilee celebrations with an Event Date, summary, and banner image (<code>800 &times; 500 px</code>).</li>
+                                <li><b>Auto Mobile "Read More":</b> Any programme or event description longer than <code>210 characters</code> is automatically given a collapsible <b>Read More / Show Less</b> button on mobile phones!</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                            <button type="button" class="btn btn-sm btn-outline-success fw-semibold" onclick="switchTab('courses')">Manage Courses</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('events')">Manage Events <i class="fa fa-arrow-right ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials & News Ticker -->
+                <div class="col-lg-6">
+                    <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0"><i class="fa fa-quote-right text-info me-2"></i>Alumni Testimonials &amp; News Ticker</h6>
+                                <span class="badge-soft-info">Homepage Carousel &amp; Ticker</span>
+                            </div>
+                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
+                                <li><b>Alumni Testimonials:</b> Enter the alumnus name, designation/company (e.g., <i>Lead Naval Architect, Classification Society</i>), quote, and square portrait photo (<code>300 &times; 300 px</code>).</li>
+                                <li><b>Marquee News Ticker:</b> Add scrolling homepage announcements and admission alerts. Set <b>Visibility</b> to <code>1</code> to show live on the homepage ticker, or <code>0</code> to hide temporarily without deleting.</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('testimonials'); openModal();"><i class="fa fa-plus me-1"></i>Add Testimonial</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('announcements')">Manage News Ticker <i class="fa fa-arrow-right ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vision, HOD Profile & Inquiries -->
+                <div class="col-lg-6">
+                    <div class="surface-card p-4 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="fw-bold mb-0"><i class="fa fa-sliders-h text-primary me-2"></i>Vision, HOD Profile &amp; Public Inquiries</h6>
+                                <span class="badge-soft-info">Global Settings &amp; Inbox</span>
+                            </div>
+                            <ul class="small text-secondary ps-3 mb-3" style="line-height: 1.65;">
+                                <li><b>Department Coordinates:</b> Update the official email (<code>ship@cusat.ac.in</code>), topbar/footer phone numbers, and mailing address across the header, footer, and contact page simultaneously.</li>
+                                <li><b>Vision, About &amp; HOD Message:</b> Edit the Vision statement, <i>"Surging ahead since 1975"</i> overview, and HOD's message/portrait from a single screen.</li>
+                                <li><b>Public Inquiries:</b> Review messages submitted via the Contact and Connect pages and delete resolved inquiries.</li>
+                            </ul>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                            <button type="button" class="btn btn-sm btn-outline-primary fw-semibold" onclick="switchTab('settings')"><i class="fa fa-sliders-h me-1"></i>Edit Vision &amp; HOD</button>
+                            <button type="button" class="btn btn-sm btn-light border fw-semibold" onclick="switchTab('inquiries')">Open Inquiries Inbox <i class="fa fa-arrow-right ms-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Specifications & Best Practices Reference -->
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="surface-card h-100">
+                        <div class="surface-card-header">
+                            <div>
+                                <h6 class="fw-bold mb-0"><i class="fa fa-photo-video text-primary me-2"></i>3. Media &amp; File Upload Specifications Cheat-Sheet</h6>
+                                <small class="text-muted">Recommended dimensions and file formats for crisp rendering on all devices</small>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-modern">
+                                <thead>
+                                    <tr>
+                                        <th>Asset Type</th>
+                                        <th>Recommended Size</th>
+                                        <th>Formats</th>
+                                        <th>Max Size</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Asset Type"><b>Faculty / Staff / HOD Portrait</b></td>
+                                        <td data-label="Recommended Size"><code class="small">400 &times; 480 px</code> (Vertical)</td>
+                                        <td data-label="Formats"><span class="badge-soft-info">JPG / PNG / WebP</span></td>
+                                        <td data-label="Max Size"><span class="badge-soft-secondary">2 MB</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Asset Type"><b>Alumni Testimonial Photo</b></td>
+                                        <td data-label="Recommended Size"><code class="small">300 &times; 300 px</code> (Square)</td>
+                                        <td data-label="Formats"><span class="badge-soft-info">PNG / JPG</span></td>
+                                        <td data-label="Max Size"><span class="badge-soft-secondary">2 MB</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Asset Type"><b>Campus Gallery / Event Banner</b></td>
+                                        <td data-label="Recommended Size"><code class="small">1200 &times; 800 px</code> (Landscape)</td>
+                                        <td data-label="Formats"><span class="badge-soft-info">JPG / PNG</span></td>
+                                        <td data-label="Max Size"><span class="badge-soft-secondary">5 MB</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Asset Type"><b>Placement Brochure Document</b></td>
+                                        <td data-label="Recommended Size">A4 Portrait Document</td>
+                                        <td data-label="Formats"><span class="badge-soft-success">PDF (.pdf)</span></td>
+                                        <td data-label="Max Size"><span class="badge-soft-success">Up to 25 MB</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="surface-card p-4 h-100">
+                        <h6 class="fw-bold mb-3 pb-2 border-bottom">
+                            <i class="fa fa-shield-alt text-primary me-2"></i>4. Security, Backups &amp; Mobile Rules
+                        </h6>
+                        <div class="mb-3">
+                            <div class="fw-bold small text-dark mb-1"><i class="fa fa-mobile-alt text-info me-2"></i>Automatic Mobile "Read More" Optimization</div>
+                            <p class="small text-secondary mb-0">
+                                You can write detailed, comprehensive descriptions for Courses, Events, About Us, HOD Message, and Testimonials without worrying about mobile clutter. On smartphones and tablets (<code>&lt; 992px</code>), long paragraphs automatically collapse with an interactive <b>Read More / Show Less</b> button.
+                            </p>
+                        </div>
+                        <div class="mb-3">
+                            <div class="fw-bold small text-dark mb-1"><i class="fa fa-cloud-download-alt text-success me-2"></i>Regular Database Backups (Snapshot JSON)</div>
+                            <p class="small text-secondary mb-0">
+                                After making batch updates, click <b>Snapshot JSON</b> in the topbar to download <code>shiptech_db_backup.json</code>. This file contains a complete snapshot of all faculty, staff, gallery items, courses, brochures, and settings.
+                            </p>
+                        </div>
+                        <div class="mb-0">
+                            <div class="fw-bold small text-dark mb-1"><i class="fa fa-lock text-warning me-2"></i>Admin Password &amp; Session Security</div>
+                            <p class="small text-secondary mb-0">
+                                Use the <b>Security</b> button in the topbar to change your administrator passkey at any time. Always click <b>Lock &amp; Sign Out</b> at the bottom of the sidebar when using a shared computer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </div>
@@ -1749,6 +2034,13 @@ function renderCurrentTab() {
         Object.keys(s).forEach(function (k) {
             if (form.elements[k]) form.elements[k].value = s[k];
         });
+        return;
+    }
+
+    if (currentTab === 'guidelines') {
+        document.getElementById('page-title').textContent = 'User Guidelines & Administrator Manual';
+        document.getElementById('page-subtitle').textContent = 'Step-by-step instructions for adding content, media specifications, display ordering & backups';
+        document.getElementById('tab-guidelines').style.display = 'block';
         return;
     }
 
