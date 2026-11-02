@@ -30,98 +30,108 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css?v=7" rel="stylesheet">
     <style>
-        .mou-bento-card {
-            background: #ffffff;
-            border-radius: 22px;
-            border: 1px solid rgba(14, 165, 233, 0.18);
-            box-shadow: 0 14px 34px -12px rgba(9, 21, 47, 0.08);
-            overflow: hidden;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
-        }
-        .mou-bento-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 22px 44px -12px rgba(2, 132, 199, 0.18);
-            border-color: rgba(2, 132, 199, 0.42);
-        }
-        .mou-img-wrap {
+        /* MoU Showcase Frame inside standard .programme-bento-card */
+        .mou-showcase-stage {
             position: relative;
-            width: 100%;
-            height: 290px;
-            background: #09152f;
+            height: 235px;
+            border-radius: 16px;
             overflow: hidden;
+            background: radial-gradient(circle at 50% 42%, #ffffff 0%, #f0f7ff 70%, #e0f2fe 100%);
+            border: 1px solid rgba(14, 165, 233, 0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 28px;
+            cursor: pointer;
         }
-        .mou-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.45s ease;
-        }
-        .mou-bento-card:hover .mou-img-wrap img {
-            transform: scale(1.04);
-        }
-        .mou-year-badge {
+        .mou-showcase-stage::after {
+            content: "";
             position: absolute;
-            bottom: 14px;
-            right: 14px;
-            background: linear-gradient(135deg, #09152f 0%, #0284c7 100%);
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(2, 132, 199, 0.06) 0%, transparent 45%),
+                radial-gradient(circle at 85% 80%, rgba(21, 7, 84, 0.05) 0%, transparent 45%);
+            pointer-events: none;
+        }
+        .mou-showcase-stage img {
+            max-width: 100%;
+            max-height: 185px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 10px 20px rgba(9, 21, 47, 0.12));
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .programme-bento-card:hover .mou-showcase-stage img {
+            transform: scale(1.06);
+        }
+        .mou-year-pill-top {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 2;
+            background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%);
             color: #ffffff;
+            border: 1px solid rgba(56, 189, 248, 0.45);
+            font-size: 0.76rem;
             font-weight: 800;
-            font-size: 0.92rem;
-            padding: 6px 16px;
+            letter-spacing: 0.6px;
+            padding: 5px 13px;
             border-radius: 999px;
-            border: 1px solid rgba(125, 211, 252, 0.5);
-            box-shadow: 0 8px 20px rgba(9, 21, 47, 0.38);
-            letter-spacing: 0.04em;
             display: inline-flex;
             align-items: center;
             gap: 6px;
+            box-shadow: 0 8px 18px -4px rgba(9, 21, 47, 0.35);
         }
-        .mou-card-body {
-            padding: 1.65rem 1.75rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-        .mou-card-title {
-            color: #09152f;
+        .mou-partner-badge-left {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 2;
+            background: rgba(9, 21, 47, 0.86);
+            backdrop-filter: blur(8px);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            font-size: 0.68rem;
             font-weight: 800;
-            font-size: 1.28rem;
-            margin-bottom: 0.85rem;
-            line-height: 1.35;
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            padding: 5px 11px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
-        .mou-card-desc {
+        .mou-desc-formatted {
             color: #334155;
-            font-size: 0.96rem;
-            line-height: 1.72;
-            text-align: justify;
+            font-size: 0.92rem;
+            line-height: 1.68;
+        }
+        .mou-desc-formatted ol {
+            margin-top: 0.55rem;
+            margin-bottom: 0;
+            padding-left: 1.2rem;
+        }
+        .mou-desc-formatted li {
+            margin-bottom: 0.35rem;
+        }
+        .mou-kpi-stat {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-left: 3.5px solid #0284c7;
             border-radius: 14px;
-            padding: 1.1rem 1.25rem;
-            flex-grow: 1;
-        }
-        .mou-card-desc ol {
-            margin-top: 0.65rem;
-            margin-bottom: 0;
-            padding-left: 1.25rem;
-        }
-        .mou-card-desc li {
-            margin-bottom: 0.4rem;
+            padding: 14px 16px;
+            height: 100%;
         }
         @media (max-width: 767.98px) {
-            .mou-img-wrap {
-                height: 220px;
+            .mou-showcase-stage {
+                height: 200px;
+                padding: 18px;
             }
-            .mou-card-body {
-                padding: 1.25rem;
-            }
-            .mou-card-desc {
-                text-align: left;
-                padding: 0.95rem 1rem;
+            .mou-showcase-stage img {
+                max-height: 155px;
             }
         }
     </style>
@@ -150,9 +160,9 @@
             <circle cx="275" cy="18" r="5" fill="#38bdf8"/>
         </svg>
         <div class="container position-relative" style="z-index: 2;">
-            <span class="maritime-hero-eyebrow"><i class="fa fa-handshake"></i> Department of Ship Technology, CUSAT</span>
+            <span class="maritime-hero-eyebrow"><i class="fa fa-handshake"></i> Research &amp; Industry Collaborations</span>
             <h1 class="maritime-hero-title">Memorandum Of Understanding</h1>
-            <p class="maritime-hero-subtitle">Strategic academic, research, and industrial collaborations signed by the Department of Ship Technology, Cochin University of Science and Technology.</p>
+            <p class="maritime-hero-subtitle">Strategic Memoranda of Understanding (MoUs) with premier shipyards, international classification societies, and global maritime universities.</p>
             <ul class="maritime-breadcrumb">
                 <li><a href="index.php"><i class="fa fa-home me-1"></i> Home</a></li>
                 <li class="sep">/</li>
@@ -176,26 +186,65 @@
     </section>
     <!-- Maritime Subpage Hero End -->
 
-    <!-- MoU Bento Grid Start -->
+    <!-- MoU Spotlight & Bento Cards Start -->
     <div class="container-xxl py-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="maritime-section-pill"><i class="fa fa-handshake"></i> Industry &amp; Academic MoUs</span>
-                <h2 class="maritime-section-heading">Memorandum Of Understanding</h2>
+            <!-- Top Bento Overview Panel -->
+            <div class="maritime-bento-panel mb-5">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <span class="maritime-section-pill"><i class="fa fa-globe"></i> Global &amp; National Partnerships</span>
+                        <h2 class="maritime-section-heading mb-2">Industry &amp; Academic MoUs</h2>
+                        <p class="mb-0" style="color:#475569; line-height:1.72;">The Department of Ship Technology, CUSAT actively collaborates with leading shipyards, international maritime universities, and ship classification societies through formal Memoranda of Understanding (MoUs) to foster joint R&amp;D, student internships, academic exchange, and excellence awards.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="mou-kpi-stat">
+                                    <div style="font-weight:800; color:#09152f; font-size:0.92rem;"><i class="fa fa-ship text-info me-2"></i>Shipyard &amp; Class Links</div>
+                                    <div class="small text-muted mt-1">Cochin Shipyard Ltd (CSL) &amp; Nippon Kaiji Kyokai (ClassNK, Japan).</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="mou-kpi-stat">
+                                    <div style="font-weight:800; color:#09152f; font-size:0.92rem;"><i class="fa fa-university text-info me-2"></i>Global Universities</div>
+                                    <div class="small text-muted mt-1">SMTU (Saint Petersburg, Russia) &amp; UTAS (Sultanate of Oman).</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+                <span class="maritime-section-pill"><i class="fa fa-handshake"></i> Official Agreements</span>
+                <h2 class="maritime-section-heading">Signed Memoranda Of Understanding</h2>
+                <p class="maritime-section-lead">Explore the official MoUs signed by Cochin University of Science and Technology (CUSAT) under the initiative of the Department of Ship Technology.</p>
+            </div>
+
+            <!-- 2x2 Bento Grid of MoUs -->
             <div id="mous-grid" class="row g-4">
                 <!-- 1. Cochin Shipyard LTD -->
                 <div class="col-lg-6">
-                    <div class="mou-bento-card">
-                        <div class="mou-img-wrap">
+                    <div class="programme-bento-card">
+                        <div class="mou-showcase-stage" onclick="openMouPreviewModal('uploads/Untitled design (12).png', 'Cochin Shipyard LTD (2022)')">
+                            <span class="mou-partner-badge-left"><i class="fa fa-Certificate fa-shield-alt"></i> Official MoU</span>
+                            <span class="mou-year-pill-top"><i class="fa fa-calendar-alt"></i> 2022</span>
                             <img loading="lazy" src="uploads/Untitled design (12).png" alt="Cochin Shipyard LTD">
-                            <span class="mou-year-badge"><i class="fa fa-calendar-alt"></i> 2022</span>
                         </div>
-                        <div class="mou-card-body">
-                            <h3 class="mou-card-title">Cochin Shipyard LTD</h3>
-                            <div class="mou-card-desc">
+                        <div class="programme-icon-orb"><i class="fa fa-ship"></i></div>
+                        <div class="programme-card-body">
+                            <span class="person-role-pill"><i class="fa fa-industry"></i> Shipbuilding &amp; R&amp;D Partner • Signed 2022</span>
+                            <h4>Cochin Shipyard LTD</h4>
+                            <div class="programme-desc-box mou-desc-formatted">
                                 Cochin University of Science and Technology (CUSAT) signed an MoU with Cochin Shipyard Limited (CSL) under the initiative of the Department of Ship Technology. CSL is a listed premier Mini Ratna Company of India engaged in the maritime sector. In the last three decades the company has emerged as a forerunner in the Indian Ship Building &amp; Ship Repair industry. The yard can build and repair the largest vessels in India and has been collaborating with educational institutions for R &amp; D, Training, Projects etc.
+                            </div>
+                            <div class="programme-card-footer">
+                                <span class="programme-level-tag"><i class="fa fa-check-circle"></i> Active MoU • 2022</span>
+                                <button type="button" class="programme-cta-btn border-0" onclick="openMouPreviewModal('uploads/Untitled design (12).png', 'Cochin Shipyard LTD (2022)')">
+                                    <span>View Emblem</span> <i class="fa fa-search-plus"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -203,15 +252,24 @@
 
                 <!-- 2. MOU with SMTU -->
                 <div class="col-lg-6">
-                    <div class="mou-bento-card">
-                        <div class="mou-img-wrap">
+                    <div class="programme-bento-card">
+                        <div class="mou-showcase-stage" onclick="openMouPreviewModal('uploads/Untitled design (13).png', 'MOU with SMTU (2022)')">
+                            <span class="mou-partner-badge-left"><i class="fa fa-shield-alt"></i> Official MoU</span>
+                            <span class="mou-year-pill-top"><i class="fa fa-calendar-alt"></i> 2022</span>
                             <img loading="lazy" src="uploads/Untitled design (13).png" alt="MOU with SMTU">
-                            <span class="mou-year-badge"><i class="fa fa-calendar-alt"></i> 2022</span>
                         </div>
-                        <div class="mou-card-body">
-                            <h3 class="mou-card-title">MOU with SMTU</h3>
-                            <div class="mou-card-desc">
+                        <div class="programme-icon-orb"><i class="fa fa-university"></i></div>
+                        <div class="programme-card-body">
+                            <span class="person-role-pill"><i class="fa fa-globe"></i> International Marine University • Signed 2022</span>
+                            <h4>MOU with SMTU</h4>
+                            <div class="programme-desc-box mou-desc-formatted">
                                 Cochin University of Science and Technology (CUSAT) signed an MoU with Saint Petersburg State Marine Technical University, Russia under the initiative of the Department of Ship Technology on 12 January 2022.
+                            </div>
+                            <div class="programme-card-footer">
+                                <span class="programme-level-tag"><i class="fa fa-check-circle"></i> Active MoU • 2022</span>
+                                <button type="button" class="programme-cta-btn border-0" onclick="openMouPreviewModal('uploads/Untitled design (13).png', 'MOU with SMTU (2022)')">
+                                    <span>View Emblem</span> <i class="fa fa-search-plus"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -219,20 +277,27 @@
 
                 <!-- 3. MOU with Nippon Kyaji Kyokai Japan -->
                 <div class="col-lg-6">
-                    <div class="mou-bento-card">
-                        <div class="mou-img-wrap">
+                    <div class="programme-bento-card">
+                        <div class="mou-showcase-stage" onclick="openMouPreviewModal('uploads/Untitled design (14).png', 'MOU with Nippon Kyaji Kyokai Japan (2017)')">
+                            <span class="mou-partner-badge-left"><i class="fa fa-shield-alt"></i> Official MoU</span>
+                            <span class="mou-year-pill-top"><i class="fa fa-calendar-alt"></i> 2017</span>
                             <img loading="lazy" src="uploads/Untitled design (14).png" alt="MOU with Nippon Kyaji Kyokai Japan">
-                            <span class="mou-year-badge"><i class="fa fa-calendar-alt"></i> 2017</span>
                         </div>
-                        <div class="mou-card-body">
-                            <h3 class="mou-card-title">MOU with Nippon Kyaji Kyokai Japan</h3>
-                            <div class="mou-card-desc">
-                                <p class="mb-2">This MOU on the “classNK Award” is concluded and entered into force on 17th August 2017 between Cochin University of Science and Technology (CUSAT) in Kerala, India and Nippon Kyaji Kyokai. The head office of which is in Tokyo, Japan. The objective of the MOU is in order to help raise excellent professionals for the Indian maritime industry. ClassNK provides the “ClassNK Award” to CUSAT students. Following discussion both ClassNk and CUSAT have reached the following understanding</p>
-                                <ol>
-                                    <li>Allocation of the award: The award will be given to the best three B.Tech projects.</li>
-                                    <li>Course Majors of the Awardees: All of the Awardees should be from the Naval Architecture and Shipbuilding course of the Department of Ship Technology CUSAT.</li>
-                                    <li>Qualification and Selection of Awardees: To receive this award the students should have a minimum CGPA of 7.0 and sincere desire to work in the shipbuilding and maritime industry on a long-term basis.</li>
-                                </ol>
+                        <div class="programme-icon-orb"><i class="fa fa-award"></i></div>
+                        <div class="programme-card-body">
+                            <span class="person-role-pill"><i class="fa fa-anchor"></i> Classification Society (Tokyo, Japan) • Signed 2017</span>
+                            <h4>MOU with Nippon Kyaji Kyokai Japan</h4>
+                            <div class="programme-desc-box mou-desc-formatted">
+                                This MOU on the “classNK Award” is concluded and entered into force on 17th August 2017 between Cochin University of Science and Technology (CUSAT) in Kerala, India and Nippon Kyaji Kyokai. The head office of which is in Tokyo, Japan. The objective of the MOU is in order to help raise excellent professionals for the Indian maritime industry. ClassNK provides the “ClassNK Award” to CUSAT students. Following discussion both ClassNk and CUSAT have reached the following understanding:<br>
+                                1. Allocation of the award: The award will be given to the best three B.Tech projects.<br>
+                                2. Course Majors of the Awardees: All of the Awardees should be from the Naval Architecture and Shipbuilding course of the Department of Ship Technology CUSAT.<br>
+                                3. Qualification and Selection of Awardees: To receive this award the students should have a minimum CGPA of 7.0 and sincere desire to work in the shipbuilding and maritime industry on a long-term basis.
+                            </div>
+                            <div class="programme-card-footer">
+                                <span class="programme-level-tag"><i class="fa fa-check-circle"></i> Active MoU • 2017</span>
+                                <button type="button" class="programme-cta-btn border-0" onclick="openMouPreviewModal('uploads/Untitled design (14).png', 'MOU with Nippon Kyaji Kyokai Japan (2017)')">
+                                    <span>View Emblem</span> <i class="fa fa-search-plus"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -240,20 +305,65 @@
 
                 <!-- 4. MoU with University of Technology and Applied Science, Oman -->
                 <div class="col-lg-6">
-                    <div class="mou-bento-card">
-                        <div class="mou-img-wrap">
+                    <div class="programme-bento-card">
+                        <div class="mou-showcase-stage" onclick="openMouPreviewModal('uploads/moc.jpg', 'MoU with University of Technology and Applied Science, Oman (2024)')">
+                            <span class="mou-partner-badge-left"><i class="fa fa-file-contract"></i> Official MoU Document</span>
+                            <span class="mou-year-pill-top"><i class="fa fa-calendar-alt"></i> 2024</span>
                             <img loading="lazy" src="uploads/moc.jpg" alt="MoU with University of Technology and Applied Science, Oman">
-                            <span class="mou-year-badge"><i class="fa fa-calendar-alt"></i> 2024</span>
                         </div>
-                        <div class="mou-card-body">
-                            <h3 class="mou-card-title">MoU with University of Technology and Applied Science, Oman</h3>
+                        <div class="programme-icon-orb"><i class="fa fa-handshake"></i></div>
+                        <div class="programme-card-body">
+                            <span class="person-role-pill"><i class="fa fa-globe"></i> International Academic Cooperation • Signed 2024</span>
+                            <h4>MoU with University of Technology and Applied Science, Oman</h4>
+                            <div class="programme-desc-box mou-desc-formatted">
+                                This Memorandum of Cooperation is an agreement of friendship between University of Technology and Applied Sciences-Musandam (UTAS-Musandam), Sultanate of Oman and Cochin University of Science and Technology (CUSAT), Kochi, Kerala, India to examine and pursue academic collaboration opportunities in:<br>
+                                1. Joint research by faculty members and researchers.<br>
+                                2. Grant collaboration and joint working teams.<br>
+                                3. Student and staff exchange programmes.<br>
+                                4. Academic and research development and sharing of laboratory &amp; learning resources.
+                            </div>
+                            <div class="programme-card-footer">
+                                <span class="programme-level-tag"><i class="fa fa-check-circle"></i> Active MoU • 2024</span>
+                                <button type="button" class="programme-cta-btn border-0" onclick="openMouPreviewModal('uploads/moc.jpg', 'MoU with University of Technology and Applied Science, Oman (2024)')">
+                                    <span>View Document</span> <i class="fa fa-search-plus"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- MoU Bento Grid End -->
+    <!-- MoU Spotlight & Bento Cards End -->
+
+    <!-- MoU Image / Certificate Lightbox Modal -->
+    <div class="modal fade" id="mouPreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="border-radius: 20px; overflow: hidden; border: 1px solid rgba(56,189,248,0.35);">
+                <div class="modal-header" style="background: linear-gradient(135deg, #09152f 0%, #150754 55%, #0284c7 100%); color: #fff; border-bottom: none;">
+                    <h5 class="modal-title fw-bold text-white" id="mouPreviewModalTitle"><i class="fa fa-handshake text-info me-2"></i>MoU Preview</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center p-4" style="background: #f8fafc;">
+                    <img id="mouPreviewModalImg" src="" alt="MoU Preview" class="img-fluid rounded-3 shadow-sm" style="max-height: 75vh; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMouPreviewModal(imgSrc, titleText) {
+            var imgEl = document.getElementById('mouPreviewModalImg');
+            var titleEl = document.getElementById('mouPreviewModalTitle');
+            if (imgEl) imgEl.src = imgSrc;
+            if (titleEl) titleEl.innerHTML = '<i class="fa fa-handshake text-info me-2"></i>' + titleText;
+            var modalEl = document.getElementById('mouPreviewModal');
+            if (modalEl && typeof bootstrap !== 'undefined') {
+                var m = bootstrap.Modal.getOrCreateInstance(modalEl);
+                m.show();
+            }
+        }
+    </script>
 
     <!-- Footer Start -->
     <?php include('partials/footer.php') ?>
