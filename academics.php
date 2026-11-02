@@ -93,7 +93,7 @@
                     <div class="programme-bento-card">
                         <div class="programme-img-wrap">
                             <span class="programme-badge-top"><i class="fa fa-award"></i> NBA Accredited • 4 Years</span>
-                            <img src="img/service-1.jpg" alt="B.Tech in Naval Architecture & Ship Building">
+                            <img src="uploads/btchnavel.jpg" alt="B.Tech in Naval Architecture & Ship Building">
                         </div>
                         <div class="programme-icon-orb"><i class="fa fa-ship"></i></div>
                         <div class="programme-card-body">
@@ -110,7 +110,7 @@
                     <div class="programme-bento-card">
                         <div class="programme-img-wrap">
                             <span class="programme-badge-top"><i class="fa fa-layer-group"></i> Postgraduate • 2 Years</span>
-                            <img src="img/service-2.jpg" alt="M.Tech in Computer Aided Structural Analysis & Design">
+                            <img src="uploads/mtech.jpg" alt="M.Tech in Computer Aided Structural Analysis & Design">
                         </div>
                         <div class="programme-icon-orb"><i class="fa fa-cogs"></i></div>
                         <div class="programme-card-body">
@@ -127,7 +127,7 @@
                     <div class="programme-bento-card">
                         <div class="programme-img-wrap">
                             <span class="programme-badge-top"><i class="fa fa-microscope"></i> Doctoral • 41+ Scholars</span>
-                            <img src="img/service-3.jpg" alt="Ph.D. Programmes">
+                            <img src="img/phd_image.jpg" alt="Ph.D. Programmes">
                         </div>
                         <div class="programme-icon-orb"><i class="fa fa-compass"></i></div>
                         <div class="programme-card-body">
