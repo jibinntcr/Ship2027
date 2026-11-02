@@ -135,7 +135,7 @@
                             <div class="programme-desc-box">Doctoral research in frontier areas of Computational Hydrodynamics, Marine Structures, Propulsion, and Ocean Engineering at the CHASE Lab.</div>
                             <div class="programme-card-footer">
                                 <span class="programme-level-tag"><i class="fa fa-graduation-cap"></i> Doctoral Research</span>
-                                <a class="programme-cta-btn" href="#phd"><span>Explore</span> <i class="fa fa-arrow-right"></i></a>
+                                <a class="programme-cta-btn" href="phd.php"><span>Explore</span> <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

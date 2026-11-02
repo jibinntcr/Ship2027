@@ -58,6 +58,32 @@ def init_db():
             "I invite you to browse through the web pages for further information"
         ),
         "hod_image": "uploads/mathi.png",
+        "phd_title": "Dept. of Ship Technology, CUSAT",
+        "phd_description": (
+            "Research is central to the progress of any academic department. It improves the teaching "
+            "effectiveness and helps to make a difference to business, industry and society as a whole "
+            "thereby transforming the way academics, business, industry and the public sector collaborate. "
+            "The department’s research mission is to utilize its core strengths to maximize impact and help "
+            "the maritime communities (research and industrial) and the society to address global challenges. "
+            "The Department provides a thriving research environment with collaborations with leading "
+            "shipyards, Classification Societies, R & D organizations, etc. Further, all faculty members are "
+            "consultants of DESCON (Consultancy wing of department) and carry out consultancy assignments for "
+            "several Public/ Private organizations."
+        ),
+        "phd_image": "img/phd_image.jpg",
+        "phd_areas": (
+            "Naval Architecture (Ship Design, Ship Building, Computer Applications)\n"
+            "Structures (Marine / Civil)\n"
+            "Ship hydrodynamics\n"
+            "Ship stability and hydrostatics\n"
+            "Ship recycling\n"
+            "Manoeuvring and motion stability of marine vehicles\n"
+            "Marine materials and corrosion\n"
+            "Offshore and subsea structures\n"
+            "Numerical and experimental hydrodynamics\n"
+            "Ship electrical systems\n"
+            "Offshore renewable energy"
+        ),
     }
     for k, v in default_settings.items():
         cur.execute("INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)", (k, v))
@@ -157,6 +183,64 @@ def init_db():
             [
                 ("Madhu S Nair", "Chairman and Managing Director, Cochin Shipyard Ltd. | Btech Naval Architecture& Shipbuilding , 1983-1988", "The Department of Ship Technology, CUSAT, has contributed immensely to the field of Naval Architecture, Shipbuilding and various other allied sectors in the global maritime sector.", "testimonials_data/images/madhu_s.png"),
                 ("Abdul Rahim", "Corporate Officer, Class NK. | Btech Naval Architecture & Shipbuilding , 1979-1984", "ClassNK has long been associated with CUSAT and over the years we have recruited more than 26 CUSAT naval architects who work around the world.", "testimonials_data/images/abdhul_rahman.png"),
+            ],
+        )
+
+    # Seed research_guides if empty
+    cur.execute("SELECT COUNT(*) FROM research_guides")
+    if cur.fetchone()[0] == 0:
+        cur.executemany(
+            """INSERT INTO research_guides (name, designation, research_areas, image, profile_url, sort_order)
+               VALUES (?, ?, ?, ?, ?, ?)""",
+            [
+                (
+                    "Dr. K. SIVAPRASAD",
+                    "Professor",
+                    "Ship Recycling | Inland Waterway Transport | Green Energy in Maritime Technology",
+                    "uploads/Untitled design (7).png",
+                    "https://shiptech.cusat.ac.in/faculty-details.php?id=15&name=dr-sivaprasad-kodungalloor",
+                    1,
+                ),
+                (
+                    "Dr. P.K. SATHEESH BABU",
+                    "Associate Professor",
+                    "Ship Design | Hydrodynamics | Material Science | Corrosion Engineering",
+                    "uploads/Untitled design (8).png",
+                    "https://shiptech.cusat.ac.in/faculty-details.php?id=3&name=dr-satheesh-babu-pk",
+                    2,
+                ),
+                (
+                    "Dr. A. MATHIAZHAGAN",
+                    "Professor",
+                    "Materials Technology | Corrosion Engineering",
+                    "uploads/Untitled design (6).png",
+                    "https://shiptech.cusat.ac.in/faculty-details.php?id=14&name=dr-a-mathiazhakan",
+                    3,
+                ),
+                (
+                    "Dr. MANOJ T ISSAC",
+                    "Assistant Professor",
+                    "Numerical Investigation Of Hydrodynamics and Underwater Vehicles | Dynamics Modelling of Underwater Vehicles Using Identification Techniques | CFD Analysis of A SELF-PROPELLED AUV With Ducted Propeller",
+                    "uploads/Untitled design (5).png",
+                    "https://shiptech.cusat.ac.in/faculty-details.php?id=13&name=manoj-t-issac",
+                    4,
+                ),
+                (
+                    "Dr. RAJESH P NAIR",
+                    "Assistant Professor",
+                    "Finite Element Method | Descrete Element Method | Blast Analysis | Numerical Simulation of Impact Mechanism | Composite Structures | Biomechanics",
+                    "uploads/Untitled design (15).png",
+                    "https://shiptech.cusat.ac.in/faculty-details.php?id=7&name=rajesh-p-nair",
+                    5,
+                ),
+                (
+                    "Dr. FAVAS T K",
+                    "Assistant Professor",
+                    "Computational Fluid Dynamics | Numerical Heat Transfer | Entropy Generation Analysis",
+                    "uploads/Untitled design (16).png",
+                    "https://shiptech.cusat.ac.in/faculty-details.php?id=9&name=dr-favas-t-k",
+                    6,
+                ),
             ],
         )
 

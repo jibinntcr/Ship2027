@@ -1240,7 +1240,7 @@ section {
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
                     Facilities</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
-                    <a href="academics.php#phd" class="dropdown-item">Ph.D.</a>
+                    <a href="phd.php" class="dropdown-item">Ph.D.</a>
                     <a href="department-library.php" class="dropdown-item">Facilities</a>
                     <a href="connect.php#collaborations" class="dropdown-item">MoU</a>
                     <a href="events.php" class="dropdown-item">Achievements</a>

@@ -100,6 +100,17 @@ CREATE TABLE IF NOT EXISTS inquiries (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS research_guides (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    designation TEXT NOT NULL,
+    research_areas TEXT NOT NULL,
+    image TEXT DEFAULT 'uploads/Untitled design (7).png',
+    profile_url TEXT DEFAULT '#',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Performance Indexes for Sorting, Filtering, and Lookups
 CREATE INDEX IF NOT EXISTS idx_announcements_active ON announcements(is_active, id DESC);
 CREATE INDEX IF NOT EXISTS idx_faculty_sort ON faculty(sort_order ASC, id ASC);
@@ -111,3 +122,4 @@ CREATE INDEX IF NOT EXISTS idx_gallery_category ON gallery(category, id DESC);
 CREATE INDEX IF NOT EXISTS idx_testimonials_id ON testimonials(id ASC);
 CREATE INDEX IF NOT EXISTS idx_inquiries_created ON inquiries(created_at DESC, id DESC);
 CREATE INDEX IF NOT EXISTS idx_inquiries_type ON inquiries(type, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_research_guides_sort ON research_guides(sort_order ASC, id ASC);

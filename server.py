@@ -17,6 +17,7 @@ UPLOAD_DIR = os.path.join(BASE_DIR, "img", "uploads")
 ALLOWED_TABLES = {
     "faculty": ["name", "designation", "specialization", "email", "phone", "image", "profile_url", "facebook", "twitter", "linkedin", "sort_order"],
     "technical_staff": ["name", "designation", "email", "phone", "image", "sort_order"],
+    "research_guides": ["name", "designation", "research_areas", "image", "profile_url", "sort_order"],
     "courses": ["title", "description", "duration", "image", "link", "sort_order"],
     "events": ["title", "event_date", "description", "image", "link"],
     "gallery": ["title", "category", "image"],
@@ -72,6 +73,7 @@ def get_public_data_payload():
             "announcements": fetch_table(conn, "SELECT * FROM announcements WHERE is_active = 1 ORDER BY id DESC"),
             "faculty": fetch_table(conn, "SELECT * FROM faculty ORDER BY sort_order ASC, id ASC"),
             "technical_staff": fetch_table(conn, "SELECT * FROM technical_staff ORDER BY sort_order ASC, id ASC"),
+            "research_guides": fetch_table(conn, "SELECT * FROM research_guides ORDER BY sort_order ASC, id ASC"),
             "courses": fetch_table(conn, "SELECT * FROM courses ORDER BY sort_order ASC, id ASC"),
             "events": fetch_table(conn, "SELECT * FROM events ORDER BY event_date DESC, id DESC"),
             "gallery": fetch_table(conn, "SELECT * FROM gallery ORDER BY id DESC"),
@@ -161,6 +163,7 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                     "announcements": fetch_table(conn, "SELECT * FROM announcements ORDER BY id DESC"),
                     "faculty": fetch_table(conn, "SELECT * FROM faculty ORDER BY sort_order ASC, id ASC"),
                     "technical_staff": fetch_table(conn, "SELECT * FROM technical_staff ORDER BY sort_order ASC, id ASC"),
+                    "research_guides": fetch_table(conn, "SELECT * FROM research_guides ORDER BY sort_order ASC, id ASC"),
                     "courses": fetch_table(conn, "SELECT * FROM courses ORDER BY sort_order ASC, id ASC"),
                     "events": fetch_table(conn, "SELECT * FROM events ORDER BY event_date DESC, id DESC"),
                     "gallery": fetch_table(conn, "SELECT * FROM gallery ORDER BY id DESC"),
@@ -343,6 +346,7 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                 "gallery": "gallery_data/images",
                 "faculty": "faculty_data/images",
                 "technical_staff": "technical_staff_data/images",
+                "research_guides": "uploads",
                 "testimonials": "testimonials_data/images",
                 "placement_brochures": "placement_data/brochures",
             }
