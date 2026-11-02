@@ -3348,7 +3348,7 @@
                         </div>
                         <div class="programme-card-footer">
                             <span class="maritime-header-pill"><i class="fa-solid fa-microscope"></i> Doctoral Track</span>
-                            <a class="maritime-cta-btn" href="academics.php#phd">
+                            <a class="maritime-cta-btn" href="phd.php">
                                 <span>Read More</span>
                                 <i class="fa fa-arrow-right"></i>
                             </a>

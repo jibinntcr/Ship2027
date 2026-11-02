@@ -198,7 +198,7 @@
             </div>
 
             <!-- Research Guides Section -->
-            <div class="text-center mb-5 pt-2">
+            <div id="research-guides" class="text-center mb-5 pt-2">
                 <span class="maritime-section-pill"><i class="fa fa-user-graduate"></i> Doctoral Supervision</span>
                 <h2 class="maritime-section-heading">Research Guides</h2>
                 <p class="maritime-section-lead">Approved Ph.D. Research Supervisors and their specialized research domains at the Department of Ship Technology, CUSAT.</p>

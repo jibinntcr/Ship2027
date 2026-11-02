@@ -216,7 +216,7 @@
                     <div class="col-lg-5">
                         <div class="programme-img-wrap" style="height: 310px;">
                             <span class="programme-badge-top"><i class="fa fa-compass"></i> 41+ Active Research Scholars</span>
-                            <img src="img/service-3.jpg" alt="Ph.D. Doctoral Research at Shiptech CUSAT">
+                            <img src="img/phd_image.jpg" alt="Ph.D. Doctoral Research at Shiptech CUSAT">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -236,6 +236,12 @@
                                     <div class="small text-muted mt-1">Composite marine structures, welding technology, and offshore risers.</div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="mt-4">
+                            <a href="phd.php" class="programme-cta-btn d-inline-flex align-items-center gap-2">
+                                <span>View Research Areas &amp; Ph.D. Research Guides</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

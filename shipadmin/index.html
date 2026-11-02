@@ -1716,6 +1716,19 @@
         if (!Array.isArray(db.research_guides) || db.research_guides.length === 0) {
             db.research_guides = JSON.parse(JSON.stringify(SEED_DATA.research_guides || []));
         }
+        if (Array.isArray(db.courses)) {
+            db.courses = db.courses.map(function(c) {
+                if (Number(c.id) === 3 || (c.title && c.title.indexOf("Ph.D") !== -1)) {
+                    if (!c.link || c.link === "#" || c.link.indexOf("academics") !== -1) {
+                        c.link = "phd.php";
+                    }
+                    if (!c.image || c.image === "img/service-3.jpg") {
+                        c.image = "img/phd_image.jpg";
+                    }
+                }
+                return c;
+            });
+        }
         db.settings = Object.assign({}, SEED_DATA.settings || {}, db.settings || {});
         return db;
     }
