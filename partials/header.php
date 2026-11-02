@@ -1244,7 +1244,7 @@ section {
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="phd.php" class="dropdown-item">Ph.D.</a>
                     <a href="department-library.php" class="dropdown-item">Facilities</a>
-                    <a href="connect.php#collaborations" class="dropdown-item">MoU</a>
+                    <a href="mou.php" class="dropdown-item">MoU</a>
                     <a href="events.php" class="dropdown-item">Achievements</a>
                     <a href="Current-PhD-students.php" class="dropdown-item">Current Ph.D. Students</a>
                     <a href="PhD-awarded.php" class="dropdown-item">Ph.D. Awarded</a>

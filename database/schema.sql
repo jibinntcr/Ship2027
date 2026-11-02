@@ -131,6 +131,16 @@ CREATE TABLE IF NOT EXISTS phd_students (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS mous (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    year TEXT DEFAULT '',
+    description TEXT DEFAULT '',
+    image TEXT DEFAULT 'uploads/Untitled design (12).png',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Performance Indexes for Sorting, Filtering, and Lookups
 CREATE INDEX IF NOT EXISTS idx_announcements_active ON announcements(is_active, id DESC);
 CREATE INDEX IF NOT EXISTS idx_faculty_sort ON faculty(sort_order ASC, id ASC);
@@ -145,3 +155,4 @@ CREATE INDEX IF NOT EXISTS idx_inquiries_type ON inquiries(type, created_at DESC
 CREATE INDEX IF NOT EXISTS idx_research_guides_sort ON research_guides(sort_order ASC, id ASC);
 CREATE INDEX IF NOT EXISTS idx_phd_awarded_sort ON phd_awarded(sort_order ASC, id ASC);
 CREATE INDEX IF NOT EXISTS idx_phd_students_sort ON phd_students(sort_order ASC, id ASC);
+CREATE INDEX IF NOT EXISTS idx_mous_sort ON mous(sort_order ASC, id ASC);
