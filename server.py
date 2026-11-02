@@ -18,6 +18,8 @@ ALLOWED_TABLES = {
     "faculty": ["name", "designation", "specialization", "email", "phone", "image", "profile_url", "facebook", "twitter", "linkedin", "sort_order"],
     "technical_staff": ["name", "designation", "email", "phone", "image", "sort_order"],
     "research_guides": ["name", "designation", "research_areas", "image", "profile_url", "sort_order"],
+    "phd_awarded": ["name", "thesis_title", "supervisor", "year_of_award", "sort_order"],
+    "phd_students": ["name", "thesis_title", "supervisor", "year_of_registration", "sort_order"],
     "courses": ["title", "description", "duration", "image", "link", "sort_order"],
     "events": ["title", "event_date", "description", "image", "link"],
     "gallery": ["title", "category", "image"],
@@ -74,6 +76,8 @@ def get_public_data_payload():
             "faculty": fetch_table(conn, "SELECT * FROM faculty ORDER BY sort_order ASC, id ASC"),
             "technical_staff": fetch_table(conn, "SELECT * FROM technical_staff ORDER BY sort_order ASC, id ASC"),
             "research_guides": fetch_table(conn, "SELECT * FROM research_guides ORDER BY sort_order ASC, id ASC"),
+            "phd_awarded": fetch_table(conn, "SELECT * FROM phd_awarded ORDER BY sort_order ASC, id ASC"),
+            "phd_students": fetch_table(conn, "SELECT * FROM phd_students ORDER BY sort_order ASC, id ASC"),
             "courses": fetch_table(conn, "SELECT * FROM courses ORDER BY sort_order ASC, id ASC"),
             "events": fetch_table(conn, "SELECT * FROM events ORDER BY event_date DESC, id DESC"),
             "gallery": fetch_table(conn, "SELECT * FROM gallery ORDER BY id DESC"),
@@ -164,6 +168,8 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                     "faculty": fetch_table(conn, "SELECT * FROM faculty ORDER BY sort_order ASC, id ASC"),
                     "technical_staff": fetch_table(conn, "SELECT * FROM technical_staff ORDER BY sort_order ASC, id ASC"),
                     "research_guides": fetch_table(conn, "SELECT * FROM research_guides ORDER BY sort_order ASC, id ASC"),
+                    "phd_awarded": fetch_table(conn, "SELECT * FROM phd_awarded ORDER BY sort_order ASC, id ASC"),
+                    "phd_students": fetch_table(conn, "SELECT * FROM phd_students ORDER BY sort_order ASC, id ASC"),
                     "courses": fetch_table(conn, "SELECT * FROM courses ORDER BY sort_order ASC, id ASC"),
                     "events": fetch_table(conn, "SELECT * FROM events ORDER BY event_date DESC, id DESC"),
                     "gallery": fetch_table(conn, "SELECT * FROM gallery ORDER BY id DESC"),
@@ -193,6 +199,10 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
 
         if path in ("/", "/index.html"):
             path = "/index.php"
+        elif path.endswith(".html") and not path.startswith("/shipadmin"):
+            php_candidate = os.path.join(BASE_DIR, path.lstrip("/")[:-5] + ".php")
+            if os.path.isfile(php_candidate):
+                path = path[:-5] + ".php"
 
         filepath = os.path.join(BASE_DIR, path.lstrip("/"))
         if filepath.endswith(".php") and os.path.isfile(filepath):

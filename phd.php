@@ -81,6 +81,45 @@
             color: #0284c7;
             font-size: 0.78rem;
         }
+        .phd-nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        .phd-nav-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 11px 20px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            font-weight: 700;
+            text-decoration: none;
+            background: #ffffff;
+            color: #09152f;
+            border: 1.5px solid rgba(14, 165, 233, 0.28);
+            box-shadow: 0 8px 20px -10px rgba(9, 21, 47, 0.12);
+            transition: all 0.2s ease;
+        }
+        .phd-nav-pill:hover {
+            background: #f0f9ff;
+            color: #0284c7;
+            transform: translateY(-2px);
+        }
+        .phd-nav-pill.active {
+            background: linear-gradient(135deg, #09152f 0%, #0284c7 100%);
+            color: #ffffff;
+            border-color: transparent;
+            box-shadow: 0 12px 26px -8px rgba(2, 132, 199, 0.45);
+        }
+        @media (max-width: 767.98px) {
+            .phd-nav-pill {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 
@@ -136,6 +175,13 @@
     <!-- Research Overview & Categories Start -->
     <div class="container-xxl py-5">
         <div class="container">
+            <!-- Quick Navigation Tabs -->
+            <div class="phd-nav-pills">
+                <a href="phd.php" class="phd-nav-pill active"><i class="fa fa-microscope"></i> Ph.D. Overview &amp; Research Guides</a>
+                <a href="Current-PhD-students.php" class="phd-nav-pill"><i class="fa fa-user-graduate"></i> Current Ph.D. Students</a>
+                <a href="PhD-awarded.php" class="phd-nav-pill"><i class="fa fa-award"></i> Ph.D. Awarded</a>
+            </div>
+
             <div class="maritime-bento-panel mb-5">
                 <div class="row g-4 align-items-stretch">
                     <div class="col-lg-5">
