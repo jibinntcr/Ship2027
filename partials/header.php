@@ -1227,7 +1227,6 @@ section {
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Academics</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
                     <a href="academics.php" class="dropdown-item">Courses</a>
-                    <a href="phd.php" class="dropdown-item">Ph.D. &amp; Research</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
@@ -1235,7 +1234,6 @@ section {
                 <div class="dropdown-menu bg-light border-0 m-0" style="width: 220px;">
                     <a href="faculty.php" class="dropdown-item">Faculty</a>
                     <a href="technical-staff.php" class="dropdown-item">Technical Staff</a>
-                    <a href="phd.php#research-guides" class="dropdown-item">Research Guides</a>
                 </div>
             </div>
             <div class=" nav-item dropdown">

@@ -141,6 +141,64 @@ CREATE TABLE IF NOT EXISTS mous (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS syllabi (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    programme TEXT NOT NULL DEFAULT 'B.Tech',
+    title TEXT NOT NULL,
+    file_url TEXT NOT NULL,
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS approvals (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    year_badge TEXT NOT NULL,
+    description TEXT DEFAULT '',
+    file_url TEXT NOT NULL,
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS recognitions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    designation TEXT NOT NULL,
+    achievements TEXT NOT NULL,
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS banners (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    subtitle TEXT DEFAULT '',
+    image TEXT NOT NULL,
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS news_items (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    news_date TEXT DEFAULT '',
+    summary TEXT DEFAULT '',
+    image TEXT DEFAULT '',
+    file_url TEXT DEFAULT '#',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS placement_stats (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    programme TEXT NOT NULL DEFAULT 'B.Tech',
+    batch_title TEXT NOT NULL,
+    highlights TEXT DEFAULT '',
+    image TEXT DEFAULT '',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Performance Indexes for Sorting, Filtering, and Lookups
 CREATE INDEX IF NOT EXISTS idx_announcements_active ON announcements(is_active, id DESC);
 CREATE INDEX IF NOT EXISTS idx_faculty_sort ON faculty(sort_order ASC, id ASC);
@@ -156,3 +214,9 @@ CREATE INDEX IF NOT EXISTS idx_research_guides_sort ON research_guides(sort_orde
 CREATE INDEX IF NOT EXISTS idx_phd_awarded_sort ON phd_awarded(sort_order ASC, id ASC);
 CREATE INDEX IF NOT EXISTS idx_phd_students_sort ON phd_students(sort_order ASC, id ASC);
 CREATE INDEX IF NOT EXISTS idx_mous_sort ON mous(sort_order ASC, id ASC);
+CREATE INDEX IF NOT EXISTS idx_syllabi_sort ON syllabi(programme, sort_order ASC, id ASC);
+CREATE INDEX IF NOT EXISTS idx_approvals_sort ON approvals(sort_order ASC, id ASC);
+CREATE INDEX IF NOT EXISTS idx_recognitions_sort ON recognitions(sort_order ASC, id ASC);
+CREATE INDEX IF NOT EXISTS idx_banners_sort ON banners(sort_order ASC, id ASC);
+CREATE INDEX IF NOT EXISTS idx_news_items_sort ON news_items(sort_order ASC, id DESC);
+CREATE INDEX IF NOT EXISTS idx_placement_stats_sort ON placement_stats(programme, sort_order ASC, id ASC);

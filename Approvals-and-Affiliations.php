@@ -146,7 +146,7 @@
                 <p class="maritime-section-lead">Chronological repository of AICTE Extension of Approval (EoA) certificates and NBA Accreditation letters.</p>
             </div>
 
-            <div class="row g-4 justify-content-center">
+            <div id="approvals-grid" class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-sm-6">
                     <a href="https://shiptech.cusat.ac.in/uploads/AICTE%20EOA%202026.pdf" target="_blank" class="doc-bento-card">
                         <div class="d-flex align-items-center justify-content-between mb-3">

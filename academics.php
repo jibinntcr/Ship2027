@@ -158,7 +158,10 @@
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <span class="maritime-section-pill"><i class="fa fa-ship"></i> Undergraduate Flagship (NA&amp;SB)</span>
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                            <span class="maritime-section-pill mb-0"><i class="fa fa-ship"></i> Undergraduate Flagship (NA&amp;SB)</span>
+                            <span class="badge rounded-pill px-3 py-2" style="background:#09152f; color:#38bdf8; font-weight:700; font-size:0.8rem;"><i class="fa fa-users me-1"></i> Number of Seats: <span id="btech-seats-val">40</span> (From 2020 admission onwards)</span>
+                        </div>
                         <h3 class="mb-3" style="color:#09152f; font-weight:800;">B.Tech. in Naval Architecture &amp; Ship Building</h3>
                         <p style="color:#334155; line-height:1.72;">Established in 1975 in collaboration with Rostock University, Germany, the B.Tech. in Naval Architecture and Ship Building (NA&amp;SB) is one of India's premier maritime engineering degrees. The curriculum blends rigorous hydrodynamic theory, ship structures, marine engineering, and hands-on ship design projects with mandatory shipyard internships.</p>
                         <div class="row g-3 mt-2">
@@ -177,13 +180,110 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- B.Tech Qualification & Syllabus Details (From Official CUSAT Curriculum) -->
+                <div class="mt-4 pt-4" style="border-top: 1px solid rgba(14,165,233,0.16);">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="coord-bento-card h-100 p-4">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-user-check"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">Admission Criteria • 40 Seats</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">Eligibility &amp; Minimum Qualifications Required</h5>
+                                    </div>
+                                </div>
+                                <ul id="btech-eligibility-list" class="mb-3 ps-3" style="color:#334155; font-size:0.92rem; line-height:1.7;">
+                                    <li class="mb-2">Pass in Plus Two (10+2) examination of the State of Kerala or the examination of any other University/Board accepted by the University as equivalent thereto in <strong>First Class (60% marks)</strong> with Mathematics, Physics and Chemistry as subjects of study and with a minimum of <strong>50% marks in Mathematics</strong> as well as for Mathematics, Physics and Chemistry put together.</li>
+                                    <li class="mb-2">Candidates belonging to Kerala Scheduled Caste (KSC) and Kerala Scheduled Tribe (KST) communities are eligible for applying, if they have minimum pass marks in the qualifying examination.</li>
+                                    <li class="mb-0">SEBC candidates of Kerala State who are certified as belonging to non-creamy layer are eligible for 5% relaxation in the minimum required marks for qualifying examination.</li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                                    <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank" class="btn btn-sm rounded-pill px-3 py-1" style="background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; font-weight:700; font-size:0.78rem;"><i class="fa fa-file-pdf text-danger me-1"></i>Program Educational Objectives (PEOs)</a>
+                                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="btn btn-sm rounded-pill px-3 py-1" style="background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; font-weight:700; font-size:0.78rem;"><i class="fa fa-file-pdf text-danger me-1"></i>Program Outcomes (POs)</a>
+                                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="btn btn-sm rounded-pill px-3 py-1" style="background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; font-weight:700; font-size:0.78rem;"><i class="fa fa-file-pdf text-danger me-1"></i>Program Specific Outcomes (PSOs)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="coord-bento-card h-100 p-4">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-book-open"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">Curriculum &amp; Regulations</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">B.Tech. Syllabus &amp; Academic Schemes</h5>
+                                    </div>
+                                </div>
+                                <div id="btech-syllabus-grid" class="row g-2">
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1TpdWBcCR3PI-1w3hOQVeaIOBW1mi5Ipo/view?usp=sharing" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Regulation &amp; Syllabus 2026 (I &amp; II Sem) Revised</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/13Smg7V5gfNGNncXniAL5FcgCyTIVLowi/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Regulation &amp; Syllabus 2026 Admission</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1laInRVV3FDdt1ni-nJdcI72VKpjnw7WH/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>B.Tech. Regulations &amp; Syllabus 2024 Scheme</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1BYvwSeBfDPek9nYzQaumGvM02FiOCG1K/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Syllabus 2020-21</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1DEbSY47bN7nm2VcoN0f7rIo_xcgeTDSS/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Syllabus 2018</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1HVuciFausJs-ENdV2nyviaaN67Zv-1fV/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Syllabus 2015-2018</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1aMW7z01ZkAFvfZB5dobVhVuTaBTiWGo_/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Syllabus 2010-2015</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1lmoUllPtiLDTU5pmjerVlBOaW1oFyFjs/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Syllabus 1980 onwards</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1YGCbVJvXzBR40TFcLaOkXtLlejKsKJhO/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-2 px-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.84rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>Syllabus 1974 onwards</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- M.Tech Section -->
             <div id="mtech" class="maritime-bento-panel mb-5">
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-7 order-2 order-lg-1">
-                        <span class="maritime-section-pill"><i class="fa fa-cogs"></i> Postgraduate Programme (CASAD)</span>
+                        <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                            <span class="maritime-section-pill mb-0"><i class="fa fa-cogs"></i> Postgraduate Programme (CASAD)</span>
+                            <span class="badge rounded-pill px-3 py-2" style="background:#09152f; color:#38bdf8; font-weight:700; font-size:0.8rem;"><i class="fa fa-users me-1"></i> Number of Seats: <span id="mtech-seats-val">18</span> (From 2020 admission onwards)</span>
+                        </div>
                         <h3 class="mb-3" style="color:#09152f; font-weight:800;">M.Tech. in Computer Aided Structural Analysis &amp; Design</h3>
                         <p style="color:#334155; line-height:1.72;">The M.Tech. in Computer Aided Structural Analysis and Design (CASAD) equips engineering graduates with advanced expertise in Finite Element Methods (FEM), offshore structures, ship structural reliability, fatigue &amp; fracture mechanics, and computational structural dynamics.</p>
                         <div class="row g-3 mt-2">
@@ -205,6 +305,58 @@
                         <div class="programme-img-wrap" style="height: 310px;">
                             <span class="programme-badge-top"><i class="fa fa-Drafting-compass"></i> 4 Semesters • AICTE Approved</span>
                             <img src="img/mtech.jpg" alt="M.Tech Computer Aided Structural Analysis and Design">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- M.Tech Qualification & Syllabus Details (From Official CUSAT Curriculum) -->
+                <div class="mt-4 pt-4" style="border-top: 1px solid rgba(14,165,233,0.16);">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="coord-bento-card h-100 p-4">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-user-check"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">Admission Criteria • 18 Seats</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">Eligibility &amp; Minimum Qualifications Required</h5>
+                                    </div>
+                                </div>
+                                <ul id="mtech-eligibility-list" class="mb-3 ps-3" style="color:#334155; font-size:0.92rem; line-height:1.7;">
+                                    <li class="mb-2">B.Tech. or equivalent degree in <strong>Naval Architecture and Ship Building / Civil Engineering / Mechanical Engineering</strong> with <strong>First Class (60%) marks</strong> from any recognized University or Institution.</li>
+                                    <li class="mb-2">A valid <strong>GATE score</strong>.</li>
+                                    <li class="mb-0">In the absence of sufficient number of candidates with GATE score, candidates without GATE score shall also be considered subject to passing a Departmental Admission Test (DAT).</li>
+                                </ul>
+                                <div class="d-flex flex-wrap gap-2 pt-2 border-top">
+                                    <a href="uploads/Programme Educational Objective(PEO).pdf" target="_blank" class="btn btn-sm rounded-pill px-3 py-1" style="background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; font-weight:700; font-size:0.78rem;"><i class="fa fa-file-pdf text-danger me-1"></i>Program Educational Objectives (PEOs)</a>
+                                    <a href="uploads/Programmes outcome(PO).pdf" target="_blank" class="btn btn-sm rounded-pill px-3 py-1" style="background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; font-weight:700; font-size:0.78rem;"><i class="fa fa-file-pdf text-danger me-1"></i>Program Outcomes (POs)</a>
+                                    <a href="uploads/Programme specific outcome(PSO).pdf" target="_blank" class="btn btn-sm rounded-pill px-3 py-1" style="background:#f0f9ff; color:#0369a1; border:1px solid #bae6fd; font-weight:700; font-size:0.78rem;"><i class="fa fa-file-pdf text-danger me-1"></i>Program Specific Outcomes (PSOs)</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="coord-bento-card h-100 p-4">
+                                <div class="d-flex align-items-center gap-3 mb-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-book-open"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">Curriculum &amp; Regulations</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">M.Tech. (CASAD) Syllabus &amp; Schemes</h5>
+                                    </div>
+                                </div>
+                                <div id="mtech-syllabus-grid" class="row g-2">
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1zGxgen-salXdis8qTk_o1fSYJG__7HpD/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.88rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>M.Tech. Syllabus 2024</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a href="https://drive.google.com/file/d/1Rk3ArtfPUuXiaHyqWODNQ9KY4sc9fmdy/view?usp=drive_link" target="_blank" class="d-flex align-items-center justify-content-between p-3 rounded-3 text-decoration-none" style="background:#f8fafc; border:1px solid #e2e8f0; color:#09152f; font-weight:700; font-size:0.88rem;">
+                                            <span><i class="fa fa-file-pdf text-danger me-2"></i>M.Tech. Syllabus 2020</span>
+                                            <i class="fa fa-external-link-alt text-info small ms-2"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

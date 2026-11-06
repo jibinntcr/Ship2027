@@ -101,7 +101,6 @@
                             <div class="programme-desc-box">Annual technical symposium and conference on Naval Architecture and Ocean Engineering.</div>
                             <div class="programme-card-footer">
                                 <span class="programme-level-tag"><i class="fa fa-anchor"></i> Shiptech Event</span>
-                                <a class="programme-cta-btn" href="news.php"><span>View Details</span> <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -149,7 +148,7 @@
                     <span class="maritime-section-pill"><i class="fa fa-award"></i> Faculty Recognitions</span>
                     <h3 style="color:#09152f; font-weight:800;">National &amp; International Faculty Honours</h3>
                 </div>
-                <div class="row g-4">
+                <div id="recognitions-grid" class="row g-4">
                     <div class="col-md-6">
                         <div class="coord-bento-card h-100">
                             <div class="d-flex align-items-center gap-3 mb-2">
