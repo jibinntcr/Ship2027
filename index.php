@@ -1965,16 +1965,16 @@
     }
 
     .testimonial-portrait-img {
-        width: 130px !important;
-        height: 130px !important;
-        min-width: 130px !important;
+        width: 156px !important;
+        height: 156px !important;
+        min-width: 156px !important;
         object-fit: cover;
-        object-position: top center;
-        border-radius: 22px;
+        object-position: center 18%;
+        border-radius: 24px;
         border: 3px solid #38bdf8;
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.38);
-        margin: 0 auto 16px !important;
-        background: #ffffff;
+        box-shadow: 0 14px 30px rgba(0, 0, 0, 0.42), 0 0 0 5px rgba(56, 189, 248, 0.14);
+        margin: 0 auto 18px !important;
+        background: #f4ece4;
         display: block !important;
     }
 
