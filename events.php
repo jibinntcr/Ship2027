@@ -120,8 +120,8 @@
                     <h3 style="color:#09152f; font-weight:800;">International Awards &amp; Professional Bodies</h3>
                 </div>
                 <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="coord-bento-card">
+                    <div class="col-md-6">
+                        <div class="coord-bento-card h-100">
                             <div class="d-flex align-items-center gap-3 mb-3">
                                 <div class="coord-icon-avatar"><i class="fa fa-trophy"></i></div>
                                 <div>
@@ -132,8 +132,8 @@
                             <p class="mb-0" style="color:#475569; font-size:0.92rem; line-height:1.65;">Presented annually by the Royal Institution of Naval Architects (RINA, London) recognizing outstanding final-year ship design and naval architecture research projects.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="coord-bento-card">
+                    <div class="col-md-6">
+                        <div class="coord-bento-card h-100">
                             <div class="d-flex align-items-center gap-3 mb-3">
                                 <div class="coord-icon-avatar"><i class="fa fa-certificate"></i></div>
                                 <div>
@@ -144,16 +144,73 @@
                             <p class="mb-0" style="color:#475569; font-size:0.92rem; line-height:1.65;">Instituted by Nippon Kaiji Kyokai (ClassNK) to honour excellence in naval architecture innovation, structural safety, and marine engineering thesis work.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="coord-bento-card">
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="coord-icon-avatar"><i class="fa fa-users"></i></div>
+                </div>
+                <div class="text-center mt-5 mb-4 pt-3" style="border-top: 1px solid rgba(14,165,233,0.14);">
+                    <span class="maritime-section-pill"><i class="fa fa-award"></i> Faculty Recognitions</span>
+                    <h3 style="color:#09152f; font-weight:800;">National &amp; International Faculty Honours</h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="coord-bento-card h-100">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="coord-icon-avatar"><i class="fa fa-user-tie"></i></div>
                                 <div>
-                                    <span class="person-role-pill mb-1">Student Society</span>
-                                    <h5 class="mb-0" style="color:#09152f; font-weight:800;">SNAS &amp; Anchora</h5>
+                                    <span class="person-role-pill mb-1">Professor (Adjunct)</span>
+                                    <h5 class="mb-0" style="color:#09152f; font-weight:800;">Dr. D. D. Ebenezer</h5>
                                 </div>
                             </div>
-                            <p class="mb-0" style="color:#475569; font-size:0.92rem; line-height:1.65;">The Society of Naval Architecture Students (SNAS) spearheads national technical symposia, industry conclaves, and technical leadership initiatives.</p>
+                            <ul class="mb-0 ps-3" style="color:#475569; font-size:0.9rem; line-height:1.65;">
+                                <li>Outstanding Performance Award of NPOL for contribution to acoustic transducer arrays (2004)</li>
+                                <li>Laboratory Scientist of the Year Award of DRDO (2008)</li>
+                                <li>Fellow of the Acoustical Society of India</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="coord-bento-card h-100">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="coord-icon-avatar"><i class="fa fa-user-tie"></i></div>
+                                <div>
+                                    <span class="person-role-pill mb-1">Professor</span>
+                                    <h5 class="mb-0" style="color:#09152f; font-weight:800;">Dr. P. Krishnankutty</h5>
+                                </div>
+                            </div>
+                            <ul class="mb-0 ps-3" style="color:#475569; font-size:0.9rem; line-height:1.65;">
+                                <li>Visiting Faculty at Virginia Tech, USA (2013)</li>
+                                <li>Best Technical Paper Award, Marine Technology Society (MTS), IEEE &amp; OES International Conference (2015)</li>
+                                <li>Advisory Committee Member at Hydrodynamic Research Centre (2015)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="coord-bento-card h-100">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="coord-icon-avatar"><i class="fa fa-user-tie"></i></div>
+                                <div>
+                                    <span class="person-role-pill mb-1">Professor</span>
+                                    <h5 class="mb-0" style="color:#09152f; font-weight:800;">Dr. K. Sivaprasad</h5>
+                                </div>
+                            </div>
+                            <ul class="mb-0 ps-3" style="color:#475569; font-size:0.9rem; line-height:1.65;">
+                                <li>Korean Government IITA Fellowship at Mokpo National University, South Korea (2006–2007)</li>
+                                <li>Member, Technical Advisory Committee of Kerala Inland Vessel Rules (2010)</li>
+                                <li>Editorial Committee Member, Journal of Shipbuilding, Indian Institution of Naval Architects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="coord-bento-card h-100">
+                            <div class="d-flex align-items-center gap-3 mb-2">
+                                <div class="coord-icon-avatar"><i class="fa fa-user-tie"></i></div>
+                                <div>
+                                    <span class="person-role-pill mb-1">Professor &amp; Head</span>
+                                    <h5 class="mb-0" style="color:#09152f; font-weight:800;">Dr. A. Mathiazhagan</h5>
+                                </div>
+                            </div>
+                            <ul class="mb-0 ps-3" style="color:#475569; font-size:0.9rem; line-height:1.65;">
+                                <li>Board of Studies &amp; Academic Council Member, Cochin University of Science and Technology</li>
+                                <li>Editorial Board Member of five international engineering journals</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -155,7 +155,7 @@ def init_db():
             """INSERT INTO events (title, event_date, description, image, link)
                VALUES (?, ?, ?, ?, ?)""",
             [
-                ("ANCHOR - Annual National Technical Symposium", "2026-11-15", "National-level technical fest and symposium organized by the Society of Naval Architecture Students (SNAS) featuring paper presentations and design competitions.", "img/service-4.jpg", "#"),
+                ("Annual National Technical Symposium", "2026-11-15", "National-level technical fest and symposium organized by the Society of Naval Architecture Students (SNAS) featuring paper presentations and design competitions.", "img/service-4.jpg", "#"),
                 ("International Workshop on Green Shipping & Decarbonization", "2026-12-05", "Two-day workshop in collaboration with industry experts and classification societies on sustainable ship propulsion and IMO regulations.", "img/service-5.jpg", "#"),
                 ("Golden Jubilee Alumni & Industry Conclave", "2027-01-20", "Gathering of Shiptech CUSAT alumni from global shipyards, R&D institutes, Indian Navy, and classification societies.", "img/service-6.jpg", "#"),
             ],
