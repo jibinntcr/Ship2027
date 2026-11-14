@@ -85,6 +85,13 @@
         margin-top: -15px;
     }
 
+    @media (min-width: 992px) {
+        .col-bento-5 {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+
     .bento-card {
         position: relative;
         display: flex;
@@ -2622,8 +2629,8 @@
 
 
     <div class="container py-4 bento-portal-grid">
-        <div class="row g-2 g-sm-4">
-            <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row g-2 g-sm-3 justify-content-center">
+            <div class="col-6 col-bento-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bento-card" onclick="window.open('https://snas.in/','_blank')">
                     <div class="bento-top">
                         <span class="bento-badge"><i class="fa fa-anchor"></i> Student Forum</span>
@@ -2639,7 +2646,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-6 col-bento-5 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="bento-card" onclick="window.open('https://descon.cusat.ac.in','_blank')">
                     <div class="bento-top">
                         <span class="bento-badge"><i class="fa fa-compass"></i> Conclave</span>
@@ -2655,7 +2662,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-6 col-bento-5 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="bento-card" onclick="location.href='Approvals-and-Affiliations.php'">
                     <div class="bento-top">
                         <span class="bento-badge"><i class="fa fa-award"></i> Accredited</span>
@@ -2671,7 +2678,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-6 col-bento-5 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="bento-card" onclick="location.href='placement.php'">
                     <div class="bento-top">
                         <span class="bento-badge"><i class="fa fa-briefcase"></i> Career Cell</span>
@@ -2682,6 +2689,22 @@
                     <div class="bento-bottom">
                         <h3 class="bento-title">Placement</h3>
                         <p class="bento-subtitle">Global Maritime Recruitment &amp; Brochures</p>
+                        <span class="bento-cta">Know More <i class="fa fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-bento-5 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="bento-card" onclick="location.href='cesst.php'" style="background: linear-gradient(145deg, #071936 0%, #0b2e4f 52%, #065f46 100%); border-color: rgba(52, 211, 153, 0.35);">
+                    <div class="bento-top">
+                        <span class="bento-badge" style="color: #6ee7b7; background: rgba(16, 185, 129, 0.16); border-color: rgba(52, 211, 153, 0.35);"><i class="fa fa-leaf"></i> CSL CSR CoE</span>
+                        <div class="bento-icon-orb" style="background: #ffffff; padding: 4px; border-color: rgba(52, 211, 153, 0.45);">
+                            <img src="img/coe-logo.jpg" alt="CESST - Centre of Excellence in Sustainable Shipbuilding Technology" style="border-radius: 12px; filter: none;">
+                        </div>
+                    </div>
+                    <div class="bento-bottom">
+                        <h3 class="bento-title" style="font-size: 1.25rem; line-height: 1.15;">CESST</h3>
+                        <p class="bento-subtitle" style="font-size: 0.76rem; line-height: 1.3; margin-bottom: 10px;">Centre of Excellence in Sustainable Shipbuilding Technology • CSL CSR Initiative</p>
                         <span class="bento-cta">Know More <i class="fa fa-arrow-right"></i></span>
                     </div>
                 </div>

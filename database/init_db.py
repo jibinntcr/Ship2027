@@ -244,6 +244,114 @@ def init_db():
             ],
         )
 
+    # Seed CESST Personnel if empty
+    cur.execute("SELECT COUNT(*) FROM cesst_personnel")
+    if cur.fetchone()[0] == 0:
+        cur.executemany(
+            """INSERT INTO cesst_personnel (name, designation, image, sort_order)
+               VALUES (?, ?, ?, ?)""",
+            [
+                (
+                    "Dr. A. Mathiazhagan",
+                    "Professor & Head, Dept. of Ship Technology | Advisory Lead, CESST",
+                    "faculty_data/images/mathi.png",
+                    1,
+                ),
+                (
+                    "Dr. Satheesh Babu P.K",
+                    "Associate Professor & Coordinator, CESST (Tarani)",
+                    "faculty_data/images/satheeshbabu.jpg",
+                    2,
+                ),
+                (
+                    "Dr. Rajesh P Nair",
+                    "Assistant Professor & Structural / FEA Research Lead, CESST",
+                    "faculty_data/images/fac-2.jpg",
+                    3,
+                ),
+                (
+                    "Dr. Manoj T. Issac",
+                    "Assistant Professor & Hydrodynamics / CFD Research Lead, CESST",
+                    "faculty_data/images/Untitled_design__5_.png",
+                    4,
+                ),
+            ],
+        )
+
+    # Seed CESST Projects (Student Projects & Sponsored Projects) if empty
+    cur.execute("SELECT COUNT(*) FROM cesst_projects")
+    if cur.fetchone()[0] == 0:
+        cur.executemany(
+            """INSERT INTO cesst_projects (project_type, title, details, sort_order)
+               VALUES (?, ?, ?, ?)""",
+            [
+                (
+                    "Sponsored Project",
+                    "Indigenous Maritime Design & Hull Digitisation Suite (CSL–CUSAT Collaborative R&D)",
+                    "Sponsored under the Cochin Shipyard Limited (CSL) CSR Centre of Excellence initiative (₹3.53 Crore grant). Focused on developing indigenous computational tools for hull form parameterization, automated hydrostatic and stability assessment, and digital twin integration for next-generation sustainable vessels built at Indian shipyards.",
+                    1,
+                ),
+                (
+                    "Sponsored Project",
+                    "Decarbonization & Hybrid-Electric Propulsion Retrofit Study for Coastal & Inland Vessels",
+                    "Comprehensive techno-economic and hydrodynamic investigation into battery-hybrid, solar-assisted, and green hydrogen fuel-cell propulsion architectures for short-sea and inland water transport vessels, aimed at achieving IMO net-zero maritime emission targets.",
+                    2,
+                ),
+                (
+                    "Sponsored Project",
+                    "Advanced Structural Integrity & Vibro-Acoustic Optimization for Sustainable Ship Structures",
+                    "Sponsored research project utilizing Finite Element Analysis (FEA) and fluid-structure interaction modeling to optimize lightweight, high-strength marine grade materials and reduce underwater radiated noise from ship propulsion systems.",
+                    3,
+                ),
+                (
+                    "Student Project",
+                    "Concept Design of a Zero-Emission Hydrogen Fuel-Cell Roll-On/Roll-Off (Ro-Ro) Vessel",
+                    "Student research project focusing on general arrangement, LH2 containment integration, resistance optimization using CFD (STAR-CCM+), and intact/damaged stability compliance under the IGF Code for green coastal shipping.",
+                    1,
+                ),
+                (
+                    "Student Project",
+                    "CFD Investigation of Energy Saving Devices (Pre-Swirl Stators & Ducted Propellers) for Cargo Vessels",
+                    "Numerical simulation and wake-field optimization of hull-propulsor interaction using RANS solvers at CESST computational workstations, demonstrating measurable shaft power reduction and improved Energy Efficiency Existing Ship Index (EEXI).",
+                    2,
+                ),
+                (
+                    "Student Project",
+                    "AI-Driven Predictive Maintenance & Structural Health Monitoring Digital Twin for Ship Hulls",
+                    "Development of a sensor-integrated structural health monitoring framework combining finite element strain databases with machine learning algorithms to predict fatigue life and corrosion wastage in marine structures.",
+                    3,
+                ),
+            ],
+        )
+
+    # Seed CESST Events if empty
+    cur.execute("SELECT COUNT(*) FROM cesst_events")
+    if cur.fetchone()[0] == 0:
+        cur.executemany(
+            """INSERT INTO cesst_events (title, event_date, image, sort_order)
+               VALUES (?, ?, ?, ?)""",
+            [
+                (
+                    "MoU Signing & Establishment of CUSAT–CSL Centre of Excellence (CESST - Tarani)",
+                    "2024-11-15",
+                    "img/coe-logo.jpg",
+                    1,
+                ),
+                (
+                    "National Workshop on Green Shipbuilding, Decarbonization & Maritime Software Digitisation",
+                    "2025-01-20",
+                    "gallery_data/images/IMG-20250109-WA0004.jpg",
+                    2,
+                ),
+                (
+                    "Industry-Academia Training Programme on Advanced CFD & FEA in Sustainable Vessel Design",
+                    "2025-02-12",
+                    "img/course-cad-cam.jpg",
+                    3,
+                ),
+            ],
+        )
+
     conn.execute("PRAGMA analyze;")
     conn.execute("PRAGMA optimize;")
     conn.commit()

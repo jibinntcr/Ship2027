@@ -1240,6 +1240,7 @@ section {
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Research &amp;
                     Facilities</a>
                 <div class="dropdown-menu bg-light border-0 m-0">
+                    <a href="cesst.php" class="dropdown-item">Centre of Excellence (CESST)</a>
                     <a href="phd.php" class="dropdown-item">Ph.D.</a>
                     <a href="department-library.php" class="dropdown-item">Facilities</a>
                     <a href="mou.php" class="dropdown-item">MoU</a>
@@ -1265,6 +1266,7 @@ section {
                     <a href="https://descon.cusat.ac.in/" target="_blank" class="dropdown-item">DESCON</a>
                     <a href="Approvals-and-Affiliations.php" class="dropdown-item">Approvals &amp; Affiliations</a>
                     <a href="placement.php" class="dropdown-item">Placement</a>
+                    <a href="cesst.php" class="dropdown-item">Centre of Excellence (CESST)</a>
                     <a href="https://estudents.cusat.ac.in/" target="_blank" class="dropdown-item">Exam
                         Registration</a>
                     <a href="https://ugcsct.cusat.ac.in/" target="_blank" class="dropdown-item">Equal Opportunity

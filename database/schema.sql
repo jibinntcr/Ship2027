@@ -199,6 +199,42 @@ CREATE TABLE IF NOT EXISTS placement_stats (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS conference_presentations (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    programme TEXT NOT NULL DEFAULT 'B.Tech',
+    title TEXT NOT NULL,
+    image TEXT DEFAULT '',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS cesst_personnel (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    designation TEXT NOT NULL,
+    image TEXT DEFAULT '',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS cesst_projects (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    project_type TEXT NOT NULL DEFAULT 'Student Project',
+    title TEXT NOT NULL,
+    details TEXT NOT NULL DEFAULT '',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS cesst_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    event_date TEXT NOT NULL DEFAULT '',
+    image TEXT DEFAULT '',
+    sort_order INTEGER DEFAULT 1,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Performance Indexes for Sorting, Filtering, and Lookups
 CREATE INDEX IF NOT EXISTS idx_announcements_active ON announcements(is_active, id DESC);
 CREATE INDEX IF NOT EXISTS idx_faculty_sort ON faculty(sort_order ASC, id ASC);
