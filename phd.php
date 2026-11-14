@@ -260,7 +260,7 @@
                         </div>
                         <div class="person-card-body">
                             <span class="person-role-pill"><i class="fa fa-user-tie"></i> Professor</span>
-                            <h5 class="person-name"><a href="faculty-details.php?id=15">Dr. K. SIVAPRASAD</a></h5>
+                            <h5 class="person-name"><a href="dr-k-sivaprasad.php">Dr. K. SIVAPRASAD</a></h5>
                             <ul class="research-guide-areas">
                                 <li><i class="fa fa-ship"></i>Ship Recycling</li>
                                 <li><i class="fa fa-ship"></i>Inland Waterway Transport</li>
@@ -268,7 +268,7 @@
                             </ul>
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
-                                <a class="person-profile-btn" href="faculty-details.php?id=15">View Profile <i class="fa fa-arrow-right"></i></a>
+                                <a class="person-profile-btn" href="dr-k-sivaprasad.php">View Profile <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -282,7 +282,7 @@
                         </div>
                         <div class="person-card-body">
                             <span class="person-role-pill"><i class="fa fa-user-tie"></i> Associate Professor</span>
-                            <h5 class="person-name"><a href="faculty-details.php?id=20">Dr. P.K. SATHEESH BABU</a></h5>
+                            <h5 class="person-name"><a href="dr-satheesh-babu-pk.php">Dr. P.K. SATHEESH BABU</a></h5>
                             <ul class="research-guide-areas">
                                 <li><i class="fa fa-ship"></i>Ship Design</li>
                                 <li><i class="fa fa-ship"></i>Hydrodynamics</li>
@@ -291,7 +291,7 @@
                             </ul>
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
-                                <a class="person-profile-btn" href="faculty-details.php?id=20">View Profile <i class="fa fa-arrow-right"></i></a>
+                                <a class="person-profile-btn" href="dr-satheesh-babu-pk.php">View Profile <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -305,14 +305,14 @@
                         </div>
                         <div class="person-card-body">
                             <span class="person-role-pill"><i class="fa fa-user-tie"></i> Professor</span>
-                            <h5 class="person-name"><a href="faculty-details.php?id=19">Dr. A. MATHIAZHAGAN</a></h5>
+                            <h5 class="person-name"><a href="dr-a-mathiazhagan.php">Dr. A. MATHIAZHAGAN</a></h5>
                             <ul class="research-guide-areas">
                                 <li><i class="fa fa-ship"></i>Materials Technology</li>
                                 <li><i class="fa fa-ship"></i>Corrosion Engineering</li>
                             </ul>
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
-                                <a class="person-profile-btn" href="faculty-details.php?id=19">View Profile <i class="fa fa-arrow-right"></i></a>
+                                <a class="person-profile-btn" href="dr-a-mathiazhagan.php">View Profile <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -326,7 +326,7 @@
                         </div>
                         <div class="person-card-body">
                             <span class="person-role-pill"><i class="fa fa-user-tie"></i> Assistant Professor</span>
-                            <h5 class="person-name"><a href="faculty-details.php?id=23">Dr. MANOJ T ISSAC</a></h5>
+                            <h5 class="person-name"><a href="dr-manoj-t-issac.php">Dr. MANOJ T ISSAC</a></h5>
                             <ul class="research-guide-areas">
                                 <li><i class="fa fa-ship"></i>Numerical Investigation Of Hydrodynamics and Underwater Vehicles</li>
                                 <li><i class="fa fa-ship"></i>Dynamics Modelling of Underwater Vehicles Using Identification Techniques</li>
@@ -334,7 +334,7 @@
                             </ul>
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
-                                <a class="person-profile-btn" href="faculty-details.php?id=23">View Profile <i class="fa fa-arrow-right"></i></a>
+                                <a class="person-profile-btn" href="dr-manoj-t-issac.php">View Profile <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -348,7 +348,7 @@
                         </div>
                         <div class="person-card-body">
                             <span class="person-role-pill"><i class="fa fa-user-tie"></i> Assistant Professor</span>
-                            <h5 class="person-name"><a href="faculty-details.php?id=22">Dr. RAJESH P NAIR</a></h5>
+                            <h5 class="person-name"><a href="dr-rajesh-p-nair.php">Dr. RAJESH P NAIR</a></h5>
                             <ul class="research-guide-areas">
                                 <li><i class="fa fa-ship"></i>Finite Element Method</li>
                                 <li><i class="fa fa-ship"></i>Descrete Element Method</li>
@@ -359,7 +359,7 @@
                             </ul>
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
-                                <a class="person-profile-btn" href="faculty-details.php?id=22">View Profile <i class="fa fa-arrow-right"></i></a>
+                                <a class="person-profile-btn" href="dr-rajesh-p-nair.php">View Profile <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -373,7 +373,7 @@
                         </div>
                         <div class="person-card-body">
                             <span class="person-role-pill"><i class="fa fa-user-tie"></i> Assistant Professor</span>
-                            <h5 class="person-name"><a href="faculty-details.php?id=24">Dr. FAVAS T K</a></h5>
+                            <h5 class="person-name"><a href="dr-favas-t-k.php">Dr. FAVAS T K</a></h5>
                             <ul class="research-guide-areas">
                                 <li><i class="fa fa-ship"></i>Computational Fluid Dynamics</li>
                                 <li><i class="fa fa-ship"></i>Numerical Heat Transfer</li>
@@ -381,7 +381,7 @@
                             </ul>
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
-                                <a class="person-profile-btn" href="faculty-details.php?id=24">View Profile <i class="fa fa-arrow-right"></i></a>
+                                <a class="person-profile-btn" href="dr-favas-t-k.php">View Profile <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

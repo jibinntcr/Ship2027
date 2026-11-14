@@ -226,7 +226,16 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                 self.wfile.write(data)
                 return
 
-        if path in ("/", "/index.html"):
+        FACULTY_SLUGS = {
+            "dr-a-mathiazhagan", "dr-satheesh-babu-pk", "dr-d-d-ebenezer",
+            "dr-rajesh-p-nair", "dr-manoj-t-issac", "dr-favas-t-k",
+            "akram-p-a", "dr-aravind-kr", "dr-beena-mary-john",
+            "dr-haseena-k-a", "dr-k-sivaprasad"
+        }
+        slug_candidate = re.sub(r"\.(php|html)$", "", path.lstrip("/"), flags=re.I).lower()
+        if slug_candidate in FACULTY_SLUGS:
+            path = "/faculty-details.php"
+        elif path in ("/", "/index.html"):
             path = "/index.php"
         elif path.endswith(".html") and not path.startswith("/shipadmin"):
             php_candidate = os.path.join(BASE_DIR, path.lstrip("/")[:-5] + ".php")
@@ -412,8 +421,9 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
             conn = get_db()
             try:
                 if body.get("id"):
-                    if table == "faculty" and (not body.get("profile_url") or "shiptech.cusat.ac.in" in str(body.get("profile_url", ""))):
-                        body["profile_url"] = f"faculty-details.php?id={body['id']}"
+                    if table == "faculty" and (not body.get("profile_url") or "shiptech.cusat.ac.in" in str(body.get("profile_url", "")) or "id=" in str(body.get("profile_url", ""))):
+                        slug = re.sub(r"[^a-z0-9]+", "-", str(body.get("name", "")).lower()).strip("-")
+                        body["profile_url"] = f"faculty-details.php?name={slug}" if slug else f"faculty-details.php?id={body['id']}"
                         if "profile_url" not in cols:
                             cols.append("profile_url")
                     set_clause = ", ".join([f"{c} = ?" for c in cols])
@@ -424,8 +434,10 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                     placeholders = ", ".join(["?" for _ in cols])
                     vals = [body[c] for c in cols]
                     cur = conn.execute(f"INSERT INTO {table} ({col_names}) VALUES ({placeholders})", vals)
-                    if table == "faculty" and (not body.get("profile_url") or "shiptech.cusat.ac.in" in str(body.get("profile_url", ""))):
-                        conn.execute("UPDATE faculty SET profile_url = ? WHERE id = ?", (f"faculty-details.php?id={cur.lastrowid}", cur.lastrowid))
+                    if table == "faculty" and (not body.get("profile_url") or "shiptech.cusat.ac.in" in str(body.get("profile_url", "")) or "id=" in str(body.get("profile_url", ""))):
+                        slug = re.sub(r"[^a-z0-9]+", "-", str(body.get("name", "")).lower()).strip("-")
+                        new_url = f"faculty-details.php?name={slug}" if slug else f"faculty-details.php?id={cur.lastrowid}"
+                        conn.execute("UPDATE faculty SET profile_url = ? WHERE id = ?", (new_url, cur.lastrowid))
                 conn.commit()
                 invalidate_cache()
                 self.send_json({"ok": True})
