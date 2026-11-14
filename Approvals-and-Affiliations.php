@@ -141,9 +141,9 @@
 
             <!-- AICTE / NBA Approvals Grid -->
             <div class="text-center mb-5">
-                <span class="maritime-section-pill"><i class="fa fa-award"></i> Archive of Accreditations (2015 – 2026)</span>
+                <span class="maritime-section-pill"><i class="fa fa-award"></i> Archive of Accreditations (2016 – 2026)</span>
                 <h2 class="maritime-section-heading">AICTE &amp; NBA Approvals</h2>
-                <p class="maritime-section-lead">Chronological repository of AICTE Extension of Approval (EoA) certificates and NBA Accreditation letters. Click any certificate card to preview the official PDF right on this page.</p>
+                <p class="maritime-section-lead">Chronological repository of AICTE Extension of Approval (EoA) certificates and NBA Accreditation letters. Click any certificate card to open the official PDF in our document viewer.</p>
             </div>
 
             <div id="approvals-grid" class="row g-4 justify-content-center">
@@ -302,54 +302,12 @@
                         <span class="programme-cta-btn align-self-start"><span>View PDF</span> <i class="fa fa-eye"></i></span>
                     </a>
                 </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <a href="Affiliations/PSO.pdf" onclick="return window.openShiptechPdfViewer('Affiliations/PSO.pdf', 'AICTE Approval 2015', '2015', event);" class="doc-bento-card">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <div class="doc-bento-icon"><i class="fa fa-book-open"></i></div>
-                            <span class="person-role-pill">2015</span>
-                        </div>
-                        <h5 style="color:#09152f; font-weight:800;" class="mb-2">AICTE Approval 2015</h5>
-                        <p class="small text-muted mb-3 flex-grow-1">Statutory approval documentation for the 2015 session.</p>
-                        <span class="programme-cta-btn align-self-start"><span>View PDF</span> <i class="fa fa-eye"></i></span>
-                    </a>
-                </div>
             </div>
-
-            <!-- Embedded In-Site Maritime PDF Viewer Dock Start -->
-            <div id="shiptech-inline-pdf-dock" class="maritime-bento-panel mt-5" style="padding:0; overflow:hidden; border:1px solid rgba(14,165,233,0.28); box-shadow:0 24px 60px rgba(9,21,47,0.12);">
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 px-4 py-3" style="background:linear-gradient(135deg, #09152f 0%, #0f2952 60%, #0369a1 100%); color:#fff;">
-                    <div class="d-flex align-items-center gap-3">
-                        <div style="width:44px; height:44px; border-radius:12px; background:rgba(56,189,248,0.18); border:1px solid rgba(56,189,248,0.4); display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:#38bdf8;">
-                            <i class="fa fa-file-pdf"></i>
-                        </div>
-                        <div>
-                            <div class="d-flex align-items-center gap-2">
-                                <span id="inline-pdf-badge" class="badge rounded-pill" style="background:rgba(56,189,248,0.22); color:#7dd3fc; font-size:0.72rem; letter-spacing:0.06em;">2026</span>
-                                <span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">IN-SITE DOCUMENT READER</span>
-                            </div>
-                            <h5 id="inline-pdf-title" class="mb-0 text-white" style="font-weight:800; font-size:1.1rem;">AICTE Approval 2026</h5>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-wrap align-items-center gap-2">
-                        <button type="button" onclick="window.openShiptechPdfModalCurrent()" class="btn btn-sm px-3 py-2" style="background:rgba(56,189,248,0.18); color:#e0f2fe; border:1px solid rgba(56,189,248,0.4); border-radius:10px; font-weight:700; font-size:0.82rem;">
-                            <i class="fa fa-expand me-1"></i> Fullscreen Reader
-                        </button>
-                        <a id="inline-pdf-download" href="Affiliations/Approval%20AICTE%20EOA%202026.pdf" download class="btn btn-sm px-3 py-2" style="background:#0ea5e9; color:#fff; border-radius:10px; font-weight:700; font-size:0.82rem;">
-                            <i class="fa fa-download me-1"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-                <div style="background:#1e293b; position:relative; width:100%; height:720px;">
-                    <iframe id="inline-pdf-frame" src="Affiliations/Approval%20AICTE%20EOA%202026.pdf#toolbar=1&navpanes=0&view=FitH" title="Department Official Document Viewer" style="width:100%; height:100%; border:0; display:block; background:#fff;"></iframe>
-                </div>
-            </div>
-            <!-- Embedded In-Site Maritime PDF Viewer Dock End -->
         </div>
     </div>
 
     <!-- Fullscreen Maritime PDF Viewer Modal Start -->
-    <div id="shiptech-pdf-modal" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(6, 15, 34, 0.86); backdrop-filter:blur(8px); padding:1.25rem; align-items:center; justify-content:center;">
+    <div id="shiptech-pdf-modal" onclick="if(event.target === this) window.closeShiptechPdfViewer();" style="display:none; position:fixed; inset:0; z-index:99999; background:rgba(6, 15, 34, 0.86); backdrop-filter:blur(8px); padding:1.25rem; align-items:center; justify-content:center;">
         <div style="width:100%; max-width:1240px; height:92vh; background:#09152f; border-radius:20px; border:1px solid rgba(56,189,248,0.35); box-shadow:0 30px 90px rgba(0,0,0,0.55); display:flex; flex-direction:column; overflow:hidden;">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 px-4 py-3" style="background:linear-gradient(135deg, #09152f 0%, #0f2952 65%, #0284c7 100%); border-bottom:1px solid rgba(56,189,248,0.25);">
                 <div class="d-flex align-items-center gap-3">
