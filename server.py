@@ -15,7 +15,12 @@ DB_PATH = os.path.join(BASE_DIR, "database", "shiptech.db")
 UPLOAD_DIR = os.path.join(BASE_DIR, "img", "uploads")
 
 ALLOWED_TABLES = {
-    "faculty": ["name", "designation", "specialization", "email", "phone", "image", "profile_url", "facebook", "twitter", "linkedin", "sort_order"],
+    "faculty": [
+        "name", "designation", "specialization", "email", "phone", "image",
+        "profile_url", "facebook", "twitter", "linkedin", "sort_order",
+        "bio", "address", "iqac_url", "interests", "experience",
+        "education", "publications", "projects", "other_info"
+    ],
     "technical_staff": ["name", "designation", "email", "phone", "image", "sort_order"],
     "research_guides": ["name", "designation", "research_areas", "image", "profile_url", "sort_order"],
     "phd_awarded": ["name", "thesis_title", "supervisor", "year_of_award", "sort_order"],
@@ -407,6 +412,10 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
             conn = get_db()
             try:
                 if body.get("id"):
+                    if table == "faculty" and (not body.get("profile_url") or "shiptech.cusat.ac.in" in str(body.get("profile_url", ""))):
+                        body["profile_url"] = f"faculty-details.php?id={body['id']}"
+                        if "profile_url" not in cols:
+                            cols.append("profile_url")
                     set_clause = ", ".join([f"{c} = ?" for c in cols])
                     vals = [body[c] for c in cols] + [body["id"]]
                     conn.execute(f"UPDATE {table} SET {set_clause} WHERE id = ?", vals)
@@ -414,7 +423,9 @@ class ShiptechServerHandler(http.server.SimpleHTTPRequestHandler):
                     col_names = ", ".join(cols)
                     placeholders = ", ".join(["?" for _ in cols])
                     vals = [body[c] for c in cols]
-                    conn.execute(f"INSERT INTO {table} ({col_names}) VALUES ({placeholders})", vals)
+                    cur = conn.execute(f"INSERT INTO {table} ({col_names}) VALUES ({placeholders})", vals)
+                    if table == "faculty" and (not body.get("profile_url") or "shiptech.cusat.ac.in" in str(body.get("profile_url", ""))):
+                        conn.execute("UPDATE faculty SET profile_url = ? WHERE id = ?", (f"faculty-details.php?id={cur.lastrowid}", cur.lastrowid))
                 conn.commit()
                 invalidate_cache()
                 self.send_json({"ok": True})
