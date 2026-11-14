@@ -122,25 +122,29 @@
     }
     function getStore() {
         try {
-            var raw = localStorage.getItem("shiptech_cloud_db_v1");
+            var raw = localStorage.getItem("shiptech_cloud_db_v3");
             if (raw) {
                 var parsed = ensureSeedFields(JSON.parse(raw));
-                localStorage.setItem("shiptech_cloud_db_v1", JSON.stringify(parsed));
+                localStorage.setItem("shiptech_cloud_db_v3", JSON.stringify(parsed));
                 return parsed;
             }
         } catch (e) {}
-        localStorage.setItem("shiptech_cloud_db_v1", JSON.stringify(SEED_DATA));
+        localStorage.setItem("shiptech_cloud_db_v3", JSON.stringify(SEED_DATA));
         return JSON.parse(JSON.stringify(SEED_DATA));
     }
     function saveStore(db) {
-        try { localStorage.setItem("shiptech_cloud_db_v1", JSON.stringify(db)); } catch (e) {}
+        try { localStorage.setItem("shiptech_cloud_db_v3", JSON.stringify(db)); } catch (e) {}
     }
     try {
-        var customRaw = localStorage.getItem("shiptech_cloud_db_v1");
+        var customRaw = localStorage.getItem("shiptech_cloud_db_v3");
         if (customRaw) {
             window.__SHIPTECH_DATA__ = ensureSeedFields(JSON.parse(customRaw));
+        } else {
+            window.__SHIPTECH_DATA__ = ensureSeedFields(window.__SHIPTECH_DATA__ || SEED_DATA);
         }
-    } catch (e) {}
+    } catch (e) {
+        if (!window.__SHIPTECH_DATA__) window.__SHIPTECH_DATA__ = SEED_DATA;
+    }
 
     var origFetch = window.fetch;
     window.fetch = function(input, init) {
@@ -435,10 +439,6 @@
             }
         };
 
-        function resolveFacultyProfileHref(person) {
-            if (!person) return normHref('faculty.php');
-            var rawUrl = String(person.profile_url || '');
-            var nameLower = String(person.name || '').toLowerCase();
         var FACULTY_ID_TO_SLUG = {
             19: 'dr-a-mathiazhagan',
             20: 'dr-satheesh-babu-pk',
@@ -548,8 +548,8 @@
             var reqName = (params.get('name') || params.get('faculty') || '').toLowerCase();
 
             // Check if the page filename itself is a faculty slug (e.g. /Ship2027/dr-favas-t-k.html)
-            var pathBase = (window.location.pathname || '').split('/').pop() || '';
-            var pageSlug = pathBase.replace(/\.(html|php)$/i, '').toLowerCase();
+            var pathBase = window.__FORCED_FACULTY_SLUG__ || ((window.location.pathname || '').split('/').filter(Boolean).pop() || '');
+            var pageSlug = String(pathBase).replace(/\.(html|php)$/i, '').toLowerCase();
             if (pageSlug && pageSlug !== 'faculty-details' && pageSlug !== 'faculty') {
                 if (FACULTY_SLUG_TO_ID[pageSlug]) {
                     reqId = FACULTY_SLUG_TO_ID[pageSlug];
