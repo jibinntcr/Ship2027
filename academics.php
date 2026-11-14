@@ -181,8 +181,17 @@
                     </div>
                 </div>
 
-                <!-- B.Tech Qualification & Syllabus Details (From Official CUSAT Curriculum) -->
+                <!-- B.Tech Sub-Navigation Tabs: Eligibility & Syllabus | Conference and Paper Presentation -->
                 <div class="mt-4 pt-4" style="border-top: 1px solid rgba(14,165,233,0.16);">
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <button type="button" id="btech-tab-btn-main" onclick="window.switchCourseSubTab('btech', 'main')" class="btn rounded-pill px-4 py-2 fw-bold" style="background:linear-gradient(135deg,#09152f 0%,#0284c7 100%); color:#fff; border:1.5px solid transparent; font-size:0.88rem; box-shadow:0 8px 20px -8px rgba(2,132,199,0.45);">
+                            <i class="fa fa-book-open me-2"></i>Eligibility &amp; Syllabus
+                        </button>
+                        <button type="button" id="btech-tab-btn-conf" onclick="window.switchCourseSubTab('btech', 'conf')" class="btn rounded-pill px-4 py-2 fw-bold" style="background:#f0f9ff; color:#09152f; border:1.5px solid rgba(14,165,233,0.35); font-size:0.88rem;">
+                            <i class="fa fa-chalkboard-teacher text-info me-2"></i>Conference and Paper Presentation
+                        </button>
+                    </div>
+                    <div id="btech-subpane-main">
                     <div class="row g-4">
                         <div class="col-lg-6">
                             <div class="coord-bento-card h-100 p-4">
@@ -273,6 +282,45 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <!-- B.Tech Conference and Paper Presentation Sub-Pane -->
+                    <div id="btech-subpane-conf" style="display:none;">
+                        <div class="coord-bento-card p-4">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-chalkboard-teacher"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">B.Tech. (NA&amp;SB) Student &amp; Faculty Research</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">Conference and Paper Presentation (B.Tech)</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="btech-conference-grid" class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="programme-bento-card h-100">
+                                        <div class="programme-img-wrap" style="height:230px;">
+                                            <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> B.Tech Presentation</span>
+                                            <img src="gallery_data/images/IMG-20250109-WA0004.jpg" alt="B.Tech Conference Presentation">
+                                        </div>
+                                        <div class="programme-card-body">
+                                            <h5 style="color:#09152f; font-weight:800; line-height:1.45;">Paper Presentation on Hydrodynamic Hull Form Optimization &amp; Resistance Reduction at International Maritime Conference</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="programme-bento-card h-100">
+                                        <div class="programme-img-wrap" style="height:230px;">
+                                            <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> B.Tech Presentation</span>
+                                            <img src="gallery_data/images/AWARD_function.jpg" alt="B.Tech Conference Presentation">
+                                        </div>
+                                        <div class="programme-card-body">
+                                            <h5 style="color:#09152f; font-weight:800; line-height:1.45;">Student Technical Paper Presentation on Autonomous Surface Vessel Design at Annual Naval Architecture Symposium</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -309,8 +357,17 @@
                     </div>
                 </div>
 
-                <!-- M.Tech Qualification & Syllabus Details (From Official CUSAT Curriculum) -->
+                <!-- M.Tech Sub-Navigation Tabs: Eligibility & Syllabus | Conference and Paper Presentation -->
                 <div class="mt-4 pt-4" style="border-top: 1px solid rgba(14,165,233,0.16);">
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <button type="button" id="mtech-tab-btn-main" onclick="window.switchCourseSubTab('mtech', 'main')" class="btn rounded-pill px-4 py-2 fw-bold" style="background:linear-gradient(135deg,#09152f 0%,#0284c7 100%); color:#fff; border:1.5px solid transparent; font-size:0.88rem; box-shadow:0 8px 20px -8px rgba(2,132,199,0.45);">
+                            <i class="fa fa-book-open me-2"></i>Eligibility &amp; Syllabus
+                        </button>
+                        <button type="button" id="mtech-tab-btn-conf" onclick="window.switchCourseSubTab('mtech', 'conf')" class="btn rounded-pill px-4 py-2 fw-bold" style="background:#f0f9ff; color:#09152f; border:1.5px solid rgba(14,165,233,0.35); font-size:0.88rem;">
+                            <i class="fa fa-chalkboard-teacher text-info me-2"></i>Conference and Paper Presentation
+                        </button>
+                    </div>
+                    <div id="mtech-subpane-main">
                     <div class="row g-4">
                         <div class="col-lg-6">
                             <div class="coord-bento-card h-100 p-4">
@@ -359,6 +416,45 @@
                             </div>
                         </div>
                     </div>
+                    </div>
+                    <!-- M.Tech Conference and Paper Presentation Sub-Pane -->
+                    <div id="mtech-subpane-conf" style="display:none;">
+                        <div class="coord-bento-card p-4">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-chalkboard-teacher"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">M.Tech. (CASAD) Postgraduate Research</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">Conference and Paper Presentation (M.Tech)</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="mtech-conference-grid" class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="programme-bento-card h-100">
+                                        <div class="programme-img-wrap" style="height:230px;">
+                                            <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> M.Tech Presentation</span>
+                                            <img src="img/Computational-Lab-(CHASE).png" alt="M.Tech Conference Presentation">
+                                        </div>
+                                        <div class="programme-card-body">
+                                            <h5 style="color:#09152f; font-weight:800; line-height:1.45;">Conference Presentation on Finite Element Structural Analysis of Offshore Jacket Platforms (CASAD)</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="programme-bento-card h-100">
+                                        <div class="programme-img-wrap" style="height:230px;">
+                                            <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> M.Tech Presentation</span>
+                                            <img src="img/Instrumentation-Lab.png" alt="M.Tech Conference Presentation">
+                                        </div>
+                                        <div class="programme-card-body">
+                                            <h5 style="color:#09152f; font-weight:800; line-height:1.45;">Research Paper Presentation on Fatigue &amp; Fracture Reliability of Marine Composite Structures</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -389,11 +485,57 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="mt-4">
+                        <div class="mt-4 d-flex flex-wrap gap-2">
                             <a href="phd.php" class="programme-cta-btn d-inline-flex align-items-center gap-2">
                                 <span>View Research Areas &amp; Ph.D. Research Guides</span>
                                 <i class="fa fa-arrow-right"></i>
                             </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ph.D. Sub-Navigation Tabs: Doctoral Research Domains | Conference and Paper Presentation -->
+                <div class="mt-4 pt-4" style="border-top: 1px solid rgba(14,165,233,0.16);">
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                        <button type="button" id="phd-tab-btn-conf" onclick="window.switchCourseSubTab('phd', 'conf')" class="btn rounded-pill px-4 py-2 fw-bold" style="background:linear-gradient(135deg,#09152f 0%,#0284c7 100%); color:#fff; border:1.5px solid transparent; font-size:0.88rem; box-shadow:0 8px 20px -8px rgba(2,132,199,0.45);">
+                            <i class="fa fa-chalkboard-teacher me-2"></i>Conference and Paper Presentation (Ph.D.)
+                        </button>
+                    </div>
+                    <div id="phd-subpane-conf">
+                        <div class="coord-bento-card p-4">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-4">
+                                <div class="d-flex align-items-center gap-3">
+                                    <div class="coord-icon-avatar"><i class="fa fa-chalkboard-teacher"></i></div>
+                                    <div>
+                                        <span class="person-role-pill mb-1">Ph.D. Doctoral Scholars &amp; Faculty</span>
+                                        <h5 class="mb-0" style="color:#09152f; font-weight:800;">Conference and Paper Presentation (Ph.D.)</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="phd-conference-grid" class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="programme-bento-card h-100">
+                                        <div class="programme-img-wrap" style="height:230px;">
+                                            <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> Ph.D. Presentation</span>
+                                            <img src="img/phd_image.jpg" alt="Ph.D. Conference Presentation">
+                                        </div>
+                                        <div class="programme-card-body">
+                                            <h5 style="color:#09152f; font-weight:800; line-height:1.45;">Doctoral Paper Presentation on CFD Investigation of Self-Propelled Underwater Vehicles &amp; Green Ship Propulsion</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="programme-bento-card h-100">
+                                        <div class="programme-img-wrap" style="height:230px;">
+                                            <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> Ph.D. Presentation</span>
+                                            <img src="gallery_data/images/02_DSC_8646.JPG" alt="Ph.D. Conference Presentation">
+                                        </div>
+                                        <div class="programme-card-body">
+                                            <h5 style="color:#09152f; font-weight:800; line-height:1.45;">International Conference Presentation on Sustainable Ship Recycling &amp; Decarbonization in Maritime Transport</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

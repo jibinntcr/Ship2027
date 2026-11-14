@@ -180,6 +180,7 @@
                 <a href="phd.php" class="phd-nav-pill active"><i class="fa fa-microscope"></i> Ph.D. Overview &amp; Research Guides</a>
                 <a href="Current-PhD-students.php" class="phd-nav-pill"><i class="fa fa-user-graduate"></i> Current Ph.D. Students</a>
                 <a href="PhD-awarded.php" class="phd-nav-pill"><i class="fa fa-award"></i> Ph.D. Awarded</a>
+                <a href="#phd-conference-section" class="phd-nav-pill"><i class="fa fa-chalkboard-teacher"></i> Conference and Paper Presentation</a>
             </div>
 
             <div class="maritime-bento-panel mb-5">
@@ -381,6 +382,39 @@
                             <div class="person-card-footer">
                                 <span class="person-email-chip"><i class="fa fa-microscope"></i> Research Guide</span>
                                 <a class="person-profile-btn" href="https://shiptech.cusat.ac.in/faculty-details.php?id=9&amp;name=dr-favas-t-k" target="_blank">Profile <i class="fa fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ph.D. Conference and Paper Presentation Section -->
+            <div id="phd-conference-section" class="mt-5 pt-4">
+                <div class="text-center mb-4">
+                    <span class="maritime-section-pill"><i class="fa fa-chalkboard-teacher"></i> Doctoral Research Dissemination</span>
+                    <h2 class="maritime-section-heading">Conference and Paper Presentation</h2>
+                    <p class="maritime-section-lead">National and international conference presentations and research papers by Ph.D. scholars and faculty.</p>
+                </div>
+                <div id="phd-page-conference-grid" class="row g-4">
+                    <div class="col-md-6">
+                        <div class="programme-bento-card h-100">
+                            <div class="programme-img-wrap" style="height:250px;">
+                                <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> Ph.D. Presentation</span>
+                                <img src="img/phd_image.jpg" alt="Ph.D. Conference Presentation">
+                            </div>
+                            <div class="programme-card-body">
+                                <h5 style="color:#09152f; font-weight:800; line-height:1.45;">Doctoral Paper Presentation on CFD Investigation of Self-Propelled Underwater Vehicles &amp; Green Ship Propulsion</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="programme-bento-card h-100">
+                            <div class="programme-img-wrap" style="height:250px;">
+                                <span class="programme-badge-top"><i class="fa fa-chalkboard-teacher"></i> Ph.D. Presentation</span>
+                                <img src="gallery_data/images/02_DSC_8646.JPG" alt="Ph.D. Conference Presentation">
+                            </div>
+                            <div class="programme-card-body">
+                                <h5 style="color:#09152f; font-weight:800; line-height:1.45;">International Conference Presentation on Sustainable Ship Recycling &amp; Decarbonization in Maritime Transport</h5>
                             </div>
                         </div>
                     </div>

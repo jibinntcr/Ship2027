@@ -182,6 +182,7 @@
             <div class="phd-nav-pills">
                 <a href="phd.php" class="phd-nav-pill"><i class="fa fa-microscope"></i> Ph.D. Overview &amp; Research Guides</a>
                 <a href="Current-PhD-students.php" class="phd-nav-pill active"><i class="fa fa-user-graduate"></i> Current Ph.D. Students</a>
+                <a href="phd.php#phd-conference-section" class="phd-nav-pill"><i class="fa fa-chalkboard-teacher"></i> Conference and Paper Presentation</a>
                 <a href="PhD-awarded.php" class="phd-nav-pill"><i class="fa fa-award"></i> Ph.D. Awarded</a>
             </div>
 
